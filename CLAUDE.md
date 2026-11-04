@@ -1,6 +1,6 @@
 # @code_tho_samsaram Reel Factory
 
-Faceless Instagram Reels engine for the **@code_tho_samsaram** account. Niche: AI coding tips, developer tools, LeetCode O(1)-space tricks, GitHub trending repos. Everything runs on free tiers: Render for the webhook, GitHub Actions for rendering, edge-tts, Whisper, Pexels and tmpfiles.org.
+Faceless Instagram Reels engine for the **@code_tho_samsaram** account. Niche: AI coding tips, developer tools, LeetCode O(1)-space tricks, GitHub trending repos. Everything runs on free tiers: Vercel for the webhook and dashboard, GitHub Actions for rendering and posting, edge-tts, Whisper and Pexels. Videos go straight to Meta through resumable upload, with no public host (tmpfiles.org's direct links stopped working).
 
 ## Files
 
@@ -44,7 +44,7 @@ Runtime folders (git-ignore them): `.env`, `data/` (webhook state), `output/` (r
    /dashboard ◀── /api/stats /api/queue /api/fetch-trending /ws/logs                         │
                                                                                              │
  auto_pipeline.py render: storyboard → edge-tts → Whisper words → props.json ──────────────┘
-                          → ducked music + SFX → Remotion MP4 → tmpfiles.org → /media (REELS)
+                          → ducked music + SFX → Remotion MP4 → /media (REELS, resumable) → upload to Meta
                           → poll status_code=FINISHED → /media_publish → permalink
 ```
 

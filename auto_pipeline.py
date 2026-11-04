@@ -12,7 +12,7 @@
                   every cut, bright snaps on stamps, typing clicks, ticks per algorithm step,
                   chimes on results and a riser into the CTA. Nothing has a sub-bass thump.
   5. Visuals      Remotion (video/) renders 1080x1920 motion graphics from props.json.
-  6. Publish      tmpfiles.org public URL -> /{ig-user-id}/media (REELS) -> poll FINISHED -> media_publish.
+  6. Publish      /{ig-user-id}/media (REELS, resumable) -> upload file to Meta -> poll FINISHED -> media_publish.
 
 CLI:
     python auto_pipeline.py                         # render + publish next queued item
@@ -743,7 +743,7 @@ def render_topic(item: dict[str, Any], log: Log = print) -> Path:
 
 
 # ---------------------------------------------------------------------------
-# Publishing: tmpfiles.org -> Meta Graph API
+# Publishing: Meta Graph API
 # ---------------------------------------------------------------------------
 
 
@@ -766,17 +766,38 @@ def _graph(client: httpx.Client, method: str, path: str, **params: Any) -> dict[
     return data
 
 
-def upload_tmpfiles(path: Path, log: Log) -> str:
-    with httpx.Client(timeout=600) as client, open(path, "rb") as fh:
-        resp = client.post("https://tmpfiles.org/api/v1/upload", files={"file": (path.name, fh, "video/mp4")})
-    resp.raise_for_status()
-    page_url = resp.json()["data"]["url"]
-    match = re.match(r"https?://tmpfiles\.org/(?:dl/)?(\d+)/(.+)", page_url)
-    if not match:
-        raise RuntimeError(f"Unexpected tmpfiles.org response: {page_url}")
-    direct = f"https://tmpfiles.org/dl/{match.group(1)}/{match.group(2)}"
-    log(f"Uploaded to {direct}")
-    return direct
+def create_reel_container(client: httpx.Client, video: Path, caption: str, log: Log) -> str:
+    """Send the file straight to Meta (resumable upload), so no public video host is involved."""
+    uid = settings.instagram_user_id
+    created = _graph(client, "POST", f"{uid}/media", media_type="REELS", upload_type="resumable",
+                     caption=caption, share_to_feed="true")
+    container = created["id"]
+    upload_url = created.get("uri") or f"https://rupload.facebook.com/ig-api-upload/{settings.graph_api_version}/{container}"
+    data = video.read_bytes()
+    resp = client.post(upload_url, content=data, timeout=600, headers={
+        "Authorization": f"OAuth {settings.instagram_access_token}",
+        "offset": "0",
+        "file_size": str(len(data)),
+    })
+    if resp.status_code >= 400:
+        raise GraphAPIError(f"Video upload -> {resp.status_code}: {resp.text[:300]}")
+    log(f"Uploaded {len(data) / 1e6:.1f} MB to container {container}")
+    return container
+
+
+def wait_for_container(client: httpx.Client, container: str, log: Log) -> None:
+    deadline = time.time() + 15 * 60
+    while True:
+        status = _graph(client, "GET", container, fields="status_code,status")
+        code = status.get("status_code")
+        if code == "FINISHED":
+            return
+        if code in {"ERROR", "EXPIRED"}:
+            raise GraphAPIError(f"Container {container} {code}: {status.get('status')}")
+        if time.time() > deadline:
+            raise GraphAPIError(f"Container {container} still {code} after 15 minutes")
+        log(f"Container status: {code}")
+        time.sleep(10)
 
 
 def build_caption(item: dict[str, Any]) -> str:
@@ -793,24 +814,10 @@ def build_caption(item: dict[str, Any]) -> str:
 
 def publish_reel(video: Path, caption: str, log: Log = print) -> dict[str, Any]:
     settings.require("instagram_access_token", "instagram_user_id")
-    video_url = upload_tmpfiles(video, log)
     uid = settings.instagram_user_id
     with httpx.Client(timeout=120) as client:
-        container = _graph(client, "POST", f"{uid}/media", media_type="REELS", video_url=video_url,
-                           caption=caption, share_to_feed="true")["id"]
-        log(f"Container {container} created, waiting for Meta to process")
-        deadline = time.time() + 15 * 60
-        while True:
-            status = _graph(client, "GET", container, fields="status_code,status")
-            code = status.get("status_code")
-            if code == "FINISHED":
-                break
-            if code in {"ERROR", "EXPIRED"}:
-                raise GraphAPIError(f"Container {container} {code}: {status.get('status')}")
-            if time.time() > deadline:
-                raise GraphAPIError(f"Container {container} still {code} after 15 minutes")
-            log(f"Container status: {code}")
-            time.sleep(10)
+        container = create_reel_container(client, video, caption, log)
+        wait_for_container(client, container, log)
         media_id = _graph(client, "POST", f"{uid}/media_publish", creation_id=container)["id"]
         permalink = _graph(client, "GET", media_id, fields="permalink").get("permalink")
     log(f"Published reel {media_id} {permalink or ''}")
