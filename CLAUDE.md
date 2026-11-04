@@ -206,7 +206,9 @@ Chosen over Render because Vercel's free plan doesn't sleep and the webhook alre
 1. Put the Instagram values in `.env` (the list is at the top of `setup_instagram.py`), then run `python setup_instagram.py --push owner/repo`. It upgrades the token and stores secrets in Vercel and GitHub without printing them.
 2. `reel.yml` deploys to Vercel after each run using `VERCEL_TOKEN`, which updates the dashboard and keyword map. No Vercel-GitHub link is needed.
 3. Meta callback URL: `https://code-tho-samsaram.vercel.app/webhook`, verify token: `VERIFY_TOKEN`, field: `comments`.
-4. `refresh-token.yml` renews the token weekly (needs the `GH_PAT` secret; `VERCEL_TOKEN` also updates Vercel).
+4. `refresh-token.yml` renews `IGAA` tokens weekly (needs the `GH_PAT` secret; `VERCEL_TOKEN` also updates Vercel) and skips `EAA` tokens.
+
+Two tokens are in use: GitHub holds a never-expiring System User token for posting, and Vercel holds a never-expiring Page token for DMs (`setup_instagram.py --dm-token`, then `--push-dm`). DMs go to `/{instagram-id}/messages`. They need **Allow access to messages** on in the Instagram app, and App Review before they reach accounts without a role on the app.
 
 `process_topic` refuses to publish without credentials before touching the item, and a failed reel goes back to `queued` until its third attempt (`MAX_ATTEMPTS`).
 

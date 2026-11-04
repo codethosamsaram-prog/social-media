@@ -272,9 +272,8 @@ async def graph(method: str, path: str, *, params: dict[str, Any] | None = None,
 
 
 def messages_path() -> str:
-    if settings.graph_api_host == "graph.instagram.com":
-        return f"{settings.instagram_user_id}/messages"
-    return f"{settings.facebook_page_id or 'me'}/messages"
+    # The Instagram ID works on both hosts; the Page route would also need pages_messaging.
+    return f"{settings.instagram_user_id}/messages"
 
 
 # ---------------------------------------------------------------------------
