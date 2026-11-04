@@ -204,7 +204,7 @@ Live at https://code-tho-samsaram.vercel.app (project `code-tho-samsaram`). `npx
 Chosen over Render because Vercel's free plan doesn't sleep and the webhook already works there. Use a public GitHub repo for unlimited Actions minutes.
 
 1. Put the Instagram values in `.env` (the list is at the top of `setup_instagram.py`), then run `python setup_instagram.py --push owner/repo`. It upgrades the token and stores secrets in Vercel and GitHub without printing them.
-2. Connect Vercel to the repo (`npx vercel git connect`) so each queue commit redeploys the dashboard and keyword map.
+2. `reel.yml` deploys to Vercel after each run using `VERCEL_TOKEN`, which updates the dashboard and keyword map. No Vercel-GitHub link is needed.
 3. Meta callback URL: `https://code-tho-samsaram.vercel.app/webhook`, verify token: `VERIFY_TOKEN`, field: `comments`.
 4. `refresh-token.yml` renews the token weekly (needs the `GH_PAT` secret; `VERCEL_TOKEN` also updates Vercel).
 

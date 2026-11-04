@@ -107,6 +107,17 @@ jobs:
           git diff --cached --quiet || git commit -m "chore(queue): update after $KIND reel run"
           git pull --rebase --autostash && git push
 
+      # Vercel holds a snapshot of the queue, so the dashboard and DM keywords update only on deploy.
+      - name: Update dashboard
+        if: always() && steps.gate.outputs.go == 'true'
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          if [ -z "$VERCEL_TOKEN" ]; then echo "No VERCEL_TOKEN: skipping"; exit 0; fi
+          npx --yes vercel deploy --prod --yes --token "$VERCEL_TOKEN"
+
       - uses: actions/upload-artifact@v4
         if: always() && steps.gate.outputs.go == 'true'
         with:
