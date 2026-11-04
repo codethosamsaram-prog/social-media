@@ -27,12 +27,13 @@ import config  # noqa: F401 - loads .env into os.environ
 
 ENV_FILE = Path(__file__).parent / ".env"
 HOST = "https://graph.instagram.com"
+HOST_FB = "https://graph.facebook.com/v23.0"
 
 
-def get(path: str, **params: str) -> dict:
+def get(path: str, host: str = HOST, **params: str) -> dict:
     """Errors are reduced to Meta's message: an httpx exception would include the token in its URL."""
     try:
-        resp = httpx.get(f"{HOST}/{path}", params=params, timeout=30)
+        resp = httpx.get(f"{host}/{path}", params=params, timeout=30)
         data = resp.json()
     except (httpx.HTTPError, ValueError) as exc:
         return {"error": {"message": type(exc).__name__}}
@@ -78,10 +79,42 @@ def push(repo: str, token: str, uid: str, secret: str) -> bool:
     return ok
 
 
+def facebook_token(args: argparse.Namespace, token: str, uid: str, secret: str) -> int:
+    """Facebook Login (EAA...) tokens only count if they can reach the Instagram account they will post to."""
+    if not uid.isdigit():
+        pages = get("me/accounts", HOST_FB, fields="instagram_business_account{id,username}", access_token=token)
+        found = [p["instagram_business_account"] for p in pages.get("data", []) if p.get("instagram_business_account")]
+        if not found:
+            print("INSTAGRAM_USER_ID must be the numeric ID, and this token lists no linked Instagram account "
+                  f"(pages found: {len(pages.get('data', []))}). It needs pages_show_list and "
+                  "pages_read_engagement, with the Instagram account linked to a Facebook Page.")
+            return 1
+        uid = str(found[0]["id"])
+        save_env("INSTAGRAM_USER_ID", uid)
+
+    account = get(uid, HOST_FB, fields="id,username", access_token=token)
+    if "error" in account:
+        print(f"Token cannot read Instagram account {uid}: {account['error'].get('message')}")
+        return 1
+    limit = get(f"{uid}/content_publishing_limit", HOST_FB, access_token=token)
+    if "error" in limit:
+        print(f"Token cannot publish for @{account.get('username')}: {limit['error'].get('message')}")
+        return 1
+    print(f"Token works and can publish for @{account.get('username')}")
+    if args.push:
+        return 0 if push(args.push, token, uid, secret) else 1
+    return 0
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description="Check the Instagram token and store it for automation.")
     parser.add_argument("--push", metavar="OWNER/REPO", help="also store secrets in Vercel and GitHub")
+    parser.add_argument("--push-infra", metavar="OWNER/REPO", help="store only the non-Instagram secrets, then stop")
     args = parser.parse_args()
+
+    if args.push_infra:
+        # Everything except Instagram, safe before the token works: a bad token would burn queue retries.
+        return 0 if push(args.push_infra, "", "", "") else 1
 
     token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
     uid = os.environ.get("INSTAGRAM_USER_ID", "").strip()
@@ -89,10 +122,8 @@ def main() -> int:
     if not token or not uid:
         print("INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_USER_ID must both be in .env")
         return 1
-    if not token.startswith("IGAA"):
-        print("This token does not start with IGAA, so it is not an Instagram Login token. Generate one under "
-              "Instagram > API setup with Instagram login.")
-        return 1
+    if token.startswith("EAA"):
+        return facebook_token(args, token, uid, secret)
 
     me = get("me", fields="user_id,username", access_token=token)
     if "error" in me:

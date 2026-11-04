@@ -19,6 +19,10 @@ on:
         description: "dev or hiring"
         required: false
         default: "dev"
+      dry_run:
+        description: "true = render only: post nothing, save nothing"
+        required: false
+        default: "false"
 
 permissions:
   contents: write
@@ -90,7 +94,9 @@ jobs:
       - name: Render + publish
         if: steps.gate.outputs.go == 'true'
         run: |
-          if [ -n "${{ github.event.inputs.item_id }}" ]; then
+          if [ "${{ github.event.inputs.dry_run }}" = "true" ]; then
+            python auto_pipeline.py --no-publish
+          elif [ -n "${{ github.event.inputs.item_id }}" ]; then
             python auto_pipeline.py --id "${{ github.event.inputs.item_id }}"
           elif [ "$KIND" = "hiring" ]; then
             python auto_pipeline.py --category hiring
@@ -99,7 +105,7 @@ jobs:
           fi
 
       - name: Commit queue
-        if: always() && steps.gate.outputs.go == 'true'
+        if: always() && steps.gate.outputs.go == 'true' && github.event.inputs.dry_run != 'true'
         run: |
           git config user.name "reel-bot"
           git config user.email "reel-bot@users.noreply.github.com"
@@ -109,7 +115,7 @@ jobs:
 
       # Vercel holds a snapshot of the queue, so the dashboard and DM keywords update only on deploy.
       - name: Update dashboard
-        if: always() && steps.gate.outputs.go == 'true'
+        if: always() && steps.gate.outputs.go == 'true' && github.event.inputs.dry_run != 'true'
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
