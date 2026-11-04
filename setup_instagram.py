@@ -86,8 +86,55 @@ def push(repo: str, token: str, uid: str, secret: str) -> bool:
     return ok
 
 
+def token_info(token: str, secret: str) -> dict:
+    app = get("app", HOST_FB, fields="id", access_token=token).get("id")
+    if not app or not secret:
+        return {}
+    return get("debug_token", HOST_FB, input_token=token, access_token=f"{app}|{secret}").get("data", {})
+
+
+def make_dm_token(token: str, secret: str) -> int:
+    """DMs go out as the Page. A Page token taken from a long-lived user token does not expire."""
+    app = get("app", HOST_FB, fields="id", access_token=token).get("id")
+    longer = get("oauth/access_token", HOST_FB, grant_type="fb_exchange_token", client_id=app,
+                 client_secret=secret, fb_exchange_token=token)
+    if not longer.get("access_token"):
+        print(f"Could not extend the token: {longer.get('error', {}).get('message')}")
+        return 1
+    pages = get("me/accounts", HOST_FB, fields="id,name,access_token,instagram_business_account{id}",
+                access_token=longer["access_token"]).get("data", [])
+    page = next((p for p in pages if p.get("instagram_business_account")), None)
+    if not page or not page.get("access_token"):
+        print(f"No Page linked to Instagram found (pages seen: {len(pages)})")
+        return 1
+    info = token_info(page["access_token"], secret)
+    print(f"Page: {page['name']} | token type: {info.get('type')} | expires_at: {info.get('expires_at')} (0 = never)")
+    print(f"Permissions: {info.get('scopes')}")
+    save_env("PAGE_ACCESS_TOKEN", page["access_token"])
+    save_env("FACEBOOK_PAGE_ID", page["id"])
+    print("Saved PAGE_ACCESS_TOKEN and FACEBOOK_PAGE_ID in .env")
+    return 0
+
+
+def push_dm() -> int:
+    """Vercel only: GitHub keeps the never-expiring System User token for posting."""
+    page_token = os.environ.get("PAGE_ACCESS_TOKEN", "").strip()
+    page_id = os.environ.get("FACEBOOK_PAGE_ID", "").strip()
+    if not page_token or not page_id:
+        print("Run --dm-token first")
+        return 1
+    ok = store(["npx", "--yes", "vercel", "env", "add", "INSTAGRAM_ACCESS_TOKEN", "production", "--force"],
+               page_token, "Vercel INSTAGRAM_ACCESS_TOKEN (Page token)")
+    ok &= store(["npx", "--yes", "vercel", "env", "add", "FACEBOOK_PAGE_ID", "production", "--force"],
+                page_id, "Vercel FACEBOOK_PAGE_ID")
+    return 0 if ok else 1
+
+
 def facebook_token(args: argparse.Namespace, token: str, uid: str, secret: str) -> int:
     """Facebook Login (EAA...) tokens only count if they can reach the Instagram account they will post to."""
+    if args.push and token_info(token, secret).get("expires_at", 0) != 0:
+        print("Refusing to store this token: it expires, and it would replace the never-expiring posting token.")
+        return 1
     if not uid.isdigit():
         pages = get("me/accounts", HOST_FB, fields="instagram_business_account{id,username}", access_token=token)
         found = [p["instagram_business_account"] for p in pages.get("data", []) if p.get("instagram_business_account")]
@@ -117,15 +164,22 @@ def main() -> int:
     parser = argparse.ArgumentParser(description="Check the Instagram token and store it for automation.")
     parser.add_argument("--push", metavar="OWNER/REPO", help="also store secrets in Vercel and GitHub")
     parser.add_argument("--push-infra", metavar="OWNER/REPO", help="store only the non-Instagram secrets, then stop")
+    parser.add_argument("--dm-token", action="store_true", help="turn a user token into a Page token for DMs, in .env")
+    parser.add_argument("--push-dm", action="store_true", help="store the Page token and Page ID in Vercel only")
     args = parser.parse_args()
 
     if args.push_infra:
         # Everything except Instagram, safe before the token works: a bad token would burn queue retries.
         return 0 if push(args.push_infra, "", "", "") else 1
 
+    if args.push_dm:
+        return push_dm()
+
     token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
     uid = os.environ.get("INSTAGRAM_USER_ID", "").strip()
     secret = os.environ.get("INSTAGRAM_APP_SECRET", "").strip()
+    if args.dm_token:
+        return make_dm_token(token, secret)
     if not token or not uid:
         print("INSTAGRAM_ACCESS_TOKEN and INSTAGRAM_USER_ID must both be in .env")
         return 1
