@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-04T18:14:55+00:00",
+  "updated_at": "2026-11-04T18:22:10+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -30,7 +30,7 @@
       ],
       "caption": "Prompt → full React dashboard in 30 seconds with v0.dev ⚡",
       "source": "seed",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-02T00:00:00+00:00",
       "storyboard": [
         {
@@ -63,25 +63,29 @@
           }
         }
       ],
-      "error": "Unexpected tmpfiles.org response: https://tmpfiles.org/wmAHoH8mUgc1/reel.mp4",
-      "updated_at": "2026-11-04T18:14:55+00:00",
+      "error": null,
+      "updated_at": "2026-11-04T18:22:10+00:00",
       "video_path": "output/seed-01-uibuild/reel.mp4",
-      "rendered_at": "2026-11-04T18:14:53+00:00",
+      "rendered_at": "2026-11-04T18:21:39+00:00",
       "day": 1,
       "style_used": {
-        "look": "hexgrid",
+        "look": "circuit",
         "hook": "kinetic",
         "captions": "bounce",
-        "cta": "search",
+        "cta": "triple",
         "hookFont": "anton",
-        "presenter": "aarav",
-        "camera": "breathe",
-        "grade": "cool",
-        "overlay": "letterbox",
-        "burst": "rays",
-        "music": "bell"
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "vivid",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "pluck"
       },
-      "attempts": 1
+      "attempts": 1,
+      "published_at": "2026-11-04T18:22:10+00:00",
+      "ig_media_id": "17966213769209641",
+      "permalink": "https://www.instagram.com/reel/DfVFsHjoAX9/",
+      "container_id": "18099151688176838"
     },
     {
       "id": "seed-02-browser",
@@ -973,6 +977,74 @@
       "created_at": "2026-11-04T18:13:00+00:00",
       "dsa": {
         "trick": "reverse"
+      }
+    },
+    {
+      "id": "dsa-c8afe52d",
+      "topic": "Find the duplicate number in O(1) space (Floyd's cycle detection)",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "NO HASHSET NEEDED",
+      "script": "Treat every value as a pointer to the next index. The duplicate creates a cycle. Move slow one step and fast two steps until they meet, then reset slow and walk both to the cycle entrance.",
+      "link": "https://leetcode.com/problems/find-the-duplicate-number/",
+      "code": {
+        "language": "python",
+        "filename": "find_duplicate.py",
+        "snippet": "def find_duplicate(nums):\n    slow = fast = nums[0]\n    while True:\n        slow = nums[slow]\n        fast = nums[nums[fast]]\n        if slow == fast:\n            break\n    slow = nums[0]\n    while slow != fast:\n        slow, fast = nums[slow], nums[fast]\n    return slow"
+      },
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "caption": "Find the duplicate number in O(1) space (Floyd's cycle detection) 🧠",
+      "source": "dsa_library",
+      "status": "queued",
+      "created_at": "2026-11-04T18:20:24+00:00",
+      "dsa": {
+        "trick": "floyd"
+      }
+    },
+    {
+      "id": "dsa-c8f46749",
+      "topic": "Missing number in O(1) space with XOR",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "XOR FINDS MISSING",
+      "script": "Start with n. XOR in every index and every value. Each number that appears twice cancels out, and the missing one is all that's left.",
+      "link": "https://leetcode.com/problems/missing-number/",
+      "code": {
+        "language": "python",
+        "filename": "missing_number.py",
+        "snippet": "def missing_number(nums):\n    x = len(nums)\n    for i, n in enumerate(nums):\n        x ^= i ^ n\n    return x"
+      },
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "caption": "Missing number in O(1) space with XOR 🧠",
+      "source": "dsa_library",
+      "status": "queued",
+      "created_at": "2026-11-04T18:20:24+00:00",
+      "dsa": {
+        "trick": "xor_missing"
       }
     }
   ]
