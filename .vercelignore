@@ -1,0 +1,15 @@
+.venv
+.env
+__pycache__
+data
+output
+assets
+video
+*.mp4
+*.wav
+.deploy-secrets
+.vercel
+.env.local
+.github
+*.md
+.remotion

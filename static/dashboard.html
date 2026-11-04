@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>@code_tho_samsaram · Command Center</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎬</text></svg>" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.4/dist/chart.umd.min.js"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            night: { 950: "#0d0e17", 900: "#13141f", 850: "#1a1b26", 800: "#24283b", 700: "#2f334d", 500: "#565f89" },
+            neon: { pink: "#ff7edb", cyan: "#36f9f6", yellow: "#fede5d", purple: "#bb9af7", green: "#9ece6a", red: "#f7768e", blue: "#7aa2f7" },
+          },
+          fontFamily: { mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular", "Consolas", "monospace"] },
+        },
+      },
+    };
+  </script>
+  <style>
+    body { background: radial-gradient(1200px 600px at 10% -10%, #2a1450 0%, transparent 60%), radial-gradient(900px 500px at 110% 10%, #0f3a4a 0%, transparent 55%), #0d0e17; }
+    .glass { background: rgba(26, 27, 38, 0.78); backdrop-filter: blur(8px); border: 1px solid #2f334d; }
+    .glow-pink { box-shadow: 0 0 24px -6px rgba(255, 126, 219, 0.55); }
+    #log::-webkit-scrollbar, .scroll-thin::-webkit-scrollbar { width: 8px; height: 8px; }
+    #log::-webkit-scrollbar-thumb, .scroll-thin::-webkit-scrollbar-thumb { background: #2f334d; border-radius: 4px; }
+    .log-line { animation: slidein .25s ease-out; }
+    @keyframes slidein { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+  </style>
+</head>
+<body class="min-h-screen text-slate-200 font-sans antialiased">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 py-6 space-y-6">
+
+    <!-- Header -->
+    <header class="flex flex-col lg:flex-row lg:items-center gap-4 justify-between">
+      <div class="flex items-center gap-3 min-w-0">
+        <div class="h-12 w-12 shrink-0 rounded-xl bg-gradient-to-br from-neon-pink to-neon-purple grid place-items-center glow-pink">
+          <i class="fa-solid fa-code text-night-950 text-xl"></i>
+        </div>
+        <div class="min-w-0">
+          <h1 class="text-xl sm:text-2xl font-bold tracking-tight break-words">
+            <span id="account">@code_tho_samsaram</span> <span class="text-neon-pink">Command Center</span>
+          </h1>
+          <p class="text-sm text-night-500 font-mono">reel factory · auto-DM · growth telemetry</p>
+        </div>
+      </div>
+      <div class="flex flex-wrap items-center gap-2">
+        <div id="integrations" class="flex flex-wrap gap-1.5"></div>
+        <button id="btn-fetch" class="px-4 py-2 rounded-lg bg-neon-pink text-night-950 font-semibold hover:brightness-110 transition flex items-center gap-2">
+          <i class="fa-solid fa-satellite-dish"></i> Fetch Trending
+        </button>
+        <button id="btn-token" title="Dashboard token" class="px-3 py-2 rounded-lg glass hover:border-neon-cyan transition">
+          <i class="fa-solid fa-key"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Metric cards -->
+    <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+      <div class="glass rounded-2xl p-5 min-w-0">
+        <div class="flex items-center justify-between text-night-500 text-sm"><span>Est. Views</span><i class="fa-solid fa-eye text-neon-cyan"></i></div>
+        <div id="m-views" class="text-3xl font-bold mt-2 font-mono">–</div>
+        <div id="m-views-sub" class="text-xs text-night-500 mt-1">–</div>
+      </div>
+      <div class="glass rounded-2xl p-5 min-w-0">
+        <div class="flex items-center justify-between text-night-500 text-sm"><span>Auto-DMs Sent</span><i class="fa-solid fa-paper-plane text-neon-pink"></i></div>
+        <div id="m-dms" class="text-3xl font-bold mt-2 font-mono">–</div>
+        <div id="m-dms-sub" class="text-xs text-night-500 mt-1">–</div>
+      </div>
+      <div class="glass rounded-2xl p-5 min-w-0">
+        <div class="flex items-center justify-between text-night-500 text-sm"><span>Conversion Rate</span><i class="fa-solid fa-bolt text-neon-yellow"></i></div>
+        <div id="m-conv" class="text-3xl font-bold mt-2 font-mono">–</div>
+        <div id="m-conv-sub" class="text-xs text-night-500 mt-1">DMs delivered ÷ comments received</div>
+      </div>
+      <div class="glass rounded-2xl p-5 min-w-0">
+        <div class="flex items-center justify-between text-night-500 text-sm"><span>Reel Queue</span><i class="fa-solid fa-film text-neon-green"></i></div>
+        <div id="m-queue" class="text-3xl font-bold mt-2 font-mono">–</div>
+        <div id="m-queue-sub" class="text-xs text-night-500 mt-1">–</div>
+      </div>
+    </section>
+
+    <!-- Chart + side panel -->
+    <section class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+      <div class="glass rounded-2xl p-5 lg:col-span-2 min-w-0">
+        <div class="flex items-center justify-between mb-3">
+          <h2 class="font-semibold"><i class="fa-solid fa-chart-line text-neon-cyan mr-2"></i>Growth Velocity <span class="text-night-500 text-sm font-normal">· last 14 days</span></h2>
+        </div>
+        <div class="relative h-64"><canvas id="chart"></canvas></div>
+      </div>
+      <div class="glass rounded-2xl p-5 space-y-5 min-w-0">
+        <div>
+          <h2 class="font-semibold mb-3"><i class="fa-solid fa-gears text-neon-purple mr-2"></i>Render Engine</h2>
+          <div id="render-state" class="text-sm font-mono text-night-500">idle</div>
+        </div>
+        <div>
+          <h2 class="font-semibold mb-3"><i class="fa-solid fa-hashtag text-neon-yellow mr-2"></i>Top Trigger Keywords</h2>
+          <ul id="keywords" class="space-y-2 text-sm"></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Queue table -->
+    <section class="glass rounded-2xl p-5 min-w-0">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-4">
+        <h2 class="font-semibold"><i class="fa-solid fa-list-check text-neon-green mr-2"></i>Content Queue</h2>
+        <div id="filters" class="flex flex-wrap gap-2 text-sm"></div>
+      </div>
+      <div class="overflow-x-auto scroll-thin -mx-5 px-5">
+        <table class="w-full text-sm min-w-[760px]">
+          <thead class="text-night-500 text-left border-b border-night-700">
+            <tr>
+              <th class="py-2 pr-3 font-medium">Topic</th>
+              <th class="py-2 pr-3 font-medium">Keyword</th>
+              <th class="py-2 pr-3 font-medium">Category</th>
+              <th class="py-2 pr-3 font-medium">Status</th>
+              <th class="py-2 pr-3 font-medium">Link</th>
+              <th class="py-2 font-medium text-right">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="queue-body"></tbody>
+        </table>
+      </div>
+      <p id="queue-empty" class="hidden text-center text-night-500 py-8">Nothing in this filter yet. Hit <b>Fetch Trending</b>.</p>
+    </section>
+
+    <!-- Live log console -->
+    <section class="glass rounded-2xl p-5 min-w-0">
+      <div class="flex flex-col md:flex-row md:items-center justify-between gap-3 mb-3">
+        <h2 class="font-semibold flex items-center gap-2">
+          <i class="fa-solid fa-terminal text-neon-pink"></i>Live Webhook Log
+          <span id="ws-dot" class="inline-block h-2.5 w-2.5 rounded-full bg-neon-red"></span>
+          <span id="ws-label" class="text-xs text-night-500 font-normal">connecting…</span>
+        </h2>
+        <div class="flex gap-2 text-sm">
+          <button id="btn-pause" class="px-3 py-1.5 rounded-lg border border-night-700 hover:border-neon-cyan"><i class="fa-solid fa-pause mr-1"></i>Pause</button>
+          <button id="btn-clear" class="px-3 py-1.5 rounded-lg border border-night-700 hover:border-neon-red"><i class="fa-solid fa-trash mr-1"></i>Clear</button>
+        </div>
+      </div>
+      <div id="log" class="bg-night-950 rounded-xl border border-night-700 h-80 overflow-y-auto p-3 font-mono text-[13px] leading-relaxed"></div>
+      <form id="sim-form" class="mt-3 flex flex-col sm:flex-row gap-2">
+        <input id="sim-user" value="test_dev" maxlength="30" class="sm:w-40 min-w-0 bg-night-950 border border-night-700 rounded-lg px-3 py-2 font-mono focus:outline-none focus:border-neon-cyan" placeholder="username" />
+        <input id="sim-text" required maxlength="300" class="flex-1 min-w-0 bg-night-950 border border-night-700 rounded-lg px-3 py-2 font-mono focus:outline-none focus:border-neon-cyan" placeholder='Simulate a comment, e.g. "BITXOR pls 🔥"' />
+        <button class="px-4 py-2 rounded-lg bg-neon-cyan text-night-950 font-semibold hover:brightness-110"><i class="fa-solid fa-flask mr-1"></i>Dry-run webhook</button>
+      </form>
+    </section>
+
+    <footer class="text-center text-xs text-night-500 pb-4 font-mono">auto-refresh 15s · webhook at <span id="hook-url"></span></footer>
+  </div>
+
+  <div id="toast" class="fixed bottom-5 right-5 max-w-sm hidden glass rounded-xl px-4 py-3 text-sm shadow-xl"></div>
+
+<script>
+const CATEGORY_LABELS = { ai_tool: "Hidden AI Tools", repo: "Repos", dsa: "DSA Tricks", dev_tip: "Dev Tips", website: "Dev Tips" };
+const FILTERS = [
+  { key: "", label: "All", icon: "fa-layer-group" },
+  { key: "ai_tool", label: "Hidden AI Tools", icon: "fa-robot" },
+  { key: "repo", label: "Repos", icon: "fa-code-branch" },
+  { key: "dsa", label: "DSA Tricks", icon: "fa-brain" },
+  { key: "Dev Tips", label: "Dev Tips", icon: "fa-lightbulb" },
+];
+const STATUS_STYLE = {
+  queued: "bg-night-700 text-slate-300",
+  rendering: "bg-neon-purple/20 text-neon-purple animate-pulse",
+  rendered: "bg-neon-blue/20 text-neon-blue",
+  published: "bg-neon-green/20 text-neon-green",
+  failed: "bg-neon-red/20 text-neon-red",
+};
+const LEVEL_STYLE = {
+  info: ["text-slate-400", "fa-circle-info"], success: ["text-neon-green", "fa-circle-check"],
+  warn: ["text-neon-yellow", "fa-triangle-exclamation"], error: ["text-neon-red", "fa-circle-xmark"],
+  comment: ["text-neon-cyan", "fa-comment"], dm: ["text-neon-pink", "fa-paper-plane"],
+  render: ["text-neon-purple", "fa-film"], discover: ["text-neon-blue", "fa-satellite-dish"],
+};
+
+let token = localStorage.getItem("dashToken") || "";
+let activeFilter = "";
+let paused = false;
+let lastLogId = null;
+let chart = null;
+let renderAvailable = true;
+const seenLogIds = new Set();
+
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const fmt = (n) => Intl.NumberFormat("en", { notation: n >= 10000 ? "compact" : "standard" }).format(n || 0);
+
+function toast(msg, kind = "info") {
+  const el = $("toast");
+  el.innerHTML = `<span class="${(LEVEL_STYLE[kind] || LEVEL_STYLE.info)[0]}">${esc(msg)}</span>`;
+  el.classList.remove("hidden");
+  clearTimeout(toast.t);
+  toast.t = setTimeout(() => el.classList.add("hidden"), 4500);
+}
+
+async function api(path, opts = {}) {
+  const res = await fetch(path, { ...opts, headers: { "Content-Type": "application/json", "X-Dashboard-Token": token, ...(opts.headers || {}) } });
+  if (res.status === 401) {
+    askToken();
+    throw new Error("Dashboard token required");
+  }
+  const data = await res.json().catch(() => ({}));
+  if (!res.ok) throw new Error(typeof data.detail === "string" ? data.detail : JSON.stringify(data.detail || data));
+  return data;
+}
+
+function askToken() {
+  const value = prompt("Dashboard token (DASHBOARD_TOKEN on the server):", token);
+  if (value !== null) {
+    token = value.trim();
+    localStorage.setItem("dashToken", token);
+    refreshAll();
+    connectWS();
+  }
+}
+
+// ---------- Stats ----------
+function renderIntegrations(status) {
+  const labels = { instagram: "Instagram", verify_token: "Verify token", signature_check: "Signatures", pexels: "Pexels", google_search: "Google CSE", dashboard_auth: "Auth" };
+  $("integrations").innerHTML = Object.entries(labels).map(([k, label]) => {
+    const ok = status[k];
+    return `<span class="text-xs px-2 py-1 rounded-full border ${ok ? "border-neon-green/40 text-neon-green" : "border-night-700 text-night-500"}">
+      <i class="fa-solid ${ok ? "fa-check" : "fa-xmark"} mr-1"></i>${label}</span>`;
+  }).join("");
+}
+
+function renderChart(growth) {
+  const labels = growth.labels.map((d) => d.slice(5));
+  if (!chart) {
+    chart = new Chart($("chart"), {
+      type: "line",
+      data: {
+        labels,
+        datasets: [
+          { label: "Comments", data: growth.comments, borderColor: "#36f9f6", backgroundColor: "rgba(54,249,246,.12)", fill: true, tension: .35, pointRadius: 2 },
+          { label: "Auto-DMs", data: growth.dms, borderColor: "#ff7edb", backgroundColor: "rgba(255,126,219,.12)", fill: true, tension: .35, pointRadius: 2 },
+        ],
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false, interaction: { mode: "index", intersect: false },
+        plugins: { legend: { labels: { color: "#a9b1d6", usePointStyle: true } } },
+        scales: {
+          x: { ticks: { color: "#565f89" }, grid: { color: "rgba(47,51,77,.4)" } },
+          y: { beginAtZero: true, ticks: { color: "#565f89", precision: 0 }, grid: { color: "rgba(47,51,77,.4)" } },
+        },
+      },
+    });
+  } else {
+    chart.data.labels = labels;
+    chart.data.datasets[0].data = growth.comments;
+    chart.data.datasets[1].data = growth.dms;
+    chart.update();
+  }
+}
+
+async function loadStats() {
+  const s = await api("/api/stats");
+  $("account").textContent = "@" + s.account;
+  $("m-views").textContent = fmt(s.est_views);
+  $("m-views-sub").textContent = s.views_source === "instagram_insights" ? "live from Instagram Insights" : "estimated from comment volume";
+  $("m-dms").textContent = fmt(s.dms_sent);
+  $("m-dms-sub").textContent = `${s.dms_pending} pending · ${s.dms_failed} failed · ${s.keyword_hits} keyword hits`;
+  $("m-conv").textContent = s.conversion_rate.toFixed(1) + "%";
+  $("m-conv-sub").textContent = `${fmt(s.dms_sent)} DMs from ${fmt(s.comments)} comments`;
+  $("m-queue").textContent = s.queue.total;
+  $("m-queue-sub").textContent = `${s.queue.queued || 0} queued · ${s.queue.rendered || 0} rendered · ${s.queue.published || 0} live`;
+  renderIntegrations(s.integrations);
+  renderChart(s.growth);
+  renderAvailable = s.render.available;
+  $("render-state").innerHTML = s.render.running
+    ? `<span class="text-neon-purple"><i class="fa-solid fa-spinner fa-spin mr-2"></i>rendering ${esc(s.render.item_id)}</span><br><span class="text-xs">since ${esc(s.render.started_at)}${s.render.publish ? " · will publish" : ""}</span>`
+    : s.render.available
+      ? `<span class="text-neon-green"><i class="fa-solid fa-circle mr-2 text-[8px]"></i>idle, ready</span>`
+      : `<span class="text-neon-yellow"><i class="fa-solid fa-cloud mr-2"></i>render deps not installed here</span><br><span class="text-xs">reels render in GitHub Actions</span>`;
+  $("keywords").innerHTML = s.top_keywords.length
+    ? s.top_keywords.map(([k, n]) => {
+        const max = s.top_keywords[0][1];
+        return `<li><div class="flex justify-between font-mono"><span class="text-neon-yellow">${esc(k)}</span><span>${n}</span></div>
+          <div class="h-1.5 rounded bg-night-700 mt-1"><div class="h-1.5 rounded bg-neon-yellow" style="width:${(100 * n) / max}%"></div></div></li>`;
+      }).join("")
+    : `<li class="text-night-500">No keyword comments yet.</li>`;
+}
+
+// ---------- Queue ----------
+function renderFilters() {
+  $("filters").innerHTML = FILTERS.map((f) => `
+    <button data-filter="${esc(f.key)}" class="px-3 py-1.5 rounded-lg border transition ${activeFilter === f.key ? "border-neon-pink text-neon-pink bg-neon-pink/10" : "border-night-700 text-slate-400 hover:border-night-500"}">
+      <i class="fa-solid ${f.icon} mr-1"></i>${f.label}</button>`).join("");
+  $("filters").querySelectorAll("button").forEach((b) => b.onclick = () => { activeFilter = b.dataset.filter; renderFilters(); loadQueue(); });
+}
+
+async function loadQueue() {
+  const q = await api("/api/queue" + (activeFilter ? `?category=${encodeURIComponent(activeFilter)}` : ""));
+  const rows = q.items.map((i) => {
+    const link = i.permalink || i.link;
+    const disabled = !renderAvailable || i.status === "rendering" ? "opacity-40 pointer-events-none" : "";
+    return `<tr class="border-b border-night-700/60 hover:bg-night-800/40 align-top">
+      <td class="py-3 pr-3 max-w-[340px]">
+        <div class="font-medium text-slate-100">${esc(i.topic)}</div>
+        <div class="text-xs text-night-500 font-mono mt-0.5">hook: <span class="text-neon-yellow">${esc(i.hook)}</span> · ${esc((i.hashtags || []).join(" "))}</div>
+        ${i.error ? `<div class="text-xs text-neon-red mt-1 break-words">${esc(i.error)}</div>` : ""}
+      </td>
+      <td class="py-3 pr-3 font-mono text-neon-pink">${esc(i.keyword)}</td>
+      <td class="py-3 pr-3 whitespace-nowrap">${esc(CATEGORY_LABELS[i.category] || i.category)}</td>
+      <td class="py-3 pr-3"><span class="text-xs px-2 py-1 rounded-full ${STATUS_STYLE[i.status] || STATUS_STYLE.queued}">${esc(i.status)}</span></td>
+      <td class="py-3 pr-3"><a href="${esc(link)}" target="_blank" rel="noopener" class="text-neon-cyan hover:underline"><i class="fa-solid ${i.permalink ? "fa-instagram fa-brands" : "fa-arrow-up-right-from-square"}"></i></a></td>
+      <td class="py-3 text-right whitespace-nowrap">
+        <button title="Render" data-act="render" data-id="${esc(i.id)}" class="px-2 py-1 rounded hover:text-neon-purple ${disabled}"><i class="fa-solid fa-clapperboard"></i></button>
+        <button title="Render + publish" data-act="publish" data-id="${esc(i.id)}" class="px-2 py-1 rounded hover:text-neon-green ${disabled}"><i class="fa-solid fa-rocket"></i></button>
+        <button title="Copy keyword" data-act="copy" data-id="${esc(i.keyword)}" class="px-2 py-1 rounded hover:text-neon-yellow"><i class="fa-regular fa-copy"></i></button>
+        <button title="Delete" data-act="delete" data-id="${esc(i.id)}" class="px-2 py-1 rounded hover:text-neon-red"><i class="fa-solid fa-trash"></i></button>
+      </td></tr>`;
+  });
+  $("queue-body").innerHTML = rows.join("");
+  $("queue-empty").classList.toggle("hidden", rows.length > 0);
+  $("queue-body").querySelectorAll("button[data-act]").forEach((b) => b.onclick = () => queueAction(b.dataset.act, b.dataset.id));
+}
+
+async function queueAction(act, id) {
+  try {
+    if (act === "copy") { await navigator.clipboard.writeText(id); return toast(`Copied ${id}`, "success"); }
+    if (act === "delete") {
+      if (!confirm(`Delete ${id} from the queue?`)) return;
+      await api(`/api/queue/${encodeURIComponent(id)}`, { method: "DELETE" });
+      toast(`Deleted ${id}`, "warn");
+    } else {
+      const publish = act === "publish";
+      if (publish && !confirm("Render and PUBLISH this reel to Instagram?")) return;
+      await api(`/api/queue/${encodeURIComponent(id)}/render?publish=${publish}`, { method: "POST" });
+      toast(`Render started for ${id}`, "render");
+    }
+    refreshAll();
+  } catch (e) { toast(e.message, "error"); }
+}
+
+$("btn-fetch").onclick = async () => {
+  const btn = $("btn-fetch");
+  btn.disabled = true;
+  btn.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Scanning…`;
+  try {
+    const r = await api("/api/fetch-trending?limit=2", { method: "POST" });
+    toast(`${r.count} new topic(s) queued`, "success");
+    refreshAll();
+  } catch (e) { toast(e.message, "error"); }
+  finally { btn.disabled = false; btn.innerHTML = `<i class="fa-solid fa-satellite-dish"></i> Fetch Trending`; }
+};
+$("btn-token").onclick = askToken;
+
+// ---------- Live log ----------
+function appendLog(e) {
+  if (seenLogIds.has(e.id)) return;
+  seenLogIds.add(e.id);
+  lastLogId = e.id;
+  if (paused) return;
+  const [color, icon] = LEVEL_STYLE[e.level] || LEVEL_STYLE.info;
+  const time = new Date(e.ts).toLocaleTimeString([], { hour12: false });
+  const line = document.createElement("div");
+  line.className = "log-line flex gap-2 py-0.5";
+  line.innerHTML = `<span class="text-night-500 shrink-0">${time}</span><i class="fa-solid ${icon} ${color} mt-1 shrink-0 w-4"></i><span class="${color} break-words min-w-0">${esc(e.message)}</span>`;
+  const log = $("log");
+  const atBottom = log.scrollHeight - log.scrollTop - log.clientHeight < 40;
+  log.appendChild(line);
+  while (log.children.length > 400) log.firstChild.remove();
+  if (atBottom) log.scrollTop = log.scrollHeight;
+  if (["dm", "success", "comment"].includes(e.level)) debouncedStats();
+}
+
+let statsTimer = null;
+function debouncedStats() { clearTimeout(statsTimer); statsTimer = setTimeout(() => loadStats().catch(() => {}), 800); }
+
+let ws = null, wsRetry = 1000, pollTimer = null, pingTimer = null;
+function setWS(state) {
+  const map = { live: ["bg-neon-green", "live via WebSocket"], poll: ["bg-neon-yellow", "WebSocket down · polling"], connecting: ["bg-neon-red", "connecting…"] };
+  $("ws-dot").className = `inline-block h-2.5 w-2.5 rounded-full ${map[state][0]} ${state === "live" ? "animate-pulse" : ""}`;
+  $("ws-label").textContent = map[state][1];
+}
+function startPolling() {
+  if (pollTimer) return;
+  setWS("poll");
+  pollTimer = setInterval(async () => {
+    try { (await api("/api/logs" + (lastLogId ? `?after=${lastLogId}` : ""))).events.forEach(appendLog); } catch (_) {}
+  }, 4000);
+}
+function connectWS() {
+  if (ws) { ws.onclose = null; ws.close(); }
+  setWS("connecting");
+  const proto = location.protocol === "https:" ? "wss" : "ws";
+  ws = new WebSocket(`${proto}://${location.host}/ws/logs?token=${encodeURIComponent(token)}`);
+  ws.onopen = () => {
+    wsRetry = 1000;
+    clearInterval(pollTimer); pollTimer = null;
+    setWS("live");
+    clearInterval(pingTimer);
+    pingTimer = setInterval(() => ws.readyState === 1 && ws.send("ping"), 25000);
+  };
+  ws.onmessage = (m) => { try { appendLog(JSON.parse(m.data)); } catch (_) {} };
+  ws.onclose = () => {
+    clearInterval(pingTimer);
+    startPolling();
+    setTimeout(connectWS, wsRetry);
+    wsRetry = Math.min(wsRetry * 2, 30000);
+  };
+}
+
+$("btn-pause").onclick = () => {
+  paused = !paused;
+  $("btn-pause").innerHTML = paused ? `<i class="fa-solid fa-play mr-1"></i>Resume` : `<i class="fa-solid fa-pause mr-1"></i>Pause`;
+};
+$("btn-clear").onclick = () => { $("log").innerHTML = ""; };
+
+$("sim-form").onsubmit = async (ev) => {
+  ev.preventDefault();
+  try {
+    const r = await api("/api/simulate-comment", { method: "POST", body: JSON.stringify({ text: $("sim-text").value, username: $("sim-user").value || "test_dev" }) });
+    toast(r.matched ? `Matched ${r.keyword} → ${r.item_id}` : "No trigger keyword matched", r.matched ? "dm" : "warn");
+    $("sim-text").value = "";
+  } catch (e) { toast(e.message, "error"); }
+};
+
+// ---------- Boot ----------
+async function refreshAll() {
+  try { await loadStats(); await loadQueue(); } catch (e) { if (!String(e.message).includes("token")) toast(e.message, "error"); }
+}
+$("hook-url").textContent = `${location.origin}/webhook`;
+renderFilters();
+refreshAll();
+connectWS();
+setInterval(refreshAll, 15000);
+</script>
+</body>
+</html>

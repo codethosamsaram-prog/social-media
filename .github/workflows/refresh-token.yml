@@ -1,0 +1,36 @@
+name: refresh-instagram-token
+
+# Long-lived Instagram tokens die after 60 days unless refreshed. Runs weekly and stores the new
+# token in GitHub (for posting) and Vercel (for DMs). Needs the GH_PAT secret: a fine-grained token
+# for this repo with "Secrets: read and write". The Vercel secrets are optional.
+on:
+  schedule:
+    - cron: "0 3 * * 1"      # Mondays 08:30 IST
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    env:
+      OLD_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_PAT }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+    steps:
+      - name: Refresh and store
+        run: |
+          resp=$(curl -sS -G https://graph.instagram.com/refresh_access_token \
+            --data-urlencode grant_type=ig_refresh_token \
+            --data-urlencode "access_token=$OLD_TOKEN")
+          new=$(jq -r '.access_token // empty' <<<"$resp")
+          if [ -z "$new" ]; then
+            echo "Refresh failed: $(jq -r '.error.message // "unknown error"' <<<"$resp")"
+            exit 1
+          fi
+          echo "::add-mask::$new"
+          printf %s "$new" | gh secret set INSTAGRAM_ACCESS_TOKEN --repo "$GITHUB_REPOSITORY"
+          if [ -n "$VERCEL_TOKEN" ]; then
+            printf %s "$new" | npx --yes vercel env add INSTAGRAM_ACCESS_TOKEN production --force --token "$VERCEL_TOKEN"
+          fi
+          echo "Token refreshed"

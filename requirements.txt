@@ -1,0 +1,7 @@
+# Webhook server + dashboard: all that Vercel / Render need.
+# Rendering deps live in requirements-render.txt (pip install -r requirements-render.txt).
+fastapi>=0.115
+uvicorn[standard]>=0.30
+httpx>=0.27
+pydantic>=2.7
+beautifulsoup4>=4.12

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+.env
+.env.local
+.deploy-secrets
+.vercel
+data/
+output/
+assets/stock/
+assets/fonts/
+video/node_modules/
+video/public/renders/
+.remotion/
+.claude/

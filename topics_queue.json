@@ -1,0 +1,769 @@
+{
+  "account": "@code_tho_samsaram",
+  "updated_at": "2026-11-04T14:30:14+00:00",
+  "items": [
+    {
+      "id": "seed-01-uibuild",
+      "topic": "Prompt to full React dashboard in 30 seconds (v0.dev)",
+      "keyword": "UIBUILD",
+      "keyword_spoken": "UI build",
+      "category": "ai_tool",
+      "hook": "STOP CODING DASHBOARDS",
+      "script": "Stop coding dashboards by hand. One prompt in v0 dot dev builds a full React dashboard in thirty seconds.",
+      "link": "https://v0.dev",
+      "code": {
+        "language": "tsx",
+        "filename": "dashboard.tsx",
+        "snippet": "// prompt: \"SaaS analytics dashboard, dark mode\"\nexport default function Dashboard() {\n  return (\n    <div className=\"grid grid-cols-3 gap-4 p-6\">\n      <StatCard title=\"Revenue\" value=\"$48.2k\" />\n      <StatCard title=\"Users\" value=\"12,904\" />\n      <StatCard title=\"Churn\" value=\"1.8%\" />\n      <RevenueChart className=\"col-span-3\" />\n    </div>\n  );\n}"
+      },
+      "stock_queries": [
+        "coding laptop dark",
+        "programmer typing night",
+        "neon technology"
+      ],
+      "hashtags": [
+        "#ai",
+        "#react",
+        "#coding",
+        "#developers",
+        "#vscode"
+      ],
+      "caption": "Prompt → full React dashboard in 30 seconds with v0.dev ⚡",
+      "source": "seed",
+      "status": "queued",
+      "created_at": "2026-11-02T00:00:00+00:00",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Stop coding dashboards by hand.",
+          "kicker": "AI TOOL"
+        },
+        {
+          "type": "browser",
+          "narration": "Type one prompt into v0 dot dev and it builds the whole dashboard.",
+          "transition": "zoom",
+          "data": {
+            "url": "v0.dev",
+            "prompt": "SaaS analytics dashboard, dark mode",
+            "mock": "dashboard"
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Real React code you can ship.",
+          "kicker": "GENERATED",
+          "transition": "slide-up",
+          "data": {
+            "title": "REAL REACT CODE",
+            "focus": [
+              4,
+              5,
+              6
+            ]
+          }
+        }
+      ],
+      "error": null,
+      "updated_at": "2026-11-04T14:30:14+00:00",
+      "video_path": null,
+      "rendered_at": null,
+      "day": null
+    },
+    {
+      "id": "seed-02-browser",
+      "topic": "This open-source repo automates your browser (browser-use)",
+      "keyword": "BROWSER",
+      "keyword_spoken": "browser",
+      "category": "repo",
+      "hook": "BROWSER ON AUTOPILOT",
+      "script": "This open source repo lets AI drive your browser. Browser use clicks, types and scrapes any site for you.",
+      "link": "https://github.com/browser-use/browser-use",
+      "code": {
+        "language": "python",
+        "filename": "agent.py",
+        "snippet": "import asyncio\nfrom browser_use import Agent, ChatOpenAI\n\nasync def main():\n    agent = Agent(\n        task=\"Find the top post on Hacker News\",\n        llm=ChatOpenAI(model=\"gpt-4.1-mini\"),\n    )\n    await agent.run()\n\nasyncio.run(main())"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "hacker dark room",
+        "robot technology"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#python",
+        "#ai",
+        "#developers"
+      ],
+      "caption": "browser-use lets an AI agent click, type and scrape any site for you 🤖",
+      "source": "seed",
+      "status": "queued",
+      "created_at": "2026-11-02T00:00:01+00:00",
+      "repo": {
+        "full_name": "browser-use/browser-use",
+        "description": "Make websites accessible for AI agents. Automate tasks online with ease.",
+        "pitch": "It lets an AI agent drive a real browser for you",
+        "language": "Python",
+        "install": "pip install browser-use",
+        "demo_code": {
+          "snippet": "import asyncio\nfrom browser_use import Agent, ChatOpenAI\n\nasync def main():\n    agent = Agent(\n        task=\"Find the top post on Hacker News\",\n        llm=ChatOpenAI(model=\"gpt-4.1-mini\"),\n    )\n    await agent.run()\n\nasyncio.run(main())",
+          "language": "python",
+          "filename": "agent.py",
+          "focus": [
+            5,
+            6
+          ]
+        },
+        "how": [
+          {
+            "icon": "💬",
+            "title": "You describe a task",
+            "detail": "\"find the top post on HN\"",
+            "cue": "describe"
+          },
+          {
+            "icon": "🧠",
+            "title": "An LLM reads the page",
+            "detail": "decides the next action",
+            "cue": "llm"
+          },
+          {
+            "icon": "🖱️",
+            "title": "The agent clicks & types",
+            "detail": "in a real Chrome browser",
+            "cue": "clicks"
+          },
+          {
+            "icon": "✅",
+            "title": "Task done",
+            "detail": "no Selenium scripts to write",
+            "cue": "done"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🧲",
+            "title": "Scrape any website",
+            "detail": "even JavaScript-heavy pages",
+            "cue": "scrape"
+          },
+          {
+            "icon": "📝",
+            "title": "Auto-fill forms",
+            "detail": "applications, signups, checkouts",
+            "cue": "auto"
+          },
+          {
+            "icon": "🧪",
+            "title": "Test your web app",
+            "detail": "end-to-end, in plain English",
+            "cue": "test"
+          }
+        ],
+        "narration": {
+          "hook": "This repo puts your browser on autopilot.",
+          "how": "Here's how it works. You describe a task in plain English. An LLM reads the page, and the agent clicks and types in a real browser until it's done.",
+          "demo": "Setup is one pip install and about ten lines of Python.",
+          "use_cases": "Use it to scrape any website, auto fill forms, or test your own web app."
+        }
+      },
+      "error": null,
+      "updated_at": "2026-11-04T14:30:14+00:00",
+      "video_path": null,
+      "rendered_at": null,
+      "day": null
+    },
+    {
+      "id": "seed-03-bitxor",
+      "topic": "Solve array duplicates in O(1) space with Bitwise XOR",
+      "keyword": "BITXOR",
+      "keyword_spoken": "bit X-O-R",
+      "category": "dsa",
+      "hook": "XOR KILLS DUPLICATES",
+      "script": "Skip the hash set. XOR every number. Pairs cancel to zero, and only the unique one is left.",
+      "link": "https://leetcode.com/problems/single-number/",
+      "code": {
+        "language": "python",
+        "filename": "single_number.py",
+        "snippet": "def single_number(nums):\n    x = 0\n    for n in nums:\n        x ^= n   # a ^ a = 0\n    return x"
+      },
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "caption": "Duplicates in O(1) space? XOR makes every pair cancel out 🧠",
+      "source": "seed",
+      "status": "queued",
+      "created_at": "2026-11-02T00:00:02+00:00",
+      "dsa": {
+        "trick": "xor_single"
+      },
+      "error": null,
+      "updated_at": "2026-11-04T14:30:14+00:00",
+      "video_path": null,
+      "rendered_at": null,
+      "day": null
+    },
+    {
+      "id": "seed-04-async",
+      "topic": "Stop using blocking loops in FastAPI (asyncio.gather)",
+      "keyword": "ASYNC",
+      "keyword_spoken": "async",
+      "category": "dev_tip",
+      "hook": "STOP BLOCKING LOOPS",
+      "script": "Stop awaiting requests one by one in FastAPI. Asyncio gather fires them all at the same time.",
+      "link": "https://docs.python.org/3/library/asyncio-task.html#asyncio.gather",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "@app.get(\"/feed\")\nasync def feed():\n    async with httpx.AsyncClient() as client:\n        # slow: for u in URLS: await client.get(u)\n        # fast: every request at the same time\n        res = await asyncio.gather(\n            *(client.get(u) for u in URLS)\n        )\n    return [r.json() for r in res]"
+      },
+      "stock_queries": [
+        "server room lights",
+        "coding laptop dark",
+        "fast city night"
+      ],
+      "hashtags": [
+        "#python",
+        "#fastapi",
+        "#coding",
+        "#developers",
+        "#backend"
+      ],
+      "caption": "One asyncio.gather and your FastAPI endpoint stops waiting in line 🏎️",
+      "source": "seed",
+      "status": "queued",
+      "created_at": "2026-11-02T00:00:03+00:00",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Stop blocking your FastAPI endpoint.",
+          "kicker": "PYTHON TIP"
+        },
+        {
+          "type": "compare",
+          "narration": "A loop runs three requests in three seconds. Gather runs them together in one.",
+          "kicker": "3 REQUESTS x 1s",
+          "transition": "zoom",
+          "data": {
+            "title": "LOOP VS GATHER",
+            "scale": 3,
+            "rows": [
+              {
+                "label": "for u in urls: await",
+                "color": "#f7768e",
+                "bars": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    1,
+                    2
+                  ],
+                  [
+                    2,
+                    3
+                  ]
+                ],
+                "total": "3.0s"
+              },
+              {
+                "label": "asyncio.gather(*reqs)",
+                "color": "#9ece6a",
+                "bars": [
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    0,
+                    1
+                  ],
+                  [
+                    0,
+                    1
+                  ]
+                ],
+                "total": "1.0s"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Just wrap the calls in asyncio gather.",
+          "kicker": "THE FIX",
+          "transition": "slide-up",
+          "data": {
+            "title": "ASYNCIO.GATHER",
+            "focus": [
+              5,
+              6,
+              7
+            ]
+          }
+        }
+      ],
+      "error": null,
+      "updated_at": "2026-11-04T14:30:14+00:00",
+      "video_path": null,
+      "rendered_at": null,
+      "style_used": {
+        "look": "terminal",
+        "hook": "glitch",
+        "captions": "neon",
+        "cta": "share",
+        "hookFont": "archivo",
+        "presenter": "dev"
+      },
+      "day": null
+    },
+    {
+      "id": "seed-05-website",
+      "topic": "Secret websites every software engineer needs (DevDocs.io)",
+      "keyword": "WEBSITE",
+      "keyword_spoken": "website",
+      "category": "website",
+      "hook": "BOOKMARK THIS NOW",
+      "script": "Every engineer needs this website. DevDocs puts hundreds of API docs in one search bar, even offline.",
+      "link": "https://devdocs.io",
+      "code": {
+        "language": "text",
+        "filename": "devdocs.io",
+        "snippet": "devdocs.io\n--------------------------------\n /  instant fuzzy search\n    python  react  go  rust\n    postgres  docker  css ...\n\n [x] hundreds of API docs\n [x] works offline\n [x] keyboard-first, no ads"
+      },
+      "stock_queries": [
+        "laptop web browsing night",
+        "developer workspace",
+        "minimal desk setup"
+      ],
+      "hashtags": [
+        "#webdev",
+        "#coding",
+        "#developers",
+        "#programming",
+        "#devtools"
+      ],
+      "caption": "DevDocs.io: every API doc you use, one search bar, works offline 📚",
+      "source": "seed",
+      "status": "queued",
+      "created_at": "2026-11-02T00:00:04+00:00",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Every engineer needs this website.",
+          "kicker": "BOOKMARK THIS"
+        },
+        {
+          "type": "browser",
+          "narration": "DevDocs puts hundreds of API docs behind one instant search, and it even works offline.",
+          "transition": "zoom",
+          "data": {
+            "url": "devdocs.io",
+            "query": "asyncio.gather",
+            "mock": "docs",
+            "bullets": [
+              "asyncio.gather()  ·  Python 3",
+              "asyncio.TaskGroup  ·  Python 3",
+              "Promise.all()  ·  JavaScript"
+            ]
+          }
+        }
+      ],
+      "error": null,
+      "updated_at": "2026-11-04T14:30:14+00:00",
+      "video_path": null,
+      "rendered_at": null,
+      "day": null
+    },
+    {
+      "id": "repo-40b1bb8d",
+      "topic": "agent-desktop: Computer use CLI for AI agents (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. agent desktop: Computer use CLI for AI agents. 3,791 new stars today.",
+      "link": "https://github.com/vercel-labs/agent-desktop",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# vercel-labs/agent-desktop\n# +3,791 stars today\n\ngit clone https://github.com/vercel-labs/agent-desktop.git\ncd agent-desktop\n\n# Computer use CLI for AI agents"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "agent-desktop is trending on GitHub 🔥 Computer use CLI for AI agents.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-04T05:45:01+00:00",
+      "meta": {
+        "stars_today": 3791,
+        "stars": 13281,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "vercel-labs/agent-desktop",
+        "description": "Computer use CLI for AI agents",
+        "stars": 13281,
+        "stars_today": 3791,
+        "language": "Rust",
+        "install": "npm install -g agent-desktop",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "npm install -g agent-desktop",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Computer use CLI for AI",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-db112699",
+      "topic": "Scrapling: The BEST Web Scraping framework that handles everything from a single request (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. Scrapling: The BEST Web Scraping framework that handles everything from a single request. 1,658 new stars today.",
+      "link": "https://github.com/D4Vinci/Scrapling",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# D4Vinci/Scrapling\n# +1,658 stars today\n\ngit clone https://github.com/D4Vinci/Scrapling.git\ncd Scrapling\n\n# The BEST Web Scraping framework\n# that handles everything from a\n# single request"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "Scrapling is trending on GitHub 🔥 The BEST Web Scraping framework that handles everything from a single request.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-04T05:44:59+00:00",
+      "meta": {
+        "stars_today": 1658,
+        "stars": 95224,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "D4Vinci/Scrapling",
+        "description": "The BEST Web Scraping framework that handles everything from a single request",
+        "stars": 95224,
+        "stars_today": 1658,
+        "language": "Python",
+        "install": "pip install \"scrapling[shell]\"",
+        "demo_code": {
+          "snippet": "from scrapling.fetchers import Fetcher\n\npage = Fetcher.get('https://quotes.toscrape.com/')\nquotes = page.css('.quote .text::text').getall()\nprint(quotes)",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install \"scrapling[shell]\"",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "from scrapling.fetchers import Fet",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The BEST Web Scraping framework",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "⚡",
+            "title": "Fetch & interact",
+            "detail": "Fast HTTP requests, stealth browsers",
+            "cue": "fetch"
+          },
+          {
+            "icon": "🔎",
+            "title": "Parse & extract",
+            "detail": "CSS, XPath, text and regex search, adaptive",
+            "cue": "parse"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Crawl & export",
+            "detail": "Concurrent spiders, proxy rotation, retries",
+            "cue": "crawl"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "aitool-4b34d08f",
+      "topic": "Interactive notes on RLHF: attention, LoRA and LLM evals",
+      "keyword": "AITOOL",
+      "keyword_spoken": "AI tool",
+      "category": "ai_tool",
+      "hook": "HIDDEN AI TOOL",
+      "script": "This AI tool is criminally underrated. Interactive notes on RLHF: attention, LoRA and LLM evals.",
+      "link": "https://concepts.laxmena.com/",
+      "code": {
+        "language": "javascript",
+        "filename": "ai-tool.js",
+        "snippet": "// hidden AI tool of the day\nconst tool = \"Interactive notes on RLHF\";\nconst site = \"concepts.laxmena.com\";\n\n// attention, LoRA and LLM evals\n\nawait tool.tryIt(); // link in DMs"
+      },
+      "stock_queries": [
+        "artificial intelligence",
+        "coding laptop dark",
+        "neon technology"
+      ],
+      "hashtags": [
+        "#ai",
+        "#aitools",
+        "#coding",
+        "#developers",
+        "#vscode"
+      ],
+      "caption": "Interactive notes on RLHF: attention, LoRA and LLM evals 🤖",
+      "source": "hacker_news",
+      "status": "queued",
+      "created_at": "2026-11-04T05:45:08+00:00",
+      "browser": {
+        "url": "concepts.laxmena.com",
+        "mock": "landing",
+        "headline": "Interactive notes on RLHF",
+        "bullets": [
+          "attention",
+          "LoRA",
+          "LLM evals"
+        ]
+      }
+    },
+    {
+      "id": "dsa-356d47dd",
+      "topic": "Sort colors in one pass, O(1) space (Dutch national flag)",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "ONE PASS SORT",
+      "script": "Use three pointers: low, mid and high. Zero? Swap it to low. One? Just move on. Two? Swap it to high. Done in one pass.",
+      "link": "https://leetcode.com/problems/sort-colors/",
+      "code": {
+        "language": "python",
+        "filename": "sort_colors.py",
+        "snippet": "def sort_colors(a):\n    lo = mid = 0\n    hi = len(a) - 1\n    while mid <= hi:\n        if a[mid] == 0:\n            a[lo], a[mid] = a[mid], a[lo]\n            lo += 1; mid += 1\n        elif a[mid] == 1:\n            mid += 1\n        else:\n            a[mid], a[hi] = a[hi], a[mid]\n            hi -= 1"
+      },
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "caption": "Sort colors in one pass, O(1) space (Dutch national flag) 🧠",
+      "source": "dsa_library",
+      "status": "queued",
+      "created_at": "2026-11-04T05:45:08+00:00",
+      "dsa": {
+        "trick": "dutch"
+      },
+      "error": null,
+      "updated_at": "2026-11-04T14:30:14+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "news",
+        "captions": "gradient",
+        "cta": "search",
+        "hookFont": "anton",
+        "presenter": "coder",
+        "camera": "breathe",
+        "grade": "vivid",
+        "overlay": "vhs",
+        "burst": "slash",
+        "music": "pad"
+      },
+      "day": null,
+      "video_path": null,
+      "rendered_at": null
+    },
+    {
+      "id": "dsa-84ee2d5e",
+      "topic": "Maximum subarray in O(1) space (Kadane's algorithm)",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "KADANE IN SECONDS",
+      "script": "Walk the array once. At each number, either extend the current run or start fresh, whichever is bigger. Keep the best sum you've seen. The answer is six.",
+      "link": "https://leetcode.com/problems/maximum-subarray/",
+      "code": {
+        "language": "python",
+        "filename": "kadane.py",
+        "snippet": "def max_subarray(nums):\n    best = cur = nums[0]\n    for n in nums[1:]:\n        cur = max(n, cur + n)\n        best = max(best, cur)\n    return best"
+      },
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "caption": "Maximum subarray in O(1) space (Kadane's algorithm) 🧠",
+      "source": "dsa_library",
+      "status": "queued",
+      "created_at": "2026-11-04T05:45:08+00:00",
+      "dsa": {
+        "trick": "kadane"
+      },
+      "style": null,
+      "updated_at": "2026-11-04T14:30:14+00:00",
+      "error": null,
+      "style_used": {
+        "look": "ocean",
+        "hook": "question",
+        "captions": "tape",
+        "cta": "share",
+        "hookFont": "archivo",
+        "presenter": "meera",
+        "camera": "drift",
+        "grade": "faded",
+        "overlay": "leaks",
+        "burst": "ring",
+        "music": "arp"
+      },
+      "day": null,
+      "video_path": null,
+      "rendered_at": null
+    },
+    {
+      "id": "repo-78da873c",
+      "topic": "kairos: Real time event intelligence, fraud and risk decisioning for financial behavior (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB IS CRAZY",
+      "script": "This GitHub repo is exploding. kairos: Real time event intelligence, fraud and risk decisioning for financial behavior. 123 stars already.",
+      "link": "https://github.com/finic-ai/kairos",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# finic-ai/kairos\n# 123 stars\n\ngit clone https://github.com/finic-ai/kairos.git\ncd kairos\n\n# Real time event intelligence,\n# fraud and risk decisioning for\n# financial behavior"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "kairos is trending on GitHub 🔥 Real time event intelligence, fraud and risk decisioning for financial behavior.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-04T05:57:20+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 123,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "finic-ai/kairos",
+        "description": "Real time event intelligence, fraud and risk decisioning for financial behavior",
+        "stars": 123,
+        "stars_today": null,
+        "language": "TypeScript",
+        "install": "git clone https://github.com/finic-ai/kairos",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone finic-ai/kairos",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Real time event intelligence, frau",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    }
+  ]
+}
