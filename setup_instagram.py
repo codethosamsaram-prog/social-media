@@ -19,6 +19,7 @@ import os
 import shutil
 import subprocess
 import sys
+import time
 from pathlib import Path
 
 import httpx
@@ -32,11 +33,17 @@ HOST_FB = "https://graph.facebook.com/v23.0"
 
 def get(path: str, host: str = HOST, **params: str) -> dict:
     """Errors are reduced to Meta's message: an httpx exception would include the token in its URL."""
-    try:
-        resp = httpx.get(f"{host}/{path}", params=params, timeout=30)
-        data = resp.json()
-    except (httpx.HTTPError, ValueError) as exc:
-        return {"error": {"message": type(exc).__name__}}
+    for attempt in range(5):
+        try:
+            resp = httpx.get(f"{host}/{path}", params=params, timeout=30)
+            data = resp.json()
+            break
+        except httpx.TransportError as exc:  # connection drops to Meta are common and short-lived
+            if attempt == 4:
+                return {"error": {"message": f"{type(exc).__name__}, check your internet connection and retry"}}
+            time.sleep(3 * (attempt + 1))
+        except (httpx.HTTPError, ValueError) as exc:
+            return {"error": {"message": type(exc).__name__}}
     return data if resp.status_code < 400 else {"error": data.get("error") or {"message": f"HTTP {resp.status_code}"}}
 
 
