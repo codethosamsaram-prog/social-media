@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Refresh and store
         run: |
+          # Facebook System User tokens (EAA...) can be set to never expire and have no refresh endpoint.
+          case "$OLD_TOKEN" in EAA*) echo "Facebook-type token: nothing to refresh"; exit 0 ;; esac
           resp=$(curl -sS -G https://graph.instagram.com/refresh_access_token \
             --data-urlencode grant_type=ig_refresh_token \
             --data-urlencode "access_token=$OLD_TOKEN")
