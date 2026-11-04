@@ -199,6 +199,17 @@ Add the secrets under **Settings → Secrets and variables → Actions**: `INSTA
 
 Live at https://code-tho-samsaram.vercel.app (project `code-tho-samsaram`). `npx vercel deploy --prod --yes`. `config.SERVERLESS` (the `VERCEL` env var) moves runtime state to `/tmp` and sends DMs inline in the webhook request. `DASHBOARD_TOKEN`/`VERIFY_TOKEN` are Vercel production env vars; a local copy is in `.deploy-secrets`. The dashboard API takes the token as the `X-Dashboard-Token` header or `?token=`.
 
+## Going live (free path: Vercel + GitHub Actions)
+
+Chosen over Render because Vercel's free plan doesn't sleep and the webhook already works there. Use a public GitHub repo for unlimited Actions minutes.
+
+1. Put the Instagram values in `.env` (the list is at the top of `setup_instagram.py`), then run `python setup_instagram.py --push owner/repo`. It upgrades the token and stores secrets in Vercel and GitHub without printing them.
+2. Connect Vercel to the repo (`npx vercel git connect`) so each queue commit redeploys the dashboard and keyword map.
+3. Meta callback URL: `https://code-tho-samsaram.vercel.app/webhook`, verify token: `VERIFY_TOKEN`, field: `comments`.
+4. `refresh-token.yml` renews the token weekly (needs the `GH_PAT` secret; `VERCEL_TOKEN` also updates Vercel).
+
+`process_topic` refuses to publish without credentials before touching the item, and a failed reel goes back to `queued` until its third attempt (`MAX_ATTEMPTS`).
+
 ## Conventions
 
 - All queue writes go through `topic_fetcher` (`append_items`, `update_item`, `delete_item`). These hold a lock and replace the file atomically. Never write `topics_queue.json` by hand while the server is running.
