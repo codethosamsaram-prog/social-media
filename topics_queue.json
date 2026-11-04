@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-04T14:30:14+00:00",
+  "updated_at": "2026-11-04T18:14:55+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -63,11 +63,25 @@
           }
         }
       ],
-      "error": null,
-      "updated_at": "2026-11-04T14:30:14+00:00",
-      "video_path": null,
-      "rendered_at": null,
-      "day": null
+      "error": "Unexpected tmpfiles.org response: https://tmpfiles.org/wmAHoH8mUgc1/reel.mp4",
+      "updated_at": "2026-11-04T18:14:55+00:00",
+      "video_path": "output/seed-01-uibuild/reel.mp4",
+      "rendered_at": "2026-11-04T18:14:53+00:00",
+      "day": 1,
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "kinetic",
+        "captions": "bounce",
+        "cta": "search",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "breathe",
+        "grade": "cool",
+        "overlay": "letterbox",
+        "burst": "rays",
+        "music": "bell"
+      },
+      "attempts": 1
     },
     {
       "id": "seed-02-browser",
@@ -763,6 +777,202 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
+      }
+    },
+    {
+      "id": "repo-8ac19897",
+      "topic": "auto-ontology: Auto Ontology is a Python framework for building semantic, graph-based reasoning layers (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. auto ontology: Auto Ontology is a Python framework for building semantic, graph-based reasoning layers. 2,053 new stars today.",
+      "link": "https://github.com/NVIDIA/auto-ontology",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# NVIDIA/auto-ontology\n# +2,053 stars today\n\ngit clone https://github.com/NVIDIA/auto-ontology.git\ncd auto-ontology\n\n# Auto Ontology is a Python\n# framework for building semantic,\n# graph-based reasoning layers"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "auto-ontology is trending on GitHub 🔥 Auto Ontology is a Python framework for building semantic, graph-based reasoning layers.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-04T18:11:49+00:00",
+      "meta": {
+        "stars_today": 2053,
+        "stars": 4450,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "NVIDIA/auto-ontology",
+        "description": "Auto Ontology is a Python framework for building semantic, graph-based reasoning layers",
+        "stars": 4450,
+        "stars_today": 2053,
+        "language": "Python",
+        "install": "git clone https://github.com/NVIDIA/auto-ontology",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone NVIDIA/auto-ontology",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Auto Ontology is a Python",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "📊",
+            "title": "Discover. Generate an ontology",
+            "detail": "",
+            "cue": "discover."
+          },
+          {
+            "icon": "🤖",
+            "title": "Ground. Give agents one",
+            "detail": "",
+            "cue": "ground."
+          },
+          {
+            "icon": "🛠️",
+            "title": "Certify. Review, edit",
+            "detail": "",
+            "cue": "certify."
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "aitool-27a269c7",
+      "topic": "Uncracked City: detective game where you question LLM suspects that lie",
+      "keyword": "AITOOL",
+      "keyword_spoken": "AI tool",
+      "category": "ai_tool",
+      "hook": "THIS FEELS ILLEGAL",
+      "script": "This AI tool is criminally underrated. Uncracked City: detective game where you question LLM suspects that lie.",
+      "link": "https://uncracked.city",
+      "code": {
+        "language": "javascript",
+        "filename": "ai-tool.js",
+        "snippet": "// hidden AI tool of the day\nconst tool = \"Uncracked City\";\nconst site = \"uncracked.city\";\n\n// detective game where you question\n// LLM suspects that lie\n\nawait tool.tryIt(); // link in DMs"
+      },
+      "stock_queries": [
+        "artificial intelligence",
+        "coding laptop dark",
+        "neon technology"
+      ],
+      "hashtags": [
+        "#ai",
+        "#aitools",
+        "#coding",
+        "#developers",
+        "#vscode"
+      ],
+      "caption": "Uncracked City: detective game where you question LLM suspects that lie 🤖",
+      "source": "hacker_news",
+      "status": "queued",
+      "created_at": "2026-11-04T18:13:00+00:00",
+      "browser": {
+        "url": "uncracked.city",
+        "mock": "landing",
+        "headline": "Uncracked City",
+        "bullets": [
+          "detective game where you question LLM"
+        ]
+      }
+    },
+    {
+      "id": "dsa-61238ed1",
+      "topic": "Power of two in O(1) with one bitwise AND",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "ONE LINE CHECK",
+      "script": "A power of two has exactly one set bit. Subtract one and every bit below it flips. AND them together and you get zero. Six fails the test.",
+      "link": "https://leetcode.com/problems/power-of-two/",
+      "code": {
+        "language": "python",
+        "filename": "power_of_two.py",
+        "snippet": "def is_power_of_two(n: int) -> bool:\n    return n > 0 and n & (n - 1) == 0"
+      },
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "caption": "Power of two in O(1) with one bitwise AND 🧠",
+      "source": "dsa_library",
+      "status": "queued",
+      "created_at": "2026-11-04T18:13:00+00:00",
+      "dsa": {
+        "trick": "pow2"
+      }
+    },
+    {
+      "id": "dsa-f42aca0e",
+      "topic": "Reverse a linked list in place, O(1) space",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "THREE POINTERS ONLY",
+      "script": "Keep three pointers: previous, current and next. Flip one arrow per step, then move everything forward. When current hits null, previous is your new head.",
+      "link": "https://leetcode.com/problems/reverse-linked-list/",
+      "code": {
+        "language": "python",
+        "filename": "reverse_list.py",
+        "snippet": "def reverse(head):\n    prev, curr = None, head\n    while curr:\n        nxt = curr.next\n        curr.next = prev\n        prev, curr = curr, nxt\n    return prev"
+      },
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "caption": "Reverse a linked list in place, O(1) space 🧠",
+      "source": "dsa_library",
+      "status": "queued",
+      "created_at": "2026-11-04T18:13:00+00:00",
+      "dsa": {
+        "trick": "reverse"
       }
     }
   ]
