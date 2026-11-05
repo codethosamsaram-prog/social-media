@@ -45,7 +45,7 @@ import numpy as np
 
 import storyboard as sb
 import topic_fetcher as tq
-from check_token import publish_problem
+from check_token import _get, publish_problem
 from config import settings
 
 Log = Callable[[str], None]
@@ -856,9 +856,25 @@ def next_for(category: str | None) -> dict[str, Any] | None:
                           permalink=None, published_at=None)
 
 
+def skip_already_posted(item: dict[str, Any] | None, category: str | None, log: Log) -> dict[str, Any] | None:
+    """Never post a reel twice: if its queue update was lost, Instagram still shows the post.
+    The cap stops a rerun of an old reel from looping when everything left is recent."""
+    recent = [m.get("caption") or "" for m in _get(f"{settings.graph_base}/{settings.instagram_user_id}/media",
+                                                   fields="caption", limit="25").get("data", [])]
+    for _ in range(5):
+        if not item or not any((item.get("caption") or item["topic"]) in c for c in recent):
+            return item
+        log(f"'{item['id']}' is already on Instagram: marking it published and taking the next reel")
+        tq.update_item(item["id"], status="published", published_at=tq.now_iso())
+        item = next_for(category)
+    return item
+
+
 def process_topic(item_id: str | None = None, publish: bool = True, log: Log = print,
                   category: str | None = None) -> dict[str, Any] | None:
     item = tq.get_item(item_id) if item_id else next_for(category)
+    if publish and not item_id:
+        item = skip_already_posted(item, category, log)
     if not item:
         log("Queue is empty" if not item_id else f"No queue item '{item_id}'")
         return None

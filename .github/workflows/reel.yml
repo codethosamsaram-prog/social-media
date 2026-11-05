@@ -43,7 +43,11 @@ jobs:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       WHISPER_MODEL: base
     steps:
+      # By default a run checks out the commit from when it was triggered. A run that waited for the
+      # concurrency lock would then see an old queue and post the reel that just went up.
       - uses: actions/checkout@v4
+        with:
+          ref: main
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
