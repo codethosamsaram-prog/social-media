@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-05T09:48:45+00:00",
+  "updated_at": "2026-11-05T12:47:08+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -293,7 +293,7 @@
       ],
       "caption": "One asyncio.gather and your FastAPI endpoint stops waiting in line 🏎️",
       "source": "seed",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-02T00:00:03+00:00",
       "storyboard": [
         {
@@ -367,18 +367,27 @@
         }
       ],
       "error": null,
-      "updated_at": "2026-11-04T14:30:14+00:00",
-      "video_path": null,
-      "rendered_at": null,
+      "updated_at": "2026-11-05T12:47:08+00:00",
+      "video_path": "output/seed-04-async/reel.mp4",
+      "rendered_at": "2026-11-05T12:46:34+00:00",
       "style_used": {
-        "look": "terminal",
-        "hook": "glitch",
+        "look": "bokeh",
+        "hook": "question",
         "captions": "neon",
-        "cta": "share",
-        "hookFont": "archivo",
-        "presenter": "dev"
+        "cta": "triple",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "handheld",
+        "grade": "faded",
+        "overlay": "vhs",
+        "burst": "rays",
+        "music": "keys"
       },
-      "day": null
+      "day": 2,
+      "published_at": "2026-11-05T12:47:08+00:00",
+      "ig_media_id": "17915452674472569",
+      "permalink": "https://www.instagram.com/reel/DfXEI6DHRHj/",
+      "container_id": "18099338060176838"
     },
     {
       "id": "seed-05-website",
@@ -1369,6 +1378,76 @@
         "bullets": [
           "Open-weight state of the art model"
         ]
+      }
+    },
+    {
+      "id": "repo-5d26c060",
+      "topic": "TScert: TScert: a sound core for TypeScript (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STAR THIS NOW",
+      "script": "This GitHub repo is exploding. TScert: TScert: a sound core for TypeScript. 111 stars already.",
+      "link": "https://github.com/cristianoc/TScert",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# cristianoc/TScert\n# 111 stars\n\ngit clone https://github.com/cristianoc/TScert.git\ncd TScert\n\n# TScert: a sound core for\n# TypeScript"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "TScert is trending on GitHub 🔥 TScert: a sound core for TypeScript.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-05T12:43:59+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 111,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "cristianoc/TScert",
+        "description": "TScert: a sound core for TypeScript",
+        "stars": 111,
+        "stars_today": null,
+        "language": "TypeScript",
+        "install": "git clone https://github.com/cristianoc/TScert",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone cristianoc/TScert",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "TScert: a sound core for",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
       }
     }
   ]
