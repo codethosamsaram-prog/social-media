@@ -1,6 +1,6 @@
 """Should this tick post a reel? Compares what is due by now (IST) with what actually went up today.
 
-GitHub runs this every 30 minutes. Late or dropped schedules and failed runs therefore fix themselves:
+GitHub runs this every 15 minutes. Late or dropped schedules and failed runs therefore fix themselves:
 the next tick sees the shortfall and posts. Writes go=true|false and kind=dev|hiring to GITHUB_OUTPUT.
 """
 

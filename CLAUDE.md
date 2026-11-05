@@ -13,7 +13,7 @@ Faceless Instagram Reels engine for the **@code_tho_samsaram** account. Niche: A
 | `auto_pipeline.py` | Render orchestrator: storyboard → edge-tts → Whisper → sound design → Remotion. Also the Meta publisher. |
 | `check_token.py` | Can the stored token still publish, and when does it run out? Runs before each render and daily in `token-check.yml`. |
 | `hiring.py` | Daily "hiring in India" reel: top 3 companies by fresh India engineering openings, from public Greenhouse/Lever/Ashby boards. |
-| `.github/workflows/reel.yml` | Wakes every 30 minutes; posts only when `slot_gate.py` says today is behind. |
+| `.github/workflows/reel.yml` | Wakes every 15 minutes; posts only when `slot_gate.py` says today is behind. |
 | `slot_gate.py` | The 6 slots (IST 08,11,**13 hiring**,15,18,21). Compares what is due with what is on Instagram, so missed runs fix themselves. |
 | `video/` | Remotion (React) project that renders 1080×1920 motion graphics from `output/<id>/props.json`. |
 | `main.py` | FastAPI app: Meta webhook, auto-DM worker, dashboard REST API, WebSocket log stream. |
@@ -193,7 +193,7 @@ Free-tier caveats:
 
 ## Render + publish with GitHub Actions (free)
 
-The workflow lives in `.github/workflows/reel.yml`: 5 dev reels + 1 hiring reel a day. It ticks every 30 minutes and `slot_gate.py` decides whether a reel is due, catching up one reel per tick within the same IST day. A run that posts discovers (`topic_fetcher.py --limit 2`, or `hiring.py` for the hiring reel; failure here is not fatal), renders + publishes (`auto_pipeline.py [--category hiring]`), then commits `topics_queue.json` back. No hiring reel falls back to a dev reel, and an empty queue reruns the oldest published dev reel.
+The workflow lives in `.github/workflows/reel.yml`: 5 dev reels + 1 hiring reel a day. It ticks every 15 minutes and `slot_gate.py` decides whether a reel is due, catching up one reel per tick within the same IST day. A run that posts discovers (`topic_fetcher.py --limit 2`, or `hiring.py` for the hiring reel; failure here is not fatal), renders + publishes (`auto_pipeline.py [--category hiring]`), then commits `topics_queue.json` back. No hiring reel falls back to a dev reel, and an empty queue reruns the oldest published dev reel.
 
 Add the secrets under **Settings → Secrets and variables → Actions**: `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_USER_ID`, optional `PEXELS_API_KEY`, `GEMINI_API_KEY`, `GOOGLE_SEARCH_API_KEY`, `GOOGLE_SEARCH_CX`.
 

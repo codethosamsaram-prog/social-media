@@ -1,11 +1,11 @@
 name: reel-pipeline
 
 # 6 posts a day (IST): 5 dev reels + 1 "hiring in India" reel from 13:00. Slots are in slot_gate.py.
-# This wakes every 30 minutes and posts only if today is behind, so a late or dropped GitHub schedule
+# This wakes every 15 minutes and posts only if today is behind, so a late or dropped GitHub schedule
 # or a failed run is made up by the next tick. A tick with nothing to do ends in seconds.
 on:
   schedule:
-    - cron: "7,37 2-18 * * *"     # 07:37 to 00:07 IST
+    - cron: "2,17,32,47 2-18 * * *"     # about 07:32 to 00:17 IST; dense because GitHub runs some late and skips others
   workflow_dispatch:
     inputs:
       item_id:

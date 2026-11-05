@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Tell the owner something broke by opening an issue assigned to them (GitHub emails it). Only one stays
-# open per problem, because a run every 30 minutes would otherwise send an email every 30 minutes.
+# open per problem, because a run every 15 minutes would otherwise send an email every 15 minutes.
 # It closes itself on recovery, so the next failure emails again. Needs GH_TOKEN and issues: write.
 # Usage: alert-issue.sh "title" "body"   |   alert-issue.sh --clear "title"
 set -euo pipefail
