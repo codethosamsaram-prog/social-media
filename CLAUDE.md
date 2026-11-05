@@ -52,14 +52,14 @@ Runtime folders (git-ignore them): `.env`, `data/` (webhook state), `output/` (r
 
 ## Reel spec (enforced in code)
 
-- **Length per category** (`storyboard.LENGTHS`): `dsa` and `repo` run 20–32 s; everything else 7–12 s.
+- **Length per category** (`storyboard.LENGTHS`): `dsa` and `repo` run 20–34 s; `hiring` 14–26 s; everything else 7–12 s.
   `voice_scenes` synthesizes every scene, and if the reel runs long it raises the speaking rate (from `+15%`, max `+40%`), scaled by how much *speech* must go (padding and `MIN_DUR` don't shrink). Still too long → optional scenes are dropped. Too short → stretchable scenes grow.
 - **Formats:** `dsa` hook → problem → naive (O(n) stamp) → animated trace → code → CTA. `repo` hook → repo card → how it works → setup demo → use cases → CTA. Others hook → browser/compare/code → CTA. A queue item can carry an explicit `storyboard` list to hand-author a reel.
 - **3-word hook** first; `validate_item` rejects other hook lengths. Captions are hidden on hook and CTA scenes.
 - **Captions:** karaoke words timed to Whisper timestamps, aligned back to the script text (`align_to_script`).
 - **Audio:** the hook is voice only (user disliked per-word hits: the "dum dum dum"). A drumless bed (or `assets/music/*`) fades in after the hook, ducked to 25 % under the voice. Whoosh on every cut, bright snaps on stamps, typing clicks, per-step ticks, a riser into the CTA. No sound has a sub-bass thump.
 - **Editing:** every reel draws one option per axis in `storyboard.AXES`. `storyboard.emphasis` marks stressed words; the camera moves on them, strong ones also fire a burst. The camera is scaled to 35 % on full-width layouts so it never crops them. Avatars are soft 3D-style human characters in SVG (`Presenter.tsx`), never robots or flat cartoons (user's rule), with mouth shapes from word timings.
-- **DSA script:** always opens "Day N. Imagine you get this question in your interview." (`storyboard.interview_opening`), then goes straight into the problem and explanation.
+- **Spoken opening (user's rule, every reel):** the interesting line first, then "Day N." (`storyboard.spoken_opening`). DSA continues "Imagine you get this question in your interview.", then goes straight into the problem and explanation.
 - **Day N** badge at the top and "Day N" in the caption; Day 1 = `DAY_ONE` (2026-11-04, IST). No progress bar at the bottom (user asked to remove it).
 - **Styles** (`storyboard.pick_style`): weighted-random per axis (look, hook, captions, cta, hookFont, presenter), never repeating the previous reel's choice, weighted by `learned_weights` from Insights (`engagement_score`: likes + 3·comments + 4·shares + 3·saves per view). Chosen style is saved as `style_used`; `style` on an item pins axes. Hiring reels always use the `triple` (follow/like/comment) ending.
 - **Exactly 5 hashtags.** `validate_item` pads or truncates.

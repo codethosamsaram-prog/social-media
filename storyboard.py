@@ -572,14 +572,17 @@ def from_spec(item: dict[str, Any], handle: str) -> list[Scene]:
     return scenes
 
 
-def interview_opening(hook: Scene, day: int | None) -> None:
-    """Every DSA reel opens the same way (user's rule): the day number, then the interview framing.
-    The problem scene follows straight on, so the explanation starts right after this line."""
-    hook.narration = (f"Day {day}. " if day else "") + "Imagine you get this question in your interview."
-    hook.kicker = "CAN YOU SOLVE IT?"
-    hook.data["words"] = ([f"DAY {day}"] if day else []) + ["INTERVIEW", "QUESTION"]
-    # "question" is spoken before "interview", so INTERVIEW lands on "Imagine" to keep the title reading in order.
-    hook.data["cues"] = ([["day"]] if day else []) + [["imagin"], ["quest"]]
+def spoken_opening(hook: Scene, day: int | None, is_dsa: bool) -> None:
+    """User's rule for every reel: open on the interesting line, then say the day number.
+    DSA adds the interview framing, and the problem scene follows straight on."""
+    line = hook.narration.strip()
+    if line and line[-1] not in ".!?":
+        line += "."
+    parts = [line, f"Day {day}." if day else ""]
+    if is_dsa:
+        parts.append("Imagine you get this question in your interview.")
+        hook.kicker = "CAN YOU SOLVE IT?"
+    hook.narration = " ".join(p for p in parts if p)
 
 
 def build(item: dict[str, Any], handle: str) -> list[Scene]:
@@ -593,8 +596,8 @@ def build(item: dict[str, Any], handle: str) -> list[Scene]:
         scenes = hiring_storyboard(item, handle)
     else:
         scenes = generic_storyboard(item, handle)
-    if item["category"] == "dsa" and scenes[0].type == "hook":
-        interview_opening(scenes[0], item.get("_day"))
+    if scenes[0].type == "hook":
+        spoken_opening(scenes[0], item.get("_day"), item["category"] == "dsa")
     order =(item.get("_style") or {}).get("transitions") or TRANSITIONS
     for i, s in enumerate(scenes):
         # The style's shuffled order wins over format defaults; a hand-authored storyboard keeps its own.
