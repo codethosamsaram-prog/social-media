@@ -45,6 +45,7 @@ import numpy as np
 
 import storyboard as sb
 import topic_fetcher as tq
+from check_token import publish_problem
 from config import settings
 
 Log = Callable[[str], None]
@@ -851,7 +852,9 @@ def process_topic(item_id: str | None = None, publish: bool = True, log: Log = p
         return None
     # Fail before touching the item: otherwise a missing token uses up the queue without posting.
     if publish:
-        settings.require("instagram_access_token", "instagram_user_id")
+        problem = publish_problem()  # a dead token must not burn a render and one of the reel's attempts
+        if problem:
+            raise RuntimeError(problem)
     item = tq.validate_item(item)
     tq.update_item(item["id"], status="rendering", error=None)
     try:

@@ -117,7 +117,7 @@ def make_dm_token(token: str, secret: str) -> int:
 
 
 def push_dm() -> int:
-    """Vercel only: GitHub keeps the never-expiring System User token for posting."""
+    """Vercel only: --push-posting decides what GitHub posts with."""
     page_token = os.environ.get("PAGE_ACCESS_TOKEN", "").strip()
     page_id = os.environ.get("FACEBOOK_PAGE_ID", "").strip()
     if not page_token or not page_id:
@@ -130,10 +130,39 @@ def push_dm() -> int:
     return 0 if ok else 1
 
 
+def unusable_for_posting(token: str, secret: str) -> str | None:
+    """Unattended posting needs a token Meta confirms is valid and never expires. An unknown answer is a no."""
+    info = token_info(token, secret)
+    if not info.get("is_valid"):
+        return "it is invalid or expired, or Meta could not confirm it"
+    if info.get("expires_at") != 0:
+        return "it expires, so posting would stop when it does"
+    return None
+
+
+def push_posting(repo: str, uid: str, secret: str) -> int:
+    """GitHub only: post with the Page token after proving it can publish."""
+    token = os.environ.get("PAGE_ACCESS_TOKEN", "").strip()
+    if not token:
+        print("Run --dm-token first")
+        return 1
+    reason = unusable_for_posting(token, secret)
+    if reason:
+        print(f"Refusing to store this token: {reason}.")
+        return 1
+    limit = get(f"{uid}/content_publishing_limit", HOST_FB, access_token=token)
+    if "error" in limit:
+        print(f"Token cannot publish: {limit['error'].get('message')}")
+        return 1
+    return 0 if store(["gh", "secret", "set", "INSTAGRAM_ACCESS_TOKEN", "--repo", repo], token,
+                      "GitHub INSTAGRAM_ACCESS_TOKEN (Page token)") else 1
+
+
 def facebook_token(args: argparse.Namespace, token: str, uid: str, secret: str) -> int:
     """Facebook Login (EAA...) tokens only count if they can reach the Instagram account they will post to."""
-    if args.push and token_info(token, secret).get("expires_at", 0) != 0:
-        print("Refusing to store this token: it expires, and it would replace the never-expiring posting token.")
+    reason = unusable_for_posting(token, secret) if args.push else None
+    if reason:
+        print(f"Refusing to store this token: {reason}.")
         return 1
     if not uid.isdigit():
         pages = get("me/accounts", HOST_FB, fields="instagram_business_account{id,username}", access_token=token)
@@ -166,6 +195,7 @@ def main() -> int:
     parser.add_argument("--push-infra", metavar="OWNER/REPO", help="store only the non-Instagram secrets, then stop")
     parser.add_argument("--dm-token", action="store_true", help="turn a user token into a Page token for DMs, in .env")
     parser.add_argument("--push-dm", action="store_true", help="store the Page token and Page ID in Vercel only")
+    parser.add_argument("--push-posting", metavar="OWNER/REPO", help="check the Page token, then post with it from GitHub")
     args = parser.parse_args()
 
     if args.push_infra:
@@ -178,6 +208,8 @@ def main() -> int:
     token = os.environ.get("INSTAGRAM_ACCESS_TOKEN", "").strip()
     uid = os.environ.get("INSTAGRAM_USER_ID", "").strip()
     secret = os.environ.get("INSTAGRAM_APP_SECRET", "").strip()
+    if args.push_posting:
+        return push_posting(args.push_posting, uid, secret)
     if args.dm_token:
         return make_dm_token(token, secret)
     if not token or not uid:

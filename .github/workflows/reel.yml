@@ -26,6 +26,7 @@ on:
 
 permissions:
   contents: write
+  issues: write
 
 concurrency: reel-pipeline
 
@@ -130,3 +131,9 @@ jobs:
           name: reels-${{ github.run_id }}
           path: output/*/reel.mp4
           retention-days: 7
+
+      - name: Alert on failure
+        if: failure() && github.event.inputs.dry_run != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash .github/alert-issue.sh "Reel run failed" "A $KIND reel did not post. The log shows why."

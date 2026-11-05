@@ -11,6 +11,7 @@ Faceless Instagram Reels engine for the **@code_tho_samsaram** account. Niche: A
 | `topic_fetcher.py` | Topic Discovery Engine and the queue store (load/save/update/append with atomic writes). |
 | `storyboard.py` | Turns a queue item into narrated, timed scenes per category (DSA traces run the real algorithm). |
 | `auto_pipeline.py` | Render orchestrator: storyboard → edge-tts → Whisper → sound design → Remotion. Also the Meta publisher. |
+| `check_token.py` | Can the stored token still publish, and when does it run out? Runs before each render and daily in `token-check.yml`. |
 | `hiring.py` | Daily "hiring in India" reel: top 3 companies by fresh India engineering openings, from public Greenhouse/Lever/Ashby boards. |
 | `.github/workflows/reel.yml` | 6 posts/day (IST 08,11,**13 hiring**,15,18,21). Gated on `DAY_ONE`. |
 | `video/` | Remotion (React) project that renders 1080×1920 motion graphics from `output/<id>/props.json`. |
@@ -208,7 +209,9 @@ Chosen over Render because Vercel's free plan doesn't sleep and the webhook alre
 3. Meta callback URL: `https://code-tho-samsaram.vercel.app/webhook`, verify token: `VERIFY_TOKEN`, field: `comments`.
 4. `refresh-token.yml` renews `IGAA` tokens weekly (needs the `GH_PAT` secret; `VERCEL_TOKEN` also updates Vercel) and skips `EAA` tokens.
 
-Two tokens are in use: GitHub holds a never-expiring System User token for posting, and Vercel holds a never-expiring Page token for DMs (`setup_instagram.py --dm-token`, then `--push-dm`). DMs go to `/{instagram-id}/messages`. They need **Allow access to messages** on in the Instagram app, and App Review before they reach accounts without a role on the app.
+The never-expiring Page token does both jobs: GitHub posts with it (`setup_instagram.py --push-posting owner/repo`, which refuses anything that isn't valid, permanent and able to publish) and Vercel sends DMs with it (`--dm-token`, then `--push-dm`). `INSTAGRAM_ACCESS_TOKEN` in `.env` is only an input to `--dm-token`, and usually short-lived. Its data access still has an end date, about 90 days out.
+
+A bad token raises an alert instead of losing a day: `token-check.yml` runs at 06:00 IST, failed reel runs do the same, and both open a GitHub issue assigned to the owner (`.github/alert-issue.sh`). The pipeline checks the token before rendering, so a dead one costs no render and none of the reel's attempts. DMs go to `/{instagram-id}/messages`. They need **Allow access to messages** on in the Instagram app, and App Review before they reach accounts without a role on the app.
 
 `process_topic` refuses to publish without credentials before touching the item, and a failed reel goes back to `queued` until its third attempt (`MAX_ATTEMPTS`).
 

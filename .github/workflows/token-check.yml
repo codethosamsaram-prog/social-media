@@ -1,0 +1,39 @@
+name: token-check
+
+# Runs before the first reel of the day (08:00 IST), leaving time to fix a bad token.
+on:
+  schedule:
+    - cron: "30 0 * * *"     # 06:00 IST
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - run: pip install -q httpx
+      - name: Check Instagram token
+        id: check
+        env:
+          INSTAGRAM_ACCESS_TOKEN: ${{ secrets.INSTAGRAM_ACCESS_TOKEN }}
+          INSTAGRAM_USER_ID: ${{ secrets.INSTAGRAM_USER_ID }}
+        run: |
+          set +e
+          result=$(python check_token.py); code=$?
+          echo "$result"
+          { echo "result<<RESULT_END"; echo "$result"; echo "RESULT_END"; } >> "$GITHUB_OUTPUT"
+          exit $code
+      - name: Alert
+        if: failure()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RESULT: ${{ steps.check.outputs.result }}
+        run: bash .github/alert-issue.sh "Instagram token needs attention" "$RESULT"
