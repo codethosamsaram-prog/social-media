@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-05T13:43:35+00:00",
+  "updated_at": "2026-11-05T16:02:52+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -417,7 +417,7 @@
       ],
       "caption": "DevDocs.io: every API doc you use, one search bar, works offline 📚",
       "source": "seed",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-02T00:00:04+00:00",
       "storyboard": [
         {
@@ -442,10 +442,27 @@
         }
       ],
       "error": null,
-      "updated_at": "2026-11-04T14:30:14+00:00",
-      "video_path": null,
-      "rendered_at": null,
-      "day": null
+      "updated_at": "2026-11-05T16:02:52+00:00",
+      "video_path": "output/seed-05-website/reel.mp4",
+      "rendered_at": "2026-11-05T16:02:15+00:00",
+      "day": 2,
+      "style_used": {
+        "look": "retrosun",
+        "hook": "split",
+        "captions": "tape",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "zoya",
+        "camera": "breathe",
+        "grade": "none",
+        "overlay": "letterbox",
+        "burst": "slash",
+        "music": "lofi"
+      },
+      "published_at": "2026-11-05T16:02:52+00:00",
+      "ig_media_id": "17905055199603733",
+      "permalink": "https://www.instagram.com/reel/DfXaiUjiBH3/",
+      "container_id": "18099385895176838"
     },
     {
       "id": "repo-40b1bb8d",
@@ -1372,6 +1389,146 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "TScert: a sound core for",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-76608378",
+      "topic": "skills: Skills for Real Engineers (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. skills: Skills for Real Engineers. 2,053 new stars today.",
+      "link": "https://github.com/mattpocock/skills",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# mattpocock/skills\n# +2,053 stars today\n\ngit clone https://github.com/mattpocock/skills.git\ncd skills\n\n# Skills for Real Engineers"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "skills is trending on GitHub 🔥 Skills for Real Engineers.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-05T15:58:32+00:00",
+      "meta": {
+        "stars_today": 2053,
+        "stars": 314582,
+        "language": "Shell"
+      },
+      "repo": {
+        "full_name": "mattpocock/skills",
+        "description": "Skills for Real Engineers",
+        "stars": 314582,
+        "stars_today": 2053,
+        "language": "Shell",
+        "install": "git clone https://github.com/mattpocock/skills",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone mattpocock/skills",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Skills for Real Engineers",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-ec9a31b7",
+      "topic": "MoneyPrinterTurbo: AI Generate HD short videos from a topic or keyword with an (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. MoneyPrinterTurbo: AI Generate HD short videos from a topic or keyword with an. 1,056 new stars today.",
+      "link": "https://github.com/harry0703/MoneyPrinterTurbo",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# harry0703/MoneyPrinterTurbo\n# +1,056 stars today\n\ngit clone https://github.com/harry0703/MoneyPrinterTurbo.git\ncd MoneyPrinterTurbo\n\n# AI Generate HD short videos from a\n# topic or keyword with an"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "MoneyPrinterTurbo is trending on GitHub 🔥 AI Generate HD short videos from a topic or keyword with an.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-05T15:58:31+00:00",
+      "meta": {
+        "stars_today": 1056,
+        "stars": 139655,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "harry0703/MoneyPrinterTurbo",
+        "description": "AI Generate HD short videos from a topic or keyword with an",
+        "stars": 139655,
+        "stars_today": 1056,
+        "language": "Python",
+        "install": "git clone https://github.com/harry0703/MoneyPrinterTurbo",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone harry0703/MoneyPrinterTu",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "AI Generate HD short videos",
             "cue": "run"
           }
         ],
