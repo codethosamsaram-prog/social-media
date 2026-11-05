@@ -193,7 +193,7 @@ Free-tier caveats:
 
 ## Render + publish with GitHub Actions (free)
 
-The workflow lives in `.github/workflows/reel.yml`: 5 dev reels + 1 hiring reel a day. It ticks every 15 minutes and `slot_gate.py` decides whether a reel is due, catching up one reel per tick within the same IST day. A run that posts discovers (`topic_fetcher.py --limit 2`, or `hiring.py` for the hiring reel; failure here is not fatal), renders + publishes (`auto_pipeline.py [--category hiring]`), then commits `topics_queue.json` back. No hiring reel falls back to a dev reel, and an empty queue reruns the oldest published dev reel.
+The workflow lives in `.github/workflows/reel.yml`: 5 dev reels + 1 hiring reel a day. It ticks every 15 minutes and `slot_gate.py` decides whether a reel is due, catching up one reel per tick within the same IST day. A run that posts discovers (`topic_fetcher.py --limit 2`, or `hiring.py` for the hiring reel; failure here is not fatal), renders + publishes (`auto_pipeline.py [--category hiring]`), then commits `topics_queue.json` back. No hiring reel falls back to a dev reel. A published reel is never posted again: an empty queue fails the run and opens an alert, and the next tick discovers again.
 
 Add the secrets under **Settings → Secrets and variables → Actions**: `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_USER_ID`, optional `PEXELS_API_KEY`, `GEMINI_API_KEY`, `GOOGLE_SEARCH_API_KEY`, `GOOGLE_SEARCH_CX`.
 
@@ -220,6 +220,7 @@ A bad token raises an alert instead of losing a day: `token-check.yml` runs at 0
 
 - All queue writes go through `topic_fetcher` (`append_items`, `update_item`, `delete_item`). These hold a lock and replace the file atomically. Never write `topics_queue.json` by hand while the server is running.
 - `main.py` reads the queue through `queue_items()`, which caches it and reloads when the file's mtime changes. Edits from a render thread or a redeploy are picked up automatically.
+- **No repeats (user's rule).** `topic_fetcher.topic_keys` identifies a topic by link, title, product name and DSA idea (`SAME_DSA_TOPIC`); sharing any key makes two items the same reel. Published items stay in the queue file as the history, and `delete_item` records keys under `removed`, so deleted topics don't come back. Sources call `unseen` before cutting to their limit. `topic_fetcher.py` stops fetching at `MAX_BACKLOG` queued reels.
 - Discovery sources are best-effort. Each one catches its own errors and logs them, so one dead source never blocks the rest.
 - Inspect a render without playing it: `imageio_ffmpeg`'s ffmpeg (Remotion's bundled one lacks the `select` filter).
 - The pipeline imports heavy dependencies (whisper, edge-tts) lazily, so `main.py` runs without them.

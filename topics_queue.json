@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-05T12:47:08+00:00",
+  "updated_at": "2026-11-05T13:43:35+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -1058,40 +1058,6 @@
       }
     },
     {
-      "id": "dsa-c8f46749",
-      "topic": "Missing number in O(1) space with XOR",
-      "keyword": "LEETCODE",
-      "keyword_spoken": "leetcode",
-      "category": "dsa",
-      "hook": "XOR FINDS MISSING",
-      "script": "Start with n. XOR in every index and every value. Each number that appears twice cancels out, and the missing one is all that's left.",
-      "link": "https://leetcode.com/problems/missing-number/",
-      "code": {
-        "language": "python",
-        "filename": "missing_number.py",
-        "snippet": "def missing_number(nums):\n    x = len(nums)\n    for i, n in enumerate(nums):\n        x ^= i ^ n\n    return x"
-      },
-      "stock_queries": [
-        "programmer thinking",
-        "abstract binary code",
-        "dark desk setup"
-      ],
-      "hashtags": [
-        "#leetcode",
-        "#dsa",
-        "#python",
-        "#coding",
-        "#programming"
-      ],
-      "caption": "Missing number in O(1) space with XOR 🧠",
-      "source": "dsa_library",
-      "status": "queued",
-      "created_at": "2026-11-04T18:20:24+00:00",
-      "dsa": {
-        "trick": "xor_missing"
-      }
-    },
-    {
       "id": "repo-f106f87b",
       "topic": "gauge-cli: :dog: The open-source Gauge CLI (GitHub trending)",
       "keyword": "REPO",
@@ -1193,40 +1159,6 @@
       "created_at": "2026-11-05T03:16:14+00:00",
       "dsa": {
         "trick": "boyer_moore"
-      }
-    },
-    {
-      "id": "dsa-fbc7ffe9",
-      "topic": "Find all duplicates in O(1) space (index negation trick)",
-      "keyword": "LEETCODE",
-      "keyword_spoken": "leetcode",
-      "category": "dsa",
-      "hook": "NEGATE THE INDEX",
-      "script": "Use each value as an index and flip that slot negative. If the slot is already negative, you've seen that number before. That's a duplicate.",
-      "link": "https://leetcode.com/problems/find-all-duplicates-in-an-array/",
-      "code": {
-        "language": "python",
-        "filename": "find_duplicates.py",
-        "snippet": "def find_duplicates(nums):\n    out = []\n    for n in nums:\n        i = abs(n) - 1\n        if nums[i] < 0:\n            out.append(abs(n))\n        nums[i] = -nums[i]\n    return out"
-      },
-      "stock_queries": [
-        "programmer thinking",
-        "abstract binary code",
-        "dark desk setup"
-      ],
-      "hashtags": [
-        "#leetcode",
-        "#dsa",
-        "#python",
-        "#coding",
-        "#programming"
-      ],
-      "caption": "Find all duplicates in O(1) space (index negation trick) 🧠",
-      "source": "dsa_library",
-      "status": "queued",
-      "created_at": "2026-11-05T03:16:14+00:00",
-      "dsa": {
-        "trick": "negate"
       }
     },
     {
@@ -1450,5 +1382,13 @@
         }
       }
     }
+  ],
+  "removed": [
+    "dsa:floyd",
+    "dsa:xor_single",
+    "link:leetcode.com/problems/find-all-duplicates-in-an-array",
+    "link:leetcode.com/problems/missing-number",
+    "topic:find all duplicates in o(1) space (index negation trick)",
+    "topic:missing number in o(1) space with xor"
   ]
 }

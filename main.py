@@ -717,7 +717,7 @@ async def add_topic(body: TopicIn) -> dict[str, Any]:
     )
     added = tq.append_items([item])
     if not added:
-        raise HTTPException(409, "A topic with that link or title is already queued")
+        raise HTTPException(409, "That topic was already queued, posted or deleted")
     await hub.emit("info", f"Added topic '{item['topic']}' ({item['keyword']})")
     return added[0]
 

@@ -837,33 +837,22 @@ MAX_ATTEMPTS = 3
 
 
 def next_for(category: str | None) -> dict[str, Any] | None:
-    """Oldest queued item; `hiring` picks the hiring reel, anything else skips it. A slot should never
-    go empty: no hiring reel falls back to a dev reel, and an empty queue reruns the oldest dev reel."""
-    items = tq.load_queue()
-    queued = sorted((i for i in items if i.get("status", "queued") == "queued"), key=lambda i: i.get("created_at", ""))
+    """Oldest queued item; `hiring` picks the hiring reel, anything else skips it. No hiring reel falls
+    back to a dev reel. An empty queue returns None: a published reel is never posted again."""
+    queued = sorted((i for i in tq.load_queue() if i.get("status", "queued") == "queued"),
+                    key=lambda i: i.get("created_at", ""))
     hiring = [i for i in queued if i.get("category") == "hiring"]
     dev = [i for i in queued if i.get("category") != "hiring"]
     if category == "hiring" and hiring:
         return hiring[0]
-    if dev:
-        return dev[0]
-    done = sorted((i for i in items if i.get("status") == "published" and i.get("category") != "hiring"),
-                  key=lambda i: i.get("published_at", ""))
-    if not done:
-        return None
-    # A rerun renders again with a fresh style. The old reel's DM keyword still resolves by keyword.
-    return tq.update_item(done[0]["id"], status="queued", attempts=0, error=None, ig_media_id=None,
-                          permalink=None, published_at=None)
+    return dev[0] if dev else None
 
 
 def skip_already_posted(item: dict[str, Any] | None, category: str | None, log: Log) -> dict[str, Any] | None:
-    """Never post a reel twice: if its queue update was lost, Instagram still shows the post.
-    The cap stops a rerun of an old reel from looping when everything left is recent."""
+    """Never post a reel twice: if its queue update was lost, Instagram still shows the post."""
     recent = [m.get("caption") or "" for m in _get(f"{settings.graph_base}/{settings.instagram_user_id}/media",
                                                    fields="caption", limit="25").get("data", [])]
-    for _ in range(5):
-        if not item or not any((item.get("caption") or item["topic"]) in c for c in recent):
-            return item
+    while item and any((item.get("caption") or item["topic"]) in c for c in recent):
         log(f"'{item['id']}' is already on Instagram: marking it published and taking the next reel")
         tq.update_item(item["id"], status="published", published_at=tq.now_iso())
         item = next_for(category)
@@ -877,6 +866,9 @@ def process_topic(item_id: str | None = None, publish: bool = True, log: Log = p
         item = skip_already_posted(item, category, log)
     if not item:
         log("Queue is empty" if not item_id else f"No queue item '{item_id}'")
+        return None
+    if publish and item.get("status") == "published":
+        log(f"'{item['id']}' is already published ({item.get('permalink')}): not posting it again")
         return None
     # Fail before touching the item: otherwise a missing token uses up the queue without posting.
     if publish:
@@ -906,6 +898,8 @@ def publish_existing(item_id: str, log: Log = print) -> dict[str, Any]:
     item = tq.get_item(item_id)
     if not item or not item.get("video_path"):
         raise RuntimeError(f"'{item_id}' has no rendered video; render it first")
+    if item.get("status") == "published":
+        raise RuntimeError(f"'{item_id}' is already published ({item.get('permalink')}): not posting it again")
     video = Path(item["video_path"])
     video = video if video.is_absolute() else settings.base_dir / video
     result = publish_reel(video, build_caption(item), log)

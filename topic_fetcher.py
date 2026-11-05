@@ -105,10 +105,17 @@ def load_queue() -> list[dict[str, Any]]:
         return [dict(i) for i in items]
 
 
-def save_queue(items: list[dict[str, Any]]) -> None:
+def _removed_keys() -> list[str]:
+    path = settings.queue_file
+    data = json.loads(path.read_text(encoding="utf-8") or "[]") if path.exists() else []
+    return data.get("removed", []) if isinstance(data, dict) else []
+
+
+def save_queue(items: list[dict[str, Any]], removed: Iterable[str] = ()) -> None:
     with _LOCK:
         path = settings.queue_file
-        payload = {"account": f"@{settings.account_handle}", "updated_at": now_iso(), "items": items}
+        payload = {"account": f"@{settings.account_handle}", "updated_at": now_iso(), "items": items,
+                   "removed": sorted({*_removed_keys(), *removed})}
         fd, tmp = tempfile.mkstemp(dir=path.parent, prefix=".queue-", suffix=".json")
         with os.fdopen(fd, "w", encoding="utf-8") as fh:
             json.dump(payload, fh, indent=2, ensure_ascii=False)
@@ -147,7 +154,9 @@ def delete_item(item_id: str) -> bool:
         kept = [i for i in items if i.get("id") != item_id]
         if len(kept) == len(items):
             return False
-        save_queue(kept)
+        # Remember what was deleted, or the next discovery run would fetch it straight back.
+        gone = [key for i in items if i.get("id") == item_id for key in topic_keys(i)]
+        save_queue(kept, removed=gone)
         return True
 
 
@@ -158,26 +167,80 @@ def next_queued() -> dict[str, Any] | None:
 
 
 def _norm_link(link: str) -> str:
-    link = (link or "").strip().lower()
+    link = (link or "").strip().lower().split("#")[0]
     link = re.sub(r"^https?://(www\.)?", "", link)
-    return link.rstrip("/")
+    link = re.sub(r"[?&](utm_\w+|ref)=[^&]*", "", link)
+    return re.sub(r"\.git$", "", link.rstrip("/"))
+
+
+# These teach the same idea as another trick, so a second reel would read as a repost.
+SAME_DSA_TOPIC = {"xor_missing": "xor_single", "negate": "floyd"}
+
+
+def _name_key(name: str) -> str:
+    return re.sub(r"[^a-z0-9]", "", re.sub(r"\.(dev|io|ai|app|so|sh|com)$", "", name.strip().lower()))
+
+
+def topic_keys(item: dict[str, Any]) -> set[str]:
+    """Everything that identifies a topic. Two items sharing any key are the same reel, so the same
+    product found by two sources (a GitHub repo and its website, say) only gets queued once."""
+    if item.get("category") == "hiring":  # a daily reel: its link is a company page that comes round again
+        return {f"id:{item.get('id')}"}
+    topic = (item.get("topic") or "").strip().lower()
+    keys = {f"link:{_norm_link(item.get('link', ''))}", f"topic:{topic}"}
+    trick = (item.get("dsa") or {}).get("trick")
+    if trick:
+        keys.add(f"dsa:{SAME_DSA_TOPIC.get(trick, trick)}")
+    if item.get("category") == "dsa":  # their titles share words like "O(1) space", which proves nothing
+        return keys
+    names = re.findall(r"\(([^)]+)\)", topic)
+    if ":" in topic:
+        names.append(topic.split(":", 1)[0])
+    repo = re.match(r"github\.com/[^/]+/([^/]+)$", _norm_link(item.get("link", "")))
+    if repo:
+        names.append(repo.group(1))
+    for name in names:
+        key = _name_key(name)
+        if len(key) >= 3 and key != "githubtrending":
+            keys.add(f"name:{key}")
+    return keys
+
+
+def known_keys() -> set[str]:
+    """Every topic ever queued, posted or deleted. Published items stay in the queue file for this."""
+    with _LOCK:
+        return {*_removed_keys(), *(key for i in load_queue() for key in topic_keys(i))}
+
+
+def unseen(candidates: Iterable[dict[str, Any]], limit: int) -> list[dict[str, Any]]:
+    """The first `limit` new topics. Sources must filter before cutting to their limit: the top results
+    barely change between runs, so cutting first returns only old topics and new ones are never reached."""
+    known, fresh = known_keys(), []
+    for item in candidates:
+        keys = topic_keys(item)
+        if keys & known:
+            continue
+        known |= keys
+        fresh.append(item)
+        if len(fresh) >= limit:
+            break
+    return fresh
 
 
 def append_items(new_items: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
-    """Validate + append, skipping anything whose link or topic is already queued."""
+    """Validate + append, skipping any topic already queued, posted or deleted."""
     with _LOCK:
         items = load_queue()
-        links = {_norm_link(i.get("link", "")) for i in items}
-        topics = {i.get("topic", "").strip().lower() for i in items}
+        known = known_keys()
         added: list[dict[str, Any]] = []
         for item in new_items:
             item = validate_item(item)
-            if _norm_link(item["link"]) in links or item["topic"].lower() in topics:
+            keys = topic_keys(item)
+            if keys & known:
                 continue
             items.append(item)
             added.append(item)
-            links.add(_norm_link(item["link"]))
-            topics.add(item["topic"].lower())
+            known |= keys
         if added:
             save_queue(items)
         return added
@@ -506,7 +569,7 @@ def discover_github_trending(client: httpx.Client, limit: int, log: Log) -> list
                 results.append(item)
     results.sort(key=lambda i: (i.get("meta") or {}).get("stars_today") or 0, reverse=True)
     log(f"GitHub Trending: {len(results)} candidate repos")
-    return results[:limit]
+    return unseen(results, limit)
 
 
 def discover_github_api(client: httpx.Client, limit: int, log: Log) -> list[dict[str, Any]]:
@@ -526,8 +589,8 @@ def discover_github_api(client: httpx.Client, limit: int, log: Log) -> list[dict
                           repo.get("stargazers_count"), repo.get("language"), "github_search")
         if item:
             results.append(item)
-    log(f"GitHub Search API: {len(results)} new fast-rising repos")
-    return results[:limit]
+    log(f"GitHub Search API: {len(results)} fast-rising repos")
+    return unseen(results, limit)
 
 
 # ---------------------------------------------------------------------------
@@ -599,7 +662,7 @@ def discover_hn_ai_tools(client: httpx.Client, limit: int, log: Log) -> list[dic
         if item:
             results.append(item)
     log(f"Hacker News Show HN: {len(results)} AI tool launches")
-    return results[:limit]
+    return unseen(results, limit)
 
 
 # ---------------------------------------------------------------------------
@@ -634,7 +697,7 @@ def discover_google(client: httpx.Client, limit: int, log: Log) -> list[dict[str
             if item:
                 results.append(item)
     log(f"Google Custom Search: {len(results)} results")
-    return results[:limit]
+    return unseen(results, limit)
 
 
 # ---------------------------------------------------------------------------
@@ -703,6 +766,7 @@ def discover_gemini(client: httpx.Client, limit: int, log: Log) -> list[dict[str
         log("Gemini: skipped (GEMINI_API_KEY not set)")
         return []
     results: list[dict[str, Any]] = []
+    known = known_keys()
     rows = _gemini_candidates(client, limit * 3, log)
     for row in rows:
         url, summary = str(row["url"]).strip(), clean_text(str(row.get("summary", "")))
@@ -714,12 +778,14 @@ def discover_gemini(client: httpx.Client, limit: int, log: Log) -> list[dict[str
                 info = meta.json()
                 item = _repo_item(info["full_name"], info.get("description") or summary, None,
                                   info.get("stargazers_count"), info.get("language"), "gemini")
-                if item:
-                    item = enrich_repo(client, item, log)
         elif url.startswith("https://") and client.get(url).status_code < 400:
             item = _ai_tool_item(f"{row['name']}: {summary}", url, "gemini")
+        if item and topic_keys(item) & known:
+            log(f"Gemini: already have '{str(row['name'])[:40]}'")
+            continue
         if item:
-            results.append(item)
+            known |= topic_keys(item)
+            results.append(enrich_repo(client, item, log))
         else:
             log(f"Gemini: dropped unverifiable '{str(row['name'])[:40]}'")
         if len(results) >= limit:
@@ -735,8 +801,9 @@ def discover_gemini(client: httpx.Client, limit: int, log: Log) -> list[dict[str
 def discover_dsa(limit: int, log: Log) -> list[dict[str, Any]]:
     from storyboard import DSA_TRICKS
 
-    existing = {_norm_link(i.get("link", "")) for i in load_queue()}
-    fresh = [(k, t) for k, t in DSA_TRICKS.items() if _norm_link(t["link"]) not in existing]
+    known = known_keys()
+    fresh = [(k, t) for k, t in DSA_TRICKS.items()
+             if f"dsa:{SAME_DSA_TOPIC.get(k, k)}" not in known and f"link:{_norm_link(t['link'])}" not in known]
     random.shuffle(fresh)
     results = []
     for key, t in fresh[:limit]:
@@ -784,6 +851,10 @@ def discover_and_enqueue(limit_per_source: int = 2, log: Log = print) -> list[di
     return added
 
 
+# Trending topics go stale and the queue posts oldest first, so don't let the backlog outrun posting (5 a day).
+MAX_BACKLOG = 20
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Discover trending dev topics and enqueue reels.")
     parser.add_argument("--limit", type=int, default=2, help="max items per source")
@@ -797,6 +868,10 @@ def main() -> None:
         return
     if args.dry_run:
         print(json.dumps(discover(args.limit), indent=2, ensure_ascii=False))
+        return
+    backlog = sum(i.get("status") == "queued" for i in load_queue())
+    if backlog >= MAX_BACKLOG:
+        print(f"{backlog} reels already queued: nothing to fetch")
         return
     for item in discover_and_enqueue(args.limit):
         print(f"+ {item['id']}  {item['keyword']:<9} {item['topic']}")
