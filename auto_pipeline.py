@@ -820,7 +820,10 @@ def publish_reel(video: Path, caption: str, log: Log = print) -> dict[str, Any]:
         container = create_reel_container(client, video, caption, log)
         wait_for_container(client, container, log)
         media_id = _graph(client, "POST", f"{uid}/media_publish", creation_id=container)["id"]
-        permalink = _graph(client, "GET", media_id, fields="permalink").get("permalink")
+        try:
+            permalink = _graph(client, "GET", media_id, fields="permalink").get("permalink")
+        except (GraphAPIError, httpx.HTTPError):  # it is already live: failing here would post it twice
+            permalink = None
     log(f"Published reel {media_id} {permalink or ''}")
     return {"ig_media_id": media_id, "permalink": permalink, "container_id": container}
 
@@ -834,14 +837,23 @@ MAX_ATTEMPTS = 3
 
 
 def next_for(category: str | None) -> dict[str, Any] | None:
-    """Oldest queued item; `hiring` picks the hiring reel, anything else skips it."""
-    queued = [i for i in tq.load_queue() if i.get("status", "queued") == "queued"]
-    if category == "hiring":
-        queued = [i for i in queued if i.get("category") == "hiring"]
-    else:
-        queued = [i for i in queued if i.get("category") != "hiring"]
-    queued.sort(key=lambda i: i.get("created_at", ""))
-    return queued[0] if queued else None
+    """Oldest queued item; `hiring` picks the hiring reel, anything else skips it. A slot should never
+    go empty: no hiring reel falls back to a dev reel, and an empty queue reruns the oldest dev reel."""
+    items = tq.load_queue()
+    queued = sorted((i for i in items if i.get("status", "queued") == "queued"), key=lambda i: i.get("created_at", ""))
+    hiring = [i for i in queued if i.get("category") == "hiring"]
+    dev = [i for i in queued if i.get("category") != "hiring"]
+    if category == "hiring" and hiring:
+        return hiring[0]
+    if dev:
+        return dev[0]
+    done = sorted((i for i in items if i.get("status") == "published" and i.get("category") != "hiring"),
+                  key=lambda i: i.get("published_at", ""))
+    if not done:
+        return None
+    # A rerun renders again with a fresh style. The old reel's DM keyword still resolves by keyword.
+    return tq.update_item(done[0]["id"], status="queued", attempts=0, error=None, ig_media_id=None,
+                          permalink=None, published_at=None)
 
 
 def process_topic(item_id: str | None = None, publish: bool = True, log: Log = print,
@@ -901,7 +913,7 @@ def main() -> int:
                 process_topic(publish=not args.no_publish)
             return 0
         result = process_topic(args.id, publish=not args.no_publish, category=args.category)
-        return 0 if result is not None or not args.id else 1
+        return 0 if result is not None else 1  # nothing to post is a failure: it would leave a slot empty
     except Exception as exc:  # noqa: BLE001
         print(f"Pipeline error: {exc}", file=sys.stderr)
         return 1

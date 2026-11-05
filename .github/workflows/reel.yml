@@ -1,15 +1,11 @@
 name: reel-pipeline
 
-# 6 posts a day (IST): 5 dev reels + 1 "hiring in India" reel at 13:00.
-# GitHub cron is UTC (IST = UTC+5:30) and can start a few minutes late under load.
+# 6 posts a day (IST): 5 dev reels + 1 "hiring in India" reel from 13:00. Slots are in slot_gate.py.
+# This wakes every 30 minutes and posts only if today is behind, so a late or dropped GitHub schedule
+# or a failed run is made up by the next tick. A tick with nothing to do ends in seconds.
 on:
   schedule:
-    - cron: "30 2 * * *"     # 08:00 IST  dev reel
-    - cron: "30 5 * * *"     # 11:00 IST  dev reel
-    - cron: "30 7 * * *"     # 13:00 IST  HIRING reel
-    - cron: "30 9 * * *"     # 15:00 IST  dev reel
-    - cron: "30 12 * * *"    # 18:00 IST  dev reel
-    - cron: "30 15 * * *"    # 21:00 IST  dev reel
+    - cron: "7,37 2-18 * * *"     # 07:37 to 00:07 IST
   workflow_dispatch:
     inputs:
       item_id:
@@ -31,7 +27,7 @@ permissions:
 concurrency: reel-pipeline
 
 env:
-  DAY_ONE: "2026-11-04"      # Day 1 of the streak; nothing is posted before this date
+  DAY_ONE: "2026-11-04"      # Day 1 of the streak
 
 jobs:
   reel:
@@ -46,22 +42,32 @@ jobs:
       GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       WHISPER_MODEL: base
-      KIND: ${{ github.event.inputs.kind || (github.event.schedule == '30 7 * * *' && 'hiring' || 'dev') }}
     steps:
-      - name: Wait for Day 1
-        id: gate
-        run: |
-          today=$(TZ=Asia/Kolkata date +%F)
-          if [[ "$today" < "$DAY_ONE" ]]; then echo "Before $DAY_ONE (today $today): skipping"; echo "go=false" >> "$GITHUB_OUTPUT"; else echo "go=true" >> "$GITHUB_OUTPUT"; fi
-
       - uses: actions/checkout@v4
-        if: steps.gate.outputs.go == 'true'
       - uses: actions/setup-python@v5
-        if: steps.gate.outputs.go == 'true'
         with:
           python-version: "3.11"
           cache: pip
           cache-dependency-path: requirements-render.txt
+
+      # Runs inside the concurrency lock, so a tick that waited for a running reel sees that reel's post.
+      - name: Is a reel due?
+        id: gate
+        env:
+          MANUAL_KIND: ${{ github.event.inputs.kind }}
+        run: |
+          if [ "$GITHUB_EVENT_NAME" = "workflow_dispatch" ]; then
+            echo "go=true" >> "$GITHUB_OUTPUT"
+            echo "KIND=${MANUAL_KIND:-dev}" >> "$GITHUB_ENV"
+          else
+            pip install -q httpx
+            python slot_gate.py
+          fi
+
+      - name: Set reel kind
+        if: github.event_name != 'workflow_dispatch' && steps.gate.outputs.go == 'true'
+        run: echo "KIND=${{ steps.gate.outputs.kind }}" >> "$GITHUB_ENV"
+
       - uses: actions/setup-node@v4
         if: steps.gate.outputs.go == 'true'
         with:
@@ -87,8 +93,10 @@ jobs:
           pip install -r requirements-render.txt
           (cd video && npm ci)
 
+      # New topics are a bonus: the queue has a backlog, so a dead source must not stop today's post.
       - name: Discover
         if: steps.gate.outputs.go == 'true'
+        continue-on-error: true
         run: |
           if [ "$KIND" = "hiring" ]; then python hiring.py; else python topic_fetcher.py --limit 2; fi
 
@@ -112,11 +120,17 @@ jobs:
           git config user.email "reel-bot@users.noreply.github.com"
           git add topics_queue.json
           git diff --cached --quiet || git commit -m "chore(queue): update after $KIND reel run"
-          git pull --rebase --autostash && git push
+          for attempt in 1 2 3 4 5; do
+            git pull --rebase --autostash && git push && exit 0
+            sleep $((attempt * 10))
+          done
+          exit 1
 
       # Vercel holds a snapshot of the queue, so the dashboard and DM keywords update only on deploy.
+      # A failure here doesn't touch posting, so it doesn't fail the run.
       - name: Update dashboard
         if: always() && steps.gate.outputs.go == 'true' && github.event.inputs.dry_run != 'true'
+        continue-on-error: true
         env:
           VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
           VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
@@ -127,6 +141,7 @@ jobs:
 
       - uses: actions/upload-artifact@v4
         if: always() && steps.gate.outputs.go == 'true'
+        continue-on-error: true
         with:
           name: reels-${{ github.run_id }}
           path: output/*/reel.mp4
@@ -136,4 +151,10 @@ jobs:
         if: failure() && github.event.inputs.dry_run != 'true'
         env:
           GH_TOKEN: ${{ github.token }}
-        run: bash .github/alert-issue.sh "Reel run failed" "A $KIND reel did not post. The log shows why."
+        run: bash .github/alert-issue.sh "Reel run failed" "A reel did not post. The next tick retries; the log shows why this one failed."
+
+      - name: Clear the alert
+        if: success() && steps.gate.outputs.go == 'true' && github.event.inputs.dry_run != 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash .github/alert-issue.sh --clear "Reel run failed"

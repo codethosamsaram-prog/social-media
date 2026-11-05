@@ -37,3 +37,8 @@ jobs:
           GH_TOKEN: ${{ github.token }}
           RESULT: ${{ steps.check.outputs.result }}
         run: bash .github/alert-issue.sh "Instagram token needs attention" "$RESULT"
+      - name: Clear the alert
+        if: success()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: bash .github/alert-issue.sh --clear "Instagram token needs attention"
