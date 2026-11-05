@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-05T03:19:52+00:00",
+  "updated_at": "2026-11-05T06:06:19+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -115,7 +115,7 @@
       ],
       "caption": "browser-use lets an AI agent click, type and scrape any site for you 🤖",
       "source": "seed",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-02T00:00:01+00:00",
       "repo": {
         "full_name": "browser-use/browser-use",
@@ -185,25 +185,29 @@
           "use_cases": "Use it to scrape any website, auto fill forms, or test your own web app."
         }
       },
-      "error": "POST 17841435305119250/media -> 400: Error validating access token: Session has expired on Wednesday, 04-Nov-26 11:00:00 PST. The current time is Wednesday, 04-Nov-26 19:19:52 PST.",
-      "updated_at": "2026-11-05T03:19:52+00:00",
+      "error": null,
+      "updated_at": "2026-11-05T06:06:19+00:00",
       "video_path": "output/seed-02-browser/reel.mp4",
-      "rendered_at": "2026-11-05T03:19:52+00:00",
+      "rendered_at": "2026-11-05T06:05:43+00:00",
       "day": 2,
       "style_used": {
-        "look": "matrix",
-        "hook": "glitch",
-        "captions": "neon",
-        "cta": "share",
-        "hookFont": "bebas",
-        "presenter": "zoya",
-        "camera": "drift",
-        "grade": "teal_orange",
+        "look": "mono",
+        "hook": "chat",
+        "captions": "clean",
+        "cta": "search",
+        "hookFont": "archivo",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "contrast",
         "overlay": "sparks",
         "burst": "ring",
         "music": "arp"
       },
-      "attempts": 1
+      "attempts": 1,
+      "published_at": "2026-11-05T06:06:19+00:00",
+      "ig_media_id": "18125147458939903",
+      "permalink": "https://www.instagram.com/reel/DfWWRA4jdx8/",
+      "container_id": "18099269810176838"
     },
     {
       "id": "seed-03-bitxor",
