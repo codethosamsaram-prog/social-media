@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-06T08:30:44+00:00",
+  "updated_at": "2026-11-06T09:30:34+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -678,7 +678,7 @@
       ],
       "caption": "Interactive notes on RLHF: attention, LoRA and LLM evals 🤖",
       "source": "hacker_news",
-      "status": "queued",
+      "status": "failed",
       "created_at": "2026-11-04T05:45:08+00:00",
       "browser": {
         "url": "concepts.laxmena.com",
@@ -691,8 +691,8 @@
         ]
       },
       "error": "Remotion render failed:\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31minputRange must be strictly monotonically increasing but got [1.6,1.6]\u001b[39m\nat \u001b[4mnode_modules/remotion/dist/esm/index.mjs:5042\u001b[24m\n\u001b[90m5040\u001b[39m │ \u001b[90mfunction checkValidInputRange(arr) {\u001b[39m\n\u001b[90m5041\u001b[39m │ \u001b[90m  for (let i = 1;i < arr.length; ++i) {\u001b[39m\n5042 │     if (!(arr[i] > arr[i - 1])) {\n\u001b[90m5043\u001b[39m │ \u001b[90m      throw new Error(`inputRange must be strictly monotonically increasing but got [${arr.join(\",\")",
-      "updated_at": "2026-11-06T07:12:57+00:00",
-      "attempts": 2
+      "updated_at": "2026-11-06T09:30:34+00:00",
+      "attempts": 3
     },
     {
       "id": "dsa-356d47dd",
@@ -2335,6 +2335,323 @@
       "ig_media_id": "18150596572566455",
       "permalink": "https://www.instagram.com/reel/DfZLmfYnIcq/",
       "container_id": "18099560105176838"
+    },
+    {
+      "id": "repo-3acc55b4",
+      "topic": "wifit3: Wifite but USB-only & cross-platform (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. wifit3: Wifite but USB-only & cross-platform. 206 new stars today.",
+      "link": "https://github.com/derv82/wifit3",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# derv82/wifit3\n# +206 stars today\n\ngit clone https://github.com/derv82/wifit3.git\ncd wifit3\n\n# Wifite but USB-only & cross-\n# platform"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "wifit3 is trending on GitHub 🔥 Wifite but USB-only & cross-platform.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T09:29:01+00:00",
+      "meta": {
+        "stars_today": 206,
+        "stars": 3368,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "derv82/wifit3",
+        "description": "Wifite but USB-only & cross-platform",
+        "stars": 3368,
+        "stars_today": 206,
+        "language": "Python",
+        "install": "git clone https://github.com/derv82/wifit3",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone derv82/wifit3",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Wifite but USB-only & cross-platfo",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🛠️",
+            "title": "Wireless Driver Heaven",
+            "detail": "Built-in wireless stack avoids kernel driver",
+            "cue": "wireless"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Zero Runtime Dependencies",
+            "detail": "No aircrack-ng or reaver, just pure Python",
+            "cue": "zero"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-a3e9168e",
+      "topic": "switch: Open-source AI teammates in Slack, Teams, Discord, Telegram and Mattermost (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "OPEN SOURCE GOLD",
+      "script": "This GitHub repo is exploding. switch: Open-source AI teammates in Slack, Teams, Discord, Telegram and Mattermost. 182 new stars today.",
+      "link": "https://github.com/sandbox-quantum/switch",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# sandbox-quantum/switch\n# +182 stars today\n\ngit clone https://github.com/sandbox-quantum/switch.git\ncd switch\n\n# Open-source AI teammates in Slack,\n# Teams, Discord, Telegram and\n# Mattermost"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "switch is trending on GitHub 🔥 Open-source AI teammates in Slack, Teams, Discord, Telegram and Mattermost.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-06T09:29:01+00:00",
+      "meta": {
+        "stars_today": 182,
+        "stars": 3990,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "sandbox-quantum/switch",
+        "description": "Open-source AI teammates in Slack, Teams, Discord, Telegram and Mattermost",
+        "stars": 3990,
+        "stars_today": 182,
+        "language": "Python",
+        "install": "git clone https://github.com/sandbox-quantum/switch",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone sandbox-quantum/switch",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Open-source AI teammates in Slack",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🤖",
+            "title": "Work on a feature",
+            "detail": "",
+            "cue": "work"
+          },
+          {
+            "icon": "🤖",
+            "title": "Pull a colleague in to review",
+            "detail": "",
+            "cue": "pull"
+          },
+          {
+            "icon": "🤖",
+            "title": "Stand up a Codex agent that",
+            "detail": "",
+            "cue": "stand"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-dc28e50d",
+      "topic": "window-sweaters: A macOS menu-bar app that dresses your windows in knitted borders (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB IS CRAZY",
+      "script": "This GitHub repo is exploding. window sweaters: A macOS menu-bar app that dresses your windows in knitted borders. 1,142 stars already.",
+      "link": "https://github.com/saragordic/window-sweaters",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# saragordic/window-sweaters\n# 1,142 stars\n\ngit clone https://github.com/saragordic/window-sweaters.git\ncd window-sweaters\n\n# A macOS menu-bar app that dresses\n# your windows in knitted borders"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "window-sweaters is trending on GitHub 🔥 A macOS menu-bar app that dresses your windows in knitted borders.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-06T09:29:25+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 1142,
+        "language": "C"
+      },
+      "repo": {
+        "full_name": "saragordic/window-sweaters",
+        "description": "A macOS menu-bar app that dresses your windows in knitted borders",
+        "stars": 1142,
+        "stars_today": null,
+        "language": "C",
+        "install": "git clone https://github.com/saragordic/window-sweaters",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone saragordic/window-sweate",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A macOS menu-bar app that",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-3a41e347",
+      "topic": "BUI: Blender's GPU Accelerated UI, Decoupled from it's original codebase (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. BUI: Blender's GPU Accelerated UI, Decoupled from it's original codebase. 256 stars already.",
+      "link": "https://github.com/ppmpreetham/BUI",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# ppmpreetham/BUI\n# 256 stars\n\ngit clone https://github.com/ppmpreetham/BUI.git\ncd BUI\n\n# Blender's GPU Accelerated UI,\n# Decoupled from it's original\n# codebase"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "BUI is trending on GitHub 🔥 Blender's GPU Accelerated UI, Decoupled from it's original codebase.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-06T09:29:26+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 256,
+        "language": "C++"
+      },
+      "repo": {
+        "full_name": "ppmpreetham/BUI",
+        "description": "Blender's GPU Accelerated UI, Decoupled from it's original codebase",
+        "stars": 256,
+        "stars_today": null,
+        "language": "C++",
+        "install": "pip install blenderui",
+        "demo_code": {
+          "snippet": "use blenderui_imgui as imgui;\n\nfn main() {\n    let mut value = 0.5f32;\n    imgui::run(\"Hello\", [1280, 800], move || {\n        imgui::show_demo_window();\n        imgui::begin(\"Hello\");\n        imgui::slider_float(\"Value\", &mut value, 0.0, 1.0);\n        imgui::end();\n    });\n}",
+          "language": "rust",
+          "filename": "example.rs",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install blenderui",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "use blenderui_imgui as imgui;",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Blender's GPU Accelerated UI, Deco",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
     }
   ],
   "removed": [
