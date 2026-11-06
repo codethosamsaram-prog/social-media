@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-06T06:32:41+00:00",
+  "updated_at": "2026-11-06T07:12:57+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -691,8 +691,8 @@
         ]
       },
       "error": "Remotion render failed:\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31minputRange must be strictly monotonically increasing but got [1.6,1.6]\u001b[39m\nat \u001b[4mnode_modules/remotion/dist/esm/index.mjs:5042\u001b[24m\n\u001b[90m5040\u001b[39m │ \u001b[90mfunction checkValidInputRange(arr) {\u001b[39m\n\u001b[90m5041\u001b[39m │ \u001b[90m  for (let i = 1;i < arr.length; ++i) {\u001b[39m\n5042 │     if (!(arr[i] > arr[i - 1])) {\n\u001b[90m5043\u001b[39m │ \u001b[90m      throw new Error(`inputRange must be strictly monotonically increasing but got [${arr.join(\",\")",
-      "updated_at": "2026-11-06T06:32:41+00:00",
-      "attempts": 1
+      "updated_at": "2026-11-06T07:12:57+00:00",
+      "attempts": 2
     },
     {
       "id": "dsa-356d47dd",
@@ -2003,6 +2003,216 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "Find known secrets in your",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-dbc44342",
+      "topic": "pr-agent: PR Agent: The Original Open-Source PR Reviewer (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. pr agent: PR Agent: The Original Open-Source PR Reviewer. 442 new stars today.",
+      "link": "https://github.com/The-PR-Agent/pr-agent",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# The-PR-Agent/pr-agent\n# +442 stars today\n\ngit clone https://github.com/The-PR-Agent/pr-agent.git\ncd pr-agent\n\n# PR Agent: The Original Open-Source\n# PR Reviewer"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "pr-agent is trending on GitHub 🔥 PR Agent: The Original Open-Source PR Reviewer.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T07:10:11+00:00",
+      "meta": {
+        "stars_today": 442,
+        "stars": 15145,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "The-PR-Agent/pr-agent",
+        "description": "PR Agent: The Original Open-Source PR Reviewer",
+        "stars": 15145,
+        "stars_today": 442,
+        "language": "Python",
+        "install": "pip install \"pr-agent[github]\"",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install \"pr-agent[github]\"",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "PR Agent: The Original Open-Source",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-b9901cf0",
+      "topic": "VibeVoice: Open-Source Frontier Voice AI (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. VibeVoice: Open-Source Frontier Voice AI. 223 new stars today.",
+      "link": "https://github.com/microsoft/VibeVoice",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# microsoft/VibeVoice\n# +223 stars today\n\ngit clone https://github.com/microsoft/VibeVoice.git\ncd VibeVoice\n\n# Open-Source Frontier Voice AI"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "VibeVoice is trending on GitHub 🔥 Open-Source Frontier Voice AI.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T07:10:11+00:00",
+      "meta": {
+        "stars_today": 223,
+        "stars": 56233,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "microsoft/VibeVoice",
+        "description": "Open-Source Frontier Voice AI",
+        "stars": 56233,
+        "stars_today": 223,
+        "language": "Python",
+        "install": "git clone https://github.com/microsoft/VibeVoice",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone microsoft/VibeVoice",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Open-Source Frontier Voice AI",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-b95f6aa2",
+      "topic": "nvke: NVIDIA Kubernetes Engine (NVKE) (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. nvke: NVIDIA Kubernetes Engine (NVKE). 148 stars already.",
+      "link": "https://github.com/dsx-ai-factory/nvke",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# dsx-ai-factory/nvke\n# 148 stars\n\ngit clone https://github.com/dsx-ai-factory/nvke.git\ncd nvke\n\n# NVIDIA Kubernetes Engine (NVKE)"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#go"
+      ],
+      "caption": "nvke is trending on GitHub 🔥 NVIDIA Kubernetes Engine (NVKE).",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-06T07:11:57+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 148,
+        "language": "Go"
+      },
+      "repo": {
+        "full_name": "dsx-ai-factory/nvke",
+        "description": "NVIDIA Kubernetes Engine (NVKE)",
+        "stars": 148,
+        "stars_today": null,
+        "language": "Go",
+        "install": "git clone https://github.com/dsx-ai-factory/nvke",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone dsx-ai-factory/nvke",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "NVIDIA Kubernetes Engine (NVKE)",
             "cue": "run"
           }
         ],
