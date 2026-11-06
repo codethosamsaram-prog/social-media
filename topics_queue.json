@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-06T09:30:34+00:00",
+  "updated_at": "2026-11-06T10:39:35+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -722,29 +722,33 @@
       ],
       "caption": "Sort colors in one pass, O(1) space (Dutch national flag) 🧠",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T05:45:08+00:00",
       "dsa": {
         "trick": "dutch"
       },
       "error": null,
-      "updated_at": "2026-11-04T14:30:14+00:00",
+      "updated_at": "2026-11-06T10:39:35+00:00",
       "style_used": {
-        "look": "sunset",
-        "hook": "news",
-        "captions": "gradient",
+        "look": "matrix",
+        "hook": "chat",
+        "captions": "underline",
         "cta": "search",
-        "hookFont": "anton",
-        "presenter": "coder",
-        "camera": "breathe",
-        "grade": "vivid",
-        "overlay": "vhs",
-        "burst": "slash",
-        "music": "pad"
+        "hookFont": "oswald",
+        "presenter": "anya",
+        "camera": "drift",
+        "grade": "none",
+        "overlay": "sparks",
+        "burst": "sparks",
+        "music": "pluck"
       },
-      "day": null,
-      "video_path": null,
-      "rendered_at": null
+      "day": 3,
+      "video_path": "output/dsa-356d47dd/reel.mp4",
+      "rendered_at": "2026-11-06T10:38:56+00:00",
+      "published_at": "2026-11-06T10:39:35+00:00",
+      "ig_media_id": "17915176179561299",
+      "permalink": "https://www.instagram.com/reel/DfZaVYMgnz6/",
+      "container_id": "18099581666176838"
     },
     {
       "id": "dsa-84ee2d5e",
@@ -2650,6 +2654,146 @@
         "narration": {
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-98270c71",
+      "topic": "garden-skills: ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. garden skills: ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and. 175 new stars today.",
+      "link": "https://github.com/ConardLi/garden-skills",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# ConardLi/garden-skills\n# +175 stars today\n\ngit clone https://github.com/ConardLi/garden-skills.git\ncd garden-skills\n\n# ConardLi's open-source Skills\n# collection, featuring web design,\n# knowledge retrieval, image"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#javascript"
+      ],
+      "caption": "garden-skills is trending on GitHub 🔥 ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T10:34:04+00:00",
+      "meta": {
+        "stars_today": 175,
+        "stars": 14424,
+        "language": "JavaScript"
+      },
+      "repo": {
+        "full_name": "ConardLi/garden-skills",
+        "description": "ConardLi's open-source Skills collection, featuring web design, knowledge retrieval, image generation, and",
+        "stars": 14424,
+        "stars_today": 175,
+        "language": "JavaScript",
+        "install": "git clone https://github.com/ConardLi/garden-skills",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone ConardLi/garden-skills",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "ConardLi's open-source Skills coll",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-1ceb56a3",
+      "topic": "agent-browser: Browser automation CLI for AI agents (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. agent browser: Browser automation CLI for AI agents. 150 new stars today.",
+      "link": "https://github.com/vercel-labs/agent-browser",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# vercel-labs/agent-browser\n# +150 stars today\n\ngit clone https://github.com/vercel-labs/agent-browser.git\ncd agent-browser\n\n# Browser automation CLI for AI\n# agents"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "agent-browser is trending on GitHub 🔥 Browser automation CLI for AI agents.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T10:34:04+00:00",
+      "meta": {
+        "stars_today": 150,
+        "stars": 46197,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "vercel-labs/agent-browser",
+        "description": "Browser automation CLI for AI agents",
+        "stars": 46197,
+        "stars_today": 150,
+        "language": "Rust",
+        "install": "npm install -g agent-browser",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "npm install -g agent-browser",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Browser automation CLI for AI",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
         }
       }
     }
