@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-06T07:12:57+00:00",
+  "updated_at": "2026-11-06T08:30:44+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -2222,6 +2222,119 @@
           "demo": "Setup is a single command."
         }
       }
+    },
+    {
+      "id": "hiring-2026-11-06",
+      "topic": "MongoDB, Sarvam AI and Meesho are hiring engineers in India (2026-11-06)",
+      "keyword": "HIRING",
+      "keyword_spoken": "hiring",
+      "category": "hiring",
+      "hook": "DEVS WANTED NOW",
+      "script": "MongoDB, Sarvam AI and Meesho are hiring in India right now. MongoDB has 37 engineering roles open in Gurugram and Bengaluru. Sarvam AI has 25 engineering roles open in Bengaluru and Delhi. Meesho has 11 engineering roles open in Bengaluru.",
+      "link": "https://boards.greenhouse.io/mongodb",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "MongoDB, Sarvam AI and Meesho are hiring engineers in India (2026-11-06)"
+      },
+      "stock_queries": [
+        "modern office india",
+        "team meeting office",
+        "bangalore city night"
+      ],
+      "hashtags": [
+        "#hiring",
+        "#jobsinindia",
+        "#softwarejobs",
+        "#bangalorejobs",
+        "#developers"
+      ],
+      "caption": "🚨 MongoDB, Sarvam AI and Meesho are hiring engineers in India right now.\n\n🏢 MongoDB: 37 open roles (Gurugram, Bengaluru), e.g. Lead, Technical Services Engineer - Partners\n🏢 Sarvam AI: 25 open roles (Bengaluru, Delhi), e.g. Software Development Engineer 3, Samvaad\n🏢 Meesho: 11 open roles (Bengaluru), e.g. Security Engineer III - Infra Security",
+      "source": "career_boards",
+      "status": "published",
+      "created_at": "2026-11-06T08:26:43+00:00",
+      "links": [
+        {
+          "label": "MongoDB",
+          "url": "https://boards.greenhouse.io/mongodb"
+        },
+        {
+          "label": "Sarvam AI",
+          "url": "https://jobs.ashbyhq.com/sarvam"
+        },
+        {
+          "label": "Meesho",
+          "url": "https://jobs.lever.co/meesho"
+        }
+      ],
+      "hiring": {
+        "companies": [
+          {
+            "name": "MongoDB",
+            "domain": "mongodb.com",
+            "color": "#00ed64",
+            "roles": 37,
+            "fresh": 4,
+            "top_role": "Lead, Technical Services Engineer - Partners",
+            "cities": [
+              "Gurugram",
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/mongodb",
+            "score": 42
+          },
+          {
+            "name": "Sarvam AI",
+            "domain": "sarvam.ai",
+            "color": "#ff7a45",
+            "roles": 25,
+            "fresh": 5,
+            "top_role": "Software Development Engineer 3, Samvaad",
+            "cities": [
+              "Bengaluru",
+              "Delhi"
+            ],
+            "url": "https://jobs.ashbyhq.com/sarvam",
+            "score": 40
+          },
+          {
+            "name": "Meesho",
+            "domain": "meesho.com",
+            "color": "#f43397",
+            "roles": 11,
+            "fresh": 1,
+            "top_role": "Security Engineer III - Infra Security",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://jobs.lever.co/meesho",
+            "score": 14
+          }
+        ],
+        "checked_at": "2026-11-06T08:26:43+00:00"
+      },
+      "error": null,
+      "updated_at": "2026-11-06T08:30:44+00:00",
+      "style_used": {
+        "look": "retrosun",
+        "hook": "glitch",
+        "captions": "gradient",
+        "cta": "triple",
+        "hookFont": "archivo",
+        "presenter": "meera",
+        "camera": "punch",
+        "grade": "cool",
+        "overlay": "none",
+        "burst": "slash",
+        "music": "pad"
+      },
+      "day": 3,
+      "video_path": "output/hiring-2026-11-06/reel.mp4",
+      "rendered_at": "2026-11-06T08:30:15+00:00",
+      "published_at": "2026-11-06T08:30:44+00:00",
+      "ig_media_id": "18150596572566455",
+      "permalink": "https://www.instagram.com/reel/DfZLmfYnIcq/",
+      "container_id": "18099560105176838"
     }
   ],
   "removed": [
