@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-05T16:02:52+00:00",
+  "updated_at": "2026-11-06T02:57:16+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -562,7 +562,7 @@
       ],
       "caption": "Scrapling is trending on GitHub 🔥 The BEST Web Scraping framework that handles everything from a single request.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T05:44:59+00:00",
       "meta": {
         "stars_today": 1658,
@@ -626,7 +626,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup really is this small."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-06T02:57:16+00:00",
+      "style_used": {
+        "look": "mono",
+        "hook": "spotlight",
+        "captions": "underline",
+        "cta": "search",
+        "hookFont": "bebas",
+        "presenter": "anya",
+        "camera": "handheld",
+        "grade": "warm",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "keys"
+      },
+      "day": 3,
+      "video_path": "output/repo-db112699/reel.mp4",
+      "rendered_at": "2026-11-06T02:56:37+00:00",
+      "published_at": "2026-11-06T02:57:16+00:00",
+      "ig_media_id": "18338663854275446",
+      "permalink": "https://www.instagram.com/reel/DfYlbELCr98/",
+      "container_id": "18099504605176838"
     },
     {
       "id": "aitool-4b34d08f",
@@ -1529,6 +1551,151 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "AI Generate HD short videos",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-75e3776d",
+      "topic": "floci: Light, fluffy, and always free (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. floci: Light, fluffy, and always free. 779 new stars today.",
+      "link": "https://github.com/floci-io/floci",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# floci-io/floci\n# +779 stars today\n\ngit clone https://github.com/floci-io/floci.git\ncd floci\n\n# Light, fluffy, and always free"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "floci is trending on GitHub 🔥 Light, fluffy, and always free.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T02:51:56+00:00",
+      "meta": {
+        "stars_today": 779,
+        "stars": 30471,
+        "language": "Java"
+      },
+      "repo": {
+        "full_name": "floci-io/floci",
+        "description": "Light, fluffy, and always free",
+        "stars": 30471,
+        "stars_today": 779,
+        "language": "Java",
+        "install": "docker run -d --name floci \\",
+        "demo_code": {
+          "snippet": "import boto3\nfrom floci import FlociContainer\n\n\ndef test_s3_create_bucket():\n    with FlociContainer() as floci:\n        s3 = boto3.client(\n            \"s3\",\n            endpoint_url=floci.get_endpoint(),\n            region_name=floci.get_region(),\n            aws_access_key_id=floci.get_access_key(),\n            aws_secret_access_key=floci.get_secret_key(),",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "docker run -d --name floci \\",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "import boto3",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Light, fluffy, and always free",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-4d766eb7",
+      "topic": "spec-kit: Toolkit to help you get started with SDD or any other process! (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. spec kit: Toolkit to help you get started with SDD or any other process!. 674 new stars today.",
+      "link": "https://github.com/github/spec-kit",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# github/spec-kit\n# +674 stars today\n\ngit clone https://github.com/github/spec-kit.git\ncd spec-kit\n\n# Toolkit to help you get started\n# with SDD or any other process!"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "spec-kit is trending on GitHub 🔥 Toolkit to help you get started with SDD or any other process!.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T02:51:54+00:00",
+      "meta": {
+        "stars_today": 674,
+        "stars": 147911,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "github/spec-kit",
+        "description": "Toolkit to help you get started with SDD or any other process!",
+        "stars": 147911,
+        "stars_today": 674,
+        "language": "Python",
+        "install": "uv tool install specify-cli",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "uv tool install specify-cli",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Toolkit to help you get",
             "cue": "run"
           }
         ],
