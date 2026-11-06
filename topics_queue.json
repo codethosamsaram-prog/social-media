@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-06T02:57:16+00:00",
+  "updated_at": "2026-11-06T06:32:41+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -689,7 +689,10 @@
           "LoRA",
           "LLM evals"
         ]
-      }
+      },
+      "error": "Remotion render failed:\n\u001b[31m\u001b[41m\u001b[37m Error \u001b[39m\u001b[31m\u001b[49m\u001b[39m \u001b[31minputRange must be strictly monotonically increasing but got [1.6,1.6]\u001b[39m\nat \u001b[4mnode_modules/remotion/dist/esm/index.mjs:5042\u001b[24m\n\u001b[90m5040\u001b[39m │ \u001b[90mfunction checkValidInputRange(arr) {\u001b[39m\n\u001b[90m5041\u001b[39m │ \u001b[90m  for (let i = 1;i < arr.length; ++i) {\u001b[39m\n5042 │     if (!(arr[i] > arr[i - 1])) {\n\u001b[90m5043\u001b[39m │ \u001b[90m      throw new Error(`inputRange must be strictly monotonically increasing but got [${arr.join(\",\")",
+      "updated_at": "2026-11-06T06:32:41+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-356d47dd",
@@ -1696,6 +1699,310 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "Toolkit to help you get",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-b22ad9f6",
+      "topic": "gstack: Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. gstack: Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve. 612 new stars today.",
+      "link": "https://github.com/garrytan/gstack",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# garrytan/gstack\n# +612 stars today\n\ngit clone https://github.com/garrytan/gstack.git\ncd gstack\n\n# Use Garry Tan's exact Claude Code\n# setup: 23 opinionated tools that\n# serve"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "gstack is trending on GitHub 🔥 Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T06:30:32+00:00",
+      "meta": {
+        "stars_today": 612,
+        "stars": 140138,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "garrytan/gstack",
+        "description": "Use Garry Tan's exact Claude Code setup: 23 opinionated tools that serve",
+        "stars": 140138,
+        "stars_today": 612,
+        "language": "TypeScript",
+        "install": "git clone https://github.com/garrytan/gstack",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone garrytan/gstack",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Use Garry Tan's exact Claude",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-d747ecb5",
+      "topic": "worktrunk: Worktrunk is a CLI for Git worktree management, designed for parallel AI (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. worktrunk: Worktrunk is a CLI for Git worktree management, designed for parallel AI. 546 new stars today.",
+      "link": "https://github.com/max-sixty/worktrunk",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# max-sixty/worktrunk\n# +546 stars today\n\ngit clone https://github.com/max-sixty/worktrunk.git\ncd worktrunk\n\n# Worktrunk is a CLI for Git\n# worktree management, designed for\n# parallel AI"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "worktrunk is trending on GitHub 🔥 Worktrunk is a CLI for Git worktree management, designed for parallel AI.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-06T06:30:32+00:00",
+      "meta": {
+        "stars_today": 546,
+        "stars": 11628,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "max-sixty/worktrunk",
+        "description": "Worktrunk is a CLI for Git worktree management, designed for parallel AI",
+        "stars": 11628,
+        "stars_today": 546,
+        "language": "Rust",
+        "install": "git clone https://github.com/max-sixty/worktrunk",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone max-sixty/worktrunk",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Worktrunk is a CLI for",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-f0e2e8b6",
+      "topic": "rivet: The orchestrator for agentic workloads (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. rivet: The orchestrator for agentic workloads. 6,687 stars already.",
+      "link": "https://github.com/rivet-dev/rivet",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# rivet-dev/rivet\n# 6,687 stars\n\ngit clone https://github.com/rivet-dev/rivet.git\ncd rivet\n\n# The orchestrator for agentic\n# workloads"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "rivet is trending on GitHub 🔥 The orchestrator for agentic workloads.",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-06T06:30:49+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 6687,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "rivet-dev/rivet",
+        "description": "The orchestrator for agentic workloads",
+        "stars": 6687,
+        "stars_today": null,
+        "language": "Rust",
+        "install": "git clone https://github.com/rivet-dev/rivet",
+        "demo_code": {
+          "snippet": "// client.ts (frontend or backend)\nimport { createClient } from \"rivetkit/client\";\nimport type { registry } from \"./server\";\n\nconst client = createClient<typeof registry>();\n\n// Open a WebSocket connection to the agent\nconst agent = client.agent.getOrCreate([\"agent-123\"]).connect();\n\n// Listen for realtime events\nagent.on(\"online\", users => console.log(\"online:\", users));\nagent.on(\"token\", delta => process.stdout.write(delta));",
+          "language": "typescript",
+          "filename": "example.ts",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone rivet-dev/rivet",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "import { createClient } from \"rive",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The orchestrator for agentic workl",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🤖",
+            "title": "Durable & multiplayer AI",
+            "detail": "memory that survives restarts, shared live",
+            "cue": "durable"
+          },
+          {
+            "icon": "🤖",
+            "title": "AI-generated apps",
+            "detail": "run the apps and Actors your agent generates",
+            "cue": "ai-generated"
+          },
+          {
+            "icon": "💻",
+            "title": "Collaborative editing",
+            "detail": "one Actor per document, synced to every",
+            "cue": "collaborative"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-01c9a315",
+      "topic": "Stroq: Find known secrets in your AI coding agent sessions (Claude Code, Codex (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STAR THIS NOW",
+      "script": "This GitHub repo is exploding. Stroq: Find known secrets in your AI coding agent sessions (Claude Code, Codex. 124 stars already.",
+      "link": "https://github.com/AGGIB/Stroq",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# AGGIB/Stroq\n# 124 stars\n\ngit clone https://github.com/AGGIB/Stroq.git\ncd Stroq\n\n# Find known secrets in your AI\n# coding agent sessions (Claude\n# Code, Codex"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "Stroq is trending on GitHub 🔥 Find known secrets in your AI coding agent sessions (Claude Code, Codex.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-06T06:30:49+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 124,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "AGGIB/Stroq",
+        "description": "Find known secrets in your AI coding agent sessions (Claude Code, Codex",
+        "stars": 124,
+        "stars_today": null,
+        "language": "TypeScript",
+        "install": "npx @stroq/cli",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "npx @stroq/cli",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Find known secrets in your",
             "cue": "run"
           }
         ],
