@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-07T14:22:25+00:00",
+  "updated_at": "2026-11-07T14:32:56+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -678,7 +678,7 @@
       ],
       "caption": "Interactive notes on RLHF: attention, LoRA and LLM evals 🤖",
       "source": "hacker_news",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T05:45:08+00:00",
       "browser": {
         "url": "concepts.laxmena.com",
@@ -691,8 +691,28 @@
         ]
       },
       "error": null,
-      "updated_at": "2026-11-07T05:42:13+00:00",
-      "attempts": 0
+      "updated_at": "2026-11-07T14:32:56+00:00",
+      "attempts": 0,
+      "style_used": {
+        "look": "bokeh",
+        "hook": "split",
+        "captions": "neon",
+        "cta": "comment",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "punch",
+        "grade": "faded",
+        "overlay": "none",
+        "burst": "ring",
+        "music": "keys"
+      },
+      "day": 4,
+      "video_path": "output/aitool-4b34d08f/reel.mp4",
+      "rendered_at": "2026-11-07T14:32:23+00:00",
+      "published_at": "2026-11-07T14:32:56+00:00",
+      "ig_media_id": "17933444778165360",
+      "permalink": "https://www.instagram.com/reel/DfcZ1mnjhKk/",
+      "container_id": "18099926828176838"
     },
     {
       "id": "dsa-356d47dd",
@@ -2907,6 +2927,165 @@
       "ig_media_id": "17991363521876350",
       "permalink": "https://www.instagram.com/reel/DfcYoAtCgkT/",
       "container_id": "18099923591176838"
+    },
+    {
+      "id": "repo-6426decb",
+      "topic": "security-audit-skill: A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. security audit skill: A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings. 2,088 new stars today.",
+      "link": "https://github.com/cloudflare/security-audit-skill",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# cloudflare/security-audit-skill\n# +2,088 stars today\n\ngit clone https://github.com/cloudflare/security-audit-skill.git\ncd security-audit-skill\n\n# A coding-agent skill for multi-\n# phase security audits with\n# independently verified, machine-"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#javascript"
+      ],
+      "caption": "security-audit-skill is trending on GitHub 🔥 A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T14:28:13+00:00",
+      "meta": {
+        "stars_today": 2088,
+        "stars": 65001,
+        "language": "JavaScript"
+      },
+      "repo": {
+        "full_name": "cloudflare/security-audit-skill",
+        "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
+        "stars": 65001,
+        "stars_today": 2088,
+        "language": "JavaScript",
+        "install": "git clone https://github.com/cloudflare/security-audit-skill",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone cloudflare/security-audi",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A coding-agent skill for multi-pha",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-239feae3",
+      "topic": "OpenMausBot: Open-source Grok Bot alternative with a virtual machine that bots can use (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. OpenMausBot: Open-source Grok Bot alternative with a virtual machine that bots can use. 1,986 new stars today.",
+      "link": "https://github.com/milind-soni/OpenMausBot",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# milind-soni/OpenMausBot\n# +1,986 stars today\n\ngit clone https://github.com/milind-soni/OpenMausBot.git\ncd OpenMausBot\n\n# Open-source Grok Bot alternative\n# with a virtual machine that bots\n# can use"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "OpenMausBot is trending on GitHub 🔥 Open-source Grok Bot alternative with a virtual machine that bots can use.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-07T14:28:13+00:00",
+      "meta": {
+        "stars_today": 1986,
+        "stars": 16401,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "milind-soni/OpenMausBot",
+        "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
+        "stars": 16401,
+        "stars_today": 1986,
+        "language": "TypeScript",
+        "install": "npm install -g openmausbot",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "npm install -g openmausbot",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Open-source Grok Bot alternative w",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🤖",
+            "title": "Bring your own agents. Bots",
+            "detail": "",
+            "cue": "bring"
+          },
+          {
+            "icon": "🤖",
+            "title": "Local first. One small harness",
+            "detail": "",
+            "cue": "local"
+          },
+          {
+            "icon": "🤖",
+            "title": "Agents with hands. Each bot",
+            "detail": "",
+            "cue": "agents"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
     }
   ],
   "removed": [
