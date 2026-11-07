@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-07T14:54:31+00:00",
+  "updated_at": "2026-11-07T15:02:22+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -926,7 +926,7 @@
       ],
       "caption": "auto-ontology is trending on GitHub 🔥 Auto Ontology is a Python framework for building semantic, graph-based reasoning layers.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T18:11:49+00:00",
       "meta": {
         "stars_today": 2053,
@@ -985,7 +985,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-07T15:02:22+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "spotlight",
+        "captions": "gradient",
+        "cta": "triple",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "punch",
+        "grade": "vivid",
+        "overlay": "letterbox",
+        "burst": "ring",
+        "music": "arp"
+      },
+      "day": 4,
+      "video_path": "output/repo-8ac19897/reel.mp4",
+      "rendered_at": "2026-11-07T15:01:49+00:00",
+      "published_at": "2026-11-07T15:02:22+00:00",
+      "ig_media_id": "18150937096565142",
+      "permalink": "https://www.instagram.com/reel/DfcdNTYEn5z/",
+      "container_id": "18099935099176838"
     },
     {
       "id": "aitool-27a269c7",
@@ -3490,6 +3512,151 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "The Prometheus monitoring system a",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-c04b1b26",
+      "topic": "voicebox: The open-source AI voice studio (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. voicebox: The open-source AI voice studio. 318 new stars today.",
+      "link": "https://github.com/jamiepine/voicebox",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# jamiepine/voicebox\n# +318 stars today\n\ngit clone https://github.com/jamiepine/voicebox.git\ncd voicebox\n\n# The open-source AI voice studio"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "voicebox is trending on GitHub 🔥 The open-source AI voice studio.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T14:56:58+00:00",
+      "meta": {
+        "stars_today": 318,
+        "stars": 59890,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "jamiepine/voicebox",
+        "description": "The open-source AI voice studio",
+        "stars": 59890,
+        "stars_today": 318,
+        "language": "Python",
+        "install": "git clone https://github.com/jamiepine/voicebox",
+        "demo_code": {
+          "snippet": "// In any MCP-aware agent:\nawait voicebox_speak({\n  text: \"Deploy complete.\",\n  profile: \"Morgan\",\n});",
+          "language": "typescript",
+          "filename": "example.ts",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone jamiepine/voicebox",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The open-source AI voice studio",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-0d415288",
+      "topic": "astryx: An open source design system that's fully customizable and agent ready (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. astryx: An open source design system that's fully customizable and agent ready. 198 new stars today.",
+      "link": "https://github.com/meta/astryx",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# meta/astryx\n# +198 stars today\n\ngit clone https://github.com/meta/astryx.git\ncd astryx\n\n# An open source design system\n# that's fully customizable and\n# agent ready"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "astryx is trending on GitHub 🔥 An open source design system that's fully customizable and agent ready.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T14:56:59+00:00",
+      "meta": {
+        "stars_today": 198,
+        "stars": 14201,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "meta/astryx",
+        "description": "An open source design system that's fully customizable and agent ready",
+        "stars": 14201,
+        "stars_today": 198,
+        "language": "TypeScript",
+        "install": "npm i -g @astryxdesign/cli",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "npm i -g @astryxdesign/cli",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "An open source design system",
             "cue": "run"
           }
         ],
