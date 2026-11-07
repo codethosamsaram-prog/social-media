@@ -89,7 +89,7 @@ export const How: React.FC<{ s: HowScene; accent: string }> = ({ s, accent }) =>
         const y = top + i * (nodeH + gap);
         const next = s.steps[i + 1];
         const line = next ? ramp(t, st.at + 0.25, next.at) : 0;
-        const dot = next ? interpolate(t, [st.at + 0.25, next.at], [0, 1], clamp) : 0;
+        const dot = next ? interpolate(t, [st.at + 0.25, Math.max(st.at + 0.251, next.at)], [0, 1], clamp) : 0;
         const isActive = i === active;
         return (
           <React.Fragment key={i}>

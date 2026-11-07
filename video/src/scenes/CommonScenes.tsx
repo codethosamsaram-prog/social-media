@@ -439,7 +439,8 @@ export const Browser: React.FC<{ s: BrowserScene; accent: string }> = ({ s, acce
   const p = pop(f, fps, 0.02, 160, 15);
   const urlChars = Math.floor(interpolate(t, s.urlTyping, [0, s.url.length], clamp));
   const promptChars = s.prompt ? Math.floor(interpolate(t, s.promptTyping, [0, s.prompt.length], clamp)) : 0;
-  const queryChars = Math.floor(interpolate(t, s.promptTyping, [0, s.query.length], clamp));
+  // promptTyping is zero-length when the scene has neither prompt nor query, and interpolate throws on that.
+  const queryChars = s.query ? Math.floor(interpolate(t, s.promptTyping, [0, s.query.length], clamp)) : 0;
   const built = ramp(t, s.mockAt, s.mockAt + 0.6);
   const blink = Math.floor(t * 2.4) % 2 === 0;
 
