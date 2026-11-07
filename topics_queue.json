@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-07T14:32:56+00:00",
+  "updated_at": "2026-11-07T14:47:05+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -804,24 +804,25 @@
         "trick": "kadane"
       },
       "style": null,
-      "updated_at": "2026-11-04T14:30:14+00:00",
-      "error": null,
+      "updated_at": "2026-11-07T14:47:05+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
       "style_used": {
-        "look": "ocean",
-        "hook": "question",
-        "captions": "tape",
-        "cta": "share",
-        "hookFont": "archivo",
-        "presenter": "meera",
-        "camera": "drift",
-        "grade": "faded",
-        "overlay": "leaks",
-        "burst": "ring",
-        "music": "arp"
+        "look": "sunset",
+        "hook": "kinetic",
+        "captions": "gradient",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "rohan",
+        "camera": "handheld",
+        "grade": "cool",
+        "overlay": "letterbox",
+        "burst": "rays",
+        "music": "pad"
       },
-      "day": null,
-      "video_path": null,
-      "rendered_at": null
+      "day": 4,
+      "video_path": "output/dsa-84ee2d5e/reel.mp4",
+      "rendered_at": "2026-11-07T14:46:32+00:00",
+      "attempts": 1
     },
     {
       "id": "repo-78da873c",
@@ -3079,6 +3080,274 @@
             "title": "Agents with hands. Each bot",
             "detail": "",
             "cue": "agents"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-eb8e2668",
+      "topic": "sherlock: Hunt down social media accounts by username across social networks (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DELETE YOUR SUBSCRIPTION",
+      "script": "This GitHub repo is exploding. sherlock: Hunt down social media accounts by username across social networks. 1,761 new stars today.",
+      "link": "https://github.com/sherlock-project/sherlock",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# sherlock-project/sherlock\n# +1,761 stars today\n\ngit clone https://github.com/sherlock-project/sherlock.git\ncd sherlock\n\n# Hunt down social media accounts by\n# username across social networks"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "sherlock is trending on GitHub 🔥 Hunt down social media accounts by username across social networks.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T14:38:43+00:00",
+      "meta": {
+        "stars_today": 1761,
+        "stars": 99688,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "sherlock-project/sherlock",
+        "description": "Hunt down social media accounts by username across social networks",
+        "stars": 99688,
+        "stars_today": 1761,
+        "language": "Python",
+        "install": "git clone https://github.com/sherlock-project/sherlock",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone sherlock-project/sherloc",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Hunt down social media accounts",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-bfa9b4aa",
+      "topic": "zed: Code at the speed of thought Zed is a high-performance, multiplayer code (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB IS CRAZY",
+      "script": "This GitHub repo is exploding. zed: Code at the speed of thought Zed is a high-performance, multiplayer code. 1,119 new stars today.",
+      "link": "https://github.com/zed-industries/zed",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# zed-industries/zed\n# +1,119 stars today\n\ngit clone https://github.com/zed-industries/zed.git\ncd zed\n\n# Code at the speed of thought Zed\n# is a high-performance, multiplayer\n# code"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "zed is trending on GitHub 🔥 Code at the speed of thought Zed is a high-performance, multiplayer code.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T14:38:45+00:00",
+      "meta": {
+        "stars_today": 1119,
+        "stars": 94090,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "zed-industries/zed",
+        "description": "Code at the speed of thought Zed is a high-performance, multiplayer code",
+        "stars": 94090,
+        "stars_today": 1119,
+        "language": "Rust",
+        "install": "git clone https://github.com/zed-industries/zed",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone zed-industries/zed",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Code at the speed of",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "aitool-63c3d56b",
+      "topic": "Gemini Omni 1.2 Flash: A fast multimodal AI model released for developer applications",
+      "keyword": "AITOOL",
+      "keyword_spoken": "AI tool",
+      "category": "ai_tool",
+      "hook": "NOBODY USES THIS",
+      "script": "This AI tool is criminally underrated. Gemini Omni 1.2 Flash: A fast multimodal AI model released for developer applications.",
+      "link": "https://blog.google/innovation-and-ai/technology/developers-tools/introducing-gemini-omni-1-2-flash/",
+      "code": {
+        "language": "javascript",
+        "filename": "ai-tool.js",
+        "snippet": "// hidden AI tool of the day\nconst tool = \"Gemini Omni 1.2 Flash\";\nconst site = \"blog.google\";\n\n// A fast multimodal AI model released\n// for developer applications\n\nawait tool.tryIt(); // link in DMs"
+      },
+      "stock_queries": [
+        "artificial intelligence",
+        "coding laptop dark",
+        "neon technology"
+      ],
+      "hashtags": [
+        "#ai",
+        "#aitools",
+        "#coding",
+        "#developers",
+        "#vscode"
+      ],
+      "caption": "Gemini Omni 1.2 Flash: A fast multimodal AI model released for developer applications 🤖",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-07T14:38:56+00:00",
+      "browser": {
+        "url": "blog.google",
+        "mock": "landing",
+        "headline": "Gemini Omni 1.2 Flash",
+        "bullets": [
+          "A fast multimodal AI model released"
+        ]
+      }
+    },
+    {
+      "id": "repo-865631e6",
+      "topic": "spindle: The web framework for modern OCaml (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. spindle: The web framework for modern OCaml. 22 stars already.",
+      "link": "https://github.com/hyphatech/spindle",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# hyphatech/spindle\n# 22 stars\n\ngit clone https://github.com/hyphatech/spindle.git\ncd spindle\n\n# The web framework for modern OCaml"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "spindle is trending on GitHub 🔥 The web framework for modern OCaml.",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-07T14:38:56+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 22,
+        "language": "OCaml"
+      },
+      "repo": {
+        "full_name": "hyphatech/spindle",
+        "description": "The web framework for modern OCaml",
+        "stars": 22,
+        "stars_today": null,
+        "language": "OCaml",
+        "install": "git clone https://github.com/hyphatech/spindle",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone hyphatech/spindle",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The web framework for modern",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🛠️",
+            "title": "Typed end to end",
+            "detail": "JSON derived from your types, every input",
+            "cue": "typed"
+          },
+          {
+            "icon": "📄",
+            "title": "Interactive docs",
+            "detail": "OpenAPI docs via Scalar, generated from",
+            "cue": "interactive"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Front end in sync",
+            "detail": "Zod or Melange schemas, derived from",
+            "cue": "front"
           }
         ],
         "narration": {
