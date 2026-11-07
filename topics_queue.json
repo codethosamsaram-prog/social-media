@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-07T15:06:30+00:00",
+  "updated_at": "2026-11-07T15:41:48+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -1102,7 +1102,10 @@
       "created_at": "2026-11-04T18:13:00+00:00",
       "dsa": {
         "trick": "pow2"
-      }
+      },
+      "error": "No audio was received. Please verify that your parameters are correct.",
+      "updated_at": "2026-11-07T15:41:48+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-f42aca0e",
@@ -3819,6 +3822,146 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "A context-compression plugin for m",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-1e0c2424",
+      "topic": "localthings: Control your Samsung appliances from Home Assistant over your home network, with (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB IS CRAZY",
+      "script": "This GitHub repo is exploding. localthings: Control your Samsung appliances from Home Assistant over your home network, with. 184 new stars today.",
+      "link": "https://github.com/mbillow/localthings",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# mbillow/localthings\n# +184 stars today\n\ngit clone https://github.com/mbillow/localthings.git\ncd localthings\n\n# Control your Samsung appliances\n# from Home Assistant over your home\n# network, with"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "localthings is trending on GitHub 🔥 Control your Samsung appliances from Home Assistant over your home network, with.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T15:38:50+00:00",
+      "meta": {
+        "stars_today": 184,
+        "stars": 974,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "mbillow/localthings",
+        "description": "Control your Samsung appliances from Home Assistant over your home network, with",
+        "stars": 974,
+        "stars_today": 184,
+        "language": "Python",
+        "install": "git clone https://github.com/mbillow/localthings",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone mbillow/localthings",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Control your Samsung appliances fr",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-3558f6c1",
+      "topic": "tailwindcss: A utility-first CSS framework for rapid UI development (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "SENIORS USE THIS",
+      "script": "This GitHub repo is exploding. tailwindcss: A utility-first CSS framework for rapid UI development. 181 new stars today.",
+      "link": "https://github.com/tailwindlabs/tailwindcss",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# tailwindlabs/tailwindcss\n# +181 stars today\n\ngit clone https://github.com/tailwindlabs/tailwindcss.git\ncd tailwindcss\n\n# A utility-first CSS framework for\n# rapid UI development"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "tailwindcss is trending on GitHub 🔥 A utility-first CSS framework for rapid UI development.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T15:38:51+00:00",
+      "meta": {
+        "stars_today": 181,
+        "stars": 98275,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "tailwindlabs/tailwindcss",
+        "description": "A utility-first CSS framework for rapid UI development",
+        "stars": 98275,
+        "stars_today": 181,
+        "language": "TypeScript",
+        "install": "git clone https://github.com/tailwindlabs/tailwindcss",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone tailwindlabs/tailwindcss",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A utility-first CSS framework for",
             "cue": "run"
           }
         ],
