@@ -16,11 +16,17 @@ from config import settings
 
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
 SLOTS = ((8, "dev"), (11, "dev"), (13, "hiring"), (15, "dev"), (18, "dev"), (21, "dev"))
+# Start this early so a late GitHub run still makes its slot. auto_pipeline holds the post until the slot time.
+LEAD = dt.timedelta(minutes=30)
+
+
+def slot_time(now: dt.datetime, hour: int) -> dt.datetime:
+    return now.replace(hour=hour, minute=0, second=0, microsecond=0)
 
 
 def decide(now: dt.datetime, posted: int, hiring_done: bool) -> str | None:
-    """The kind of reel to post now, or None when today is on track."""
-    due = [kind for hour, kind in SLOTS if now.hour >= hour]
+    """The kind of reel to start now, or None when today is on track."""
+    due = [kind for hour, kind in SLOTS if now + LEAD >= slot_time(now, hour)]
     if posted >= len(due):
         return None
     return "hiring" if "hiring" in due and not hiring_done else "dev"
@@ -57,11 +63,12 @@ def main() -> int:
     # Instagram catches a post whose queue update never got committed; the queue covers Meta being down.
     posted = max(instagram_count(now.date()) or 0, len(recorded))
     kind = decide(now, posted, any(i.get("category") == "hiring" for i in recorded))
-    print(f"{now:%H:%M} IST, {posted} posted today: {'post a ' + kind + ' reel' if kind else 'on track'}")
+    post_at = slot_time(now, SLOTS[posted][0]).isoformat() if kind else ""
+    print(f"{now:%H:%M} IST, {posted} posted today: {f'{kind} reel for {post_at}' if kind else 'on track'}")
     out = os.environ.get("GITHUB_OUTPUT")
     if out:
         with open(out, "a", encoding="utf-8") as fh:
-            fh.write(f"go={'true' if kind else 'false'}\nkind={kind or ''}\n")
+            fh.write(f"go={'true' if kind else 'false'}\nkind={kind or ''}\npost_at={post_at}\n")
     return 0
 
 

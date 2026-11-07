@@ -29,6 +29,7 @@ import asyncio
 import difflib
 import json
 import math
+import os
 import random
 import re
 import shutil
@@ -813,12 +814,22 @@ def build_caption(item: dict[str, Any]) -> str:
     )
 
 
+def hold_for_slot(log: Log) -> None:
+    """slot_gate starts runs early; wait here so the reel goes live at its slot, not when the render ended."""
+    stamp = os.environ.get("POST_NOT_BEFORE")
+    wait = (dt.datetime.fromisoformat(stamp) - dt.datetime.now(IST)).total_seconds() if stamp else 0
+    if wait > 0:
+        log(f"Ready early: holding {wait / 60:.1f} min until the {stamp} slot")
+        time.sleep(wait)
+
+
 def publish_reel(video: Path, caption: str, log: Log = print) -> dict[str, Any]:
     settings.require("instagram_access_token", "instagram_user_id")
     uid = settings.instagram_user_id
     with httpx.Client(timeout=120) as client:
         container = create_reel_container(client, video, caption, log)
         wait_for_container(client, container, log)
+        hold_for_slot(log)
         media_id = _graph(client, "POST", f"{uid}/media_publish", creation_id=container)["id"]
         try:
             permalink = _graph(client, "GET", media_id, fields="permalink").get("permalink")
