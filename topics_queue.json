@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-07T14:47:05+00:00",
+  "updated_at": "2026-11-07T14:54:31+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -798,31 +798,35 @@
       ],
       "caption": "Maximum subarray in O(1) space (Kadane's algorithm) 🧠",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T05:45:08+00:00",
       "dsa": {
         "trick": "kadane"
       },
       "style": null,
-      "updated_at": "2026-11-07T14:47:05+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-07T14:54:31+00:00",
+      "error": null,
       "style_used": {
-        "look": "sunset",
-        "hook": "kinetic",
-        "captions": "gradient",
-        "cta": "series",
-        "hookFont": "oswald",
+        "look": "retrosun",
+        "hook": "sticker",
+        "captions": "mega",
+        "cta": "share",
+        "hookFont": "archivo",
         "presenter": "rohan",
         "camera": "handheld",
-        "grade": "cool",
-        "overlay": "letterbox",
-        "burst": "rays",
+        "grade": "warm",
+        "overlay": "leaks",
+        "burst": "slash",
         "music": "pad"
       },
       "day": 4,
       "video_path": "output/dsa-84ee2d5e/reel.mp4",
-      "rendered_at": "2026-11-07T14:46:32+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-07T14:54:00+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-07T14:54:31+00:00",
+      "ig_media_id": "17996570199053184",
+      "permalink": "https://www.instagram.com/reel/DfccUBmgFFG/",
+      "container_id": "18099932546176838"
     },
     {
       "id": "repo-78da873c",
@@ -3350,6 +3354,146 @@
             "cue": "front"
           }
         ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-e9e37fae",
+      "topic": "ruff: An extremely fast Python linter and code formatter, written in Rust (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. ruff: An extremely fast Python linter and code formatter, written in Rust. 350 new stars today.",
+      "link": "https://github.com/astral-sh/ruff",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# astral-sh/ruff\n# +350 stars today\n\ngit clone https://github.com/astral-sh/ruff.git\ncd ruff\n\n# An extremely fast Python linter\n# and code formatter, written in\n# Rust"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "ruff is trending on GitHub 🔥 An extremely fast Python linter and code formatter, written in Rust.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T14:49:27+00:00",
+      "meta": {
+        "stars_today": 350,
+        "stars": 50845,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "astral-sh/ruff",
+        "description": "An extremely fast Python linter and code formatter, written in Rust",
+        "stars": 50845,
+        "stars_today": 350,
+        "language": "Rust",
+        "install": "pip install ruff",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install ruff",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "An extremely fast Python linter",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-817a11c3",
+      "topic": "prometheus: The Prometheus monitoring system and time series database (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. prometheus: The Prometheus monitoring system and time series database. 325 new stars today.",
+      "link": "https://github.com/prometheus/prometheus",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# prometheus/prometheus\n# +325 stars today\n\ngit clone https://github.com/prometheus/prometheus.git\ncd prometheus\n\n# The Prometheus monitoring system\n# and time series database"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#go"
+      ],
+      "caption": "prometheus is trending on GitHub 🔥 The Prometheus monitoring system and time series database.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T14:49:27+00:00",
+      "meta": {
+        "stars_today": 325,
+        "stars": 67329,
+        "language": "Go"
+      },
+      "repo": {
+        "full_name": "prometheus/prometheus",
+        "description": "The Prometheus monitoring system and time series database",
+        "stars": 67329,
+        "stars_today": 325,
+        "language": "Go",
+        "install": "docker run --name prometheus -d -p 127.0.0.1:9090:9090 prom/prometheus",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "docker run --name prometheus -d -p",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The Prometheus monitoring system a",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
         "narration": {
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
