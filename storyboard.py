@@ -864,7 +864,7 @@ AXES: dict[str, list[str]] = {
     "captions": ["pop", "box", "clean", "type", "neon", "bounce", "gradient", "tape", "mega", "underline", "karaoke"],
     "cta": ["search", "comment", "series", "share", "triple"],
     "hookFont": ["anton", "bebas", "archivo", "oswald"],
-    "presenter": ["aarav", "meera", "kabir", "zoya", "rohan", "anya"],
+    "presenter": ["aarav", "kabir", "rohan"],  # male only: the voice is male (user's rule)
     "camera": ["punch", "snap", "drift", "handheld", "breathe"],
     "grade": ["none", "teal_orange", "warm", "cool", "vivid", "faded", "contrast"],
     "overlay": ["none", "leaks", "dust", "vhs", "letterbox", "sparks"],

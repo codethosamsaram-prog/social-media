@@ -2,17 +2,14 @@ import React from "react";
 import { random, spring, useCurrentFrame, useVideoConfig } from "remotion";
 import { Emphasis, Presenter as Kind, Scene, Word } from "../types";
 
-type Hair = "quiff" | "bun" | "curls" | "long" | "side" | "bob";
-type Look = { skin: string; hair: string; iris: string; style: Hair; top: string; glasses?: boolean; beard?: boolean; earrings?: boolean; headphones?: boolean };
+type Hair = "quiff" | "curls" | "side";
+type Look = { skin: string; hair: string; iris: string; style: Hair; top: string; glasses?: boolean; beard?: boolean; headphones?: boolean };
 
 /** Original characters in a soft 3D look: gradients and highlights stand in for real lighting. */
 const CAST: Record<Exclude<Kind, "none">, Look> = {
   aarav: { skin: "#c98a5e", hair: "#1d1512", iris: "#4a2c17", style: "quiff", top: "#3f6df0", glasses: true },
-  meera: { skin: "#d39a6e", hair: "#20130e", iris: "#3e2412", style: "bun", top: "#e8528f", earrings: true },
   kabir: { skin: "#a96f48", hair: "#14100e", iris: "#2f1c0f", style: "curls", top: "#14b8a6", beard: true },
-  zoya: { skin: "#e0ae85", hair: "#3a2116", iris: "#5a3a1c", style: "long", top: "#f59e0b" },
   rohan: { skin: "#b87a50", hair: "#191310", iris: "#3a2312", style: "side", top: "#8b5cf6", headphones: true, beard: true },
-  anya: { skin: "#c48a60", hair: "#2a1710", iris: "#4d2f18", style: "bob", top: "#ef4444", glasses: true },
 };
 
 const shade = (hex: string, amt: number) => {
@@ -62,13 +59,6 @@ const Mouth: React.FC<{ id: string; v: Viseme; smile: number; lip: string }> = (
   );
 };
 
-const HairBack: React.FC<{ a: Look; fill: string }> = ({ a, fill }) => {
-  if (a.style === "bun") return <><circle cx="150" cy="40" r="32" fill={fill} /><path d="M 66 150 Q 62 60 150 54 Q 238 60 234 150 Z" fill={fill} /></>;
-  if (a.style === "long") return <path d="M 62 160 Q 50 48 150 44 Q 250 48 238 160 Q 252 250 232 318 L 196 318 L 196 200 L 104 200 L 104 318 L 68 318 Q 48 250 62 160 Z" fill={fill} />;
-  if (a.style === "bob") return <path d="M 60 150 Q 54 46 150 44 Q 246 46 240 150 Q 248 214 226 244 L 196 236 L 104 236 L 74 244 Q 52 214 60 150 Z" fill={fill} />;
-  return null;
-};
-
 const HairFront: React.FC<{ a: Look; fill: string; shine: string }> = ({ a, fill, shine }) => {
   switch (a.style) {
     case "quiff":
@@ -77,12 +67,6 @@ const HairFront: React.FC<{ a: Look; fill: string; shine: string }> = ({ a, fill
       return <g fill={fill}>{[[80, 110, 24], [92, 78, 27], [122, 58, 29], [156, 50, 30], [190, 60, 28], [214, 84, 26], [224, 114, 22], [108, 92, 20], [150, 82, 24], [192, 94, 20]].map(([x, y, r]) => <circle key={`${x}-${y}`} cx={x} cy={y} r={r} />)}<circle cx="128" cy="52" r="7" fill={shine} opacity={0.5} /><circle cx="184" cy="56" r="6" fill={shine} opacity={0.45} /></g>;
     case "side":
       return <><path d="M 68 142 Q 60 62 150 52 Q 240 58 232 142 Q 226 110 206 96 Q 150 112 96 84 Q 74 104 68 142 Z" fill={fill} /><path d="M 120 68 Q 168 60 204 80" fill="none" stroke={shine} strokeWidth={7} strokeLinecap="round" opacity={0.5} /></>;
-    case "bun":
-      return <><path d="M 70 142 Q 68 66 150 62 Q 232 66 230 142 Q 214 96 150 92 Q 86 96 70 142 Z" fill={fill} /><path d="M 112 76 Q 150 66 188 76" fill="none" stroke={shine} strokeWidth={6} strokeLinecap="round" opacity={0.45} /></>;
-    case "long":
-      return <><path d="M 70 158 Q 66 66 150 60 Q 234 66 230 158 Q 214 100 170 84 Q 124 116 70 158 Z" fill={fill} /><path d="M 114 74 Q 150 62 190 78" fill="none" stroke={shine} strokeWidth={7} strokeLinecap="round" opacity={0.45} /></>;
-    default:
-      return <><path d="M 68 150 Q 64 62 150 58 Q 236 62 232 150 Q 226 122 216 118 L 84 118 Q 74 122 68 150 Z" fill={fill} /><path d="M 104 78 Q 150 62 196 78" fill="none" stroke={shine} strokeWidth={7} strokeLinecap="round" opacity={0.5} /></>;
   }
 };
 
@@ -137,9 +121,7 @@ const Bust: React.FC<{ kind: Exclude<Kind, "none">; v: Viseme; blink: number; lo
         <rect x="122" y="226" width="56" height="58" rx="22" fill={dark} />
       </g>
       <g transform={`translate(${tilt * 0.8} ${nod}) rotate(${tilt} 150 240)`}>
-        <HairBack a={a} fill={`url(#${id}-hair)`} />
         <ellipse cx="70" cy="165" rx="14" ry="20" fill={dark} /><ellipse cx="230" cy="165" rx="14" ry="20" fill={dark} />
-        {a.earrings && <><circle cx="70" cy="192" r="8" fill="none" stroke="#f6c945" strokeWidth={3.5} /><circle cx="230" cy="192" r="8" fill="none" stroke="#f6c945" strokeWidth={3.5} /></>}
         <path d="M 70 150 Q 68 66 150 62 Q 232 66 230 150 Q 232 214 188 244 Q 150 262 112 244 Q 68 214 70 150 Z" fill={`url(#${id}-skin)`} />
         {a.beard && <path d="M 72 176 Q 84 224 112 244 Q 150 262 188 244 Q 216 224 228 176 Q 216 202 190 198 Q 150 188 110 198 Q 84 202 72 176 Z" fill={a.hair} opacity={0.72} />}
         <ellipse cx="100" cy="192" rx="24" ry="17" fill={`url(#${id}-blush)`} /><ellipse cx="200" cy="192" rx="24" ry="17" fill={`url(#${id}-blush)`} />

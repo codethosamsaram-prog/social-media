@@ -171,7 +171,7 @@ export type BurstStyle = "ring" | "rays" | "sparks" | "slash";
 /** A moment the edit reacts to (seconds, absolute). `strong` also fires a burst. */
 export type Emphasis = { t: number; strong: boolean };
 export type CtaStyle = "search" | "comment" | "series" | "share" | "triple";
-export type Presenter = "none" | "aarav" | "meera" | "kabir" | "zoya" | "rohan" | "anya";
+export type Presenter = "none" | "aarav" | "kabir" | "rohan";
 
 export type Style = {
   look: Look;
