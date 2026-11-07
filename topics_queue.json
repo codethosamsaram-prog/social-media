@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-07T15:41:48+00:00",
+  "updated_at": "2026-11-07T15:53:24+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -1098,14 +1098,34 @@
       ],
       "caption": "Power of two in O(1) with one bitwise AND 🧠",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T18:13:00+00:00",
       "dsa": {
         "trick": "pow2"
       },
-      "error": "No audio was received. Please verify that your parameters are correct.",
-      "updated_at": "2026-11-07T15:41:48+00:00",
-      "attempts": 1
+      "error": null,
+      "updated_at": "2026-11-07T15:53:24+00:00",
+      "attempts": 1,
+      "style_used": {
+        "look": "bokeh",
+        "hook": "stack",
+        "captions": "neon",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "drift",
+        "grade": "contrast",
+        "overlay": "dust",
+        "burst": "slash",
+        "music": "arp"
+      },
+      "day": 4,
+      "video_path": "output/dsa-61238ed1/reel.mp4",
+      "rendered_at": "2026-11-07T15:52:52+00:00",
+      "published_at": "2026-11-07T15:53:24+00:00",
+      "ig_media_id": "17974879203142496",
+      "permalink": "https://www.instagram.com/reel/DfcjDWWkQK4/",
+      "container_id": "18099947261176838"
     },
     {
       "id": "dsa-f42aca0e",
@@ -3962,6 +3982,146 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "A utility-first CSS framework for",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-9ca92b27",
+      "topic": "free-programming-books: Freely available programming books (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB IS CRAZY",
+      "script": "This GitHub repo is exploding. free programming books: Freely available programming books. 179 new stars today.",
+      "link": "https://github.com/EbookFoundation/free-programming-books",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# EbookFoundation/free-programming-books\n# +179 stars today\n\ngit clone https://github.com/EbookFoundation/free-programming-books.git\ncd free-programming-books\n\n# Freely available programming books"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "free-programming-books is trending on GitHub 🔥 Freely available programming books.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T15:47:03+00:00",
+      "meta": {
+        "stars_today": 179,
+        "stars": 401202,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "EbookFoundation/free-programming-books",
+        "description": "Freely available programming books",
+        "stars": 401202,
+        "stars_today": 179,
+        "language": "Python",
+        "install": "git clone https://github.com/EbookFoundation/free-programming-books",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone EbookFoundation/free-pro",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Freely available programming books",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-4c2682aa",
+      "topic": "django: The Web framework for perfectionists with deadlines (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. django: The Web framework for perfectionists with deadlines. 169 new stars today.",
+      "link": "https://github.com/django/django",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# django/django\n# +169 stars today\n\ngit clone https://github.com/django/django.git\ncd django\n\n# The Web framework for\n# perfectionists with deadlines"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "django is trending on GitHub 🔥 The Web framework for perfectionists with deadlines.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-07T15:47:03+00:00",
+      "meta": {
+        "stars_today": 169,
+        "stars": 91676,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "django/django",
+        "description": "The Web framework for perfectionists with deadlines",
+        "stars": 91676,
+        "stars_today": 169,
+        "language": "Python",
+        "install": "git clone https://github.com/django/django",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone django/django",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The Web framework for perfectionis",
             "cue": "run"
           }
         ],
