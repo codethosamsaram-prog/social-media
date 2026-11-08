@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-08T09:50:48+00:00",
+  "updated_at": "2026-11-08T12:49:12+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -1505,7 +1505,7 @@
       ],
       "caption": "Ripple-65B: Open-weight state of the art model for agentic coding 🤖",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-05T09:44:23+00:00",
       "browser": {
         "url": "ricursive.com",
@@ -1514,7 +1514,29 @@
         "bullets": [
           "Open-weight state of the art model"
         ]
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-08T12:49:12+00:00",
+      "style_used": {
+        "look": "matrix",
+        "hook": "alert",
+        "captions": "mega",
+        "cta": "triple",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "cool",
+        "overlay": "letterbox",
+        "burst": "rays",
+        "music": "pad"
+      },
+      "day": 5,
+      "video_path": "output/aitool-0f35e299/reel.mp4",
+      "rendered_at": "2026-11-08T12:48:41+00:00",
+      "published_at": "2026-11-08T12:49:12+00:00",
+      "ig_media_id": "18214070137363552",
+      "permalink": "https://www.instagram.com/reel/Dfeyw6DEXxb/",
+      "container_id": "18100213547176838"
     },
     {
       "id": "repo-5d26c060",
@@ -5005,6 +5027,315 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "SponsorBlock client for all YouTub",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-1261f03c",
+      "topic": "ai-engineering-from-scratch: Learn AI Engineering! (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "SENIORS USE THIS",
+      "script": "This GitHub repo is exploding. ai engineering from scratch: Learn AI Engineering!. 439 new stars today.",
+      "link": "https://github.com/rohitg00/ai-engineering-from-scratch",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# rohitg00/ai-engineering-from-scratch\n# +439 stars today\n\ngit clone https://github.com/rohitg00/ai-engineering-from-scratch.git\ncd ai-engineering-from-scratch\n\n# Learn AI Engineering!"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "ai-engineering-from-scratch is trending on GitHub 🔥 Learn AI Engineering!.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-08T12:46:31+00:00",
+      "meta": {
+        "stars_today": 439,
+        "stars": 77700,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "rohitg00/ai-engineering-from-scratch",
+        "description": "Learn AI Engineering!",
+        "stars": 77700,
+        "stars_today": 439,
+        "language": "Python",
+        "install": "npx --version",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "npx --version",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Learn AI Engineering!",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-f11725c1",
+      "topic": "google-colab-cli: A CLI for interacting with Google Colab runtimes (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. google colab cli: A CLI for interacting with Google Colab runtimes. 139 new stars today.",
+      "link": "https://github.com/googlecolab/google-colab-cli",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# googlecolab/google-colab-cli\n# +139 stars today\n\ngit clone https://github.com/googlecolab/google-colab-cli.git\ncd google-colab-cli\n\n# A CLI for interacting with Google\n# Colab runtimes"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "google-colab-cli is trending on GitHub 🔥 A CLI for interacting with Google Colab runtimes.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-08T12:46:31+00:00",
+      "meta": {
+        "stars_today": 139,
+        "stars": 2056,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "googlecolab/google-colab-cli",
+        "description": "A CLI for interacting with Google Colab runtimes",
+        "stars": 2056,
+        "stars_today": 139,
+        "language": "Python",
+        "install": "uv tool install google-colab-cli",
+        "demo_code": {
+          "snippet": "#!/usr/bin/env -S colab run --gpu L4 --keep\nimport torch\n\nprint(\"L4 GPU Available:\", torch.cuda.is_available())\nprint(\"Device Name:\", torch.cuda.get_device_name(0))",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "uv tool install google-colab-cli",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "import torch",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A CLI for interacting with",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🛠️",
+            "title": "Instant VM Provisioning",
+            "detail": "Spin up CPU, GPU (T4, L4, G4, H100, A100)",
+            "cue": "instant"
+          },
+          {
+            "icon": "💻",
+            "title": "Robust Code Execution",
+            "detail": "Run local Python scripts, Jupyter Notebooks",
+            "cue": "robust"
+          },
+          {
+            "icon": "📄",
+            "title": "Ephemeral Job Runner (colab",
+            "detail": "Provision a fresh VM, execute a local script",
+            "cue": "ephemeral"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-d3433956",
+      "topic": "pymizu: Thread-speed async and parallel Python over shared memory (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STAR THIS NOW",
+      "script": "This GitHub repo is exploding. pymizu: Thread-speed async and parallel Python over shared memory. 45 stars already.",
+      "link": "https://github.com/shikokuchuo/pymizu",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# shikokuchuo/pymizu\n# 45 stars\n\ngit clone https://github.com/shikokuchuo/pymizu.git\ncd pymizu\n\n# Thread-speed async and parallel\n# Python over shared memory"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "pymizu is trending on GitHub 🔥 Thread-speed async and parallel Python over shared memory.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-08T12:46:38+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 45,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "shikokuchuo/pymizu",
+        "description": "Thread-speed async and parallel Python over shared memory",
+        "stars": 45,
+        "stars_today": null,
+        "language": "Python",
+        "install": "pip install pymizu",
+        "demo_code": {
+          "snippet": "import pymizu\n\nwith pymizu.Pool.create(4) as pool:\n    task = pool.submit(pow, 2, 16)\n    print(task.collect(timeout=5))",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install pymizu",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "import pymizu",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Thread-speed async and parallel Py",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-827e1a67",
+      "topic": "WaveDudeNext: Interactive 2D wave optics simulator (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. WaveDudeNext: Interactive 2D wave optics simulator. 184 stars already.",
+      "link": "https://github.com/graealex/WaveDudeNext",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# graealex/WaveDudeNext\n# 184 stars\n\ngit clone https://github.com/graealex/WaveDudeNext.git\ncd WaveDudeNext\n\n# Interactive 2D wave optics\n# simulator"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "WaveDudeNext is trending on GitHub 🔥 Interactive 2D wave optics simulator.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-08T12:46:38+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 184,
+        "language": "C#"
+      },
+      "repo": {
+        "full_name": "graealex/WaveDudeNext",
+        "description": "Interactive 2D wave optics simulator",
+        "stars": 184,
+        "stars_today": null,
+        "language": "C#",
+        "install": "git clone https://github.com/graealex/WaveDudeNext",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone graealex/WaveDudeNext",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Interactive 2D wave optics simulat",
             "cue": "run"
           }
         ],
