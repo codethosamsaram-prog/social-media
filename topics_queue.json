@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-08T02:56:14+00:00",
+  "updated_at": "2026-11-08T05:53:55+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -1211,11 +1211,33 @@
       ],
       "caption": "Find the duplicate number in O(1) space (Floyd's cycle detection) 🧠",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T18:20:24+00:00",
       "dsa": {
         "trick": "floyd"
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-08T05:53:55+00:00",
+      "style_used": {
+        "look": "ember",
+        "hook": "split",
+        "captions": "bounce",
+        "cta": "search",
+        "hookFont": "oswald",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "none",
+        "overlay": "dust",
+        "burst": "sparks",
+        "music": "pad"
+      },
+      "day": 5,
+      "video_path": "output/dsa-c8afe52d/reel.mp4",
+      "rendered_at": "2026-11-08T05:53:22+00:00",
+      "published_at": "2026-11-08T05:53:55+00:00",
+      "ig_media_id": "18063696878800993",
+      "permalink": "https://www.instagram.com/reel/DfeDPNTCfru/",
+      "container_id": "18100108871176838"
     },
     {
       "id": "repo-f106f87b",
@@ -4354,6 +4376,221 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "Low-interaction honeypot for super",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-596f1566",
+      "topic": "OBLITERATUS: OBLITERATE THE CHAINS THAT BIND YOU (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. OBLITERATUS: OBLITERATE THE CHAINS THAT BIND YOU. 57 new stars today.",
+      "link": "https://github.com/elder-plinius/OBLITERATUS",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# elder-plinius/OBLITERATUS\n# +57 stars today\n\ngit clone https://github.com/elder-plinius/OBLITERATUS.git\ncd OBLITERATUS\n\n# OBLITERATE THE CHAINS THAT BIND\n# YOU"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "OBLITERATUS is trending on GitHub 🔥 OBLITERATE THE CHAINS THAT BIND YOU.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-08T05:49:02+00:00",
+      "meta": {
+        "stars_today": 57,
+        "stars": 9289,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "elder-plinius/OBLITERATUS",
+        "description": "OBLITERATE THE CHAINS THAT BIND YOU",
+        "stars": 9289,
+        "stars_today": 57,
+        "language": "Python",
+        "install": "git clone https://github.com/elder-plinius/OBLITERATUS",
+        "demo_code": {
+          "snippet": "from obliteratus.analysis import (\n    CrossLayerAlignmentAnalyzer,\n    RefusalLogitLens,\n    WhitenedSVDExtractor,\n    ActivationProbe,\n    DefenseRobustnessEvaluator,\n    ConceptConeAnalyzer,\n    AlignmentImprintDetector,\n    MultiTokenPositionAnalyzer,\n    SparseDirectionSurgeon,\n    CausalRefusalTracer,\n    ResidualStreamDecomposer,",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone elder-plinius/OBLITERATU",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "from obliteratus.analysis import (",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "OBLITERATE THE CHAINS THAT BIND",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-96bb6a37",
+      "topic": "agent-toolkit-for-aws: Official, AWS-supported MCP servers, skills, and plugins to help AI agents build (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STAR THIS NOW",
+      "script": "This GitHub repo is exploding. agent toolkit for aws: Official, AWS-supported MCP servers, skills, and plugins to help AI agents build. 8 new stars today.",
+      "link": "https://github.com/aws/agent-toolkit-for-aws",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# aws/agent-toolkit-for-aws\n# +8 stars today\n\ngit clone https://github.com/aws/agent-toolkit-for-aws.git\ncd agent-toolkit-for-aws\n\n# Official, AWS-supported MCP\n# servers, skills, and plugins to\n# help AI agents build"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "agent-toolkit-for-aws is trending on GitHub 🔥 Official, AWS-supported MCP servers, skills, and plugins to help AI agents build.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-08T05:49:02+00:00",
+      "meta": {
+        "stars_today": 8,
+        "stars": 3430,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "aws/agent-toolkit-for-aws",
+        "description": "Official, AWS-supported MCP servers, skills, and plugins to help AI agents build",
+        "stars": 3430,
+        "stars_today": 8,
+        "language": "Python",
+        "install": "git clone https://github.com/aws/agent-toolkit-for-aws",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone aws/agent-toolkit-for-aw",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Official, AWS-supported MCP server",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-47acfd08",
+      "topic": "maple: MAPLE: Manifold-Activated Pruning of Latent Experts for Sub-2-BPW MoE LLMs (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. maple: MAPLE: Manifold-Activated Pruning of Latent Experts for Sub-2-BPW MoE LLMs. and it's climbing fast.",
+      "link": "https://github.com/AmSach/maple",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# AmSach/maple\n# 0 stars\n\ngit clone https://github.com/AmSach/maple.git\ncd maple\n\n# MAPLE: Manifold-Activated Pruning\n# of Latent Experts for Sub-2-BPW\n# MoE LLMs"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "maple is trending on GitHub 🔥 MAPLE: Manifold-Activated Pruning of Latent Experts for Sub-2-BPW MoE LLMs.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-08T05:50:15+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 0,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "AmSach/maple",
+        "description": "MAPLE: Manifold-Activated Pruning of Latent Experts for Sub-2-BPW MoE LLMs",
+        "stars": 0,
+        "stars_today": null,
+        "language": "Python",
+        "install": "git clone https://github.com/AmSach/maple",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone AmSach/maple",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "MAPLE: Manifold-Activated Pruning ",
             "cue": "run"
           }
         ],
