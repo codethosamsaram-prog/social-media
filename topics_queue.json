@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-07T15:53:24+00:00",
+  "updated_at": "2026-11-08T02:56:14+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -1155,11 +1155,33 @@
       ],
       "caption": "Reverse a linked list in place, O(1) space 🧠",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-04T18:13:00+00:00",
       "dsa": {
         "trick": "reverse"
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-08T02:56:14+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "sticker",
+        "captions": "underline",
+        "cta": "share",
+        "hookFont": "anton",
+        "presenter": "kabir",
+        "camera": "handheld",
+        "grade": "cool",
+        "overlay": "none",
+        "burst": "rays",
+        "music": "keys"
+      },
+      "day": 5,
+      "video_path": "output/dsa-f42aca0e/reel.mp4",
+      "rendered_at": "2026-11-08T02:55:40+00:00",
+      "published_at": "2026-11-08T02:56:14+00:00",
+      "ig_media_id": "18647307979013339",
+      "permalink": "https://www.instagram.com/reel/Dfdu5mxDVmJ/",
+      "container_id": "18100069079176838"
     },
     {
       "id": "dsa-c8afe52d",
@@ -4122,6 +4144,216 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "The Web framework for perfectionis",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-bef22ae5",
+      "topic": "open-source-games: A list of open source games (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. open source games: A list of open source games. 143 new stars today.",
+      "link": "https://github.com/bobeff/open-source-games",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# bobeff/open-source-games\n# +143 stars today\n\ngit clone https://github.com/bobeff/open-source-games.git\ncd open-source-games\n\n# A list of open source games"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "open-source-games is trending on GitHub 🔥 A list of open source games.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-08T02:49:55+00:00",
+      "meta": {
+        "stars_today": 143,
+        "stars": 17828,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "bobeff/open-source-games",
+        "description": "A list of open source games",
+        "stars": 17828,
+        "stars_today": 143,
+        "language": "Python",
+        "install": "git clone https://github.com/bobeff/open-source-games",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone bobeff/open-source-games",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A list of open source",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-985c30e2",
+      "topic": "spotify-downloader: Download your Spotify playlists and songs along with album art and metadata (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. spotify downloader: Download your Spotify playlists and songs along with album art and metadata. 59 new stars today.",
+      "link": "https://github.com/spotDL/spotify-downloader",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# spotDL/spotify-downloader\n# +59 stars today\n\ngit clone https://github.com/spotDL/spotify-downloader.git\ncd spotify-downloader\n\n# Download your Spotify playlists\n# and songs along with album art and\n# metadata"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "spotify-downloader is trending on GitHub 🔥 Download your Spotify playlists and songs along with album art and metadata.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-08T02:49:55+00:00",
+      "meta": {
+        "stars_today": 59,
+        "stars": 26739,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "spotDL/spotify-downloader",
+        "description": "Download your Spotify playlists and songs along with album art and metadata",
+        "stars": 26739,
+        "stars_today": 59,
+        "language": "Python",
+        "install": "docker run --rm -v $(pwd):/music spotdl download [trackUrl]",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "docker run --rm -v $(pwd):/music s",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Download your Spotify playlists an",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-75033d6b",
+      "topic": "coldframe: Low-interaction honeypot for supermarket refrigeration controllers (Danfoss AK-SM 800A, Dixell XWEB 500) (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. coldframe: Low-interaction honeypot for supermarket refrigeration controllers (Danfoss AK-SM 800A, Dixell XWEB 500). 35 stars already.",
+      "link": "https://github.com/hedgerow-dev/coldframe",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# hedgerow-dev/coldframe\n# 35 stars\n\ngit clone https://github.com/hedgerow-dev/coldframe.git\ncd coldframe\n\n# Low-interaction honeypot for\n# supermarket refrigeration\n# controllers (Danfoss AK-SM 800A,"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "coldframe is trending on GitHub 🔥 Low-interaction honeypot for supermarket refrigeration controllers (Danfoss AK-SM 800A, Dixell XWEB 500).",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-08T02:51:36+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 35,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "hedgerow-dev/coldframe",
+        "description": "Low-interaction honeypot for supermarket refrigeration controllers (Danfoss AK-SM 800A, Dixell XWEB 500)",
+        "stars": 35,
+        "stars_today": null,
+        "language": "Python",
+        "install": "git clone https://github.com/hedgerow-dev/coldframe",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone hedgerow-dev/coldframe",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Low-interaction honeypot for super",
             "cue": "run"
           }
         ],
