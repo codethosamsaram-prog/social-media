@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-08T08:01:50+00:00",
+  "updated_at": "2026-11-08T09:50:48+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -1337,11 +1337,33 @@
       ],
       "caption": "Majority element in O(1) space (Boyer-Moore voting) 🧠",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-05T03:16:14+00:00",
       "dsa": {
         "trick": "boyer_moore"
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-08T09:50:48+00:00",
+      "style_used": {
+        "look": "mono",
+        "hook": "chat",
+        "captions": "clean",
+        "cta": "series",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "breathe",
+        "grade": "faded",
+        "overlay": "sparks",
+        "burst": "ring",
+        "music": "bell"
+      },
+      "day": 5,
+      "video_path": "output/dsa-e809536c/reel.mp4",
+      "rendered_at": "2026-11-08T09:50:14+00:00",
+      "published_at": "2026-11-08T09:50:48+00:00",
+      "ig_media_id": "18115278604884753",
+      "permalink": "https://www.instagram.com/reel/DfeeV-RjXFx/",
+      "container_id": "18100156598176838"
     },
     {
       "id": "hiring-2026-11-05",
@@ -4712,6 +4734,286 @@
       "ig_media_id": "17923554648532477",
       "permalink": "https://www.instagram.com/reel/DfeR4Ttl6Ue/",
       "container_id": "18100135580176838"
+    },
+    {
+      "id": "repo-473aabc3",
+      "topic": "craft-anything: Craft Anything: understand how any software works, and craft your own (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. craft anything: Craft Anything: understand how any software works, and craft your own. 21,515 stars already.",
+      "link": "https://github.com/storytold/craft-anything",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# storytold/craft-anything\n# 21,515 stars\n\ngit clone https://github.com/storytold/craft-anything.git\ncd craft-anything\n\n# Craft Anything: understand how any\n# software works, and craft your own"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "craft-anything is trending on GitHub 🔥 Craft Anything: understand how any software works, and craft your own.",
+      "source": "github_search",
+      "status": "needs_review",
+      "created_at": "2026-11-08T09:46:18+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 21515,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "storytold/craft-anything",
+        "description": "Craft Anything: understand how any software works, and craft your own",
+        "stars": 21515,
+        "stars_today": null,
+        "language": "Rust",
+        "install": "git clone https://github.com/storytold/craft-anything",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone storytold/craft-anything",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Craft Anything: understand how any",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-76e502c4",
+      "topic": "dsh-superagent-prototype: Towards a More Autonomous Agent System (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. dsh superagent prototype: Towards a More Autonomous Agent System. 20,995 stars already.",
+      "link": "https://github.com/deepseek-ai/dsh-superagent-prototype",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# deepseek-ai/dsh-superagent-prototype\n# 20,995 stars\n\ngit clone https://github.com/deepseek-ai/dsh-superagent-prototype.git\ncd dsh-superagent-prototype\n\n# Towards a More Autonomous Agent\n# System"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "dsh-superagent-prototype is trending on GitHub 🔥 Towards a More Autonomous Agent System.",
+      "source": "github_search",
+      "status": "needs_review",
+      "created_at": "2026-11-08T09:46:18+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 20995,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "deepseek-ai/dsh-superagent-prototype",
+        "description": "Towards a More Autonomous Agent System",
+        "stars": 20995,
+        "stars_today": null,
+        "language": "TypeScript",
+        "install": "git clone https://github.com/deepseek-ai/dsh-superagent-prototype",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone deepseek-ai/dsh-superage",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Towards a More Autonomous Agent",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-4fe6bf29",
+      "topic": "zapfast: ZapFast: a fast, native WhatsApp client in Rust and egui (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB IS CRAZY",
+      "script": "This GitHub repo is exploding. zapfast: ZapFast: a fast, native WhatsApp client in Rust and egui. 3,481 stars already.",
+      "link": "https://github.com/crmne/zapfast",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# crmne/zapfast\n# 3,481 stars\n\ngit clone https://github.com/crmne/zapfast.git\ncd zapfast\n\n# ZapFast: a fast, native WhatsApp\n# client in Rust and egui"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "zapfast is trending on GitHub 🔥 ZapFast: a fast, native WhatsApp client in Rust and egui.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-08T09:46:24+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 3481,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "crmne/zapfast",
+        "description": "ZapFast: a fast, native WhatsApp client in Rust and egui",
+        "stars": 3481,
+        "stars_today": null,
+        "language": "Rust",
+        "install": "git clone https://github.com/crmne/zapfast",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone crmne/zapfast",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "ZapFast: a fast, native WhatsApp",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-1ad8df36",
+      "topic": "iSponsorBlockTV: SponsorBlock client for all YouTube TV clients (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. iSponsorBlockTV: SponsorBlock client for all YouTube TV clients. 6,771 stars already.",
+      "link": "https://github.com/dmunozv04/iSponsorBlockTV",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# dmunozv04/iSponsorBlockTV\n# 6,771 stars\n\ngit clone https://github.com/dmunozv04/iSponsorBlockTV.git\ncd iSponsorBlockTV\n\n# SponsorBlock client for all\n# YouTube TV clients"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "iSponsorBlockTV is trending on GitHub 🔥 SponsorBlock client for all YouTube TV clients.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-08T09:46:24+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 6771,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "dmunozv04/iSponsorBlockTV",
+        "description": "SponsorBlock client for all YouTube TV clients",
+        "stars": 6771,
+        "stars_today": null,
+        "language": "Python",
+        "install": "git clone https://github.com/dmunozv04/iSponsorBlockTV",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone dmunozv04/iSponsorBlockT",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "SponsorBlock client for all YouTub",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
     }
   ],
   "removed": [
