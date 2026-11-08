@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-08T05:53:55+00:00",
+  "updated_at": "2026-11-08T08:01:50+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -4600,6 +4600,118 @@
           "demo": "Setup is a single command."
         }
       }
+    },
+    {
+      "id": "hiring-2026-11-08",
+      "topic": "Elastic, Coinbase and Razorpay are hiring engineers in India (2026-11-08)",
+      "keyword": "HIRING",
+      "keyword_spoken": "hiring",
+      "category": "hiring",
+      "hook": "HIRING IN INDIA",
+      "script": "Elastic, Coinbase and Razorpay are hiring in India right now. Elastic has 9 engineering roles open in Bengaluru and India. Coinbase has 8 engineering roles open in India. Razorpay has 2 engineering roles open in Bengaluru.",
+      "link": "https://boards.greenhouse.io/elastic",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "Elastic, Coinbase and Razorpay are hiring engineers in India (2026-11-08)"
+      },
+      "stock_queries": [
+        "modern office india",
+        "team meeting office",
+        "bangalore city night"
+      ],
+      "hashtags": [
+        "#hiring",
+        "#jobsinindia",
+        "#softwarejobs",
+        "#bangalorejobs",
+        "#developers"
+      ],
+      "caption": "🚨 Elastic, Coinbase and Razorpay are hiring engineers in India right now.\n\n🏢 Elastic: 9 open roles (Bengaluru, India), e.g. Senior Support Engineer\n🏢 Coinbase: 8 open roles (India), e.g. Senior Software Engineer - Data Platform\n🏢 Razorpay: 2 open roles (Bengaluru), e.g. Engineering Manager",
+      "source": "career_boards",
+      "status": "published",
+      "created_at": "2026-11-08T07:59:03+00:00",
+      "links": [
+        {
+          "label": "Elastic",
+          "url": "https://boards.greenhouse.io/elastic"
+        },
+        {
+          "label": "Coinbase",
+          "url": "https://boards.greenhouse.io/coinbase"
+        },
+        {
+          "label": "Razorpay",
+          "url": "https://boards.greenhouse.io/razorpaysoftwareprivatelimited"
+        }
+      ],
+      "hiring": {
+        "companies": [
+          {
+            "name": "Elastic",
+            "domain": "elastic.co",
+            "color": "#fec514",
+            "roles": 9,
+            "fresh": 1,
+            "top_role": "Senior Support Engineer",
+            "cities": [
+              "Bengaluru",
+              "India"
+            ],
+            "url": "https://boards.greenhouse.io/elastic",
+            "score": 12
+          },
+          {
+            "name": "Coinbase",
+            "domain": "coinbase.com",
+            "color": "#0052ff",
+            "roles": 8,
+            "fresh": 1,
+            "top_role": "Senior Software Engineer - Data Platform",
+            "cities": [
+              "India"
+            ],
+            "url": "https://boards.greenhouse.io/coinbase",
+            "score": 11
+          },
+          {
+            "name": "Razorpay",
+            "domain": "razorpay.com",
+            "color": "#3395ff",
+            "roles": 2,
+            "fresh": 2,
+            "top_role": "Engineering Manager",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/razorpaysoftwareprivatelimited",
+            "score": 8
+          }
+        ],
+        "checked_at": "2026-11-08T07:59:03+00:00"
+      },
+      "error": null,
+      "updated_at": "2026-11-08T08:01:50+00:00",
+      "style_used": {
+        "look": "aurora",
+        "hook": "glitch",
+        "captions": "underline",
+        "cta": "triple",
+        "hookFont": "bebas",
+        "presenter": "kabir",
+        "camera": "drift",
+        "grade": "vivid",
+        "overlay": "letterbox",
+        "burst": "rays",
+        "music": "lofi"
+      },
+      "day": 5,
+      "video_path": "output/hiring-2026-11-08/reel.mp4",
+      "rendered_at": "2026-11-08T08:01:20+00:00",
+      "published_at": "2026-11-08T08:01:50+00:00",
+      "ig_media_id": "17923554648532477",
+      "permalink": "https://www.instagram.com/reel/DfeR4Ttl6Ue/",
+      "container_id": "18100135580176838"
     }
   ],
   "removed": [
