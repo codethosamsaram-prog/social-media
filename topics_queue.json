@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-08T15:19:33+00:00",
+  "updated_at": "2026-11-08T16:02:01+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -2061,7 +2061,7 @@
       ],
       "caption": "rivet is trending on GitHub 🔥 The orchestrator for agentic workloads.",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-06T06:30:49+00:00",
       "meta": {
         "stars_today": null,
@@ -2126,25 +2126,29 @@
           "demo": "Setup really is this small."
         }
       },
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-08T15:19:33+00:00",
+      "error": null,
+      "updated_at": "2026-11-08T16:02:01+00:00",
       "style_used": {
-        "look": "chalk",
-        "hook": "stack",
-        "captions": "underline",
-        "cta": "series",
-        "hookFont": "oswald",
-        "presenter": "kabir",
-        "camera": "punch",
-        "grade": "contrast",
+        "look": "glass",
+        "hook": "split",
+        "captions": "pop",
+        "cta": "search",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "warm",
         "overlay": "dust",
-        "burst": "slash",
-        "music": "lofi"
+        "burst": "ring",
+        "music": "arp"
       },
       "day": 5,
       "video_path": "output/repo-f0e2e8b6/reel.mp4",
-      "rendered_at": "2026-11-08T15:19:00+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-08T16:01:14+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-08T16:02:01+00:00",
+      "ig_media_id": "18010945115996333",
+      "permalink": "https://www.instagram.com/reel/DffI0_-AQfb/",
+      "container_id": "18100265222176838"
     },
     {
       "id": "repo-01c9a315",
@@ -5508,6 +5512,286 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup really is this small."
         }
+      }
+    },
+    {
+      "id": "repo-852158c7",
+      "topic": "txtai: All-in-one AI framework for semantic search, LLM orchestration and language model workflows (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. txtai: All-in-one AI framework for semantic search, LLM orchestration and language model workflows. 57 new stars today.",
+      "link": "https://github.com/neuml/txtai",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# neuml/txtai\n# +57 stars today\n\ngit clone https://github.com/neuml/txtai.git\ncd txtai\n\n# All-in-one AI framework for\n# semantic search, LLM orchestration\n# and language model workflows"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "txtai is trending on GitHub 🔥 All-in-one AI framework for semantic search, LLM orchestration and language model workflows.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-08T15:53:47+00:00",
+      "meta": {
+        "stars_today": 57,
+        "stars": 13138,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "neuml/txtai",
+        "description": "All-in-one AI framework for semantic search, LLM orchestration and language model workflows",
+        "stars": 13138,
+        "stars_today": 57,
+        "language": "Python",
+        "install": "pip install txtai",
+        "demo_code": {
+          "snippet": "# Get started in a couple lines\nimport txtai\n\nembeddings = txtai.Embeddings()\nembeddings.index([\"Correct\", \"Not what we hoped\"])\nembeddings.search(\"positive\", 1)\n#[(0, 0.29862046241760254)]",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install txtai",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "import txtai",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "All-in-one AI framework for semant",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "📄",
+            "title": "Up and running in minutes",
+            "detail": "",
+            "cue": "up"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-c4d9d231",
+      "topic": "Ghost-Downloader-3: The only downloader you need (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. Ghost Downloader 3: The only downloader you need. 46 new stars today.",
+      "link": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# XiaoYouChR/Ghost-Downloader-3\n# +46 stars today\n\ngit clone https://github.com/XiaoYouChR/Ghost-Downloader-3.git\ncd Ghost-Downloader-3\n\n# The only downloader you need"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "Ghost-Downloader-3 is trending on GitHub 🔥 The only downloader you need.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-08T15:53:47+00:00",
+      "meta": {
+        "stars_today": 46,
+        "stars": 10835,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "XiaoYouChR/Ghost-Downloader-3",
+        "description": "The only downloader you need",
+        "stars": 10835,
+        "stars_today": 46,
+        "language": "Python",
+        "install": "git clone https://github.com/XiaoYouChR/Ghost-Downloader-3",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone XiaoYouChR/Ghost-Downloa",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The only downloader you need",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "⚡",
+            "title": "Fast where it matters. Every",
+            "detail": "",
+            "cue": "fast"
+          },
+          {
+            "icon": "🛠️",
+            "title": "One app instead of five",
+            "detail": "",
+            "cue": "one"
+          },
+          {
+            "icon": "🔒",
+            "title": "See it. Sniff it. Download it",
+            "detail": "",
+            "cue": "see"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-5e9d3fd0",
+      "topic": "llama-modchip: Run 284B DeepSeek-V4-Flash (<59GiB RAM, 44.4 tok/s pp, 9.1-14.7 tok/s) & 30B (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DELETE YOUR SUBSCRIPTION",
+      "script": "This GitHub repo is exploding. llama modchip: Run 284B DeepSeek-V4-Flash (<59GiB RAM, 44.4 tok/s pp, 9.1-14.7 tok/s) & 30B. 253 stars already.",
+      "link": "https://github.com/synchopate/llama-modchip",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# synchopate/llama-modchip\n# 253 stars\n\ngit clone https://github.com/synchopate/llama-modchip.git\ncd llama-modchip\n\n# Run 284B DeepSeek-V4-Flash (<59GiB\n# RAM, 44.4 tok/s pp, 9.1-14.7\n# tok/s) & 30B"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "llama-modchip is trending on GitHub 🔥 Run 284B DeepSeek-V4-Flash (<59GiB RAM, 44.4 tok/s pp, 9.1-14.7 tok/s) & 30B.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-08T15:53:57+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 253,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "synchopate/llama-modchip",
+        "description": "Run 284B DeepSeek-V4-Flash (<59GiB RAM, 44.4 tok/s pp, 9.1-14.7 tok/s) & 30B",
+        "stars": 253,
+        "stars_today": null,
+        "language": "Python",
+        "install": "git clone https://github.com/synchopate/llama-modchip",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone synchopate/llama-modchip",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Run 284B DeepSeek-V4-Flash (<59GiB",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "aitool-fa2bcec6",
+      "topic": "Clj.rs: A modern Clojure dialect implemented in the Rust language",
+      "keyword": "AITOOL",
+      "keyword_spoken": "AI tool",
+      "category": "ai_tool",
+      "hook": "YOUR NEW COWORKER",
+      "script": "This AI tool is criminally underrated. Clj.rs: A modern Clojure dialect implemented in the Rust language.",
+      "link": "https://clj.rs/",
+      "code": {
+        "language": "javascript",
+        "filename": "ai-tool.js",
+        "snippet": "// hidden AI tool of the day\nconst tool = \"Clj.rs\";\nconst site = \"clj.rs\";\n\n// A modern Clojure dialect implemented\n// in the Rust language\n\nawait tool.tryIt(); // link in DMs"
+      },
+      "stock_queries": [
+        "artificial intelligence",
+        "coding laptop dark",
+        "neon technology"
+      ],
+      "hashtags": [
+        "#ai",
+        "#aitools",
+        "#coding",
+        "#developers",
+        "#vscode"
+      ],
+      "caption": "Clj.rs: A modern Clojure dialect implemented in the Rust language 🤖",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-08T15:53:57+00:00",
+      "browser": {
+        "url": "clj.rs",
+        "mock": "landing",
+        "headline": "Clj.rs",
+        "bullets": [
+          "A modern Clojure dialect implemented in"
+        ]
       }
     }
   ],
