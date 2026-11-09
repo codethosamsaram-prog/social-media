@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-09T10:02:40+00:00",
+  "updated_at": "2026-11-09T13:12:15+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -3543,7 +3543,7 @@
       ],
       "caption": "spindle is trending on GitHub 🔥 The web framework for modern OCaml.",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-07T14:38:56+00:00",
       "meta": {
         "stars_today": null,
@@ -3602,7 +3602,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-09T13:12:15+00:00",
+      "style_used": {
+        "look": "ocean",
+        "hook": "alert",
+        "captions": "gradient",
+        "cta": "triple",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "faded",
+        "overlay": "letterbox",
+        "burst": "ring",
+        "music": "pluck"
+      },
+      "day": 6,
+      "video_path": "output/repo-865631e6/reel.mp4",
+      "rendered_at": "2026-11-09T13:11:40+00:00",
+      "published_at": "2026-11-09T13:12:15+00:00",
+      "ig_media_id": "17966137434387437",
+      "permalink": "https://www.instagram.com/reel/DfhaMTiDfC1/",
+      "container_id": "18100506911176838"
     },
     {
       "id": "repo-e9e37fae",
@@ -6482,6 +6504,184 @@
           }
         ],
         "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-1c9d47a9",
+      "topic": "VoiceStudio: VoiceStudio is the open-source, fully-local ElevenLabs alternative voice cloning, voice design, video (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "OPEN SOURCE GOLD",
+      "script": "This GitHub repo is exploding. VoiceStudio: VoiceStudio is the open-source, fully-local ElevenLabs alternative voice cloning, voice design, video. 1,247 new stars today.",
+      "link": "https://github.com/debpalash/VoiceStudio",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# debpalash/VoiceStudio\n# +1,247 stars today\n\ngit clone https://github.com/debpalash/VoiceStudio.git\ncd VoiceStudio\n\n# VoiceStudio is the open-source,\n# fully-local ElevenLabs alternative\n# voice cloning, voice design, video"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "VoiceStudio is trending on GitHub 🔥 VoiceStudio is the open-source, fully-local ElevenLabs alternative voice cloning, voice design, video.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-09T13:07:24+00:00",
+      "meta": {
+        "stars_today": 1247,
+        "stars": 105621,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "debpalash/VoiceStudio",
+        "description": "VoiceStudio is the open-source, fully-local ElevenLabs alternative voice cloning, voice design, video",
+        "stars": 105621,
+        "stars_today": 1247,
+        "language": "Python",
+        "install": "docker run -d --name omnivoice \\",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "docker run -d --name omnivoice \\",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "VoiceStudio is the open-source, fu",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🛠️",
+            "title": "Dictate & transcribe",
+            "detail": "",
+            "cue": "dictate"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Narrate & batch Stories",
+            "detail": "",
+            "cue": "narrate"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Connect & automate Local API",
+            "detail": "",
+            "cue": "connect"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-f9173bb7",
+      "topic": "DeepTutor: DeepTutor: Lifelong Personalized Tutoring (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. DeepTutor: DeepTutor: Lifelong Personalized Tutoring. 784 new stars today.",
+      "link": "https://github.com/HKUDS/DeepTutor",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# HKUDS/DeepTutor\n# +784 stars today\n\ngit clone https://github.com/HKUDS/DeepTutor.git\ncd DeepTutor\n\n# DeepTutor: Lifelong Personalized\n# Tutoring"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "DeepTutor is trending on GitHub 🔥 DeepTutor: Lifelong Personalized Tutoring.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-09T13:07:24+00:00",
+      "meta": {
+        "stars_today": 784,
+        "stars": 57427,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "HKUDS/DeepTutor",
+        "description": "DeepTutor: Lifelong Personalized Tutoring",
+        "stars": 57427,
+        "stars_today": 784,
+        "language": "Python",
+        "install": "docker run --rm --name deeptutor \\",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "docker run --rm --name deeptutor \\",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "DeepTutor: Lifelong Personalized T",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "💬",
+            "title": "One runtime, many learning",
+            "detail": "",
+            "cue": "one"
+          },
+          {
+            "icon": "💬",
+            "title": "A connected learning workspace",
+            "detail": "",
+            "cue": "a"
+          },
+          {
+            "icon": "📄",
+            "title": "Grounded knowledge and reading",
+            "detail": "",
+            "cue": "grounded"
+          }
+        ],
         "narration": {
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
