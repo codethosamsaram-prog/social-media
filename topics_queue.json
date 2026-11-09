@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-09T13:12:15+00:00",
+  "updated_at": "2026-11-09T15:46:20+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -5246,7 +5246,7 @@
       ],
       "caption": "google-colab-cli is trending on GitHub 🔥 A CLI for interacting with Google Colab runtimes.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-08T12:46:31+00:00",
       "meta": {
         "stars_today": 139,
@@ -5310,7 +5310,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup really is this small."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-09T15:46:20+00:00",
+      "style_used": {
+        "look": "glass",
+        "hook": "sticker",
+        "captions": "mega",
+        "cta": "series",
+        "hookFont": "bebas",
+        "presenter": "rohan",
+        "camera": "breathe",
+        "grade": "vivid",
+        "overlay": "none",
+        "burst": "rays",
+        "music": "lofi"
+      },
+      "day": 6,
+      "video_path": "output/repo-f11725c1/reel.mp4",
+      "rendered_at": "2026-11-09T15:45:49+00:00",
+      "published_at": "2026-11-09T15:46:20+00:00",
+      "ig_media_id": "17967855582247748",
+      "permalink": "https://www.instagram.com/reel/Dfhr1SykRMl/",
+      "container_id": "18100544765176838"
     },
     {
       "id": "repo-d3433956",
@@ -6686,6 +6708,252 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
+      }
+    },
+    {
+      "id": "repo-ca7dd68b",
+      "topic": "daily_stock_analysis: LLM LLM-powered multi-market stock analysis system with multi-source market data, real-time news (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. daily stock analysis: LLM LLM-powered multi-market stock analysis system with multi-source market data, real-time news. 505 new stars today.",
+      "link": "https://github.com/ZhuLinsen/daily_stock_analysis",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# ZhuLinsen/daily_stock_analysis\n# +505 stars today\n\ngit clone https://github.com/ZhuLinsen/daily_stock_analysis.git\ncd daily_stock_analysis\n\n# LLM LLM-powered multi-market stock\n# analysis system with multi-source\n# market data, real-time news"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "daily_stock_analysis is trending on GitHub 🔥 LLM LLM-powered multi-market stock analysis system with multi-source market data, real-time news.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-09T15:38:41+00:00",
+      "meta": {
+        "stars_today": 505,
+        "stars": 68591,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "ZhuLinsen/daily_stock_analysis",
+        "description": "LLM LLM-powered multi-market stock analysis system with multi-source market data, real-time news",
+        "stars": 68591,
+        "stars_today": 505,
+        "language": "Python",
+        "install": "git clone https://github.com/ZhuLinsen/daily_stock_analysis",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone ZhuLinsen/daily_stock_an",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "LLM LLM-powered multi-market stock",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-0d88eaa1",
+      "topic": "VoxCPM: VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. VoxCPM: VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life. 423 new stars today.",
+      "link": "https://github.com/OpenBMB/VoxCPM",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# OpenBMB/VoxCPM\n# +423 stars today\n\ngit clone https://github.com/OpenBMB/VoxCPM.git\ncd VoxCPM\n\n# VoxCPM2: Tokenizer-Free TTS for\n# Multilingual Speech Generation,\n# Creative Voice Design, and True-"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "VoxCPM is trending on GitHub 🔥 VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-09T15:38:41+00:00",
+      "meta": {
+        "stars_today": 423,
+        "stars": 42059,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "OpenBMB/VoxCPM",
+        "description": "VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life",
+        "stars": 42059,
+        "stars_today": 423,
+        "language": "Python",
+        "install": "pip install voxcpm",
+        "demo_code": {
+          "snippet": "import numpy as np\n\nchunks = []\nfor chunk in model.generate_streaming(\n    text=\"Streaming text to speech is easy with VoxCPM!\",\n):\n    chunks.append(chunk)\nwav = np.concatenate(chunks)\nsf.write(\"streaming.wav\", wav, model.tts_model.sample_rate)",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install voxcpm",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "import numpy as np",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "VoxCPM2: Tokenizer-Free TTS for Mu",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🛠️",
+            "title": "30-Language Multilingual Input",
+            "detail": "",
+            "cue": "30-language"
+          },
+          {
+            "icon": "💬",
+            "title": "Voice Design Create",
+            "detail": "",
+            "cue": "voice"
+          },
+          {
+            "icon": "💬",
+            "title": "Controllable Cloning Clone any",
+            "detail": "",
+            "cue": "controllable"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "aitool-79cd6977",
+      "topic": "KetchUp: Open-source SketchUp alternative built with Rust and WebGPU",
+      "keyword": "AITOOL",
+      "keyword_spoken": "AI tool",
+      "category": "ai_tool",
+      "hook": "STOP WASTING HOURS",
+      "script": "This AI tool is criminally underrated. KetchUp: Open-source SketchUp alternative built with Rust and WebGPU.",
+      "link": "https://ketchup3d.github.io/app/",
+      "code": {
+        "language": "javascript",
+        "filename": "ai-tool.js",
+        "snippet": "// hidden AI tool of the day\nconst tool = \"KetchUp\";\nconst site = \"ketchup3d.github.io\";\n\n// Open-source SketchUp alternative\n// built with Rust and WebGPU\n\nawait tool.tryIt(); // link in DMs"
+      },
+      "stock_queries": [
+        "artificial intelligence",
+        "coding laptop dark",
+        "neon technology"
+      ],
+      "hashtags": [
+        "#ai",
+        "#aitools",
+        "#coding",
+        "#developers",
+        "#vscode"
+      ],
+      "caption": "KetchUp: Open-source SketchUp alternative built with Rust and WebGPU 🤖",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-09T15:39:08+00:00",
+      "browser": {
+        "url": "ketchup3d.github.io",
+        "mock": "landing",
+        "headline": "KetchUp",
+        "bullets": [
+          "Open-source SketchUp alternative built",
+          "Rust",
+          "WebGPU"
+        ]
+      }
+    },
+    {
+      "id": "aitool-ddea982e",
+      "topic": "Dux: Free and open-source Wayland desktop shell with theming",
+      "keyword": "AITOOL",
+      "keyword_spoken": "AI tool",
+      "category": "ai_tool",
+      "hook": "THIS FEELS ILLEGAL",
+      "script": "This AI tool is criminally underrated. Dux: Free and open-source Wayland desktop shell with theming.",
+      "link": "https://duxlabs.dev/",
+      "code": {
+        "language": "javascript",
+        "filename": "ai-tool.js",
+        "snippet": "// hidden AI tool of the day\nconst tool = \"Dux\";\nconst site = \"duxlabs.dev\";\n\n// Free and open-source Wayland desktop\n// shell with theming\n\nawait tool.tryIt(); // link in DMs"
+      },
+      "stock_queries": [
+        "artificial intelligence",
+        "coding laptop dark",
+        "neon technology"
+      ],
+      "hashtags": [
+        "#ai",
+        "#aitools",
+        "#coding",
+        "#developers",
+        "#vscode"
+      ],
+      "caption": "Dux: Free and open-source Wayland desktop shell with theming 🤖",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-09T15:39:09+00:00",
+      "browser": {
+        "url": "duxlabs.dev",
+        "mock": "landing",
+        "headline": "Dux",
+        "bullets": [
+          "Free",
+          "open-source Wayland desktop shell",
+          "theming"
+        ]
       }
     }
   ],
