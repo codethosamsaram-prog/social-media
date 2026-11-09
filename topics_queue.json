@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-09T07:51:31+00:00",
+  "updated_at": "2026-11-09T10:02:40+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -3482,7 +3482,7 @@
       ],
       "caption": "Gemini Omni 1.2 Flash: A fast multimodal AI model released for developer applications 🤖",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-07T14:38:56+00:00",
       "browser": {
         "url": "blog.google",
@@ -3491,7 +3491,29 @@
         "bullets": [
           "A fast multimodal AI model released"
         ]
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-09T10:02:40+00:00",
+      "style_used": {
+        "look": "blueprint",
+        "hook": "chat",
+        "captions": "bounce",
+        "cta": "search",
+        "hookFont": "bebas",
+        "presenter": "kabir",
+        "camera": "breathe",
+        "grade": "vivid",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "lofi"
+      },
+      "day": 6,
+      "video_path": "output/aitool-63c3d56b/reel.mp4",
+      "rendered_at": "2026-11-09T10:02:04+00:00",
+      "published_at": "2026-11-09T10:02:40+00:00",
+      "ig_media_id": "18374725594214196",
+      "permalink": "https://www.instagram.com/reel/DfhEf2sCuRA/",
+      "container_id": "18100465748176838"
     },
     {
       "id": "repo-865631e6",
@@ -6161,6 +6183,310 @@
       "ig_media_id": "18120716633088139",
       "permalink": "https://www.instagram.com/reel/Dfg1f16DMll/",
       "container_id": "18100440254176838"
+    },
+    {
+      "id": "repo-97c28dfe",
+      "topic": "dsh-Go: dsh-go DeepSeek Harness (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "OPEN SOURCE GOLD",
+      "script": "This GitHub repo is exploding. dsh Go: dsh-go DeepSeek Harness. 16,956 stars already.",
+      "link": "https://github.com/ccch1mneyyy/dsh-Go",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# ccch1mneyyy/dsh-Go\n# 16,956 stars\n\ngit clone https://github.com/ccch1mneyyy/dsh-Go.git\ncd dsh-Go\n\n# dsh-go DeepSeek Harness"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "dsh-Go is trending on GitHub 🔥 dsh-go DeepSeek Harness.",
+      "source": "github_search",
+      "status": "needs_review",
+      "created_at": "2026-11-09T09:59:15+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 16956,
+        "language": "Dart"
+      },
+      "repo": {
+        "full_name": "ccch1mneyyy/dsh-Go",
+        "description": "dsh-go DeepSeek Harness",
+        "stars": 16956,
+        "stars_today": null,
+        "language": "Dart",
+        "install": "git clone https://github.com/ccch1mneyyy/dsh-Go",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone ccch1mneyyy/dsh-Go",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "dsh-go DeepSeek Harness",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-9aab5ec3",
+      "topic": "unslop: A Claude skill that turns vibecoded, AI-looking UI into a designed interface (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. unslop: A Claude skill that turns vibecoded, AI-looking UI into a designed interface. 12,296 stars already.",
+      "link": "https://github.com/heydamir/unslop",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# heydamir/unslop\n# 12,296 stars\n\ngit clone https://github.com/heydamir/unslop.git\ncd unslop\n\n# A Claude skill that turns\n# vibecoded, AI-looking UI into a\n# designed interface"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#javascript"
+      ],
+      "caption": "unslop is trending on GitHub 🔥 A Claude skill that turns vibecoded, AI-looking UI into a designed interface.",
+      "source": "github_search",
+      "status": "queued",
+      "created_at": "2026-11-09T09:59:15+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 12296,
+        "language": "JavaScript"
+      },
+      "repo": {
+        "full_name": "heydamir/unslop",
+        "description": "A Claude skill that turns vibecoded, AI-looking UI into a designed interface",
+        "stars": 12296,
+        "stars_today": null,
+        "language": "JavaScript",
+        "install": "git clone https://github.com/heydamir/unslop",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone heydamir/unslop",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A Claude skill that turns",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🛠️",
+            "title": "Audit. Lists every sign",
+            "detail": "",
+            "cue": "audit."
+          },
+          {
+            "icon": "🛠️",
+            "title": "Direction. Character, world",
+            "detail": "",
+            "cue": "direction."
+          },
+          {
+            "icon": "🛠️",
+            "title": "Passes. Spacing, color, icons",
+            "detail": "",
+            "cue": "passes."
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-dc54a120",
+      "topic": "uniform: UI tools for JavaScript and C (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. uniform: UI tools for JavaScript and C. 20 stars already.",
+      "link": "https://github.com/rkaehn/uniform",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# rkaehn/uniform\n# 20 stars\n\ngit clone https://github.com/rkaehn/uniform.git\ncd uniform\n\n# UI tools for JavaScript and C"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "uniform is trending on GitHub 🔥 UI tools for JavaScript and C.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-09T09:59:54+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 20,
+        "language": "C"
+      },
+      "repo": {
+        "full_name": "rkaehn/uniform",
+        "description": "UI tools for JavaScript and C",
+        "stars": 20,
+        "stars_today": null,
+        "language": "C",
+        "install": "git clone https://github.com/rkaehn/uniform",
+        "demo_code": {
+          "snippet": "function onTap(gesture) {\n    if (ui.tapGestureGetPhase(gesture) === 'recognized') {\n        console.log('tap');\n    }\n}",
+          "language": "javascript",
+          "filename": "example.js",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone rkaehn/uniform",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "UI tools for JavaScript and",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-285f8305",
+      "topic": "Flide: The fastest inference engine for decision model (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. Flide: The fastest inference engine for decision model. 70 stars already.",
+      "link": "https://github.com/OmniJev/Flide",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# OmniJev/Flide\n# 70 stars\n\ngit clone https://github.com/OmniJev/Flide.git\ncd Flide\n\n# The fastest inference engine for\n# decision model"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "Flide is trending on GitHub 🔥 The fastest inference engine for decision model.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-09T09:59:55+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 70,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "OmniJev/Flide",
+        "description": "The fastest inference engine for decision model",
+        "stars": 70,
+        "stars_today": null,
+        "language": "Python",
+        "install": "git clone https://github.com/OmniJev/Flide",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone OmniJev/Flide",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The fastest inference engine for",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
     }
   ],
   "removed": [
