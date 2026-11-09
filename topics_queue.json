@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-09T02:59:50+00:00",
+  "updated_at": "2026-11-09T05:30:07+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -3231,7 +3231,7 @@
       ],
       "caption": "OpenMausBot is trending on GitHub 🔥 Open-source Grok Bot alternative with a virtual machine that bots can use.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-07T14:28:13+00:00",
       "meta": {
         "stars_today": 1986,
@@ -3290,7 +3290,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-09T05:30:07+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "question",
+        "captions": "gradient",
+        "cta": "series",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "warm",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "bell"
+      },
+      "day": 6,
+      "video_path": "output/repo-239feae3/reel.mp4",
+      "rendered_at": "2026-11-09T05:11:01+00:00",
+      "published_at": "2026-11-09T05:30:07+00:00",
+      "ig_media_id": "18119478766993497",
+      "permalink": "https://www.instagram.com/reel/DfgjL7hkzqj/",
+      "container_id": "18100413263176838"
     },
     {
       "id": "repo-eb8e2668",
@@ -5946,6 +5968,76 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "A collection of projects designed",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-1a6f6c5f",
+      "topic": "Shadowbroker: Open-source intelligence for the global theater (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. Shadowbroker: Open-source intelligence for the global theater. 16 new stars today.",
+      "link": "https://github.com/BigBodyCobain/Shadowbroker",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# BigBodyCobain/Shadowbroker\n# +16 stars today\n\ngit clone https://github.com/BigBodyCobain/Shadowbroker.git\ncd Shadowbroker\n\n# Open-source intelligence for the\n# global theater"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "Shadowbroker is trending on GitHub 🔥 Open-source intelligence for the global theater.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-09T05:01:59+00:00",
+      "meta": {
+        "stars_today": 16,
+        "stars": 11506,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "BigBodyCobain/Shadowbroker",
+        "description": "Open-source intelligence for the global theater",
+        "stars": 11506,
+        "stars_today": 16,
+        "language": "Python",
+        "install": "pip install .",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install .",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Open-source intelligence for the g",
             "cue": "run"
           }
         ],
