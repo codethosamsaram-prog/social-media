@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-10T09:33:44+00:00",
+  "updated_at": "2026-11-10T12:35:17+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -6626,7 +6626,7 @@
       ],
       "caption": "VoiceStudio is trending on GitHub 🔥 VoiceStudio is the open-source, fully-local ElevenLabs alternative voice cloning, voice design, video.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-09T13:07:24+00:00",
       "meta": {
         "stars_today": 1247,
@@ -6685,7 +6685,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-10T12:35:17+00:00",
+      "style_used": {
+        "look": "circuit",
+        "hook": "spotlight",
+        "captions": "karaoke",
+        "cta": "share",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "teal_orange",
+        "overlay": "leaks",
+        "burst": "sparks",
+        "music": "keys"
+      },
+      "day": 7,
+      "video_path": "output/repo-1c9d47a9/reel.mp4",
+      "rendered_at": "2026-11-10T12:34:46+00:00",
+      "published_at": "2026-11-10T12:35:17+00:00",
+      "ig_media_id": "17965517325253724",
+      "permalink": "https://www.instagram.com/reel/Dfj6w3YDBAG/",
+      "container_id": "18100786469176838"
     },
     {
       "id": "repo-f9173bb7",
@@ -7707,6 +7729,146 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "Documentation of Gemini File Leaki",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-81f33d0f",
+      "topic": "ha-mcp: Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. ha mcp: Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants. 792 new stars today.",
+      "link": "https://github.com/homeassistant-ai/ha-mcp",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# homeassistant-ai/ha-mcp\n# +792 stars today\n\ngit clone https://github.com/homeassistant-ai/ha-mcp.git\ncd ha-mcp\n\n# Configure and automate Home\n# Assistant with Claude, ChatGPT,\n# and other AI assistants"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "ha-mcp is trending on GitHub 🔥 Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T12:28:35+00:00",
+      "meta": {
+        "stars_today": 792,
+        "stars": 6341,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "homeassistant-ai/ha-mcp",
+        "description": "Configure and automate Home Assistant with Claude, ChatGPT, and other AI assistants",
+        "stars": 6341,
+        "stars_today": 792,
+        "language": "Python",
+        "install": "git clone https://github.com/homeassistant-ai/ha-mcp",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone homeassistant-ai/ha-mcp",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Configure and automate Home Assist",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-2e74d022",
+      "topic": "agent-skills: Production-grade engineering skills for AI coding agents (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "SENIORS USE THIS",
+      "script": "This GitHub repo is exploding. agent skills: Production-grade engineering skills for AI coding agents. 465 new stars today.",
+      "link": "https://github.com/addyosmani/agent-skills",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# addyosmani/agent-skills\n# +465 stars today\n\ngit clone https://github.com/addyosmani/agent-skills.git\ncd agent-skills\n\n# Production-grade engineering\n# skills for AI coding agents"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#javascript"
+      ],
+      "caption": "agent-skills is trending on GitHub 🔥 Production-grade engineering skills for AI coding agents.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T12:28:37+00:00",
+      "meta": {
+        "stars_today": 465,
+        "stars": 114796,
+        "language": "JavaScript"
+      },
+      "repo": {
+        "full_name": "addyosmani/agent-skills",
+        "description": "Production-grade engineering skills for AI coding agents",
+        "stars": 114796,
+        "stars_today": 465,
+        "language": "JavaScript",
+        "install": "git clone https://github.com/addyosmani/agent-skills",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone addyosmani/agent-skills",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Production-grade engineering skill",
             "cue": "run"
           }
         ],
