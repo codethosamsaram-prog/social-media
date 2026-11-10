@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-10T03:01:59+00:00",
+  "updated_at": "2026-11-10T05:56:10+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -5915,7 +5915,7 @@
       ],
       "caption": "Clj.rs: A modern Clojure dialect implemented in the Rust language 🤖",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-08T15:53:57+00:00",
       "browser": {
         "url": "clj.rs",
@@ -5924,7 +5924,29 @@
         "bullets": [
           "A modern Clojure dialect implemented in"
         ]
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-10T05:56:10+00:00",
+      "style_used": {
+        "look": "ocean",
+        "hook": "glitch",
+        "captions": "neon",
+        "cta": "share",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "teal_orange",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "pad"
+      },
+      "day": 7,
+      "video_path": "output/aitool-fa2bcec6/reel.mp4",
+      "rendered_at": "2026-11-10T05:55:37+00:00",
+      "published_at": "2026-11-10T05:56:10+00:00",
+      "ig_media_id": "17893365507455177",
+      "permalink": "https://www.instagram.com/reel/DfjNFeCDwLE/",
+      "container_id": "18100701512176838"
     },
     {
       "id": "repo-2ed36b56",
@@ -7127,6 +7149,216 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "RuView turns commodity WiFi signal",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-3bb5b3b2",
+      "topic": "OpenSandbox: Secure, Fast, and Extensible Sandbox runtime for AI agents (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DELETE YOUR SUBSCRIPTION",
+      "script": "This GitHub repo is exploding. OpenSandbox: Secure, Fast, and Extensible Sandbox runtime for AI agents. 168 new stars today.",
+      "link": "https://github.com/opensandbox-group/OpenSandbox",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# opensandbox-group/OpenSandbox\n# +168 stars today\n\ngit clone https://github.com/opensandbox-group/OpenSandbox.git\ncd OpenSandbox\n\n# Secure, Fast, and Extensible\n# Sandbox runtime for AI agents"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "OpenSandbox is trending on GitHub 🔥 Secure, Fast, and Extensible Sandbox runtime for AI agents.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T05:53:36+00:00",
+      "meta": {
+        "stars_today": 168,
+        "stars": 17002,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "opensandbox-group/OpenSandbox",
+        "description": "Secure, Fast, and Extensible Sandbox runtime for AI agents",
+        "stars": 17002,
+        "stars_today": 168,
+        "language": "Python",
+        "install": "pip install opensandbox",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "pip install opensandbox",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Secure, Fast, and Extensible Sandb",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-3de13b42",
+      "topic": "claude-plugins-official: Official, Anthropic-managed directory of high quality Claude Code Plugins (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB HIDDEN GEM",
+      "script": "This GitHub repo is exploding. claude plugins official: Official, Anthropic-managed directory of high quality Claude Code Plugins. 149 new stars today.",
+      "link": "https://github.com/anthropics/claude-plugins-official",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# anthropics/claude-plugins-official\n# +149 stars today\n\ngit clone https://github.com/anthropics/claude-plugins-official.git\ncd claude-plugins-official\n\n# Official, Anthropic-managed\n# directory of high quality Claude\n# Code Plugins"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "claude-plugins-official is trending on GitHub 🔥 Official, Anthropic-managed directory of high quality Claude Code Plugins.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T05:53:36+00:00",
+      "meta": {
+        "stars_today": 149,
+        "stars": 46668,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "anthropics/claude-plugins-official",
+        "description": "Official, Anthropic-managed directory of high quality Claude Code Plugins",
+        "stars": 46668,
+        "stars_today": 149,
+        "language": "Python",
+        "install": "git clone https://github.com/anthropics/claude-plugins-official",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone anthropics/claude-plugin",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Official, Anthropic-managed direct",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-3c40bebd",
+      "topic": "exact: Cross platform UI framework for building applications easily (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "SENIORS USE THIS",
+      "script": "This GitHub repo is exploding. exact: Cross platform UI framework for building applications easily. 1,245 stars already.",
+      "link": "https://github.com/expo/exact",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# expo/exact\n# 1,245 stars\n\ngit clone https://github.com/expo/exact.git\ncd exact\n\n# Cross platform UI framework for\n# building applications easily"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "exact is trending on GitHub 🔥 Cross platform UI framework for building applications easily.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-10T05:53:46+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 1245,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "expo/exact",
+        "description": "Cross platform UI framework for building applications easily",
+        "stars": 1245,
+        "stars_today": null,
+        "language": "Rust",
+        "install": "git clone https://github.com/expo/exact",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone expo/exact",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Cross platform UI framework for",
             "cue": "run"
           }
         ],
