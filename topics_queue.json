@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-09T15:46:20+00:00",
+  "updated_at": "2026-11-10T03:01:59+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -5734,7 +5734,7 @@
       ],
       "caption": "Ghost-Downloader-3 is trending on GitHub 🔥 The only downloader you need.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-08T15:53:47+00:00",
       "meta": {
         "stars_today": 46,
@@ -5793,7 +5793,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-10T03:01:59+00:00",
+      "style_used": {
+        "look": "bokeh",
+        "hook": "stack",
+        "captions": "clean",
+        "cta": "triple",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "drift",
+        "grade": "faded",
+        "overlay": "sparks",
+        "burst": "sparks",
+        "music": "keys"
+      },
+      "day": 7,
+      "video_path": "output/repo-c4d9d231/reel.mp4",
+      "rendered_at": "2026-11-10T03:01:25+00:00",
+      "published_at": "2026-11-10T03:01:59+00:00",
+      "ig_media_id": "18116862065031585",
+      "permalink": "https://www.instagram.com/reel/Dfi5JkxE03m/",
+      "container_id": "18100663886176838"
     },
     {
       "id": "repo-5e9d3fd0",
@@ -6954,6 +6976,165 @@
           "open-source Wayland desktop shell",
           "theming"
         ]
+      }
+    },
+    {
+      "id": "repo-4c1a7c57",
+      "topic": "gbrain: Garry's Opinionated OpenClaw/Hermes Agent Brain (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. gbrain: Garry's Opinionated OpenClaw/Hermes Agent Brain. 216 new stars today.",
+      "link": "https://github.com/garrytan/gbrain",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# garrytan/gbrain\n# +216 stars today\n\ngit clone https://github.com/garrytan/gbrain.git\ncd gbrain\n\n# Garry's Opinionated\n# OpenClaw/Hermes Agent Brain"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "gbrain is trending on GitHub 🔥 Garry's Opinionated OpenClaw/Hermes Agent Brain.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-10T02:54:47+00:00",
+      "meta": {
+        "stars_today": 216,
+        "stars": 32208,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "garrytan/gbrain",
+        "description": "Garry's Opinionated OpenClaw/Hermes Agent Brain",
+        "stars": 32208,
+        "stars_today": 216,
+        "language": "TypeScript",
+        "install": "git clone https://github.com/garrytan/gbrain",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone garrytan/gbrain",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Garry's Opinionated OpenClaw/Herme",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "💬",
+            "title": "Signal detector, after you opt",
+            "detail": "",
+            "cue": "signal"
+          },
+          {
+            "icon": "⚡",
+            "title": "Brain-first lookup before any",
+            "detail": "",
+            "cue": "brain-first"
+          },
+          {
+            "icon": "🤖",
+            "title": "Auto-link extracts graph links",
+            "detail": "",
+            "cue": "auto-link"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-ea9a5697",
+      "topic": "RuView: RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "THIS REPO EXPLODED",
+      "script": "This GitHub repo is exploding. RuView: RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring. 172 new stars today.",
+      "link": "https://github.com/ruvnet/RuView",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# ruvnet/RuView\n# +172 stars today\n\ngit clone https://github.com/ruvnet/RuView.git\ncd RuView\n\n# RuView turns commodity WiFi\n# signals into real-time spatial\n# intelligence, vital sign"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "RuView is trending on GitHub 🔥 RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T02:54:47+00:00",
+      "meta": {
+        "stars_today": 172,
+        "stars": 103532,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "ruvnet/RuView",
+        "description": "RuView turns commodity WiFi signals into real-time spatial intelligence, vital sign monitoring",
+        "stars": 103532,
+        "stars_today": 172,
+        "language": "Rust",
+        "install": "docker run -p 127.0.0.1:3000:3000 -e RUVIEW_API_TOKEN ruvnet/wifi-densepose:latest",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "docker run -p 127.0.0.1:3000:3000 ",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "RuView turns commodity WiFi signal",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
       }
     }
   ],
