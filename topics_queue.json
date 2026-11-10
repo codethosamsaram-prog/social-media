@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-10T12:35:17+00:00",
+  "updated_at": "2026-11-10T15:34:56+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -6737,7 +6737,7 @@
       ],
       "caption": "DeepTutor is trending on GitHub 🔥 DeepTutor: Lifelong Personalized Tutoring.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-09T13:07:24+00:00",
       "meta": {
         "stars_today": 784,
@@ -6796,7 +6796,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-10T15:34:56+00:00",
+      "style_used": {
+        "look": "matrix",
+        "hook": "terminal",
+        "captions": "type",
+        "cta": "triple",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "faded",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "lofi"
+      },
+      "day": 7,
+      "video_path": "output/repo-f9173bb7/reel.mp4",
+      "rendered_at": "2026-11-10T15:34:23+00:00",
+      "published_at": "2026-11-10T15:34:56+00:00",
+      "ig_media_id": "17957005794270678",
+      "permalink": "https://www.instagram.com/reel/DfkPUfuAB53/",
+      "container_id": "18100836149176838"
     },
     {
       "id": "repo-ca7dd68b",
@@ -7869,6 +7891,221 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "Production-grade engineering skill",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-3ffc776f",
+      "topic": "academic-research-skills: Academic Research Skills for Claude Code: research write review revise finalize (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. academic research skills: Academic Research Skills for Claude Code: research write review revise finalize. 242 new stars today.",
+      "link": "https://github.com/Imbad0202/academic-research-skills",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# Imbad0202/academic-research-skills\n# +242 stars today\n\ngit clone https://github.com/Imbad0202/academic-research-skills.git\ncd academic-research-skills\n\n# Academic Research Skills for\n# Claude Code: research write review\n# revise finalize"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "academic-research-skills is trending on GitHub 🔥 Academic Research Skills for Claude Code: research write review revise finalize.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T15:30:35+00:00",
+      "meta": {
+        "stars_today": 242,
+        "stars": 56330,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "Imbad0202/academic-research-skills",
+        "description": "Academic Research Skills for Claude Code: research write review revise finalize",
+        "stars": 56330,
+        "stars_today": 242,
+        "language": "Python",
+        "install": "git clone https://github.com/Imbad0202/academic-research-skills",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone Imbad0202/academic-resea",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Academic Research Skills for Claud",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-5f987f06",
+      "topic": "topcoat: A batteries-included framework for building web apps (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DELETE YOUR SUBSCRIPTION",
+      "script": "This GitHub repo is exploding. topcoat: A batteries-included framework for building web apps. 192 new stars today.",
+      "link": "https://github.com/tokio-rs/topcoat",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# tokio-rs/topcoat\n# +192 stars today\n\ngit clone https://github.com/tokio-rs/topcoat.git\ncd topcoat\n\n# A batteries-included framework for\n# building web apps"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#rust"
+      ],
+      "caption": "topcoat is trending on GitHub 🔥 A batteries-included framework for building web apps.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T15:30:35+00:00",
+      "meta": {
+        "stars_today": 192,
+        "stars": 6642,
+        "language": "Rust"
+      },
+      "repo": {
+        "full_name": "tokio-rs/topcoat",
+        "description": "A batteries-included framework for building web apps",
+        "stars": 6642,
+        "stars_today": 192,
+        "language": "Rust",
+        "install": "git clone https://github.com/tokio-rs/topcoat",
+        "demo_code": {
+          "snippet": "view! {\n    <nav>\n        for item in nav_items {\n            <a\n                href=(item.url)\n                if item.url == current_path {\n                    aria-current=\"page\"\n                    class=\"active\"\n                }\n            >\n                (item.label)\n            </a>",
+          "language": "rust",
+          "filename": "example.rs",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone tokio-rs/topcoat",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A batteries-included framework for",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-ec4b65b7",
+      "topic": "HolyArrs: One self-hosted app for your shows, movies and music (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. HolyArrs: One self-hosted app for your shows, movies and music. 384 stars already.",
+      "link": "https://github.com/HolyArrs/HolyArrs",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# HolyArrs/HolyArrs\n# 384 stars\n\ngit clone https://github.com/HolyArrs/HolyArrs.git\ncd HolyArrs\n\n# One self-hosted app for your\n# shows, movies and music"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#go"
+      ],
+      "caption": "HolyArrs is trending on GitHub 🔥 One self-hosted app for your shows, movies and music.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-10T15:30:40+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 384,
+        "language": "Go"
+      },
+      "repo": {
+        "full_name": "HolyArrs/HolyArrs",
+        "description": "One self-hosted app for your shows, movies and music",
+        "stars": 384,
+        "stars_today": null,
+        "language": "Go",
+        "install": "docker run -d \\",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "docker run -d \\",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "One self-hosted app for your",
             "cue": "run"
           }
         ],
