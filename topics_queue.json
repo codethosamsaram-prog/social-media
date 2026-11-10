@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-10T05:56:10+00:00",
+  "updated_at": "2026-11-10T07:30:10+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -7368,6 +7368,117 @@
           "demo": "Setup is a single command."
         }
       }
+    },
+    {
+      "id": "hiring-2026-11-10",
+      "topic": "CRED, Airbnb and Notion are hiring engineers in India (2026-11-10)",
+      "keyword": "HIRING",
+      "keyword_spoken": "hiring",
+      "category": "hiring",
+      "hook": "DEVS WANTED NOW",
+      "script": "CRED, Airbnb and Notion are hiring in India right now. CRED has 2 engineering roles open in Bengaluru. Airbnb has 2 engineering roles open in Bengaluru. Notion has 1 engineering roles open in Hyderabad.",
+      "link": "https://jobs.lever.co/cred",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "CRED, Airbnb and Notion are hiring engineers in India (2026-11-10)"
+      },
+      "stock_queries": [
+        "modern office india",
+        "team meeting office",
+        "bangalore city night"
+      ],
+      "hashtags": [
+        "#hiring",
+        "#jobsinindia",
+        "#softwarejobs",
+        "#bangalorejobs",
+        "#developers"
+      ],
+      "caption": "🚨 CRED, Airbnb and Notion are hiring engineers in India right now.\n\n🏢 CRED: 2 open roles (Bengaluru), e.g. threat detection engineer\n🏢 Airbnb: 2 open roles (Bengaluru), e.g. Systems Engineer, Tech Foundations (Jira cloud)\n🏢 Notion: 1 open roles (Hyderabad), e.g. Forward Deployed Engineer, India",
+      "source": "career_boards",
+      "status": "published",
+      "created_at": "2026-11-10T07:06:44+00:00",
+      "links": [
+        {
+          "label": "CRED",
+          "url": "https://jobs.lever.co/cred"
+        },
+        {
+          "label": "Airbnb",
+          "url": "https://boards.greenhouse.io/airbnb"
+        },
+        {
+          "label": "Notion",
+          "url": "https://jobs.ashbyhq.com/notion"
+        }
+      ],
+      "hiring": {
+        "companies": [
+          {
+            "name": "CRED",
+            "domain": "cred.club",
+            "color": "#e5e5e5",
+            "roles": 2,
+            "fresh": 0,
+            "top_role": "threat detection engineer",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://jobs.lever.co/cred",
+            "score": 2
+          },
+          {
+            "name": "Airbnb",
+            "domain": "airbnb.com",
+            "color": "#ff5a5f",
+            "roles": 2,
+            "fresh": 0,
+            "top_role": "Systems Engineer, Tech Foundations (Jira cloud)",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/airbnb",
+            "score": 2
+          },
+          {
+            "name": "Notion",
+            "domain": "notion.so",
+            "color": "#e5e5e5",
+            "roles": 1,
+            "fresh": 0,
+            "top_role": "Forward Deployed Engineer, India",
+            "cities": [
+              "Hyderabad"
+            ],
+            "url": "https://jobs.ashbyhq.com/notion",
+            "score": 1
+          }
+        ],
+        "checked_at": "2026-11-10T07:06:44+00:00"
+      },
+      "error": null,
+      "updated_at": "2026-11-10T07:30:10+00:00",
+      "style_used": {
+        "look": "glass",
+        "hook": "alert",
+        "captions": "gradient",
+        "cta": "triple",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "handheld",
+        "grade": "none",
+        "overlay": "leaks",
+        "burst": "ring",
+        "music": "pluck"
+      },
+      "day": 7,
+      "video_path": "output/hiring-2026-11-10/reel.mp4",
+      "rendered_at": "2026-11-10T07:11:26+00:00",
+      "published_at": "2026-11-10T07:30:10+00:00",
+      "ig_media_id": "18028571999924064",
+      "permalink": "https://www.instagram.com/reel/DfjVwpinY4Y/",
+      "container_id": "18100717520176838"
     }
   ],
   "removed": [
