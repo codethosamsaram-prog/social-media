@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-10T07:30:10+00:00",
+  "updated_at": "2026-11-10T09:33:44+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -6370,7 +6370,7 @@
       ],
       "caption": "unslop is trending on GitHub 🔥 A Claude skill that turns vibecoded, AI-looking UI into a designed interface.",
       "source": "github_search",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-09T09:59:15+00:00",
       "meta": {
         "stars_today": null,
@@ -6429,7 +6429,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-10T09:33:44+00:00",
+      "style_used": {
+        "look": "bokeh",
+        "hook": "terminal",
+        "captions": "type",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "contrast",
+        "overlay": "vhs",
+        "burst": "rays",
+        "music": "lofi"
+      },
+      "day": 7,
+      "video_path": "output/repo-9aab5ec3/reel.mp4",
+      "rendered_at": "2026-11-10T09:33:07+00:00",
+      "published_at": "2026-11-10T09:33:44+00:00",
+      "ig_media_id": "17878687470636391",
+      "permalink": "https://www.instagram.com/reel/Dfjl-hpEelb/",
+      "container_id": "18100745525176838"
     },
     {
       "id": "repo-dc54a120",
@@ -7479,6 +7501,221 @@
       "ig_media_id": "18028571999924064",
       "permalink": "https://www.instagram.com/reel/DfjVwpinY4Y/",
       "container_id": "18100717520176838"
+    },
+    {
+      "id": "repo-285224a6",
+      "topic": "memorilla: Memorilla: Latent Semantic Memory for LLMs (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "SENIORS USE THIS",
+      "script": "This GitHub repo is exploding. memorilla: Memorilla: Latent Semantic Memory for LLMs. 62 new stars today.",
+      "link": "https://github.com/snap-stanford/memorilla",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# snap-stanford/memorilla\n# +62 stars today\n\ngit clone https://github.com/snap-stanford/memorilla.git\ncd memorilla\n\n# Memorilla: Latent Semantic Memory\n# for LLMs"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "memorilla is trending on GitHub 🔥 Memorilla: Latent Semantic Memory for LLMs.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T09:28:26+00:00",
+      "meta": {
+        "stars_today": 62,
+        "stars": 776,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "snap-stanford/memorilla",
+        "description": "Memorilla: Latent Semantic Memory for LLMs",
+        "stars": 776,
+        "stars_today": 62,
+        "language": "Python",
+        "install": "git clone https://github.com/snap-stanford/memorilla",
+        "demo_code": {
+          "snippet": "from memorilla import MemoryModule\n\nmemory = MemoryModule.from_pretrained(\"checkpoints/stage3\")",
+          "language": "python",
+          "filename": "example.py",
+          "focus": []
+        },
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone snap-stanford/memorilla",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "from memorilla import MemoryModule",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Memorilla: Latent Semantic Memory ",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup really is this small."
+        }
+      }
+    },
+    {
+      "id": "repo-bf15cd64",
+      "topic": "hummingbot: Open source software that helps you create and deploy high-frequency crypto trading (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. hummingbot: Open source software that helps you create and deploy high-frequency crypto trading. 45 new stars today.",
+      "link": "https://github.com/hummingbot/hummingbot",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# hummingbot/hummingbot\n# +45 stars today\n\ngit clone https://github.com/hummingbot/hummingbot.git\ncd hummingbot\n\n# Open source software that helps\n# you create and deploy high-\n# frequency crypto trading"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "hummingbot is trending on GitHub 🔥 Open source software that helps you create and deploy high-frequency crypto trading.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-10T09:28:26+00:00",
+      "meta": {
+        "stars_today": 45,
+        "stars": 21138,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "hummingbot/hummingbot",
+        "description": "Open source software that helps you create and deploy high-frequency crypto trading",
+        "stars": 21138,
+        "stars_today": 45,
+        "language": "Python",
+        "install": "git clone https://github.com/hummingbot/hummingbot",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone hummingbot/hummingbot",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Open source software that helps",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-1b18e8c9",
+      "topic": "gemini_files: Documentation of Gemini File Leaking Behavior (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. gemini files: Documentation of Gemini File Leaking Behavior. 23 stars already.",
+      "link": "https://github.com/thisisme6598/gemini_files",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# thisisme6598/gemini_files\n# 23 stars\n\ngit clone https://github.com/thisisme6598/gemini_files.git\ncd gemini_files\n\n# Documentation of Gemini File\n# Leaking Behavior"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "gemini_files is trending on GitHub 🔥 Documentation of Gemini File Leaking Behavior.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-10T09:28:36+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 23,
+        "language": null
+      },
+      "repo": {
+        "full_name": "thisisme6598/gemini_files",
+        "description": "Documentation of Gemini File Leaking Behavior",
+        "stars": 23,
+        "stars_today": null,
+        "language": null,
+        "install": "git clone https://github.com/thisisme6598/gemini_files",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone thisisme6598/gemini_file",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Documentation of Gemini File Leaki",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
     }
   ],
   "removed": [
