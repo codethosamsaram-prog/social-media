@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-11T12:08:17+00:00",
+  "updated_at": "2026-11-11T12:36:35+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -8909,7 +8909,7 @@
       },
       "caption": "LeetCode 1: Two Sum 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "two_sum"
       },
@@ -9014,11 +9014,27 @@
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
       "error": null,
-      "updated_at": "2026-11-11T06:27:09+00:00",
-      "style_used": null,
-      "day": null,
-      "video_path": null,
-      "rendered_at": null
+      "updated_at": "2026-11-11T12:36:35+00:00",
+      "style_used": {
+        "look": "neon",
+        "hook": "chat",
+        "captions": "box",
+        "cta": "share",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "cool",
+        "overlay": "leaks",
+        "burst": "rays",
+        "music": "pad"
+      },
+      "day": 8,
+      "video_path": "output/dsa-twosum/reel.mp4",
+      "rendered_at": "2026-11-11T12:36:03+00:00",
+      "published_at": "2026-11-11T12:36:35+00:00",
+      "ig_media_id": "18650028754002281",
+      "permalink": "https://www.instagram.com/reel/DfmftH-Eody/",
+      "container_id": "18101105825176838"
     },
     {
       "id": "dsa-validparentheses",
