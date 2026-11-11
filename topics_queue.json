@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-11T02:53:23+00:00",
+  "updated_at": "2026-11-11T06:01:15+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -7034,7 +7034,7 @@
       ],
       "caption": "KetchUp: Open-source SketchUp alternative built with Rust and WebGPU 🤖",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-09T15:39:08+00:00",
       "browser": {
         "url": "ketchup3d.github.io",
@@ -7045,7 +7045,29 @@
           "Rust",
           "WebGPU"
         ]
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-11T06:01:15+00:00",
+      "style_used": {
+        "look": "bokeh",
+        "hook": "kinetic",
+        "captions": "tape",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "cool",
+        "overlay": "leaks",
+        "burst": "slash",
+        "music": "bell"
+      },
+      "day": 8,
+      "video_path": "output/aitool-79cd6977/reel.mp4",
+      "rendered_at": "2026-11-11T06:00:40+00:00",
+      "published_at": "2026-11-11T06:01:15+00:00",
+      "ig_media_id": "18486107125118868",
+      "permalink": "https://www.instagram.com/reel/DflydbEgtw2/",
+      "container_id": "18101007980176838"
     },
     {
       "id": "aitool-ddea982e",
@@ -8272,6 +8294,324 @@
           }
         ],
         "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-248f98dc",
+      "topic": "oh-my-hermes: The ultrawork agent with AI coworkers wired into you (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "DEVS ARE SLEEPING",
+      "script": "This GitHub repo is exploding. oh my hermes: The ultrawork agent with AI coworkers wired into you. 50 new stars today.",
+      "link": "https://github.com/rlaope/oh-my-hermes",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# rlaope/oh-my-hermes\n# +50 stars today\n\ngit clone https://github.com/rlaope/oh-my-hermes.git\ncd oh-my-hermes\n\n# The ultrawork agent with AI\n# coworkers wired into you"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "oh-my-hermes is trending on GitHub 🔥 The ultrawork agent with AI coworkers wired into you.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-11T05:58:10+00:00",
+      "meta": {
+        "stars_today": 50,
+        "stars": 5405,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "rlaope/oh-my-hermes",
+        "description": "The ultrawork agent with AI coworkers wired into you",
+        "stars": 5405,
+        "stars_today": 50,
+        "language": "Python",
+        "install": "brew install rlaope/tap/omh",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "brew install rlaope/tap/omh",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The ultrawork agent with AI",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-9b878053",
+      "topic": "mcp-server-guide: A guide on how to use the Figma MCP server (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "GITHUB IS CRAZY",
+      "script": "This GitHub repo is exploding. mcp server guide: A guide on how to use the Figma MCP server. 7 new stars today.",
+      "link": "https://github.com/figma/mcp-server-guide",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# figma/mcp-server-guide\n# +7 stars today\n\ngit clone https://github.com/figma/mcp-server-guide.git\ncd mcp-server-guide\n\n# A guide on how to use the Figma\n# MCP server"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "mcp-server-guide is trending on GitHub 🔥 A guide on how to use the Figma MCP server.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-11T05:58:10+00:00",
+      "meta": {
+        "stars_today": 7,
+        "stars": 2171,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "figma/mcp-server-guide",
+        "description": "A guide on how to use the Figma MCP server",
+        "stars": 2171,
+        "stars_today": 7,
+        "language": "Python",
+        "install": "git clone https://github.com/figma/mcp-server-guide",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone figma/mcp-server-guide",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A guide on how to",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🤖",
+            "title": "Write to the canvas (remote",
+            "detail": "Create and modify native Figma content",
+            "cue": "write"
+          },
+          {
+            "icon": "🤖",
+            "title": "Generate placeholder images",
+            "detail": "When source, captured, or library images are",
+            "cue": "generate"
+          },
+          {
+            "icon": "💻",
+            "title": "Generate code from selected",
+            "detail": "",
+            "cue": "generate"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-5175b6a2",
+      "topic": "modern-web-guidance: Keep your coding agent up to date with the latest web best (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "OPEN SOURCE GOLD",
+      "script": "This GitHub repo is exploding. modern web guidance: Keep your coding agent up to date with the latest web best. 3,453 stars already.",
+      "link": "https://github.com/GoogleChrome/modern-web-guidance",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# GoogleChrome/modern-web-guidance\n# 3,453 stars\n\ngit clone https://github.com/GoogleChrome/modern-web-guidance.git\ncd modern-web-guidance\n\n# Keep your coding agent up to date\n# with the latest web best"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "modern-web-guidance is trending on GitHub 🔥 Keep your coding agent up to date with the latest web best.",
+      "source": "gemini",
+      "status": "needs_review",
+      "created_at": "2026-11-11T05:58:58+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 3453,
+        "language": null
+      },
+      "repo": {
+        "full_name": "GoogleChrome/modern-web-guidance",
+        "description": "Keep your coding agent up to date with the latest web best",
+        "stars": 3453,
+        "stars_today": null,
+        "language": null,
+        "install": "git clone https://github.com/GoogleChrome/modern-web-guidance",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone GoogleChrome/modern-web-",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Keep your coding agent up",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-02eb9f49",
+      "topic": "Procexp-Mac: Process Explorer for MacOS (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. Procexp Mac: Process Explorer for MacOS. 328 stars already.",
+      "link": "https://github.com/microsoft/Procexp-Mac",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# microsoft/Procexp-Mac\n# 328 stars\n\ngit clone https://github.com/microsoft/Procexp-Mac.git\ncd Procexp-Mac\n\n# Process Explorer for MacOS"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "Procexp-Mac is trending on GitHub 🔥 Process Explorer for MacOS.",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-11T05:58:58+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 328,
+        "language": "Swift"
+      },
+      "repo": {
+        "full_name": "microsoft/Procexp-Mac",
+        "description": "Process Explorer for MacOS",
+        "stars": 328,
+        "stars_today": null,
+        "language": "Swift",
+        "install": "brew install xcodegen",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "brew install xcodegen",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "Process Explorer for MacOS",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🛠️",
+            "title": "Live process tree with Process",
+            "detail": "",
+            "cue": "live"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Frozen process-name pane",
+            "detail": "",
+            "cue": "frozen"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Persisted process-list column",
+            "detail": "",
+            "cue": "persisted"
+          }
+        ],
         "narration": {
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
