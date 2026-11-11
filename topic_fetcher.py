@@ -46,6 +46,8 @@ CATEGORIES: dict[str, str] = {
     "dev_tip": "Dev Tips",
     "website": "Dev Tips",
     "hiring": "Hiring in India",
+    "interview": "Interview Concepts",
+    "quiz": "Daily Quiz",
 }
 
 STATUSES = ("queued", "needs_review", "rendering", "rendered", "published", "failed")
@@ -59,6 +61,7 @@ CATEGORY_KEYWORDS: dict[str, str] = {
     "ASYNC": "dev_tip",
     "HIRING": "hiring",
     "JOBS": "hiring",
+    "QUIZ": "quiz",
 }
 
 HASHTAGS: dict[str, list[str]] = {
@@ -68,6 +71,8 @@ HASHTAGS: dict[str, list[str]] = {
     "dev_tip": ["#python", "#coding", "#developers", "#programming", "#vscode"],
     "website": ["#webdev", "#coding", "#developers", "#programming", "#devtools"],
     "hiring": ["#hiring", "#jobsinindia", "#softwarejobs", "#bangalorejobs", "#developers"],
+    "interview": ["#interviewprep", "#softwareengineer", "#systemdesign", "#placements", "#coding"],
+    "quiz": ["#codingquiz", "#python", "#javascript", "#programming", "#developers"],
 }
 
 STOCK_QUERIES: dict[str, list[str]] = {
@@ -77,6 +82,8 @@ STOCK_QUERIES: dict[str, list[str]] = {
     "dev_tip": ["coding laptop dark", "developer workspace", "fast city night"],
     "website": ["laptop web browsing night", "developer workspace", "minimal desk setup"],
     "hiring": ["modern office india", "team meeting office", "bangalore city night"],
+    "interview": ["job interview office", "programmer thinking", "whiteboard meeting"],
+    "quiz": ["students thinking", "abstract question mark", "dark desk setup"],
 }
 
 USER_AGENT = (
@@ -191,6 +198,11 @@ def topic_keys(item: dict[str, Any]) -> set[str]:
     trick = (item.get("dsa") or {}).get("trick")
     if trick:
         keys.add(f"dsa:{SAME_DSA_TOPIC.get(trick, trick)}")
+    lc = re.search(r"leetcode\.com/problems/([a-z0-9-]+)", (item.get("link") or "").lower())
+    if lc:  # the same LeetCode problem is the same reel, whoever wrote it
+        keys.add(f"lc:{lc.group(1)}")
+    if item.get("category") in ("quiz", "interview"):  # their titles are generic; link + topic identify them
+        return keys
     if item.get("category") == "dsa":  # their titles share words like "O(1) space", which proves nothing
         return keys
     names = re.findall(r"\(([^)]+)\)", topic)
@@ -818,13 +830,109 @@ def discover_dsa(limit: int, log: Log) -> list[dict[str, Any]]:
     return results
 
 
+
+# ---------------------------------------------------------------------------
+# Source: evergreen library (DSA, interview concepts, quizzes) + Gemini top-up
+# ---------------------------------------------------------------------------
+
+# Matches the daily mix in slot_gate.SLOTS: keep this many of each queued so every slot has its reel.
+EVERGREEN_TARGET = {"dsa": 4, "interview": 4, "quiz": 2}
+
+GEN_PROMPT = """You write scripts for an Instagram coding channel for Indian students and freshers preparing for
+software interviews. Write {count} NEW {what} as a JSON array, in exactly the same format as this example:
+
+{example}
+
+Rules:
+- Simple, friendly English that a college student understands on the first listen. Short sentences.
+- Narration is spoken by a voice: write numbers and symbols as words ("O of n", "minus one").
+- Every "hook" is exactly 3 words, uppercase. "steps"/"simple"/"answer" rows are [emoji, title (max 24 chars), detail (max 36 chars)].
+- Must be factually correct. {extra}
+- Do NOT repeat any of these: {used}
+Return only the JSON array."""
+
+GEN_RULES = {
+    "dsa": ("well-known LeetCode problems, each explained through its key pattern",
+            'Python snippets must be correct and runnable; "func" is the function the tests call; give 3 to 5 tests as '
+            '[[args...], expected] using plain JSON values. Use a different, popular LeetCode problem each time.'),
+    "interview": ("core CS and system design interview concepts, each explained with an everyday Indian analogy",
+                  '"link" must be the matching English Wikipedia article URL. "keyword" is one word, 3-12 letters.'),
+    "quiz": ("multiple-choice coding quizzes (Python, JavaScript, SQL, DSA facts) with one surprising correct option",
+             '"say" must not contain the words three or answer. "why" starts with the correct option, then explains it in one sentence.'),
+}
+
+
+def _library_candidates(category: str) -> list[dict[str, Any]]:
+    import content_library as cl
+
+    entries, build, check = cl.BUILDERS[category]
+    return [build(e) for e in entries if not (check and check(e))]
+
+
+def _gemini_entries(client: httpx.Client, category: str, count: int, log: Log) -> list[dict[str, Any]]:
+    """Untrusted model output: each entry must pass the library's own checks and validate_item before use."""
+    import content_library as cl
+
+    entries, build, check = cl.BUILDERS[category]
+    used = sorted({i.get("topic", "") for i in load_queue() if i.get("category") == category}
+                  | {e.get("title") or e.get("topic") or e.get("question", "") for e in entries})
+    what, extra = GEN_RULES[category]
+    prompt = GEN_PROMPT.format(count=count, what=what, extra=extra, used="; ".join(used)[:6000],
+                               example=json.dumps(entries[0], ensure_ascii=False))
+    text = _gemini_call(client, prompt, search=False)
+    match = re.search(r"\[.*\]", text, re.S)
+    rows = json.loads(match.group(0)) if match else []
+    out = []
+    for e in rows:
+        try:
+            seed = e.get("key") or e.get("title") or e.get("topic") or e.get("question")
+            e["key"] = re.sub(r"[^a-z0-9]+", "_", str(seed).lower()).strip("_")[:30]
+            problem = check(e) if check else None
+            if problem:
+                log(f"Gemini {category}: dropped '{e['key']}': {problem}")
+                continue
+            out.append(validate_item(build(e, source="gemini")))
+        except Exception as exc:  # noqa: BLE001 - one bad entry must not drop the rest
+            log(f"Gemini {category}: dropped a malformed entry ({exc!r})")
+    return out
+
+
+def discover_evergreen(client: httpx.Client | None, log: Log) -> list[dict[str, Any]]:
+    queued = [i for i in load_queue() if i.get("status") == "queued"]
+    found: list[dict[str, Any]] = []
+    for category, target in EVERGREEN_TARGET.items():
+        want = target - sum(i.get("category") == category for i in queued)
+        if want <= 0:
+            continue
+        picks = unseen(_library_candidates(category), want)
+        if len(picks) < want and client and settings.gemini_api_key:
+            try:
+                picks += unseen(_gemini_entries(client, category, want - len(picks) + 2, log), want - len(picks))
+            except Exception as exc:  # noqa: BLE001
+                log(f"Gemini {category} top-up failed: {exc}")
+        log(f"Evergreen {category}: queueing {len(picks)} of {want} wanted")
+        found += picks
+    return found
+
+
 # ---------------------------------------------------------------------------
 # Orchestration
 # ---------------------------------------------------------------------------
 
 def discover(limit_per_source: int = 2, log: Log = print) -> list[dict[str, Any]]:
+    """Evergreen DSA / interview / quiz reels first: they fill the daily slots. Trending repos and AI tools are only
+    fetched while the backlog of those is small, since they post only when the evergreen supply runs dry."""
     found: list[dict[str, Any]] = []
     with httpx.Client(timeout=20, follow_redirects=True, headers={"User-Agent": USER_AGENT}) as client:
+        try:
+            found += discover_evergreen(client, log)
+        except Exception as exc:  # noqa: BLE001
+            log(f"Evergreen library failed: {exc}")
+        trending_queued = sum(i.get("status") == "queued" and i.get("category") in ("repo", "ai_tool", "website", "dev_tip")
+                              for i in load_queue())
+        if trending_queued >= TRENDING_RESERVE:
+            log(f"{trending_queued} trending reels already in reserve: skipping trending sources")
+            return found
         repos: list[dict[str, Any]] = []
         try:
             repos = discover_github_trending(client, limit_per_source, log)
@@ -841,8 +949,12 @@ def discover(limit_per_source: int = 2, log: Log = print) -> list[dict[str, Any]
                 found += fn(client, limit_per_source, log)
             except Exception as exc:  # noqa: BLE001
                 log(f"{name} failed: {exc}")
-    found += discover_dsa(limit_per_source, log)
+        found += discover_dsa(limit_per_source, log)
     return found
+
+
+# Trending reels are only a fallback now, so keep a small reserve instead of a growing pile.
+TRENDING_RESERVE = 3
 
 
 def discover_and_enqueue(limit_per_source: int = 2, log: Log = print) -> list[dict[str, Any]]:
@@ -851,8 +963,6 @@ def discover_and_enqueue(limit_per_source: int = 2, log: Log = print) -> list[di
     return added
 
 
-# Trending topics go stale and the queue posts oldest first, so don't let the backlog outrun posting (5 a day).
-MAX_BACKLOG = 20
 
 
 def main() -> None:
@@ -868,10 +978,6 @@ def main() -> None:
         return
     if args.dry_run:
         print(json.dumps(discover(args.limit), indent=2, ensure_ascii=False))
-        return
-    backlog = sum(i.get("status") == "queued" for i in load_queue())
-    if backlog >= MAX_BACKLOG:
-        print(f"{backlog} reels already queued: nothing to fetch")
         return
     for item in discover_and_enqueue(args.limit):
         print(f"+ {item['id']}  {item['keyword']:<9} {item['topic']}")

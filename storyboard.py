@@ -18,15 +18,18 @@ from dataclasses import dataclass, field
 from typing import Any, Callable
 
 # Reel length window (seconds) per category.
-LENGTHS: dict[str, tuple[float, float]] = {"dsa": (20.0, 34.0), "repo": (20.0, 34.0), "hiring": (14.0, 26.0)}
+LENGTHS: dict[str, tuple[float, float]] = {"dsa": (20.0, 34.0), "repo": (20.0, 34.0), "hiring": (14.0, 26.0),
+                                           "interview": (20.0, 34.0), "quiz": (16.0, 30.0)}
 DEFAULT_LENGTH = (8.0, 15.0)
 
-ACCENTS = {"hiring": "#ff9933", "dsa": "#ff9e64", "repo": "#36f9f6", "ai_tool": "#ff7edb", "dev_tip": "#7aa2f7", "website": "#9ece6a"}
+ACCENTS = {"hiring": "#ff9933", "dsa": "#ff9e64", "repo": "#36f9f6", "ai_tool": "#ff7edb", "dev_tip": "#7aa2f7", "website": "#9ece6a",
+           "interview": "#7ee787", "quiz": "#ffd166"}
 
 # Caption centre line per scene type (None hides captions: the scene's own text carries it).
 CAPTION_Y: dict[str, int | None] = {
     "hook": None, "problem": 1430, "naive": 1430, "visualize": 1520, "code": 1520, "compare": 1450,
     "repo_intro": 1430, "how": 1470, "demo": 1560, "use_cases": 1450, "browser": 1530, "hiring": 1530, "cta": None,
+    "quiz": 1640,
 }
 MIN_DUR = {
     "hook": 1.5, "problem": 3.0, "naive": 3.0, "visualize": 5.5, "code": 3.2, "compare": 3.4,
@@ -428,8 +431,19 @@ DSA_TRICKS: dict[str, dict[str, Any]] = {
 # ---------------------------------------------------------------------------
 
 
+QUIZ_CTAS = [
+    "Comment your answer, and follow for a new quiz every day.",
+    "Did you get it right? Comment below, and send this to a friend who won't.",
+    "Follow for tomorrow's quiz, and tag a friend who'd get this wrong.",
+]
+
+
 def cta_scene(item: dict[str, Any], handle: str) -> Scene:
-    thing = "code" if item["category"] == "dsa" else "link"
+    if item["category"] == "quiz":
+        line = QUIZ_CTAS[sum(map(ord, item["id"])) % len(QUIZ_CTAS)]
+        return Scene("cta", line, {"keyword": item["keyword"], "thing": "answer", "handle": handle,
+                                   "series": (item.get("_style") or {}).get("series")}, transition="zoom")
+    thing = {"dsa": "code", "interview": "notes"}.get(item["category"], "link")
     spoken = item.get("keyword_spoken") or item["keyword"].lower()
     style = item.get("_style") or {}
     series = style.get("series")
@@ -572,16 +586,24 @@ def from_spec(item: dict[str, Any], handle: str) -> list[Scene]:
     return scenes
 
 
-def spoken_opening(hook: Scene, day: int | None, is_dsa: bool) -> None:
+OPENING_FOLLOW = {
+    "dsa": ("Imagine you get this question in your interview.", "CAN YOU SOLVE IT?"),
+    "interview": ("Here it is, explained simply.", "ASKED IN INTERVIEWS"),
+    "quiz": ("Let's see if you get it right.", "QUICK QUIZ"),
+}
+
+
+def spoken_opening(hook: Scene, day: int | None, category: str) -> None:
     """User's rule for every reel: open on the interesting line, then say the day number.
     DSA adds the interview framing, and the problem scene follows straight on."""
     line = hook.narration.strip()
     if line and line[-1] not in ".!?":
         line += "."
     parts = [line, f"Day {day}." if day else ""]
-    if is_dsa:
-        parts.append("Imagine you get this question in your interview.")
-        hook.kicker = "CAN YOU SOLVE IT?"
+    follow = OPENING_FOLLOW.get(category)
+    if follow:
+        parts.append(follow[0])
+        hook.kicker = follow[1]
     hook.narration = " ".join(p for p in parts if p)
 
 
@@ -597,7 +619,7 @@ def build(item: dict[str, Any], handle: str) -> list[Scene]:
     else:
         scenes = generic_storyboard(item, handle)
     if scenes[0].type == "hook":
-        spoken_opening(scenes[0], item.get("_day"), item["category"] == "dsa")
+        spoken_opening(scenes[0], item.get("_day"), item["category"])
     order =(item.get("_style") or {}).get("transitions") or TRANSITIONS
     for i, s in enumerate(scenes):
         # The style's shuffled order wins over format defaults; a hand-authored storyboard keeps its own.
@@ -789,6 +811,25 @@ def layout(scene: Scene) -> tuple[dict[str, Any], list[tuple[float, str, float]]
             at(c["at"], "pop", 0.4)
             at(c["at"] + 0.45, "tick", 0.25)
 
+    elif kind == "quiz":
+        n_opt = len(data["options"])
+        data["optionTimes"] = [round(0.5 + i * 0.22, 3) for i in range(n_opt)]
+        for t in data["optionTimes"]:
+            at(t, "pop", 0.22)
+        # Narration: question, "Comment your answer. Three, two, one. The answer is B. <why>"
+        asked = cue(scene, ["comment"], d * 0.3)
+        three = cue(scene, ["three"], asked + 1.0, after=asked)
+        two = cue(scene, ["two"], three + 0.5, after=three + 0.1)
+        one = cue(scene, ["one"], two + 0.5, after=two + 0.1)
+        reveal = cue(scene, ["answer"], one + 0.7, after=one + 0.1)
+        reveal = min(max(reveal, one + 0.4), d - 1.2)
+        data["countdown"] = [round(three, 3), round(two, 3), round(one, 3)]
+        data["revealAt"] = round(reveal, 3)
+        for t in data["countdown"]:
+            at(t, "tick", 0.45)
+        at(reveal, "chime", 0.55)
+        impacts.append(s0 + reveal)
+
     elif kind == "cta":
         data["bubbleAt"] = 0.25
         data["followAt"] = round(min(d - 0.8, 1.35), 3)
@@ -874,7 +915,8 @@ AXES: dict[str, list[str]] = {
 # Base odds before learning (1.0 unless listed).
 BASE_WEIGHT: dict[tuple[str, str], float] = {}
 SERIES_NAMES = {"dsa": "O(1) TRICKS", "repo": "GITHUB GEMS", "ai_tool": "AI DEV TOOLS", "dev_tip": "DEV TIPS",
-                "website": "DEV WEBSITES", "hiring": "HIRING IN INDIA"}
+                "website": "DEV WEBSITES", "hiring": "HIRING IN INDIA",
+                "interview": "INTERVIEW IN 30s", "quiz": "DAILY QUIZ"}
 FORCED: dict[str, dict[str, str]] = {"hiring": {"cta": "triple"}}
 
 

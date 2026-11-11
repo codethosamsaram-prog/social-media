@@ -1,6 +1,6 @@
 # @code_tho_samsaram Reel Factory
 
-Faceless Instagram Reels engine for the **@code_tho_samsaram** account. Niche: AI coding tips, developer tools, LeetCode O(1)-space tricks, GitHub trending repos. Everything runs on free tiers: Vercel for the webhook and dashboard, GitHub Actions for rendering and posting, edge-tts, Whisper and Pexels. Videos go straight to Meta through resumable upload, with no public host (tmpfiles.org's direct links stopped working).
+Faceless Instagram Reels engine for the **@code_tho_samsaram** account. Niche (since 2026-11-11, user's request): daily DSA patterns, interview concepts explained simply, and coding quizzes, plus a daily India hiring reel. Trending repos/AI tools are only a fallback. Everything runs on free tiers: Vercel for the webhook and dashboard, GitHub Actions for rendering and posting, edge-tts, Whisper and Pexels. Videos go straight to Meta through resumable upload, with no public host (tmpfiles.org's direct links stopped working).
 
 ## Files
 
@@ -8,13 +8,14 @@ Faceless Instagram Reels engine for the **@code_tho_samsaram** account. Niche: A
 |---|---|
 | `config.py` | Loads env vars (plus an optional `.env`). Exposes `settings`. Creates `data/`, `output/`, `assets/`. |
 | `topics_queue.json` | The reel queue. Source of truth for keywords, DM links, statuses and published media IDs. |
-| `topic_fetcher.py` | Topic Discovery Engine and the queue store (load/save/update/append with atomic writes). |
+| `topic_fetcher.py` | Topic Discovery Engine and the queue store (load/save/update/append with atomic writes). `discover_evergreen` keeps `EVERGREEN_TARGET` reels of each daily category queued: library first, then Gemini top-up. Trending sources run only while fewer than `TRENDING_RESERVE` trending reels are queued. |
+| `content_library.py` | Hand-written DSA (with tests), interview-concept and quiz entries, their checks (`check_dsa` runs tests in an isolated subprocess; Gemini output must pass too) and builders that emit explicit storyboards. |
 | `storyboard.py` | Turns a queue item into narrated, timed scenes per category (DSA traces run the real algorithm). |
 | `auto_pipeline.py` | Render orchestrator: storyboard → edge-tts → Whisper → sound design → Remotion. Also the Meta publisher. |
 | `check_token.py` | Can the stored token still publish, and when does it run out? Runs before each render and daily in `token-check.yml`. |
 | `hiring.py` | Daily "hiring in India" reel: top 3 companies by fresh India engineering openings, from public Greenhouse/Lever/Ashby boards. |
 | `.github/workflows/reel.yml` | Wakes every 15 minutes; posts only when `slot_gate.py` says today is behind. |
-| `slot_gate.py` | The 6 slots (IST 08,11,**13 hiring**,15,18,21). Compares what is due with what is on Instagram, so missed runs fix themselves. |
+| `slot_gate.py` | The 6 slots, IST: 08 dsa, 11 interview, 13 hiring, 15 quiz, 18 dsa, 21 interview. Compares what is due with what is on Instagram, so missed runs fix themselves, and picks the first due category still short today. `auto_pipeline.next_for` falls back through `FALLBACK` when a category's queue is empty. |
 | `video/` | Remotion (React) project that renders 1080×1920 motion graphics from `output/<id>/props.json`. |
 | `main.py` | FastAPI app: Meta webhook, auto-DM worker, dashboard REST API, WebSocket log stream. |
 | `static/dashboard.html` | Single-file command dashboard (Tailwind, FontAwesome and Chart.js from CDNs). |
@@ -54,12 +55,13 @@ Runtime folders (git-ignore them): `.env`, `data/` (webhook state), `output/` (r
 
 - **Length per category** (`storyboard.LENGTHS`): `dsa` and `repo` run 20–34 s; `hiring` 14–26 s; everything else 7–12 s.
   `voice_scenes` synthesizes every scene, and if the reel runs long it raises the speaking rate (from `+15%`, max `+40%`), scaled by how much *speech* must go (padding and `MIN_DUR` don't shrink). Still too long → optional scenes are dropped. Too short → stretchable scenes grow.
-- **Formats:** `dsa` hook → problem → naive (O(n) stamp) → animated trace → code → CTA. `repo` hook → repo card → how it works → setup demo → use cases → CTA. Others hook → browser/compare/code → CTA. A queue item can carry an explicit `storyboard` list to hand-author a reel.
+- **Library formats** (`content_library`): DSA hook → problem → naive → approach steps (`how`) → code → CTA. Interview hook → simple analogy (`how`) → "say this" cards (`use_cases`) → CTA. Quiz hook → `quiz` scene (question, optional code, 4 options, spoken 3-2-1 countdown timed by Whisper cues on "three/two/one", reveal on "answer") → quiz CTA (`QuizCta`, no DM promise). Quiz `say` text must not contain "three" or "answer".
+- **Legacy formats:** `dsa` hook → problem → naive (O(n) stamp) → animated trace → code → CTA. `repo` hook → repo card → how it works → setup demo → use cases → CTA. Others hook → browser/compare/code → CTA. A queue item can carry an explicit `storyboard` list to hand-author a reel.
 - **3-word hook** first; `validate_item` rejects other hook lengths. Captions are hidden on hook and CTA scenes.
 - **Captions:** karaoke words timed to Whisper timestamps, aligned back to the script text (`align_to_script`).
 - **Audio:** the hook is voice only (user disliked per-word hits: the "dum dum dum"). A drumless bed (or `assets/music/*`) fades in after the hook, ducked to 25 % under the voice. Whoosh on every cut, bright snaps on stamps, typing clicks, per-step ticks, a riser into the CTA. No sound has a sub-bass thump.
 - **Editing:** every reel draws one option per axis in `storyboard.AXES`. `storyboard.emphasis` marks stressed words; the camera moves on them, strong ones also fire a burst. The camera is scaled to 35 % on full-width layouts so it never crops them. Avatars are soft 3D-style human characters in SVG (`Presenter.tsx`), never robots or flat cartoons (user's rule), and male only because the voice is male (user's rule), with mouth shapes from word timings.
-- **Spoken opening (user's rule, every reel):** the interesting line first, then "Day N." (`storyboard.spoken_opening`). DSA continues "Imagine you get this question in your interview.", then goes straight into the problem and explanation.
+- **Spoken opening (user's rule, every reel):** the interesting line first, then "Day N." (`storyboard.spoken_opening`). DSA continues "Imagine you get this question in your interview.", then goes straight into the problem and explanation. Interview reels add "Here it is, explained simply." and quizzes "Let's see if you get it right." (`storyboard.OPENING_FOLLOW`).
 - **Day N** badge at the top and "Day N" in the caption; Day 1 = `DAY_ONE` (2026-11-04, IST). No progress bar at the bottom (user asked to remove it).
 - **Styles** (`storyboard.pick_style`): weighted-random per axis (look, hook, captions, cta, hookFont, presenter), never repeating the previous reel's choice, weighted by `learned_weights` from Insights (`engagement_score`: likes + 3·comments + 4·shares + 3·saves per view). Chosen style is saved as `style_used`; `style` on an item pins axes. Hiring reels always use the `triple` (follow/like/comment) ending.
 - **Exactly 5 hashtags.** `validate_item` pads or truncates.
@@ -80,7 +82,7 @@ Fallbacks, so a render always finishes:
   "topic": "Solve array duplicates in O(1) space with Bitwise XOR",
   "keyword": "BITXOR",               // A-Z0-9, 3-20 chars, comment trigger
   "keyword_spoken": "bit X-O-R",     // how the voice says it in the CTA
-  "category": "dsa",                 // ai_tool | repo | dsa | dev_tip | website
+  "category": "dsa",                 // dsa | interview | quiz | hiring | ai_tool | repo | dev_tip | website
   "hook": "XOR KILLS DUPLICATES",    // exactly 3 words
   "script": "…",                     // voice body; CTA is appended automatically
   "link": "https://…",               // what the auto-DM sends
@@ -193,7 +195,7 @@ Free-tier caveats:
 
 ## Render + publish with GitHub Actions (free)
 
-The workflow lives in `.github/workflows/reel.yml`: 5 dev reels + 1 hiring reel a day. It ticks every 15 minutes and `slot_gate.py` decides whether a reel is due, catching up one reel per tick within the same IST day. Runs start up to 30 minutes before a slot (`slot_gate.LEAD`) and `auto_pipeline.hold_for_slot` holds the post until the slot time. GitHub's schedule runs late (about hourly in practice), so cron-job.org also calls `workflow_dispatch` with `gated=true`, which goes through the same gate; other manual dispatches skip it. A run that posts discovers (`topic_fetcher.py --limit 2`, or `hiring.py` for the hiring reel; failure here is not fatal), renders + publishes (`auto_pipeline.py [--category hiring]`), then commits `topics_queue.json` back. No hiring reel falls back to a dev reel. A published reel is never posted again: an empty queue fails the run and opens an alert, and the next tick discovers again.
+The workflow lives in `.github/workflows/reel.yml`: 2 DSA + 2 interview + 1 quiz + 1 hiring reel a day, run as `auto_pipeline.py --category <kind>`. It ticks every 15 minutes and `slot_gate.py` decides whether a reel is due, catching up one reel per tick within the same IST day. Runs start up to 30 minutes before a slot (`slot_gate.LEAD`) and `auto_pipeline.hold_for_slot` holds the post until the slot time. GitHub's schedule runs late (about hourly in practice), so cron-job.org also calls `workflow_dispatch` with `gated=true`, which goes through the same gate; other manual dispatches skip it. A run that posts discovers (`topic_fetcher.py --limit 2`, or `hiring.py` for the hiring reel; failure here is not fatal), renders + publishes (`auto_pipeline.py [--category hiring]`), then commits `topics_queue.json` back. No hiring reel falls back to a dev reel. A published reel is never posted again: an empty queue fails the run and opens an alert, and the next tick discovers again.
 
 Add the secrets under **Settings → Secrets and variables → Actions**: `INSTAGRAM_ACCESS_TOKEN`, `INSTAGRAM_USER_ID`, optional `PEXELS_API_KEY`, `GEMINI_API_KEY`, `GOOGLE_SEARCH_API_KEY`, `GOOGLE_SEARCH_CX`.
 

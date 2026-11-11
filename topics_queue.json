@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-11T09:32:02+00:00",
+  "updated_at": "2026-11-11T12:08:17+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -8892,6 +8892,995 @@
           "demo": "Setup is a single command."
         }
       }
+    },
+    {
+      "id": "dsa-twosum",
+      "topic": "LeetCode 1 Two Sum - Hash Map Lookup",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "ONE PASS ONLY",
+      "script": "Walk the array once. For each number, work out what it needs to reach the target. If you've already seen that number in your hash map, you're done. If not, store it and move on.",
+      "link": "https://leetcode.com/problems/two-sum/",
+      "code": {
+        "language": "python",
+        "filename": "two.py",
+        "snippet": "def two_sum(nums, target):\n    seen = {}\n    for i, n in enumerate(nums):\n        if target - n in seen:\n            return [seen[target - n], i]\n        seen[n] = i"
+      },
+      "caption": "LeetCode 1: Two Sum 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "two_sum"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Ninety percent of people solve Two Sum the slow way.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 1. Find the two numbers that add up to the target, and return their indexes.",
+          "data": {
+            "source": "LeetCode",
+            "number": 1,
+            "title": "Two Sum",
+            "difficulty": "Easy",
+            "statement": "Return the indexes of the two numbers that add up to the target.",
+            "example": [
+              2,
+              7,
+              11,
+              15
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Checking every pair works, but that's O of n squared.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "CHECK EVERY PAIR",
+            "items": [
+              2,
+              7,
+              11,
+              15
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Walk the array once. For each number, work out what it needs to reach the target. If you've already seen that number in your hash map, you're done. If not, store it and move on.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "HASH MAP LOOKUP",
+            "steps": [
+              {
+                "icon": "🔁",
+                "title": "Walk the array once",
+                "detail": "for each number n"
+              },
+              {
+                "icon": "🧮",
+                "title": "Need = target - n",
+                "detail": "what pairs with it?"
+              },
+              {
+                "icon": "🗂️",
+                "title": "Seen it before?",
+                "detail": "check the hash map"
+              },
+              {
+                "icon": "✅",
+                "title": "Return both indexes",
+                "detail": "else store n -> index"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "One pass, one hash map. O of n time.",
+          "kicker": "LEETCODE 1",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "1 PASS"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": null,
+      "updated_at": "2026-11-11T06:27:09+00:00",
+      "style_used": null,
+      "day": null,
+      "video_path": null,
+      "rendered_at": null
+    },
+    {
+      "id": "dsa-validparentheses",
+      "topic": "LeetCode 20 Valid Parentheses - Stack Matching",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "USE A STACK",
+      "script": "Opening bracket? Push it on the stack. Closing bracket? Pop the top and compare. A mismatch, or nothing to pop, means false. If the stack is empty at the end, it's valid.",
+      "link": "https://leetcode.com/problems/valid-parentheses/",
+      "code": {
+        "language": "python",
+        "filename": "is.py",
+        "snippet": "def is_valid(s):\n    pairs = {')': '(', ']': '[', '}': '{'}\n    stack = []\n    for ch in s:\n        if ch in pairs:\n            if not stack or stack.pop() != pairs[ch]:\n                return False\n        else:\n            stack.append(ch)\n    return not stack"
+      },
+      "caption": "LeetCode 20: Valid Parentheses 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "valid_parentheses"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "This is the most asked stack question ever.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 20. Check that every bracket in the string closes in the right order.",
+          "data": {
+            "source": "LeetCode",
+            "number": 20,
+            "title": "Valid Parentheses",
+            "difficulty": "Easy",
+            "statement": "Given a string of brackets, check that every bracket closes in the right order.",
+            "example": [
+              "(",
+              "[",
+              "]",
+              ")",
+              "{",
+              "}"
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Repeatedly deleting matching pairs works, but it's O of n squared.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "REPLACE PAIRS LOOP",
+            "items": [
+              "(",
+              "[",
+              "]",
+              ")",
+              "{",
+              "}"
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Opening bracket? Push it on the stack. Closing bracket? Pop the top and compare. A mismatch, or nothing to pop, means false. If the stack is empty at the end, it's valid.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "STACK MATCHING",
+            "steps": [
+              {
+                "icon": "📥",
+                "title": "Opening bracket?",
+                "detail": "push it on the stack"
+              },
+              {
+                "icon": "📤",
+                "title": "Closing bracket?",
+                "detail": "pop and compare"
+              },
+              {
+                "icon": "❌",
+                "title": "Mismatch or empty?",
+                "detail": "return false"
+              },
+              {
+                "icon": "✅",
+                "title": "Stack empty at end",
+                "detail": "the string is valid"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "One loop, one stack. O of n time.",
+          "kicker": "LEETCODE 20",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              5,
+              6
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "STACK"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00"
+    },
+    {
+      "id": "dsa-stock",
+      "topic": "LeetCode 121 Best Time to Buy Stock - Running Minimum",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "TRACK THE MINIMUM",
+      "script": "Track the lowest price you've seen so far. Each day, the profit is today's price minus that lowest price. Keep the best profit. Here, buy at one, sell at six, profit five.",
+      "link": "https://leetcode.com/problems/best-time-to-buy-and-sell-stock/",
+      "code": {
+        "language": "python",
+        "filename": "max.py",
+        "snippet": "def max_profit(prices):\n    low, best = float('inf'), 0\n    for p in prices:\n        low = min(low, p)\n        best = max(best, p - low)\n    return best"
+      },
+      "caption": "LeetCode 121: Best Time to Buy Stock 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "stock"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Amazon loves asking this one.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 121. You get stock prices for each day. Buy once, sell once later, and find the biggest profit.",
+          "data": {
+            "source": "LeetCode",
+            "number": 121,
+            "title": "Best Time to Buy Stock",
+            "difficulty": "Easy",
+            "statement": "Prices for each day. Buy once, sell once later. Find the maximum profit.",
+            "example": [
+              7,
+              1,
+              5,
+              3,
+              6,
+              4
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Trying every buy and sell pair is O of n squared.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "EVERY BUY-SELL PAIR",
+            "items": [
+              7,
+              1,
+              5,
+              3,
+              6,
+              4
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Track the lowest price you've seen so far. Each day, the profit is today's price minus that lowest price. Keep the best profit. Here, buy at one, sell at six, profit five.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "RUNNING MINIMUM",
+            "steps": [
+              {
+                "icon": "📉",
+                "title": "Track lowest price",
+                "detail": "cheapest day so far"
+              },
+              {
+                "icon": "💰",
+                "title": "Profit if sold today",
+                "detail": "price - lowest"
+              },
+              {
+                "icon": "🏆",
+                "title": "Keep the best profit",
+                "detail": "max of all days"
+              },
+              {
+                "icon": "✅",
+                "title": "Answer here is 5",
+                "detail": "buy at 1, sell at 6"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Two variables. O of n time, O of one space.",
+          "kicker": "LEETCODE 121",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00"
+    },
+    {
+      "id": "dsa-longestsubstring",
+      "topic": "LeetCode 3 Longest Substring - Sliding Window",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "SLIDING WINDOW MAGIC",
+      "script": "Use a sliding window. Grow the right edge one character at a time. If that character repeats inside the window, jump the left edge past its last position. Measure the window and keep the longest.",
+      "link": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+      "code": {
+        "language": "python",
+        "filename": "length.py",
+        "snippet": "def length_of_longest(s):\n    last, left, best = {}, 0, 0\n    for right, ch in enumerate(s):\n        if last.get(ch, -1) >= left:\n            left = last[ch] + 1\n        last[ch] = right\n        best = max(best, right - left + 1)\n    return best"
+      },
+      "caption": "LeetCode 3: Longest Substring 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "longest_substring"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Learn this once and you'll crack ten more problems.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 3. Find the longest substring with no repeating characters.",
+          "data": {
+            "source": "LeetCode",
+            "number": 3,
+            "title": "Longest Substring",
+            "difficulty": "Medium",
+            "statement": "Find the length of the longest substring without repeating characters.",
+            "example": [
+              "a",
+              "b",
+              "c",
+              "a",
+              "b",
+              "c",
+              "b",
+              "b"
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Checking every substring is O of n cubed. Way too slow.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "CHECK EVERY SUBSTRING",
+            "items": [
+              "a",
+              "b",
+              "c",
+              "a",
+              "b",
+              "c"
+            ],
+            "cost": "O(n³) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Use a sliding window. Grow the right edge one character at a time. If that character repeats inside the window, jump the left edge past its last position. Measure the window and keep the longest.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "SLIDING WINDOW",
+            "steps": [
+              {
+                "icon": "➡️",
+                "title": "Grow the right edge",
+                "detail": "add one character"
+              },
+              {
+                "icon": "🔁",
+                "title": "Repeat inside?",
+                "detail": "jump left past it"
+              },
+              {
+                "icon": "📏",
+                "title": "Measure the window",
+                "detail": "right - left + 1"
+              },
+              {
+                "icon": "✅",
+                "title": "Keep the longest",
+                "detail": "answer here is 3"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "The sliding window pattern. O of n time.",
+          "kicker": "LEETCODE 3",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "1 PASS"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00"
+    },
+    {
+      "id": "intv-processvsthread",
+      "topic": "Process vs Thread explained simply",
+      "keyword": "THREAD",
+      "category": "interview",
+      "hook": "PROCESS VS THREAD",
+      "script": "Think of a restaurant. A process is the whole restaurant, with its own kitchen and memory. A thread is a chef. Many chefs share one kitchen, so they work fast, but they can bump into each other.",
+      "link": "https://en.wikipedia.org/wiki/Thread_(computing)",
+      "caption": "Process vs Thread explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Process versus thread. Most freshers mix these up.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a restaurant. A process is the whole restaurant, with its own kitchen and memory. A thread is a chef. Many chefs share one kitchen, so they work fast, but they can bump into each other.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A RESTAURANT",
+            "steps": [
+              {
+                "icon": "🏢",
+                "title": "Process = a restaurant",
+                "detail": "own kitchen, own memory"
+              },
+              {
+                "icon": "👨‍🍳",
+                "title": "Thread = a chef",
+                "detail": "many chefs share one kitchen"
+              },
+              {
+                "icon": "💥",
+                "title": "Chefs share everything",
+                "detail": "fast, but they can collide"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. A process has its own memory and is isolated. Threads share their process's memory, so they are lighter and faster. But shared memory means race conditions, so you need locks.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🧠",
+                "title": "Process: own memory",
+                "detail": "isolated, heavier to create"
+              },
+              {
+                "icon": "⚡",
+                "title": "Thread: shared memory",
+                "detail": "lightweight, fast to switch"
+              },
+              {
+                "icon": "🔒",
+                "title": "Shared memory = races",
+                "detail": "so we need locks"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Process vs Thread explained simply"
+      },
+      "keyword_spoken": "thread",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": null,
+      "updated_at": "2026-11-11T06:27:08+00:00",
+      "style_used": null,
+      "day": null,
+      "video_path": null,
+      "rendered_at": null
+    },
+    {
+      "id": "intv-urltyped",
+      "topic": "What happens when you type a URL",
+      "keyword": "URL",
+      "category": "interview",
+      "hook": "TYPE A URL",
+      "script": "First, DNS works like a phonebook and turns the name into an IP address. Then a TCP and TLS handshake opens a secure line. Your browser sends an HTTP request, the server replies with HTML, and the browser renders the page.",
+      "link": "https://en.wikipedia.org/wiki/Domain_Name_System",
+      "caption": "What happens when you type a URL 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "What happens when you type google dot com and press enter?",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "First, DNS works like a phonebook and turns the name into an IP address. Then a TCP and TLS handshake opens a secure line. Your browser sends an HTTP request, the server replies with HTML, and the browser renders the page.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "LIKE SENDING A LETTER",
+            "steps": [
+              {
+                "icon": "📒",
+                "title": "DNS = phonebook",
+                "detail": "name -> IP address"
+              },
+              {
+                "icon": "🤝",
+                "title": "TCP + TLS handshake",
+                "detail": "secure line opens"
+              },
+              {
+                "icon": "📨",
+                "title": "HTTP request & reply",
+                "detail": "server sends HTML back"
+              },
+              {
+                "icon": "🎨",
+                "title": "Browser renders",
+                "detail": "HTML, CSS, JavaScript"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Bonus points: mention that DNS answers are cached at every level, that HTTPS uses TLS to encrypt the traffic, and that CDNs serve files from a server near you.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🔎",
+                "title": "Cache first",
+                "detail": "browser, OS, then DNS server"
+              },
+              {
+                "icon": "🔐",
+                "title": "HTTPS = TLS",
+                "detail": "encrypts everything"
+              },
+              {
+                "icon": "⚡",
+                "title": "Then CDN & caching",
+                "detail": "why sites load fast"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "What happens when you type a URL"
+      },
+      "keyword_spoken": "url",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00"
+    },
+    {
+      "id": "intv-sqlvsnosql",
+      "topic": "SQL vs NoSQL explained simply",
+      "keyword": "SQL",
+      "category": "interview",
+      "hook": "SQL OR NOSQL",
+      "script": "SQL is like Excel sheets, with fixed columns and strict rules, and it's great at joining tables. NoSQL is like a folder of documents, where every document can look different.",
+      "link": "https://en.wikipedia.org/wiki/NoSQL",
+      "caption": "SQL vs NoSQL explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "SQL or NoSQL? Here's how to answer it in thirty seconds.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "SQL is like Excel sheets, with fixed columns and strict rules, and it's great at joining tables. NoSQL is like a folder of documents, where every document can look different.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "EXCEL VS A FOLDER",
+            "steps": [
+              {
+                "icon": "📊",
+                "title": "SQL = Excel sheets",
+                "detail": "fixed columns, strict rules"
+              },
+              {
+                "icon": "🗂️",
+                "title": "NoSQL = folder of docs",
+                "detail": "each doc can differ"
+              },
+              {
+                "icon": "🔗",
+                "title": "SQL loves joins",
+                "detail": "relations between tables"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview: pick SQL when you need transactions and consistency, like payments. Pick NoSQL when data is huge, changes shape, and must scale across many servers. It's a trade-off.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🏦",
+                "title": "SQL for transactions",
+                "detail": "banking, orders, ACID"
+              },
+              {
+                "icon": "📈",
+                "title": "NoSQL to scale out",
+                "detail": "huge, changing data"
+              },
+              {
+                "icon": "⚖️",
+                "title": "It's a trade-off",
+                "detail": "consistency vs flexibility"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "SQL vs NoSQL explained simply"
+      },
+      "keyword_spoken": "sql",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00"
+    },
+    {
+      "id": "intv-dbindex",
+      "topic": "Database indexing explained simply",
+      "keyword": "INDEX",
+      "category": "interview",
+      "hook": "INDEXES EXPLAINED SIMPLY",
+      "script": "Without an index, the database reads every row, like reading every page of a book. An index is the index at the back of the book. It's stored as a B tree, so lookups are log n.",
+      "link": "https://en.wikipedia.org/wiki/Database_index",
+      "caption": "Database indexing explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "One line of SQL made a query a thousand times faster.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Without an index, the database reads every row, like reading every page of a book. An index is the index at the back of the book. It's stored as a B tree, so lookups are log n.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THE BOOK INDEX",
+            "steps": [
+              {
+                "icon": "📖",
+                "title": "No index = read every page",
+                "detail": "full table scan"
+              },
+              {
+                "icon": "🔖",
+                "title": "Index = back of the book",
+                "detail": "jump straight to the page"
+              },
+              {
+                "icon": "🌳",
+                "title": "Stored as a B-tree",
+                "detail": "O(log n) lookups"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Say this: indexes make reads much faster, but every insert and update must also update the index, so writes get slower. Index the columns you filter and join on, not everything.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "⚡",
+                "title": "Faster reads",
+                "detail": "WHERE, JOIN, ORDER BY"
+              },
+              {
+                "icon": "🐢",
+                "title": "Slower writes",
+                "detail": "index updates on insert"
+              },
+              {
+                "icon": "🎯",
+                "title": "Index what you filter",
+                "detail": "not every column"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Database indexing explained simply"
+      },
+      "keyword_spoken": "index",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00"
+    },
+    {
+      "id": "quiz-floatsum",
+      "topic": "Python Output Quiz - What does this print? print(0.1 + 0.2 == 0.3)",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "PYTHON OUTPUT QUIZ",
+      "script": "What does this Python code print? Comment your answer. Three, two, one. The answer is B. False. Computers store decimals in binary, so zero point one plus zero point two is really zero point three zero zero zero four.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=float_sum",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "print(0.1 + 0.2 == 0.3)"
+      },
+      "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Most developers get this wrong.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "What does this Python code print? Comment your answer. Three, two, one. The answer is B. False. Computers store decimals in binary, so zero point one plus zero point two is really zero point three zero zero zero four.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this print?",
+            "code": "print(0.1 + 0.2 == 0.3)",
+            "options": [
+              "True",
+              "False",
+              "Error",
+              "None"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00"
+    },
+    {
+      "id": "quiz-mutabledefault",
+      "topic": "Python Trap Quiz - What does the second call print? def add(x, items=[]):",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "PYTHON TRAP QUIZ",
+      "script": "We call add twice. What does the second call print? Comment your answer. Three, two, one. The answer is B. One comma two. The default list is created only once, so every call shares the same list.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=mutable_default",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "def add(x, items=[]):\n    items.append(x)\n    return items\n\nadd(1)\nprint(add(2))"
+      },
+      "caption": "Quiz time 🧩 What does the second call print? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "This Python trap catches seniors too.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "We call add twice. What does the second call print? Comment your answer. Three, two, one. The answer is B. One comma two. The default list is created only once, so every call shares the same list.",
+          "stretchable": true,
+          "data": {
+            "question": "What does the second call print?",
+            "code": "def add(x, items=[]):\n    items.append(x)\n    return items\n\nadd(1)\nprint(add(2))",
+            "options": [
+              "[2]",
+              "[1, 2]",
+              "[2, 1]",
+              "Error"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": null,
+      "updated_at": "2026-11-11T06:27:08+00:00",
+      "style_used": null,
+      "day": null,
+      "video_path": null,
+      "rendered_at": null
     }
   ],
   "removed": [

@@ -143,6 +143,18 @@ export type Company = {
   at: number;
 };
 
+export type QuizScene = Base & {
+  type: "quiz";
+  question: string;
+  code: string;
+  options: string[];
+  correct: number;
+  optionTimes: number[];
+  /** Local times of the spoken "three", "two", "one". */
+  countdown: number[];
+  revealAt: number;
+};
+
 export type HiringScene = Base & { type: "hiring"; title: string; companies: Company[] };
 
 export type Scene =
@@ -155,6 +167,7 @@ export type Scene =
   | CompareScene
   | RepoIntroScene
   | HowScene
+  | QuizScene
   | DemoScene
   | UseCasesScene
   | BrowserScene

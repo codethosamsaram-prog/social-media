@@ -804,11 +804,19 @@ def wait_for_container(client: httpx.Client, container: str, log: Log) -> None:
 
 def build_caption(item: dict[str, Any]) -> str:
     day = item.get("day") or day_number()
-    thing = "links" if item.get("links") else ("code" if item["category"] == "dsa" else "link")
+    if item["category"] == "quiz":
+        return (
+            f"Day {day} 🗓️ | {item.get('caption') or item['topic']}\n\n"
+            f"🧠 No cheating: answer before the reveal, then check the comments.\n"
+            f"➕ Follow @{settings.account_handle} for a DSA trick, an interview concept and a quiz every day.\n"
+            f"📤 Send this to a friend who'd get it wrong.\n\n"
+            + " ".join(item["hashtags"][:5])
+        )
+    thing = "links" if item.get("links") else {"dsa": "code", "interview": "notes"}.get(item["category"], "link")
     return (
         f"Day {day} 🗓️ | {item.get('caption') or item['topic']}\n\n"
         f"💬 Comment \"{item['keyword']}\" and I'll DM you the {thing} instantly.\n"
-        f"❤️ Like + ➕ follow @{settings.account_handle} for a new dev hack every few hours.\n"
+        f"❤️ Like + ➕ follow @{settings.account_handle} for daily DSA, interview prep and quizzes.\n"
         f"📤 Send this to a dev friend who needs it.\n\n"
         + " ".join(item["hashtags"][:5])
     )
@@ -847,16 +855,23 @@ def publish_reel(video: Path, caption: str, log: Log = print) -> dict[str, Any]:
 MAX_ATTEMPTS = 3
 
 
+# When a slot's category has nothing queued, take the next best thing in this order. Trending repos come last.
+FALLBACK = ("dsa", "interview", "quiz", "ai_tool", "dev_tip", "website", "repo")
+
+
 def next_for(category: str | None) -> dict[str, Any] | None:
-    """Oldest queued item; `hiring` picks the hiring reel, anything else skips it. No hiring reel falls
-    back to a dev reel. An empty queue returns None: a published reel is never posted again."""
+    """Oldest queued item of `category` (dsa / interview / quiz / hiring). An empty category falls back through
+    FALLBACK; only a `hiring` request takes the hiring reel. An empty queue returns None: a published reel is
+    never posted again."""
     queued = sorted((i for i in tq.load_queue() if i.get("status", "queued") == "queued"),
                     key=lambda i: i.get("created_at", ""))
-    hiring = [i for i in queued if i.get("category") == "hiring"]
-    dev = [i for i in queued if i.get("category") != "hiring"]
-    if category == "hiring" and hiring:
-        return hiring[0]
-    return dev[0] if dev else None
+    for cat in (category, *FALLBACK):
+        if not cat or (cat == "hiring" and category != "hiring"):
+            continue
+        hits = [i for i in queued if i.get("category") == cat]
+        if hits:
+            return hits[0]
+    return next((i for i in queued if i.get("category") != "hiring"), None)
 
 
 def skip_already_posted(item: dict[str, Any] | None, category: str | None, log: Log) -> dict[str, Any] | None:
@@ -923,7 +938,7 @@ def main() -> int:
     parser.add_argument("--all", action="store_true", help="process every queued item")
     parser.add_argument("--no-publish", action="store_true", help="render only")
     parser.add_argument("--publish-only", metavar="ID", help="publish an already rendered item")
-    parser.add_argument("--category", help="'hiring' = today's hiring reel; default = next non-hiring reel")
+    parser.add_argument("--category", help="dsa | interview | quiz | hiring; falls back to another category when empty")
     args = parser.parse_args()
     try:
         if args.publish_only:

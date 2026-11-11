@@ -683,7 +683,7 @@ async def get_queue(category: str | None = None, status: str | None = None) -> d
 class TopicIn(BaseModel):
     topic: str = Field(min_length=8, max_length=160)
     keyword: str = Field(pattern=r"^[A-Za-z0-9]{3,20}$")
-    category: Literal["ai_tool", "repo", "dsa", "dev_tip", "website"]
+    category: Literal["ai_tool", "repo", "dsa", "dev_tip", "website", "interview", "quiz"]
     hook: str
     script: str = Field(min_length=20, max_length=400)
     link: str = Field(pattern=r"^https://\S+$")

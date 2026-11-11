@@ -1,6 +1,6 @@
 name: reel-pipeline
 
-# 6 posts a day (IST): 5 dev reels + 1 "hiring in India" reel from 13:00. Slots are in slot_gate.py.
+# 6 posts a day (IST): 2 DSA, 2 interview concepts, 1 quiz, 1 "hiring in India" reel. Slots are in slot_gate.py.
 # This wakes every 15 minutes and posts only if today is behind, so a late or dropped GitHub schedule
 # or a failed run is made up by the next tick. A tick with nothing to do ends in seconds.
 # Runs start up to 30 minutes before a slot and hold the post until the slot time.
@@ -14,7 +14,7 @@ on:
         description: "Queue item id (blank = next queued)"
         required: false
       kind:
-        description: "dev or hiring"
+        description: "dsa, interview, quiz, hiring, or dev (= any)"
         required: false
         default: "dev"
       dry_run:
@@ -120,8 +120,8 @@ jobs:
             python auto_pipeline.py --no-publish
           elif [ -n "${{ github.event.inputs.item_id }}" ]; then
             python auto_pipeline.py --id "${{ github.event.inputs.item_id }}"
-          elif [ "$KIND" = "hiring" ]; then
-            python auto_pipeline.py --category hiring
+          elif [ -n "$KIND" ] && [ "$KIND" != "dev" ]; then
+            python auto_pipeline.py --category "$KIND"
           else
             python auto_pipeline.py
           fi

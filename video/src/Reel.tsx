@@ -8,6 +8,7 @@ import { Browser, Code, Compare, Cta, Hiring, Hook } from "./scenes/CommonScenes
 import { Presenter } from "./components/Presenter";
 import { Naive, Problem, Visualize } from "./scenes/DsaScenes";
 import { Demo, How, RepoIntro, UseCases } from "./scenes/RepoScenes";
+import { Quiz, QuizCta } from "./scenes/QuizScenes";
 import { C, fonts } from "./theme";
 import { DEFAULT_STYLE, ReelProps, Scene, Style } from "./types";
 
@@ -24,7 +25,8 @@ const renderScene = (s: Scene, accent: string, st: Style) => {
     case "demo": return <Demo s={s} accent={accent} />;
     case "use_cases": return <UseCases s={s} accent={accent} />;
     case "browser": return <Browser s={s} accent={accent} />;
-    case "cta": return <Cta s={s} accent={accent} st={st} />;
+    case "cta": return s.thing === "answer" ? <QuizCta s={s} accent={accent} /> : <Cta s={s} accent={accent} st={st} />;
+    case "quiz": return <Quiz s={s} accent={accent} />;
     case "hiring": return <Hiring s={s} accent={accent} />;
   }
 };

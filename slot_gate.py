@@ -15,7 +15,9 @@ from check_token import _get, publish_problem
 from config import settings
 
 IST = dt.timezone(dt.timedelta(hours=5, minutes=30))
-SLOTS = ((8, "dev"), (11, "dev"), (13, "hiring"), (15, "dev"), (18, "dev"), (21, "dev"))
+# The daily mix (user's request 2026-11-11): 2 DSA, 2 interview concepts, 1 quiz, 1 hiring. No trending repos:
+# those only post when a category's queue is empty (auto_pipeline.next_for falls back).
+SLOTS = ((8, "dsa"), (11, "interview"), (13, "hiring"), (15, "quiz"), (18, "dsa"), (21, "interview"))
 # Start this early so a late GitHub run still makes its slot. auto_pipeline holds the post until the slot time.
 LEAD = dt.timedelta(minutes=30)
 
@@ -24,12 +26,19 @@ def slot_time(now: dt.datetime, hour: int) -> dt.datetime:
     return now.replace(hour=hour, minute=0, second=0, microsecond=0)
 
 
-def decide(now: dt.datetime, posted: int, hiring_done: bool) -> str | None:
-    """The kind of reel to start now, or None when today is on track."""
+def decide(now: dt.datetime, posted: int, done: list[str]) -> str | None:
+    """The kind of reel to start now, or None when today is on track. `done` is today's published categories
+    from the queue; the first due slot whose kind is still short wins, so a missed slot is made up in kind."""
     due = [kind for hour, kind in SLOTS if now + LEAD >= slot_time(now, hour)]
     if posted >= len(due):
         return None
-    return "hiring" if "hiring" in due and not hiring_done else "dev"
+    left = list(done)
+    for kind in due:
+        if kind in left:
+            left.remove(kind)
+        else:
+            return kind
+    return SLOTS[min(posted, len(SLOTS) - 1)][1]  # the queue lost a record: go by position
 
 
 def _ist_date(stamp: str | None) -> dt.date | None:
@@ -62,7 +71,7 @@ def main() -> int:
     recorded = queue_published(now.date())
     # Instagram catches a post whose queue update never got committed; the queue covers Meta being down.
     posted = max(instagram_count(now.date()) or 0, len(recorded))
-    kind = decide(now, posted, any(i.get("category") == "hiring" for i in recorded))
+    kind = decide(now, posted, [i.get("category") for i in recorded])
     post_at = slot_time(now, SLOTS[posted][0]).isoformat() if kind else ""
     print(f"{now:%H:%M} IST, {posted} posted today: {f'{kind} reel for {post_at}' if kind else 'on track'}")
     out = os.environ.get("GITHUB_OUTPUT")
