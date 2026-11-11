@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-11T17:01:19+00:00",
+  "updated_at": "2026-11-11T17:57:49+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9423,7 +9423,7 @@
       "link": "https://en.wikipedia.org/wiki/Thread_(computing)",
       "caption": "Process vs Thread explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -9502,25 +9502,29 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-11T17:01:19+00:00",
+      "error": null,
+      "updated_at": "2026-11-11T17:57:49+00:00",
       "style_used": {
-        "look": "ember",
-        "hook": "glitch",
-        "captions": "mega",
+        "look": "retrosun",
+        "hook": "news",
+        "captions": "underline",
         "cta": "series",
-        "hookFont": "archivo",
-        "presenter": "kabir",
-        "camera": "breathe",
-        "grade": "contrast",
-        "overlay": "sparks",
+        "hookFont": "bebas",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "warm",
+        "overlay": "vhs",
         "burst": "ring",
-        "music": "lofi"
+        "music": "keys"
       },
       "day": 8,
       "video_path": "output/intv-processvsthread/reel.mp4",
-      "rendered_at": "2026-11-11T17:00:42+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-11T17:57:16+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-11T17:57:49+00:00",
+      "ig_media_id": "18152146951558060",
+      "permalink": "https://www.instagram.com/reel/DfnEdy-DrzD/",
+      "container_id": "18101195030176838"
     },
     {
       "id": "intv-urltyped",
