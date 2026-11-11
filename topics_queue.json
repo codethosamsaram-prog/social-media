@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-11T07:30:09+00:00",
+  "updated_at": "2026-11-11T09:32:02+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -7097,7 +7097,7 @@
       ],
       "caption": "Dux: Free and open-source Wayland desktop shell with theming 🤖",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-09T15:39:09+00:00",
       "browser": {
         "url": "duxlabs.dev",
@@ -7108,7 +7108,29 @@
           "open-source Wayland desktop shell",
           "theming"
         ]
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-11T09:32:02+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "spotlight",
+        "captions": "bounce",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "breathe",
+        "grade": "warm",
+        "overlay": "vhs",
+        "burst": "slash",
+        "music": "keys"
+      },
+      "day": 8,
+      "video_path": "output/aitool-ddea982e/reel.mp4",
+      "rendered_at": "2026-11-11T09:31:29+00:00",
+      "published_at": "2026-11-11T09:32:02+00:00",
+      "ig_media_id": "18155612542543653",
+      "permalink": "https://www.instagram.com/reel/DfmKlRKjkSA/",
+      "container_id": "18101057147176838"
     },
     {
       "id": "repo-4c1a7c57",
@@ -8730,6 +8752,146 @@
       "ig_media_id": "17988960419889085",
       "permalink": "https://www.instagram.com/reel/Dfl6eWoEmnu/",
       "container_id": "18101026022176838"
+    },
+    {
+      "id": "repo-1e4d2128",
+      "topic": "Lichii: VERY experimental Nintendo Switch 2 emulator (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STAR THIS NOW",
+      "script": "This GitHub repo is exploding. Lichii: VERY experimental Nintendo Switch 2 emulator. 8,319 stars already.",
+      "link": "https://github.com/zortos293/Lichii",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# zortos293/Lichii\n# 8,319 stars\n\ngit clone https://github.com/zortos293/Lichii.git\ncd Lichii\n\n# VERY experimental Nintendo Switch\n# 2 emulator"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "Lichii is trending on GitHub 🔥 VERY experimental Nintendo Switch 2 emulator.",
+      "source": "github_search",
+      "status": "needs_review",
+      "created_at": "2026-11-11T09:29:32+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 8319,
+        "language": "C++"
+      },
+      "repo": {
+        "full_name": "zortos293/Lichii",
+        "description": "VERY experimental Nintendo Switch 2 emulator",
+        "stars": 8319,
+        "stars_today": null,
+        "language": "C++",
+        "install": "git clone https://github.com/zortos293/Lichii",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone zortos293/Lichii",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "VERY experimental Nintendo Switch ",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-368c4dcc",
+      "topic": "HGhub: YellowFruit third-party client (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "OPEN SOURCE GOLD",
+      "script": "This GitHub repo is exploding. HGhub: YellowFruit third-party client. 8,234 stars already.",
+      "link": "https://github.com/Minireel/HGhub",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# Minireel/HGhub\n# 8,234 stars\n\ngit clone https://github.com/Minireel/HGhub.git\ncd HGhub\n\n# YellowFruit third-party client"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "HGhub is trending on GitHub 🔥 YellowFruit third-party client.",
+      "source": "github_search",
+      "status": "needs_review",
+      "created_at": "2026-11-11T09:29:32+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 8234,
+        "language": null
+      },
+      "repo": {
+        "full_name": "Minireel/HGhub",
+        "description": "YellowFruit third-party client",
+        "stars": 8234,
+        "stars_today": null,
+        "language": null,
+        "install": "git clone https://github.com/Minireel/HGhub",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone Minireel/HGhub",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "YellowFruit third-party client",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
     }
   ],
   "removed": [
