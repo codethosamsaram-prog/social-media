@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-11T12:36:35+00:00",
+  "updated_at": "2026-11-11T17:01:19+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9502,12 +9502,25 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
-      "error": null,
-      "updated_at": "2026-11-11T06:27:08+00:00",
-      "style_used": null,
-      "day": null,
-      "video_path": null,
-      "rendered_at": null
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-11T17:01:19+00:00",
+      "style_used": {
+        "look": "ember",
+        "hook": "glitch",
+        "captions": "mega",
+        "cta": "series",
+        "hookFont": "archivo",
+        "presenter": "kabir",
+        "camera": "breathe",
+        "grade": "contrast",
+        "overlay": "sparks",
+        "burst": "ring",
+        "music": "lofi"
+      },
+      "day": 8,
+      "video_path": "output/intv-processvsthread/reel.mp4",
+      "rendered_at": "2026-11-11T17:00:42+00:00",
+      "attempts": 1
     },
     {
       "id": "intv-urltyped",
@@ -9897,6 +9910,133 @@
       "day": null,
       "video_path": null,
       "rendered_at": null
+    },
+    {
+      "id": "dsa-containerwater",
+      "topic": "LeetCode 11 Container With Most Water - Squeeze Inward",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "TWO POINTERS WIN",
+      "script": "Start with pointers at both ends, the widest container. The area is the width times the shorter line. Now move the shorter line inward, because only that can make it better. Stop when they meet.",
+      "link": "https://leetcode.com/problems/container-with-most-water/",
+      "code": {
+        "language": "python",
+        "filename": "max.py",
+        "snippet": "def max_area(h):\n    l, r, best = 0, len(h) - 1, 0\n    while l < r:\n        best = max(best, (r - l) * min(h[l], h[r]))\n        if h[l] < h[r]:\n            l += 1\n        else:\n            r -= 1\n    return best"
+      },
+      "caption": "LeetCode 11: Container With Most Water 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "container_water"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Two pointers turn this from slow to instant.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 11. Pick two lines that hold the most water between them.",
+          "data": {
+            "source": "LeetCode",
+            "number": 11,
+            "title": "Container With Most Water",
+            "difficulty": "Medium",
+            "statement": "Pick two lines that hold the most water between them.",
+            "example": [
+              1,
+              8,
+              6,
+              2,
+              5,
+              4,
+              8,
+              3
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Checking every pair of lines is O of n squared.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "EVERY PAIR OF LINES",
+            "items": [
+              1,
+              8,
+              6,
+              2,
+              5,
+              4
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Start with pointers at both ends, the widest container. The area is the width times the shorter line. Now move the shorter line inward, because only that can make it better. Stop when they meet.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "SQUEEZE INWARD",
+            "steps": [
+              {
+                "icon": "↔️",
+                "title": "Start at both ends",
+                "detail": "widest container first"
+              },
+              {
+                "icon": "💧",
+                "title": "Area = width × short",
+                "detail": "the shorter line limits it"
+              },
+              {
+                "icon": "⏩",
+                "title": "Move the shorter line",
+                "detail": "only it can improve"
+              },
+              {
+                "icon": "✅",
+                "title": "Best area is 49",
+                "detail": "pointers meet = done"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Two pointers. O of n time, O of one space.",
+          "kicker": "LEETCODE 11",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-11T16:56:06+00:00"
     }
   ],
   "removed": [
