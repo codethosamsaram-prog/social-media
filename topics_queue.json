@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-10T15:34:56+00:00",
+  "updated_at": "2026-11-11T02:53:23+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -6918,7 +6918,7 @@
       ],
       "caption": "VoxCPM is trending on GitHub 🔥 VoxCPM2: Tokenizer-Free TTS for Multilingual Speech Generation, Creative Voice Design, and True-to-Life.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-09T15:38:41+00:00",
       "meta": {
         "stars_today": 423,
@@ -6982,7 +6982,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup really is this small."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-11T02:53:23+00:00",
+      "style_used": {
+        "look": "retrosun",
+        "hook": "spotlight",
+        "captions": "karaoke",
+        "cta": "series",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "drift",
+        "grade": "vivid",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "pluck"
+      },
+      "day": 8,
+      "video_path": "output/repo-0d88eaa1/reel.mp4",
+      "rendered_at": "2026-11-11T02:52:44+00:00",
+      "published_at": "2026-11-11T02:53:23+00:00",
+      "ig_media_id": "18653772490020269",
+      "permalink": "https://www.instagram.com/reel/Dflc9IXCjbo/",
+      "container_id": "18100961171176838"
     },
     {
       "id": "aitool-79cd6977",
@@ -8106,6 +8128,146 @@
             "icon": "🚀",
             "title": "Run it",
             "detail": "One self-hosted app for your",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-a8efea0d",
+      "topic": "sure: The personal finance app for everyone (by everyone) (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. sure: The personal finance app for everyone (by everyone). 159 new stars today.",
+      "link": "https://github.com/we-promise/sure",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# we-promise/sure\n# +159 stars today\n\ngit clone https://github.com/we-promise/sure.git\ncd sure\n\n# The personal finance app for\n# everyone (by everyone)"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "sure is trending on GitHub 🔥 The personal finance app for everyone (by everyone).",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-11T02:48:42+00:00",
+      "meta": {
+        "stars_today": 159,
+        "stars": 12061,
+        "language": "Ruby"
+      },
+      "repo": {
+        "full_name": "we-promise/sure",
+        "description": "The personal finance app for everyone (by everyone)",
+        "stars": 12061,
+        "stars_today": 159,
+        "language": "Ruby",
+        "install": "git clone https://github.com/we-promise/sure",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone we-promise/sure",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The personal finance app for",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-6a5f2d3f",
+      "topic": "500-AI-Agents-Projects: The 500 AI Agents Projects is a curated collection of AI agent (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "OPEN SOURCE GOLD",
+      "script": "This GitHub repo is exploding. 500 AI Agents Projects: The 500 AI Agents Projects is a curated collection of AI agent. 126 new stars today.",
+      "link": "https://github.com/ashishpatel26/500-AI-Agents-Projects",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# ashishpatel26/500-AI-Agents-Projects\n# +126 stars today\n\ngit clone https://github.com/ashishpatel26/500-AI-Agents-Projects.git\ncd 500-AI-Agents-Projects\n\n# The 500 AI Agents Projects is a\n# curated collection of AI agent"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "500-AI-Agents-Projects is trending on GitHub 🔥 The 500 AI Agents Projects is a curated collection of AI agent.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-11T02:48:41+00:00",
+      "meta": {
+        "stars_today": 126,
+        "stars": 39655,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "ashishpatel26/500-AI-Agents-Projects",
+        "description": "The 500 AI Agents Projects is a curated collection of AI agent",
+        "stars": 39655,
+        "stars_today": 126,
+        "language": "Python",
+        "install": "git clone https://github.com/ashishpatel26/500-AI-Agents-Projects",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone ashishpatel26/500-AI-Age",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The 500 AI Agents Projects",
             "cue": "run"
           }
         ],
