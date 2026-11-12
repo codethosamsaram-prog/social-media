@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T06:05:43+00:00",
+  "updated_at": "2026-11-12T07:30:08+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10307,6 +10307,119 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-12T06:00:12+00:00"
+    },
+    {
+      "id": "hiring-2026-11-12",
+      "topic": "Okta, GitLab and Databricks are hiring engineers in India (2026-11-12)",
+      "keyword": "HIRING",
+      "keyword_spoken": "hiring",
+      "category": "hiring",
+      "hook": "THEY ARE HIRING",
+      "script": "Okta, GitLab and Databricks are hiring in India right now. Okta has 77 engineering roles open in Bengaluru. GitLab has 26 engineering roles open in Bengaluru and India. Databricks has 70 engineering roles open in Bengaluru and Mumbai.",
+      "link": "https://boards.greenhouse.io/okta",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "Okta, GitLab and Databricks are hiring engineers in India (2026-11-12)"
+      },
+      "stock_queries": [
+        "modern office india",
+        "team meeting office",
+        "bangalore city night"
+      ],
+      "hashtags": [
+        "#hiring",
+        "#jobsinindia",
+        "#softwarejobs",
+        "#bangalorejobs",
+        "#developers"
+      ],
+      "caption": "🚨 Okta, GitLab and Databricks are hiring engineers in India right now.\n\n🏢 Okta: 77 open roles (Bengaluru), e.g. Staff Software Engineer - Backend, Identity Thre\n🏢 GitLab: 26 open roles (Bengaluru, India), e.g. Staff Software Engineer, Security Platform: Auth\n🏢 Databricks: 70 open roles (Bengaluru, Mumbai), e.g. Senior Software Engineer - Backend Infrastructur",
+      "source": "career_boards",
+      "status": "published",
+      "created_at": "2026-11-12T07:16:06+00:00",
+      "links": [
+        {
+          "label": "Okta",
+          "url": "https://boards.greenhouse.io/okta"
+        },
+        {
+          "label": "GitLab",
+          "url": "https://boards.greenhouse.io/gitlab"
+        },
+        {
+          "label": "Databricks",
+          "url": "https://boards.greenhouse.io/databricks"
+        }
+      ],
+      "hiring": {
+        "companies": [
+          {
+            "name": "Okta",
+            "domain": "okta.com",
+            "color": "#3d6ef5",
+            "roles": 77,
+            "fresh": 12,
+            "top_role": "Staff Software Engineer - Backend, Identity Thre",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/okta",
+            "score": 66
+          },
+          {
+            "name": "GitLab",
+            "domain": "gitlab.com",
+            "color": "#fc6d26",
+            "roles": 26,
+            "fresh": 9,
+            "top_role": "Staff Software Engineer, Security Platform: Auth",
+            "cities": [
+              "Bengaluru",
+              "India"
+            ],
+            "url": "https://boards.greenhouse.io/gitlab",
+            "score": 53
+          },
+          {
+            "name": "Databricks",
+            "domain": "databricks.com",
+            "color": "#ff3621",
+            "roles": 70,
+            "fresh": 5,
+            "top_role": "Senior Software Engineer - Backend Infrastructur",
+            "cities": [
+              "Bengaluru",
+              "Mumbai"
+            ],
+            "url": "https://boards.greenhouse.io/databricks",
+            "score": 45
+          }
+        ],
+        "checked_at": "2026-11-12T07:16:06+00:00"
+      },
+      "error": null,
+      "updated_at": "2026-11-12T07:30:08+00:00",
+      "style_used": {
+        "look": "ember",
+        "hook": "alert",
+        "captions": "pop",
+        "cta": "triple",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "breathe",
+        "grade": "warm",
+        "overlay": "sparks",
+        "burst": "slash",
+        "music": "keys"
+      },
+      "day": 9,
+      "video_path": "output/hiring-2026-11-12/reel.mp4",
+      "rendered_at": "2026-11-12T07:19:09+00:00",
+      "published_at": "2026-11-12T07:30:08+00:00",
+      "ig_media_id": "18671939077016332",
+      "permalink": "https://www.instagram.com/reel/DfogO9DjdP0/",
+      "container_id": "18101335550176838"
     }
   ],
   "removed": [
