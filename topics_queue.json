@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T07:30:08+00:00",
+  "updated_at": "2026-11-12T09:35:50+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9898,7 +9898,26 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-11T06:09:46+00:00"
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-12T09:35:50+00:00",
+      "style_used": {
+        "look": "blueprint",
+        "hook": "split",
+        "captions": "neon",
+        "cta": "share",
+        "hookFont": "bebas",
+        "presenter": "rohan",
+        "camera": "snap",
+        "grade": "teal_orange",
+        "overlay": "vhs",
+        "burst": "rays",
+        "music": "arp"
+      },
+      "day": 9,
+      "video_path": "output/quiz-floatsum/reel.mp4",
+      "rendered_at": "2026-11-12T09:35:17+00:00",
+      "attempts": 1
     },
     {
       "id": "quiz-mutabledefault",
@@ -10420,6 +10439,96 @@
       "ig_media_id": "18671939077016332",
       "permalink": "https://www.instagram.com/reel/DfogO9DjdP0/",
       "container_id": "18101335550176838"
+    },
+    {
+      "id": "intv-cap",
+      "topic": "CAP theorem explained simply",
+      "keyword": "CAP",
+      "category": "interview",
+      "hook": "CAP THEOREM SIMPLIFIED",
+      "script": "Imagine two shop branches. Consistency means both show the same stock. Availability means they always answer customers. A partition is when the phone line between them dies.",
+      "link": "https://en.wikipedia.org/wiki/CAP_theorem",
+      "caption": "CAP theorem explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "You can't have all three. That's the CAP theorem.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Imagine two shop branches. Consistency means both show the same stock. Availability means they always answer customers. A partition is when the phone line between them dies.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "TWO SHOP BRANCHES",
+            "steps": [
+              {
+                "icon": "🔁",
+                "title": "Consistency",
+                "detail": "both branches show same stock"
+              },
+              {
+                "icon": "🟢",
+                "title": "Availability",
+                "detail": "always answer customers"
+              },
+              {
+                "icon": "✂️",
+                "title": "Partition",
+                "detail": "the phone line between them dies"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "When the line dies, you must choose. Banks pick consistency, and refuse requests rather than show wrong data. Social apps pick availability, and show slightly old data.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "📵",
+                "title": "Line dies? Choose",
+                "detail": "consistency or availability"
+              },
+              {
+                "icon": "🏦",
+                "title": "Banks pick C",
+                "detail": "refuse rather than be wrong"
+              },
+              {
+                "icon": "📱",
+                "title": "Social apps pick A",
+                "detail": "slightly stale is fine"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "CAP theorem explained simply"
+      },
+      "keyword_spoken": "cap",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-12T09:32:23+00:00"
     }
   ],
   "removed": [
