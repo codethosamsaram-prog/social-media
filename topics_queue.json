@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T09:35:50+00:00",
+  "updated_at": "2026-11-12T10:43:06+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9861,7 +9861,7 @@
       },
       "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -9899,25 +9899,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-12T09:35:50+00:00",
+      "error": null,
+      "updated_at": "2026-11-12T10:43:06+00:00",
       "style_used": {
-        "look": "blueprint",
-        "hook": "split",
+        "look": "sunset",
+        "hook": "spotlight",
         "captions": "neon",
         "cta": "share",
-        "hookFont": "bebas",
-        "presenter": "rohan",
-        "camera": "snap",
-        "grade": "teal_orange",
-        "overlay": "vhs",
-        "burst": "rays",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "handheld",
+        "grade": "vivid",
+        "overlay": "none",
+        "burst": "ring",
         "music": "arp"
       },
       "day": 9,
       "video_path": "output/quiz-floatsum/reel.mp4",
-      "rendered_at": "2026-11-12T09:35:17+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-12T10:42:26+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-12T10:43:06+00:00",
+      "ig_media_id": "18002949603037276",
+      "permalink": "https://www.instagram.com/reel/Dfo3gAVCLLx/",
+      "container_id": "18101376890176838"
     },
     {
       "id": "quiz-mutabledefault",
