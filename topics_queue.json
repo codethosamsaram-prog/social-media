@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T15:02:11+00:00",
+  "updated_at": "2026-11-12T16:03:27+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9777,7 +9777,26 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-11T06:09:46+00:00"
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-12T16:03:27+00:00",
+      "style_used": {
+        "look": "aurora",
+        "hook": "split",
+        "captions": "neon",
+        "cta": "comment",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "cool",
+        "overlay": "sparks",
+        "burst": "ring",
+        "music": "keys"
+      },
+      "day": 9,
+      "video_path": "output/intv-sqlvsnosql/reel.mp4",
+      "rendered_at": "2026-11-12T16:02:53+00:00",
+      "attempts": 1
     },
     {
       "id": "intv-dbindex",
@@ -10610,6 +10629,128 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-12T12:44:15+00:00"
+    },
+    {
+      "id": "dsa-mergeintervals",
+      "topic": "LeetCode 56 Merge Intervals - Sort By Start",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "SORT THEN MERGE",
+      "script": "First, sort by start time, so overlapping intervals sit next to each other. Then walk through. If it overlaps the last merged one, stretch that end. If not, start a new interval.",
+      "link": "https://leetcode.com/problems/merge-intervals/",
+      "code": {
+        "language": "python",
+        "filename": "merge.py",
+        "snippet": "def merge(intervals):\n    out = []\n    for s, e in sorted(intervals):\n        if out and s <= out[-1][1]:\n            out[-1][1] = max(out[-1][1], e)\n        else:\n            out.append([s, e])\n    return out"
+      },
+      "caption": "LeetCode 56: Merge Intervals 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "merge_intervals"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Google, Meta and Microsoft all ask this.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 56. Merge every pair of overlapping intervals.",
+          "data": {
+            "source": "LeetCode",
+            "number": 56,
+            "title": "Merge Intervals",
+            "difficulty": "Medium",
+            "statement": "Merge all overlapping intervals and return the result.",
+            "example": [
+              "1-3",
+              "2-6",
+              "8-10",
+              "15-18"
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Comparing every interval with every other is O of n squared.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "COMPARE EVERY PAIR",
+            "items": [
+              "1-3",
+              "2-6",
+              "8-10",
+              "15-18"
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "First, sort by start time, so overlapping intervals sit next to each other. Then walk through. If it overlaps the last merged one, stretch that end. If not, start a new interval.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "SORT BY START",
+            "steps": [
+              {
+                "icon": "🔢",
+                "title": "Sort by start time",
+                "detail": "overlaps become neighbours"
+              },
+              {
+                "icon": "🔍",
+                "title": "Overlaps the last one?",
+                "detail": "start <= last end"
+              },
+              {
+                "icon": "🔗",
+                "title": "Yes: stretch the end",
+                "detail": "end = max(both ends)"
+              },
+              {
+                "icon": "➕",
+                "title": "No: start a new one",
+                "detail": "append to the result"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Sort, then one pass. O of n log n.",
+          "kicker": "LEETCODE 56",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              2,
+              3,
+              4
+            ],
+            "stamps": [
+              "O(n log n)",
+              "SORT FIRST"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-12T15:58:55+00:00"
     }
   ],
   "removed": [
