@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T14:10:17+00:00",
+  "updated_at": "2026-11-12T15:02:11+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9200,7 +9200,7 @@
       },
       "caption": "LeetCode 121: Best Time to Buy Stock 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "stock"
       },
@@ -9308,25 +9308,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-12T14:10:17+00:00",
+      "error": null,
+      "updated_at": "2026-11-12T15:02:11+00:00",
       "style_used": {
-        "look": "glass",
-        "hook": "terminal",
-        "captions": "mega",
-        "cta": "search",
-        "hookFont": "bebas",
-        "presenter": "rohan",
+        "look": "retrosun",
+        "hook": "kinetic",
+        "captions": "tape",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "kabir",
         "camera": "breathe",
         "grade": "faded",
-        "overlay": "dust",
+        "overlay": "letterbox",
         "burst": "slash",
-        "music": "keys"
+        "music": "pad"
       },
       "day": 9,
       "video_path": "output/dsa-stock/reel.mp4",
-      "rendered_at": "2026-11-12T14:09:44+00:00",
-      "attempts": 2
+      "rendered_at": "2026-11-12T15:01:33+00:00",
+      "attempts": 2,
+      "published_at": "2026-11-12T15:02:11+00:00",
+      "ig_media_id": "18109390622258863",
+      "permalink": "https://www.instagram.com/reel/DfpVJr3EtLE/",
+      "container_id": "18101443745176838"
     },
     {
       "id": "dsa-longestsubstring",
