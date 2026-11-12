@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-11T17:57:49+00:00",
+  "updated_at": "2026-11-12T02:55:05+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9159,7 +9159,26 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-11T06:09:46+00:00"
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-12T02:55:05+00:00",
+      "style_used": {
+        "look": "galaxy",
+        "hook": "glitch",
+        "captions": "gradient",
+        "cta": "comment",
+        "hookFont": "archivo",
+        "presenter": "aarav",
+        "camera": "drift",
+        "grade": "teal_orange",
+        "overlay": "none",
+        "burst": "slash",
+        "music": "pad"
+      },
+      "day": 9,
+      "video_path": "output/dsa-validparentheses/reel.mp4",
+      "rendered_at": "2026-11-12T02:54:29+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-stock",
@@ -10041,6 +10060,101 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-11T16:56:06+00:00"
+    },
+    {
+      "id": "intv-acid",
+      "topic": "ACID properties explained simply",
+      "keyword": "ACID",
+      "category": "interview",
+      "hook": "ACID IN SECONDS",
+      "script": "Think of a UPI transfer. Atomic means all or nothing. Consistent means the rules never break. Isolated means two transfers don't mix up. Durable means it's saved, even if the power dies.",
+      "link": "https://en.wikipedia.org/wiki/ACID",
+      "caption": "ACID properties explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Your bank money is safe because of four letters.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a UPI transfer. Atomic means all or nothing. Consistent means the rules never break. Isolated means two transfers don't mix up. Durable means it's saved, even if the power dies.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "A UPI TRANSFER",
+            "steps": [
+              {
+                "icon": "⚛️",
+                "title": "Atomic",
+                "detail": "all or nothing"
+              },
+              {
+                "icon": "✅",
+                "title": "Consistent",
+                "detail": "rules never break"
+              },
+              {
+                "icon": "🚧",
+                "title": "Isolated",
+                "detail": "transfers don't mix"
+              },
+              {
+                "icon": "💾",
+                "title": "Durable",
+                "detail": "saved even if power dies"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Give this example: money leaves account A and must reach account B. If the server crashes halfway, the transaction rolls back. Databases do this with a write ahead log.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🏦",
+                "title": "Money leaves A",
+                "detail": "and must reach B"
+              },
+              {
+                "icon": "↩️",
+                "title": "Crash halfway?",
+                "detail": "rollback, nothing lost"
+              },
+              {
+                "icon": "📝",
+                "title": "Done with a log",
+                "detail": "write-ahead logging"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "ACID properties explained simply"
+      },
+      "keyword_spoken": "acid",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-12T02:50:31+00:00"
     }
   ],
   "removed": [
