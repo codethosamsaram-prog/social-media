@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T12:48:32+00:00",
+  "updated_at": "2026-11-12T14:10:17+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9309,24 +9309,24 @@
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-12T12:48:32+00:00",
+      "updated_at": "2026-11-12T14:10:17+00:00",
       "style_used": {
-        "look": "mono",
-        "hook": "alert",
-        "captions": "pop",
-        "cta": "series",
-        "hookFont": "oswald",
+        "look": "glass",
+        "hook": "terminal",
+        "captions": "mega",
+        "cta": "search",
+        "hookFont": "bebas",
         "presenter": "rohan",
-        "camera": "snap",
-        "grade": "none",
-        "overlay": "vhs",
+        "camera": "breathe",
+        "grade": "faded",
+        "overlay": "dust",
         "burst": "slash",
-        "music": "lofi"
+        "music": "keys"
       },
       "day": 9,
       "video_path": "output/dsa-stock/reel.mp4",
-      "rendered_at": "2026-11-12T12:47:58+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-12T14:09:44+00:00",
+      "attempts": 2
     },
     {
       "id": "dsa-longestsubstring",
