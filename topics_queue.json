@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T10:43:06+00:00",
+  "updated_at": "2026-11-12T12:48:32+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9307,7 +9307,26 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-11T06:09:46+00:00"
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-12T12:48:32+00:00",
+      "style_used": {
+        "look": "mono",
+        "hook": "alert",
+        "captions": "pop",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "rohan",
+        "camera": "snap",
+        "grade": "none",
+        "overlay": "vhs",
+        "burst": "slash",
+        "music": "lofi"
+      },
+      "day": 9,
+      "video_path": "output/dsa-stock/reel.mp4",
+      "rendered_at": "2026-11-12T12:47:58+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-longestsubstring",
@@ -10533,6 +10552,60 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-12T09:32:23+00:00"
+    },
+    {
+      "id": "quiz-typeofnull",
+      "topic": "Javascript Weirdness Quiz - What does this return? typeof null",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "JAVASCRIPT WEIRDNESS QUIZ",
+      "script": "In JavaScript, what does type of null return? Comment your answer. Three, two, one. The answer is C. Object. It's a bug from the first version of JavaScript, and fixing it now would break the web.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=typeof_null",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "typeof null"
+      },
+      "caption": "Quiz time 🧩 What does this return? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "JavaScript is weird. Prove you know it.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "In JavaScript, what does type of null return? Comment your answer. Three, two, one. The answer is C. Object. It's a bug from the first version of JavaScript, and fixing it now would break the web.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this return?",
+            "code": "typeof null",
+            "options": [
+              "\"null\"",
+              "\"undefined\"",
+              "\"object\"",
+              "Error"
+            ],
+            "correct": 2
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-12T12:44:15+00:00"
     }
   ],
   "removed": [
