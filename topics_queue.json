@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T03:58:48+00:00",
+  "updated_at": "2026-11-12T06:05:43+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9559,7 +9559,7 @@
       "link": "https://en.wikipedia.org/wiki/Domain_Name_System",
       "caption": "What happens when you type a URL 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -9642,7 +9642,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-11T06:09:46+00:00"
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": null,
+      "updated_at": "2026-11-12T06:05:43+00:00",
+      "style_used": {
+        "look": "bokeh",
+        "hook": "chat",
+        "captions": "mega",
+        "cta": "share",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "cool",
+        "overlay": "letterbox",
+        "burst": "sparks",
+        "music": "pluck"
+      },
+      "day": 9,
+      "video_path": "output/intv-urltyped/reel.mp4",
+      "rendered_at": "2026-11-12T06:05:03+00:00",
+      "published_at": "2026-11-12T06:05:43+00:00",
+      "ig_media_id": "18116470583464123",
+      "permalink": "https://www.instagram.com/reel/DfoXwQgDJKk/",
+      "container_id": "18101321903176838"
     },
     {
       "id": "intv-sqlvsnosql",
@@ -10159,6 +10181,132 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-12T02:50:31+00:00"
+    },
+    {
+      "id": "dsa-binarysearch",
+      "topic": "LeetCode 704 Binary Search - Cut In Half",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "HALVE EVERY STEP",
+      "script": "Look at the middle element. If the target is smaller, drop the right half. If it's bigger, drop the left half. Every step cuts the array in half, so a billion items takes about thirty steps.",
+      "link": "https://leetcode.com/problems/binary-search/",
+      "code": {
+        "language": "python",
+        "filename": "search.py",
+        "snippet": "def search(nums, target):\n    lo, hi = 0, len(nums) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if nums[mid] == target:\n            return mid\n        if nums[mid] < target:\n            lo = mid + 1\n        else:\n            hi = mid - 1\n    return -1"
+      },
+      "caption": "LeetCode 704: Binary Search 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "binary_search"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Find one item in a billion in thirty steps.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 704. Find the target in a sorted array and return its index.",
+          "data": {
+            "source": "LeetCode",
+            "number": 704,
+            "title": "Binary Search",
+            "difficulty": "Easy",
+            "statement": "Find the target in a sorted array and return its index, or minus one.",
+            "example": [
+              -1,
+              0,
+              3,
+              5,
+              9,
+              12
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Scanning every element is O of n.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "SCAN EVERY ELEMENT",
+            "items": [
+              -1,
+              0,
+              3,
+              5,
+              9,
+              12
+            ],
+            "cost": "O(n) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Look at the middle element. If the target is smaller, drop the right half. If it's bigger, drop the left half. Every step cuts the array in half, so a billion items takes about thirty steps.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "CUT IN HALF",
+            "steps": [
+              {
+                "icon": "🎯",
+                "title": "Look at the middle",
+                "detail": "mid = (lo + hi) // 2"
+              },
+              {
+                "icon": "⬅️",
+                "title": "Target smaller?",
+                "detail": "drop the right half"
+              },
+              {
+                "icon": "➡️",
+                "title": "Target bigger?",
+                "detail": "drop the left half"
+              },
+              {
+                "icon": "✅",
+                "title": "Found or lo > hi",
+                "detail": "a billion items = 30 steps"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Binary search. O of log n time.",
+          "kicker": "LEETCODE 704",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              6,
+              7
+            ],
+            "stamps": [
+              "O(log n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-12T06:00:12+00:00"
     }
   ],
   "removed": [
