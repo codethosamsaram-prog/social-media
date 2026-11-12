@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T16:03:27+00:00",
+  "updated_at": "2026-11-12T17:09:43+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9699,7 +9699,7 @@
       "link": "https://en.wikipedia.org/wiki/NoSQL",
       "caption": "SQL vs NoSQL explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -9778,25 +9778,29 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-12T16:03:27+00:00",
+      "error": null,
+      "updated_at": "2026-11-12T17:09:43+00:00",
       "style_used": {
-        "look": "aurora",
+        "look": "bokeh",
         "hook": "split",
-        "captions": "neon",
-        "cta": "comment",
-        "hookFont": "archivo",
-        "presenter": "rohan",
-        "camera": "punch",
-        "grade": "cool",
+        "captions": "mega",
+        "cta": "triple",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "teal_orange",
         "overlay": "sparks",
-        "burst": "ring",
-        "music": "keys"
+        "burst": "sparks",
+        "music": "lofi"
       },
       "day": 9,
       "video_path": "output/intv-sqlvsnosql/reel.mp4",
-      "rendered_at": "2026-11-12T16:02:53+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-12T17:09:05+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-12T17:09:43+00:00",
+      "ig_media_id": "18022737065946918",
+      "permalink": "https://www.instagram.com/reel/DfpjvyuAOUP/",
+      "container_id": "18101481248176838"
     },
     {
       "id": "intv-dbindex",
