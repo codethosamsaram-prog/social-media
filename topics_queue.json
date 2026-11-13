@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T03:41:13+00:00",
+  "updated_at": "2026-11-13T04:46:53+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9348,7 +9348,7 @@
       },
       "caption": "LeetCode 3: Longest Substring 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "failed",
       "dsa": {
         "library": "longest_substring"
       },
@@ -9459,24 +9459,24 @@
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-13T03:41:13+00:00",
+      "updated_at": "2026-11-13T04:46:53+00:00",
       "style_used": {
-        "look": "hexgrid",
-        "hook": "alert",
-        "captions": "karaoke",
-        "cta": "series",
-        "hookFont": "anton",
-        "presenter": "kabir",
-        "camera": "punch",
-        "grade": "none",
-        "overlay": "vhs",
-        "burst": "slash",
+        "look": "neon",
+        "hook": "spotlight",
+        "captions": "type",
+        "cta": "comment",
+        "hookFont": "oswald",
+        "presenter": "rohan",
+        "camera": "breathe",
+        "grade": "vivid",
+        "overlay": "none",
+        "burst": "ring",
         "music": "pluck"
       },
       "day": 10,
       "video_path": "output/dsa-longestsubstring/reel.mp4",
-      "rendered_at": "2026-11-13T03:40:38+00:00",
-      "attempts": 2
+      "rendered_at": "2026-11-13T04:46:18+00:00",
+      "attempts": 3
     },
     {
       "id": "intv-processvsthread",
