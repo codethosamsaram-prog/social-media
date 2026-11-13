@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T12:32:50+00:00",
+  "updated_at": "2026-11-13T15:33:11+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10329,7 +10329,10 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-12T02:50:31+00:00"
+      "created_at": "2026-11-12T02:50:31+00:00",
+      "error": "No audio was received. Please verify that your parameters are correct.",
+      "updated_at": "2026-11-13T15:33:11+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-binarysearch",
@@ -11448,6 +11451,128 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-13T12:29:10+00:00"
+    },
+    {
+      "id": "dsa-linkedlistcycle",
+      "topic": "LeetCode 141 Linked List Cycle - Tortoise & Hare",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "FAST AND SLOW",
+      "script": "Send two pointers. Slow moves one step, fast moves two steps. If there's a cycle, the fast one laps the slow one and they meet. If fast hits null, there's no cycle.",
+      "link": "https://leetcode.com/problems/linked-list-cycle/",
+      "code": {
+        "language": "python",
+        "filename": "has.py",
+        "snippet": "def has_cycle(head):\n    slow = fast = head\n    while fast and fast.next:\n        slow = slow.next\n        fast = fast.next.next\n        if slow is fast:\n            return True\n    return False"
+      },
+      "caption": "LeetCode 141: Linked List Cycle 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "linked_list_cycle"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "A runner on a circular track explains this perfectly.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 141. Does this linked list loop back on itself?",
+          "data": {
+            "source": "LeetCode",
+            "number": 141,
+            "title": "Linked List Cycle",
+            "difficulty": "Easy",
+            "statement": "Return true if the linked list has a cycle in it.",
+            "example": [
+              3,
+              2,
+              0,
+              -4
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Storing every visited node in a hash set costs O of n memory.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "HASH SET OF NODES",
+            "items": [
+              3,
+              2,
+              0,
+              -4
+            ],
+            "cost": "O(n) SPACE"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Send two pointers. Slow moves one step, fast moves two steps. If there's a cycle, the fast one laps the slow one and they meet. If fast hits null, there's no cycle.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "TORTOISE & HARE",
+            "steps": [
+              {
+                "icon": "🐢",
+                "title": "Slow moves 1 step",
+                "detail": "slow = slow.next"
+              },
+              {
+                "icon": "🐇",
+                "title": "Fast moves 2 steps",
+                "detail": "fast = fast.next.next"
+              },
+              {
+                "icon": "🔁",
+                "title": "Cycle? They meet",
+                "detail": "fast laps the slow one"
+              },
+              {
+                "icon": "✅",
+                "title": "Fast hits null?",
+                "detail": "no cycle"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Floyd's algorithm. O of one space.",
+          "kicker": "LEETCODE 141",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4,
+              5
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-13T15:32:15+00:00"
     }
   ],
   "removed": [
