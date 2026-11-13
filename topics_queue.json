@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T09:19:55+00:00",
+  "updated_at": "2026-11-13T10:27:03+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10025,7 +10025,7 @@
       },
       "caption": "Quiz time 🧩 What does the second call print? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -10064,11 +10064,27 @@
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
       "error": null,
-      "updated_at": "2026-11-11T06:27:08+00:00",
-      "style_used": null,
-      "day": null,
-      "video_path": null,
-      "rendered_at": null
+      "updated_at": "2026-11-13T10:27:03+00:00",
+      "style_used": {
+        "look": "retrosun",
+        "hook": "terminal",
+        "captions": "pop",
+        "cta": "share",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "vivid",
+        "overlay": "none",
+        "burst": "slash",
+        "music": "keys"
+      },
+      "day": 10,
+      "video_path": "output/quiz-mutabledefault/reel.mp4",
+      "rendered_at": "2026-11-13T10:26:30+00:00",
+      "published_at": "2026-11-13T10:27:03+00:00",
+      "ig_media_id": "17888642703624187",
+      "permalink": "https://www.instagram.com/reel/DfraeItjRA6/",
+      "container_id": "18101675630176838"
     },
     {
       "id": "dsa-containerwater",
@@ -11266,6 +11282,96 @@
       "ig_media_id": "17953862577055838",
       "permalink": "https://www.instagram.com/reel/DfrSyiSALQq/",
       "container_id": "18101661839176838"
+    },
+    {
+      "id": "intv-caching",
+      "topic": "Caching explained simply",
+      "keyword": "CACHE",
+      "category": "interview",
+      "hook": "WHY CACHING WINS",
+      "script": "The database is the market. It has everything, but it's far away. A cache, like Redis, is your fridge. Check the fridge first. If it's not there, go to the market and keep some in the fridge.",
+      "link": "https://en.wikipedia.org/wiki/Cache_(computing)",
+      "caption": "Caching explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "This one idea makes every big app fast.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "The database is the market. It has everything, but it's far away. A cache, like Redis, is your fridge. Check the fridge first. If it's not there, go to the market and keep some in the fridge.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "YOUR FRIDGE VS MARKET",
+            "steps": [
+              {
+                "icon": "🛒",
+                "title": "Database = the market",
+                "detail": "far away and slow"
+              },
+              {
+                "icon": "🧊",
+                "title": "Cache = your fridge",
+                "detail": "close and instant"
+              },
+              {
+                "icon": "🔁",
+                "title": "Miss? Fetch and store",
+                "detail": "next time it's in the fridge"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Name it the cache aside pattern. Talk about expiry with a TTL and LRU eviction. And mention the hard part: invalidating the cache when the data changes.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "📦",
+                "title": "Cache-aside pattern",
+                "detail": "check cache, then DB"
+              },
+              {
+                "icon": "⏳",
+                "title": "TTL & eviction",
+                "detail": "LRU throws out the oldest"
+              },
+              {
+                "icon": "⚠️",
+                "title": "Stale data risk",
+                "detail": "invalidate on writes"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Caching explained simply"
+      },
+      "keyword_spoken": "cache",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-13T10:21:34+00:00"
     }
   ],
   "removed": [
