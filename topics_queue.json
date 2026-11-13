@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-12T17:09:43+00:00",
+  "updated_at": "2026-11-13T02:54:43+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9457,7 +9457,26 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-11T06:09:46+00:00"
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-13T02:54:43+00:00",
+      "style_used": {
+        "look": "neon",
+        "hook": "alert",
+        "captions": "tape",
+        "cta": "series",
+        "hookFont": "archivo",
+        "presenter": "kabir",
+        "camera": "drift",
+        "grade": "faded",
+        "overlay": "leaks",
+        "burst": "ring",
+        "music": "keys"
+      },
+      "day": 10,
+      "video_path": "output/dsa-longestsubstring/reel.mp4",
+      "rendered_at": "2026-11-13T02:54:10+00:00",
+      "attempts": 1
     },
     {
       "id": "intv-processvsthread",
@@ -10755,6 +10774,96 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-12T15:58:55+00:00"
+    },
+    {
+      "id": "intv-loadbalancer",
+      "topic": "Load balancer explained simply",
+      "keyword": "SCALE",
+      "category": "interview",
+      "hook": "LOAD BALANCER BASICS",
+      "script": "Millions of requests would melt one server. A load balancer is like a toll booth manager, sending each car to a free booth. Behind it sit many servers, and you add more when it gets busy.",
+      "link": "https://en.wikipedia.org/wiki/Load_balancing_(computing)",
+      "caption": "Load balancer explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "How does Hotstar handle millions watching a cricket match?",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Millions of requests would melt one server. A load balancer is like a toll booth manager, sending each car to a free booth. Behind it sit many servers, and you add more when it gets busy.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "TOLL BOOTH MANAGER",
+            "steps": [
+              {
+                "icon": "🚗",
+                "title": "Millions of requests",
+                "detail": "one server would melt"
+              },
+              {
+                "icon": "🚦",
+                "title": "Load balancer",
+                "detail": "sends each car to a free booth"
+              },
+              {
+                "icon": "🖥️",
+                "title": "Many servers behind it",
+                "detail": "add more when busy"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Mention the algorithms, like round robin and least connections. Mention health checks that skip dead servers. And call it horizontal scaling: more machines, not a bigger one.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🔄",
+                "title": "Round robin",
+                "detail": "or least connections"
+              },
+              {
+                "icon": "❤️",
+                "title": "Health checks",
+                "detail": "skip dead servers"
+              },
+              {
+                "icon": "📈",
+                "title": "Horizontal scaling",
+                "detail": "more machines, not bigger"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Load balancer explained simply"
+      },
+      "keyword_spoken": "scale",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-13T02:47:48+00:00"
     }
   ],
   "removed": [
