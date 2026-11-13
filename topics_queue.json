@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T04:46:53+00:00",
+  "updated_at": "2026-11-13T05:48:46+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10173,7 +10173,26 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-11T16:56:06+00:00"
+      "created_at": "2026-11-11T16:56:06+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-13T05:48:46+00:00",
+      "style_used": {
+        "look": "ember",
+        "hook": "question",
+        "captions": "underline",
+        "cta": "triple",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "drift",
+        "grade": "faded",
+        "overlay": "letterbox",
+        "burst": "sparks",
+        "music": "bell"
+      },
+      "day": 10,
+      "video_path": "output/dsa-containerwater/reel.mp4",
+      "rendered_at": "2026-11-13T05:48:13+00:00",
+      "attempts": 1
     },
     {
       "id": "intv-acid",
@@ -10864,6 +10883,128 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-13T02:47:48+00:00"
+    },
+    {
+      "id": "dsa-productexceptself",
+      "topic": "LeetCode 238 Product Except Self - Prefix × Suffix",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "NO DIVISION ALLOWED",
+      "script": "Do a left to right pass, storing the product of everything to the left. Then a right to left pass, multiplying in everything to the right. Left times right is everything except itself.",
+      "link": "https://leetcode.com/problems/product-of-array-except-self/",
+      "code": {
+        "language": "python",
+        "filename": "product.py",
+        "snippet": "def product_except_self(nums):\n    out, left = [1] * len(nums), 1\n    for i in range(len(nums)):\n        out[i], left = left, left * nums[i]\n    right = 1\n    for i in reversed(range(len(nums))):\n        out[i] *= right\n        right *= nums[i]\n    return out"
+      },
+      "caption": "LeetCode 238: Product Except Self 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "product_except_self"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "This question rejects most candidates.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 238. For every index, return the product of all the other numbers, without division.",
+          "data": {
+            "source": "LeetCode",
+            "number": 238,
+            "title": "Product Except Self",
+            "difficulty": "Medium",
+            "statement": "For each index, return the product of every other number. No division.",
+            "example": [
+              1,
+              2,
+              3,
+              4
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Multiplying everything again for each index is O of n squared.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "MULTIPLY FOR EACH",
+            "items": [
+              1,
+              2,
+              3,
+              4
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Do a left to right pass, storing the product of everything to the left. Then a right to left pass, multiplying in everything to the right. Left times right is everything except itself.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "PREFIX × SUFFIX",
+            "steps": [
+              {
+                "icon": "➡️",
+                "title": "Left to right pass",
+                "detail": "product of everything left"
+              },
+              {
+                "icon": "⬅️",
+                "title": "Right to left pass",
+                "detail": "times everything right"
+              },
+              {
+                "icon": "🧩",
+                "title": "Left × right",
+                "detail": "= everything except self"
+              },
+              {
+                "icon": "✅",
+                "title": "Answer: 24 12 8 6",
+                "detail": "two passes, no division"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Prefix and suffix products. O of n time.",
+          "kicker": "LEETCODE 238",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              6,
+              7
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "NO DIVISION"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-13T05:45:07+00:00"
     }
   ],
   "removed": [
