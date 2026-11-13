@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T06:56:25+00:00",
+  "updated_at": "2026-11-13T08:08:15+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9831,7 +9831,7 @@
       "link": "https://en.wikipedia.org/wiki/Database_index",
       "caption": "Database indexing explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -9909,7 +9909,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-11T06:09:46+00:00"
+      "created_at": "2026-11-11T06:09:46+00:00",
+      "error": null,
+      "updated_at": "2026-11-13T08:08:15+00:00",
+      "style_used": {
+        "look": "mono",
+        "hook": "question",
+        "captions": "neon",
+        "cta": "share",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "handheld",
+        "grade": "cool",
+        "overlay": "letterbox",
+        "burst": "rays",
+        "music": "arp"
+      },
+      "day": 10,
+      "video_path": "output/intv-dbindex/reel.mp4",
+      "rendered_at": "2026-11-13T08:07:41+00:00",
+      "published_at": "2026-11-13T08:08:15+00:00",
+      "ig_media_id": "18084696299352340",
+      "permalink": "https://www.instagram.com/reel/DfrKlaqATTQ/",
+      "container_id": "18101648030176838"
     },
     {
       "id": "quiz-floatsum",
@@ -11009,6 +11031,128 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-13T05:45:07+00:00"
+    },
+    {
+      "id": "dsa-climbingstairs",
+      "topic": "LeetCode 70 Climbing Stairs - Ways(N-1) + Ways(N-2)",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "DP MADE EASY",
+      "script": "Think about your last move. You came from one step below or two steps below. So the ways to reach n equal ways to n minus one plus ways to n minus two. It's just Fibonacci.",
+      "link": "https://leetcode.com/problems/climbing-stairs/",
+      "code": {
+        "language": "python",
+        "filename": "climb.py",
+        "snippet": "def climb_stairs(n):\n    a, b = 1, 1\n    for _ in range(n):\n        a, b = b, a + b\n    return a"
+      },
+      "caption": "LeetCode 70: Climbing Stairs 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "climbing_stairs"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "The easiest way to finally understand dynamic programming.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 70. You climb one or two steps at a time. How many ways can you reach the top?",
+          "data": {
+            "source": "LeetCode",
+            "number": 70,
+            "title": "Climbing Stairs",
+            "difficulty": "Easy",
+            "statement": "Climb n stairs taking 1 or 2 steps at a time. How many distinct ways?",
+            "example": [
+              1,
+              2,
+              3,
+              5,
+              8
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Plain recursion recalculates the same stairs again and again. That's O of two to the n.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "PLAIN RECURSION",
+            "items": [
+              1,
+              2,
+              3,
+              5,
+              8
+            ],
+            "cost": "O(2ⁿ) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Think about your last move. You came from one step below or two steps below. So the ways to reach n equal ways to n minus one plus ways to n minus two. It's just Fibonacci.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "WAYS(N-1) + WAYS(N-2)",
+            "steps": [
+              {
+                "icon": "🪜",
+                "title": "Last move was 1 or 2",
+                "detail": "only two ways to arrive"
+              },
+              {
+                "icon": "➕",
+                "title": "ways(n) = n-1 + n-2",
+                "detail": "it's Fibonacci"
+              },
+              {
+                "icon": "🧠",
+                "title": "Keep only two numbers",
+                "detail": "no array needed"
+              },
+              {
+                "icon": "✅",
+                "title": "5 stairs = 8 ways",
+                "detail": "O(n) time, O(1) space"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Two variables. O of n time, O of one space.",
+          "kicker": "LEETCODE 70",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-13T08:03:34+00:00"
     }
   ],
   "removed": [
