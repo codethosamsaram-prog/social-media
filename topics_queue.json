@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T02:54:43+00:00",
+  "updated_at": "2026-11-13T03:41:13+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -9459,24 +9459,24 @@
       ],
       "created_at": "2026-11-11T06:09:46+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-13T02:54:43+00:00",
+      "updated_at": "2026-11-13T03:41:13+00:00",
       "style_used": {
-        "look": "neon",
+        "look": "hexgrid",
         "hook": "alert",
-        "captions": "tape",
+        "captions": "karaoke",
         "cta": "series",
-        "hookFont": "archivo",
+        "hookFont": "anton",
         "presenter": "kabir",
-        "camera": "drift",
-        "grade": "faded",
-        "overlay": "leaks",
-        "burst": "ring",
-        "music": "keys"
+        "camera": "punch",
+        "grade": "none",
+        "overlay": "vhs",
+        "burst": "slash",
+        "music": "pluck"
       },
       "day": 10,
       "video_path": "output/dsa-longestsubstring/reel.mp4",
-      "rendered_at": "2026-11-13T02:54:10+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-13T03:40:38+00:00",
+      "attempts": 2
     },
     {
       "id": "intv-processvsthread",
