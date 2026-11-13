@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T05:48:46+00:00",
+  "updated_at": "2026-11-13T06:56:25+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10064,7 +10064,7 @@
       },
       "caption": "LeetCode 11: Container With Most Water 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "container_water"
       },
@@ -10174,25 +10174,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-11T16:56:06+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-13T05:48:46+00:00",
+      "error": null,
+      "updated_at": "2026-11-13T06:56:25+00:00",
       "style_used": {
-        "look": "ember",
-        "hook": "question",
-        "captions": "underline",
+        "look": "glass",
+        "hook": "chat",
+        "captions": "gradient",
         "cta": "triple",
         "hookFont": "bebas",
-        "presenter": "aarav",
-        "camera": "drift",
+        "presenter": "kabir",
+        "camera": "snap",
         "grade": "faded",
-        "overlay": "letterbox",
-        "burst": "sparks",
-        "music": "bell"
+        "overlay": "leaks",
+        "burst": "slash",
+        "music": "keys"
       },
       "day": 10,
       "video_path": "output/dsa-containerwater/reel.mp4",
-      "rendered_at": "2026-11-13T05:48:13+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-13T06:55:53+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-13T06:56:25+00:00",
+      "ig_media_id": "18035976563910374",
+      "permalink": "https://www.instagram.com/reel/DfrCXg5DGML/",
+      "container_id": "18101635205176838"
     },
     {
       "id": "intv-acid",
