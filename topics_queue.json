@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T10:27:03+00:00",
+  "updated_at": "2026-11-13T12:32:50+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10347,7 +10347,7 @@
       },
       "caption": "LeetCode 704: Binary Search 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "binary_search"
       },
@@ -10455,7 +10455,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-12T06:00:12+00:00"
+      "created_at": "2026-11-12T06:00:12+00:00",
+      "error": null,
+      "updated_at": "2026-11-13T12:32:50+00:00",
+      "style_used": {
+        "look": "ember",
+        "hook": "split",
+        "captions": "tape",
+        "cta": "comment",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "punch",
+        "grade": "contrast",
+        "overlay": "dust",
+        "burst": "ring",
+        "music": "lofi"
+      },
+      "day": 10,
+      "video_path": "output/dsa-binarysearch/reel.mp4",
+      "rendered_at": "2026-11-13T12:32:15+00:00",
+      "published_at": "2026-11-13T12:32:50+00:00",
+      "ig_media_id": "18094538630700722",
+      "permalink": "https://www.instagram.com/reel/Dfro3LfEvV4/",
+      "container_id": "18101708723176838"
     },
     {
       "id": "hiring-2026-11-12",
@@ -11372,6 +11394,60 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-13T10:21:34+00:00"
+    },
+    {
+      "id": "quiz-roundhalf",
+      "topic": "Rounding Trap Quiz - What does this print? print(round(2.5))",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "ROUNDING TRAP QUIZ",
+      "script": "What does round of two point five print in Python? Comment your answer. Three, two, one. The answer is A. Two. Python uses banker's rounding, so halves round to the nearest even number.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=round_half",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "print(round(2.5))"
+      },
+      "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Ninety percent of people guess wrong here.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "What does round of two point five print in Python? Comment your answer. Three, two, one. The answer is A. Two. Python uses banker's rounding, so halves round to the nearest even number.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this print?",
+            "code": "print(round(2.5))",
+            "options": [
+              "2",
+              "3",
+              "2.5",
+              "Error"
+            ],
+            "correct": 0
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-13T12:29:10+00:00"
     }
   ],
   "removed": [
