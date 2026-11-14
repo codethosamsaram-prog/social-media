@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T17:28:54+00:00",
+  "updated_at": "2026-11-14T18:16:43+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10957,7 +10957,7 @@
       "link": "https://en.wikipedia.org/wiki/Load_balancing_(computing)",
       "caption": "Load balancer explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -11035,7 +11035,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-13T02:47:48+00:00"
+      "created_at": "2026-11-13T02:47:48+00:00",
+      "error": null,
+      "updated_at": "2026-11-14T18:16:43+00:00",
+      "style_used": {
+        "look": "glass",
+        "hook": "spotlight",
+        "captions": "bounce",
+        "cta": "share",
+        "hookFont": "bebas",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "cool",
+        "overlay": "leaks",
+        "burst": "slash",
+        "music": "keys"
+      },
+      "day": 11,
+      "video_path": "output/intv-loadbalancer/reel.mp4",
+      "rendered_at": "2026-11-14T18:16:08+00:00",
+      "published_at": "2026-11-14T18:16:43+00:00",
+      "ig_media_id": "17871258582661993",
+      "permalink": "https://www.instagram.com/reel/Dfu1A0cE0eH/",
+      "container_id": "18102125879176838"
     },
     {
       "id": "dsa-productexceptself",
@@ -12446,6 +12468,134 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-14T17:23:28+00:00"
+    },
+    {
+      "id": "dsa-dailytemperatures",
+      "topic": "LeetCode 739 Daily Temperatures - Monotonic Stack",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "MONOTONIC STACK TRICK",
+      "script": "Keep a stack of days still waiting for a warmer day. When a warmer day arrives, pop every colder day, and its answer is the gap in days. Then push today onto the stack.",
+      "link": "https://leetcode.com/problems/daily-temperatures/",
+      "code": {
+        "language": "python",
+        "filename": "daily.py",
+        "snippet": "def daily_temperatures(t):\n    out, stack = [0] * len(t), []\n    for i, temp in enumerate(t):\n        while stack and t[stack[-1]] < temp:\n            j = stack.pop()\n            out[j] = i - j\n        stack.append(i)\n    return out"
+      },
+      "caption": "LeetCode 739: Daily Temperatures 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "daily_temperatures"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "One pattern solves a whole family of interview questions.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 739. For each day, how many days until it gets warmer?",
+          "data": {
+            "source": "LeetCode",
+            "number": 739,
+            "title": "Daily Temperatures",
+            "difficulty": "Medium",
+            "statement": "For each day, how many days until a warmer temperature?",
+            "example": [
+              73,
+              74,
+              75,
+              71,
+              69,
+              72,
+              76,
+              73
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Scanning ahead from every day is O of n squared.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "SCAN AHEAD EACH DAY",
+            "items": [
+              73,
+              74,
+              75,
+              71,
+              69,
+              72
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Keep a stack of days still waiting for a warmer day. When a warmer day arrives, pop every colder day, and its answer is the gap in days. Then push today onto the stack.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "MONOTONIC STACK",
+            "steps": [
+              {
+                "icon": "📚",
+                "title": "Stack of waiting days",
+                "detail": "temps only go down in it"
+              },
+              {
+                "icon": "🌡️",
+                "title": "Warmer day arrives?",
+                "detail": "pop every colder day"
+              },
+              {
+                "icon": "📏",
+                "title": "Answer = gap in days",
+                "detail": "today - popped day"
+              },
+              {
+                "icon": "📥",
+                "title": "Push today",
+                "detail": "it waits for warmer"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "A monotonic stack. Every day is pushed and popped once, so O of n.",
+          "kicker": "LEETCODE 739",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4,
+              5
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "STACK"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-14T18:08:51+00:00"
     }
   ],
   "removed": [
