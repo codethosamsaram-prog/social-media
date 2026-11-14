@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-13T16:34:53+00:00",
+  "updated_at": "2026-11-14T02:54:38+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10775,7 +10775,7 @@
       },
       "caption": "LeetCode 56: Merge Intervals 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "merge_intervals"
       },
@@ -10879,7 +10879,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-12T15:58:55+00:00"
+      "created_at": "2026-11-12T15:58:55+00:00",
+      "error": null,
+      "updated_at": "2026-11-14T02:54:38+00:00",
+      "style_used": {
+        "look": "retrosun",
+        "hook": "news",
+        "captions": "underline",
+        "cta": "triple",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "breathe",
+        "grade": "warm",
+        "overlay": "none",
+        "burst": "rays",
+        "music": "pad"
+      },
+      "day": 11,
+      "video_path": "output/dsa-mergeintervals/reel.mp4",
+      "rendered_at": "2026-11-14T02:54:04+00:00",
+      "published_at": "2026-11-14T02:54:38+00:00",
+      "ig_media_id": "18113293106233920",
+      "permalink": "https://www.instagram.com/reel/DftLfZoEwCc/",
+      "container_id": "18101892254176838"
     },
     {
       "id": "intv-loadbalancer",
@@ -11593,6 +11615,96 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-13T15:32:15+00:00"
+    },
+    {
+      "id": "intv-deadlock",
+      "topic": "Deadlock explained simply",
+      "keyword": "DEADLOCK",
+      "category": "interview",
+      "hook": "DEADLOCK IN SECONDS",
+      "script": "Two cars on a narrow bridge. Car A holds one lane and wants the other. Car B holds the other and wants the first. Nobody gives up, so both wait forever.",
+      "link": "https://en.wikipedia.org/wiki/Deadlock",
+      "caption": "Deadlock explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Two programs wait for each other forever. That's a deadlock.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Two cars on a narrow bridge. Car A holds one lane and wants the other. Car B holds the other and wants the first. Nobody gives up, so both wait forever.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "TWO CARS, ONE BRIDGE",
+            "steps": [
+              {
+                "icon": "🚗",
+                "title": "Car A holds the left lane",
+                "detail": "wants the right"
+              },
+              {
+                "icon": "🚙",
+                "title": "Car B holds the right",
+                "detail": "wants the left"
+              },
+              {
+                "icon": "⛔",
+                "title": "Nobody gives up",
+                "detail": "both wait forever"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Say there are four conditions: mutual exclusion, hold and wait, no preemption, and circular wait. Break any one and deadlock can't happen. The common fix is always taking locks in the same order.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🔒",
+                "title": "4 conditions",
+                "detail": "mutual exclusion, hold & wait"
+              },
+              {
+                "icon": "🔁",
+                "title": "+ no preemption, circular",
+                "detail": "break any one"
+              },
+              {
+                "icon": "📏",
+                "title": "Fix: lock ordering",
+                "detail": "always lock A before B"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Deadlock explained simply"
+      },
+      "keyword_spoken": "deadlock",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-14T02:48:55+00:00"
     }
   ],
   "removed": [
