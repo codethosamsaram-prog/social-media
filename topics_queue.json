@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T14:35:33+00:00",
+  "updated_at": "2026-11-14T15:17:12+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11298,7 +11298,10 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-13T08:03:34+00:00"
+      "created_at": "2026-11-13T08:03:34+00:00",
+      "error": "No audio was received. Please verify that your parameters are correct.",
+      "updated_at": "2026-11-14T15:17:12+00:00",
+      "attempts": 1
     },
     {
       "id": "hiring-2026-11-13",
@@ -12156,6 +12159,131 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-14T12:46:21+00:00"
+    },
+    {
+      "id": "dsa-groupanagrams",
+      "topic": "LeetCode 49 Group Anagrams - Same Key, Same Group",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "SORTED WORD KEY",
+      "script": "Sort the letters of each word. Eat, tea and ate all become the same key. Use that sorted word as a hash map key, and drop each word into its group.",
+      "link": "https://leetcode.com/problems/group-anagrams/",
+      "code": {
+        "language": "python",
+        "filename": "group.py",
+        "snippet": "def group_anagrams(words):\n    groups = {}\n    for w in words:\n        key = ''.join(sorted(w))\n        groups.setdefault(key, []).append(w)\n    return list(groups.values())"
+      },
+      "caption": "LeetCode 49: Group Anagrams 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "group_anagrams"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Anagrams have a secret fingerprint.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 49. Group together the words that are anagrams.",
+          "data": {
+            "source": "LeetCode",
+            "number": 49,
+            "title": "Group Anagrams",
+            "difficulty": "Medium",
+            "statement": "Group the words that are anagrams of each other.",
+            "example": [
+              "eat",
+              "tea",
+              "tan",
+              "ate",
+              "nat",
+              "bat"
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Comparing every word with every other word is far too slow.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "COMPARE EVERY PAIR",
+            "items": [
+              "eat",
+              "tea",
+              "tan",
+              "ate",
+              "nat",
+              "bat"
+            ],
+            "cost": "O(n²·k)"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Sort the letters of each word. Eat, tea and ate all become the same key. Use that sorted word as a hash map key, and drop each word into its group.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "SAME KEY, SAME GROUP",
+            "steps": [
+              {
+                "icon": "🔤",
+                "title": "Sort each word",
+                "detail": "eat, tea, ate -> aet"
+              },
+              {
+                "icon": "🗝️",
+                "title": "Sorted word = key",
+                "detail": "anagrams share a key"
+              },
+              {
+                "icon": "🗂️",
+                "title": "Group by that key",
+                "detail": "hash map of lists"
+              },
+              {
+                "icon": "✅",
+                "title": "Return the groups",
+                "detail": "one pass over words"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "One hash map, one pass over the words.",
+          "kicker": "LEETCODE 49",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4
+            ],
+            "stamps": [
+              "O(n·k log k)",
+              "HASH MAP"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-14T15:16:15+00:00"
     }
   ],
   "removed": [
