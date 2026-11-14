@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T08:02:45+00:00",
+  "updated_at": "2026-11-14T09:48:46+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10742,7 +10742,7 @@
       },
       "caption": "Quiz time 🧩 What does this return? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -10779,7 +10779,29 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-12T12:44:15+00:00"
+      "created_at": "2026-11-12T12:44:15+00:00",
+      "error": null,
+      "updated_at": "2026-11-14T09:48:46+00:00",
+      "style_used": {
+        "look": "terminal",
+        "hook": "split",
+        "captions": "type",
+        "cta": "share",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "faded",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "bell"
+      },
+      "day": 11,
+      "video_path": "output/quiz-typeofnull/reel.mp4",
+      "rendered_at": "2026-11-14T09:48:04+00:00",
+      "published_at": "2026-11-14T09:48:46+00:00",
+      "ig_media_id": "18249048829313305",
+      "permalink": "https://www.instagram.com/reel/Dft63bpl2HJ/",
+      "container_id": "18101981960176838"
     },
     {
       "id": "dsa-mergeintervals",
@@ -11966,6 +11988,101 @@
       "ig_media_id": "18182998228439255",
       "permalink": "https://www.instagram.com/reel/DftuwWHAEt7/",
       "container_id": "18101958293176838"
+    },
+    {
+      "id": "intv-oops",
+      "topic": "4 pillars of OOP explained simply",
+      "keyword": "OOPS",
+      "category": "interview",
+      "hook": "OOP IN 30S",
+      "script": "Encapsulation: the engine is hidden under the hood. Abstraction: you just press the pedal. Inheritance: an electric car is still a car. Polymorphism: start works differently for petrol and electric.",
+      "link": "https://en.wikipedia.org/wiki/Object-oriented_programming",
+      "caption": "4 pillars of OOP explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "The four pillars of OOP, using just a car.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Encapsulation: the engine is hidden under the hood. Abstraction: you just press the pedal. Inheritance: an electric car is still a car. Polymorphism: start works differently for petrol and electric.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "ALL WITH ONE CAR",
+            "steps": [
+              {
+                "icon": "💊",
+                "title": "Encapsulation",
+                "detail": "engine hidden under the hood"
+              },
+              {
+                "icon": "🎛️",
+                "title": "Abstraction",
+                "detail": "you just press the pedal"
+              },
+              {
+                "icon": "🧬",
+                "title": "Inheritance",
+                "detail": "an EV is still a car"
+              },
+              {
+                "icon": "🎭",
+                "title": "Polymorphism",
+                "detail": "start() works differently"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In code: encapsulation is private data with public methods. Inheritance reuses a parent class. Polymorphism is method overloading and overriding. Always give one real example.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🔐",
+                "title": "Encapsulation",
+                "detail": "private data, public methods"
+              },
+              {
+                "icon": "🧬",
+                "title": "Inheritance",
+                "detail": "reuse code from a parent"
+              },
+              {
+                "icon": "🎭",
+                "title": "Polymorphism",
+                "detail": "overloading and overriding"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "4 pillars of OOP explained simply"
+      },
+      "keyword_spoken": "oops",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-14T09:45:12+00:00"
     }
   ],
   "removed": [
