@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T09:48:46+00:00",
+  "updated_at": "2026-11-14T12:51:56+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11157,7 +11157,26 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-13T05:45:07+00:00"
+      "created_at": "2026-11-13T05:45:07+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-14T12:51:56+00:00",
+      "style_used": {
+        "look": "galaxy",
+        "hook": "spotlight",
+        "captions": "mega",
+        "cta": "search",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "handheld",
+        "grade": "warm",
+        "overlay": "leaks",
+        "burst": "slash",
+        "music": "arp"
+      },
+      "day": 11,
+      "video_path": "output/dsa-productexceptself/reel.mp4",
+      "rendered_at": "2026-11-14T12:51:17+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-climbingstairs",
@@ -12083,6 +12102,60 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-14T09:45:12+00:00"
+    },
+    {
+      "id": "quiz-listalias",
+      "topic": "Reference Trap Quiz - What does this print? a = [1, 2]",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "REFERENCE TRAP QUIZ",
+      "script": "We append to b. What does printing a show? Comment your answer. Three, two, one. The answer is B. One two three. b equals a doesn't copy the list. Both names point to the same list.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=list_alias",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "a = [1, 2]\nb = a\nb.append(3)\nprint(a)"
+      },
+      "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "This bug has crashed real production code.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "We append to b. What does printing a show? Comment your answer. Three, two, one. The answer is B. One two three. b equals a doesn't copy the list. Both names point to the same list.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this print?",
+            "code": "a = [1, 2]\nb = a\nb.append(3)\nprint(a)",
+            "options": [
+              "[1, 2]",
+              "[1, 2, 3]",
+              "[3]",
+              "Error"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-14T12:46:21+00:00"
     }
   ],
   "removed": [
