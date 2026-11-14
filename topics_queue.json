@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T02:54:38+00:00",
+  "updated_at": "2026-11-14T05:53:57+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -10625,7 +10625,7 @@
       "link": "https://en.wikipedia.org/wiki/CAP_theorem",
       "caption": "CAP theorem explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -10703,7 +10703,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-12T09:32:23+00:00"
+      "created_at": "2026-11-12T09:32:23+00:00",
+      "error": null,
+      "updated_at": "2026-11-14T05:53:57+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "glitch",
+        "captions": "box",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "snap",
+        "grade": "faded",
+        "overlay": "leaks",
+        "burst": "sparks",
+        "music": "bell"
+      },
+      "day": 11,
+      "video_path": "output/intv-cap/reel.mp4",
+      "rendered_at": "2026-11-14T05:53:21+00:00",
+      "published_at": "2026-11-14T05:53:57+00:00",
+      "ig_media_id": "18035907020888588",
+      "permalink": "https://www.instagram.com/reel/DftgAkPEy1H/",
+      "container_id": "18101929559176838"
     },
     {
       "id": "quiz-typeofnull",
@@ -11705,6 +11727,132 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-14T02:48:55+00:00"
+    },
+    {
+      "id": "dsa-topkfrequent",
+      "topic": "LeetCode 347 Top K Frequent - Bucket Sort",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "BUCKETS BEAT SORTING",
+      "script": "Count every number with a hash map. Then put each number in a bucket, where the bucket index is its count. Read the buckets from highest to lowest and stop after k numbers.",
+      "link": "https://leetcode.com/problems/top-k-frequent-elements/",
+      "code": {
+        "language": "python",
+        "filename": "top.py",
+        "snippet": "def top_k(nums, k):\n    count = {}\n    for n in nums:\n        count[n] = count.get(n, 0) + 1\n    buckets = [[] for _ in range(len(nums) + 1)]\n    for n, c in count.items():\n        buckets[c].append(n)\n    out = [n for b in reversed(buckets) for n in b]\n    return out[:k]"
+      },
+      "caption": "LeetCode 347: Top K Frequent 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "top_k_frequent"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Sorting here is the trap.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 347. Return the k most frequent numbers.",
+          "data": {
+            "source": "LeetCode",
+            "number": 347,
+            "title": "Top K Frequent",
+            "difficulty": "Medium",
+            "statement": "Return the k most frequent elements.",
+            "example": [
+              1,
+              1,
+              1,
+              2,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Counting and then sorting by count is O of n log n.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "COUNT THEN SORT",
+            "items": [
+              1,
+              1,
+              1,
+              2,
+              2,
+              3
+            ],
+            "cost": "O(n log n)"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Count every number with a hash map. Then put each number in a bucket, where the bucket index is its count. Read the buckets from highest to lowest and stop after k numbers.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "BUCKET SORT",
+            "steps": [
+              {
+                "icon": "🧮",
+                "title": "Count every number",
+                "detail": "hash map of counts"
+              },
+              {
+                "icon": "🪣",
+                "title": "Bucket by frequency",
+                "detail": "bucket[count] = numbers"
+              },
+              {
+                "icon": "⬇️",
+                "title": "Read buckets high→low",
+                "detail": "most frequent first"
+              },
+              {
+                "icon": "✅",
+                "title": "Stop after k items",
+                "detail": "O(n) total"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Bucket sort. O of n time.",
+          "kicker": "LEETCODE 347",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              4,
+              6,
+              7
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "NO SORT"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-14T05:50:00+00:00"
     }
   ],
   "removed": [
