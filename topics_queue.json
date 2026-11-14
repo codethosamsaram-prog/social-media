@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T12:51:56+00:00",
+  "updated_at": "2026-11-14T13:48:14+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11159,24 +11159,24 @@
       ],
       "created_at": "2026-11-13T05:45:07+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-14T12:51:56+00:00",
+      "updated_at": "2026-11-14T13:48:14+00:00",
       "style_used": {
-        "look": "galaxy",
-        "hook": "spotlight",
-        "captions": "mega",
-        "cta": "search",
-        "hookFont": "archivo",
-        "presenter": "rohan",
-        "camera": "handheld",
-        "grade": "warm",
-        "overlay": "leaks",
+        "look": "glass",
+        "hook": "stack",
+        "captions": "bounce",
+        "cta": "triple",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "drift",
+        "grade": "none",
+        "overlay": "letterbox",
         "burst": "slash",
-        "music": "arp"
+        "music": "lofi"
       },
       "day": 11,
       "video_path": "output/dsa-productexceptself/reel.mp4",
-      "rendered_at": "2026-11-14T12:51:17+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-14T13:47:40+00:00",
+      "attempts": 2
     },
     {
       "id": "dsa-climbingstairs",
