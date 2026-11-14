@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T15:59:44+00:00",
+  "updated_at": "2026-11-14T16:45:59+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11194,7 +11194,7 @@
       },
       "caption": "LeetCode 70: Climbing Stairs 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "failed",
       "dsa": {
         "library": "climbing_stairs"
       },
@@ -11299,9 +11299,25 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-13T08:03:34+00:00",
-      "error": "No audio was received. Please verify that your parameters are correct.",
-      "updated_at": "2026-11-14T15:59:44+00:00",
-      "attempts": 2
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-14T16:45:59+00:00",
+      "attempts": 3,
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "stack",
+        "captions": "underline",
+        "cta": "search",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "punch",
+        "grade": "teal_orange",
+        "overlay": "none",
+        "burst": "slash",
+        "music": "pad"
+      },
+      "day": 11,
+      "video_path": "output/dsa-climbingstairs/reel.mp4",
+      "rendered_at": "2026-11-14T16:45:26+00:00"
     },
     {
       "id": "hiring-2026-11-13",
