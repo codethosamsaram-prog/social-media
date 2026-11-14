@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T13:48:14+00:00",
+  "updated_at": "2026-11-14T14:35:33+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11053,7 +11053,7 @@
       },
       "caption": "LeetCode 238: Product Except Self 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "failed",
       "dsa": {
         "library": "product_except_self"
       },
@@ -11159,24 +11159,24 @@
       ],
       "created_at": "2026-11-13T05:45:07+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-14T13:48:14+00:00",
+      "updated_at": "2026-11-14T14:35:33+00:00",
       "style_used": {
-        "look": "glass",
-        "hook": "stack",
-        "captions": "bounce",
-        "cta": "triple",
+        "look": "blueprint",
+        "hook": "kinetic",
+        "captions": "tape",
+        "cta": "series",
         "hookFont": "oswald",
         "presenter": "kabir",
-        "camera": "drift",
-        "grade": "none",
-        "overlay": "letterbox",
-        "burst": "slash",
-        "music": "lofi"
+        "camera": "breathe",
+        "grade": "vivid",
+        "overlay": "leaks",
+        "burst": "rays",
+        "music": "pluck"
       },
       "day": 11,
       "video_path": "output/dsa-productexceptself/reel.mp4",
-      "rendered_at": "2026-11-14T13:47:40+00:00",
-      "attempts": 2
+      "rendered_at": "2026-11-14T14:34:59+00:00",
+      "attempts": 3
     },
     {
       "id": "dsa-climbingstairs",
