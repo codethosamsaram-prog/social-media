@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-15T05:56:40+00:00",
+  "updated_at": "2026-11-15T08:11:15+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12860,6 +12860,117 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-15T05:52:52+00:00"
+    },
+    {
+      "id": "hiring-2026-11-15",
+      "topic": "Twilio, HackerRank and Stripe are hiring engineers in India (2026-11-15)",
+      "keyword": "HIRING",
+      "keyword_spoken": "hiring",
+      "category": "hiring",
+      "hook": "JOBS DROPPED TODAY",
+      "script": "Twilio, HackerRank and Stripe are hiring in India right now. Twilio has 8 engineering roles open in India. HackerRank has 12 engineering roles open in Bengaluru. Stripe has 11 engineering roles open in Bengaluru.",
+      "link": "https://boards.greenhouse.io/twilio",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "Twilio, HackerRank and Stripe are hiring engineers in India (2026-11-15)"
+      },
+      "stock_queries": [
+        "modern office india",
+        "team meeting office",
+        "bangalore city night"
+      ],
+      "hashtags": [
+        "#hiring",
+        "#jobsinindia",
+        "#softwarejobs",
+        "#bangalorejobs",
+        "#developers"
+      ],
+      "caption": "🚨 Twilio, HackerRank and Stripe are hiring engineers in India right now.\n\n🏢 Twilio: 8 open roles (India), e.g. Technical Support Engineer 2\n🏢 HackerRank: 12 open roles (Bengaluru), e.g. Senior Deep Learning Research Engineer\n🏢 Stripe: 11 open roles (Bengaluru), e.g. Engineering Manager - Internal Systems Automatio",
+      "source": "career_boards",
+      "status": "published",
+      "created_at": "2026-11-15T08:07:30+00:00",
+      "links": [
+        {
+          "label": "Twilio",
+          "url": "https://boards.greenhouse.io/twilio"
+        },
+        {
+          "label": "HackerRank",
+          "url": "https://boards.greenhouse.io/hackerrank"
+        },
+        {
+          "label": "Stripe",
+          "url": "https://boards.greenhouse.io/stripe"
+        }
+      ],
+      "hiring": {
+        "companies": [
+          {
+            "name": "Twilio",
+            "domain": "twilio.com",
+            "color": "#f22f46",
+            "roles": 8,
+            "fresh": 3,
+            "top_role": "Technical Support Engineer 2",
+            "cities": [
+              "India"
+            ],
+            "url": "https://boards.greenhouse.io/twilio",
+            "score": 17
+          },
+          {
+            "name": "HackerRank",
+            "domain": "hackerrank.com",
+            "color": "#2ec866",
+            "roles": 12,
+            "fresh": 1,
+            "top_role": "Senior Deep Learning Research Engineer",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/hackerrank",
+            "score": 15
+          },
+          {
+            "name": "Stripe",
+            "domain": "stripe.com",
+            "color": "#635bff",
+            "roles": 11,
+            "fresh": 1,
+            "top_role": "Engineering Manager - Internal Systems Automatio",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/stripe",
+            "score": 14
+          }
+        ],
+        "checked_at": "2026-11-15T08:07:30+00:00"
+      },
+      "error": null,
+      "updated_at": "2026-11-15T08:11:15+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "sticker",
+        "captions": "pop",
+        "cta": "triple",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "vivid",
+        "overlay": "vhs",
+        "burst": "ring",
+        "music": "pluck"
+      },
+      "day": 12,
+      "video_path": "output/hiring-2026-11-15/reel.mp4",
+      "rendered_at": "2026-11-15T08:10:39+00:00",
+      "published_at": "2026-11-15T08:11:15+00:00",
+      "ig_media_id": "18124407355944228",
+      "permalink": "https://www.instagram.com/reel/DfwUg1zk1cb/",
+      "container_id": "18102296021176838"
     }
   ],
   "removed": [
