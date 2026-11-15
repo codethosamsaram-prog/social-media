@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-15T02:54:04+00:00",
+  "updated_at": "2026-11-15T05:56:40+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11464,7 +11464,7 @@
       "link": "https://en.wikipedia.org/wiki/Cache_(computing)",
       "caption": "Caching explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -11542,7 +11542,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-13T10:21:34+00:00"
+      "created_at": "2026-11-13T10:21:34+00:00",
+      "error": null,
+      "updated_at": "2026-11-15T05:56:40+00:00",
+      "style_used": {
+        "look": "neon",
+        "hook": "question",
+        "captions": "clean",
+        "cta": "series",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "teal_orange",
+        "overlay": "leaks",
+        "burst": "sparks",
+        "music": "bell"
+      },
+      "day": 12,
+      "video_path": "output/intv-caching/reel.mp4",
+      "rendered_at": "2026-11-15T05:56:07+00:00",
+      "published_at": "2026-11-15T05:56:40+00:00",
+      "ig_media_id": "18250953829313639",
+      "permalink": "https://www.instagram.com/reel/DfwFHqpj_TL/",
+      "container_id": "18102264206176838"
     },
     {
       "id": "quiz-roundhalf",
@@ -12713,6 +12735,131 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-15T02:50:17+00:00"
+    },
+    {
+      "id": "dsa-inverttree",
+      "topic": "LeetCode 226 Invert Binary Tree - Recursive Swap",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "SWAP EVERY CHILD",
+      "script": "Start at the root. Swap its left and right children. Then do exactly the same thing to both children, recursively. When you hit an empty node, just return.",
+      "link": "https://leetcode.com/problems/invert-binary-tree/",
+      "code": {
+        "language": "python",
+        "filename": "invert.py",
+        "snippet": "def invert(root):\n    if root:\n        root.left, root.right = invert(root.right), invert(root.left)\n    return root"
+      },
+      "caption": "LeetCode 226: Invert Binary Tree 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "invert_tree"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "The question the Homebrew creator famously failed at Google.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 226. Mirror a binary tree, so every left child becomes a right child.",
+          "data": {
+            "source": "LeetCode",
+            "number": 226,
+            "title": "Invert Binary Tree",
+            "difficulty": "Easy",
+            "statement": "Mirror a binary tree: every left child becomes the right child.",
+            "example": [
+              4,
+              2,
+              7,
+              1,
+              3,
+              6,
+              9
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "People overthink it and build a whole new tree.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "BUILD A NEW TREE",
+            "items": [
+              4,
+              2,
+              7,
+              1,
+              3,
+              6
+            ],
+            "cost": "O(n) EXTRA"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Start at the root. Swap its left and right children. Then do exactly the same thing to both children, recursively. When you hit an empty node, just return.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "RECURSIVE SWAP",
+            "steps": [
+              {
+                "icon": "🌳",
+                "title": "Start at the root",
+                "detail": "empty node? return"
+              },
+              {
+                "icon": "🔀",
+                "title": "Swap left and right",
+                "detail": "one line"
+              },
+              {
+                "icon": "🔁",
+                "title": "Recurse on both kids",
+                "detail": "same job, smaller tree"
+              },
+              {
+                "icon": "✅",
+                "title": "Tree is mirrored",
+                "detail": "4 7 2 9 6 3 1"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Three lines of recursion. O of n time.",
+          "kicker": "LEETCODE 226",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              2
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "3 LINES"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-15T05:52:52+00:00"
     }
   ],
   "removed": [
