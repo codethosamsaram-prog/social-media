@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-14T18:16:43+00:00",
+  "updated_at": "2026-11-15T02:54:04+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11848,7 +11848,7 @@
       },
       "caption": "LeetCode 347: Top K Frequent 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "top_k_frequent"
       },
@@ -11956,7 +11956,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-14T05:50:00+00:00"
+      "created_at": "2026-11-14T05:50:00+00:00",
+      "error": null,
+      "updated_at": "2026-11-15T02:54:04+00:00",
+      "style_used": {
+        "look": "matrix",
+        "hook": "news",
+        "captions": "karaoke",
+        "cta": "search",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "breathe",
+        "grade": "none",
+        "overlay": "none",
+        "burst": "ring",
+        "music": "arp"
+      },
+      "day": 12,
+      "video_path": "output/dsa-topkfrequent/reel.mp4",
+      "rendered_at": "2026-11-15T02:53:22+00:00",
+      "published_at": "2026-11-15T02:54:04+00:00",
+      "ig_media_id": "17973174146960217",
+      "permalink": "https://www.instagram.com/reel/DfvwNeLglZV/",
+      "container_id": "18102227372176838"
     },
     {
       "id": "hiring-2026-11-14",
@@ -12596,6 +12618,101 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-14T18:08:51+00:00"
+    },
+    {
+      "id": "intv-bigo",
+      "topic": "Big O notation explained simply",
+      "keyword": "BIGO",
+      "category": "interview",
+      "hook": "BIG O SIMPLIFIED",
+      "script": "You're looking for a friend in a stadium. O of one: you know the seat. O of log n: the list is sorted, so you halve it. O of n: you check every seat. O of n squared: everyone asks about everyone.",
+      "link": "https://en.wikipedia.org/wiki/Big_O_notation",
+      "caption": "Big O notation explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Big O finally explained without the maths.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "You're looking for a friend in a stadium. O of one: you know the seat. O of log n: the list is sorted, so you halve it. O of n: you check every seat. O of n squared: everyone asks about everyone.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "FINDING A FRIEND",
+            "steps": [
+              {
+                "icon": "⚡",
+                "title": "O(1): know the seat",
+                "detail": "go straight there"
+              },
+              {
+                "icon": "🔍",
+                "title": "O(log n): sorted list",
+                "detail": "halve it each time"
+              },
+              {
+                "icon": "🚶",
+                "title": "O(n): check every seat",
+                "detail": "one by one"
+              },
+              {
+                "icon": "🐌",
+                "title": "O(n²): ask everyone",
+                "detail": "about everyone"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Say this: Big O describes how the time grows as the input grows, not the exact seconds. Drop the constants. And always state both the time and the space complexity.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "📈",
+                "title": "How it grows",
+                "detail": "not the exact time"
+              },
+              {
+                "icon": "🧹",
+                "title": "Drop constants",
+                "detail": "O(2n) is O(n)"
+              },
+              {
+                "icon": "🧠",
+                "title": "Space counts too",
+                "detail": "say both time and space"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Big O notation explained simply"
+      },
+      "keyword_spoken": "bigo",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-15T02:50:17+00:00"
     }
   ],
   "removed": [
