@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-15T08:11:15+00:00",
+  "updated_at": "2026-11-15T09:30:06+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11581,7 +11581,7 @@
       },
       "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -11618,7 +11618,9 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-13T12:29:10+00:00"
+      "created_at": "2026-11-13T12:29:10+00:00",
+      "published_at": "2026-11-15T09:04:59+00:00",
+      "updated_at": "2026-11-15T09:04:59+00:00"
     },
     {
       "id": "dsa-linkedlistcycle",
@@ -12225,7 +12227,7 @@
       },
       "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -12262,7 +12264,9 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-14T12:46:21+00:00"
+      "created_at": "2026-11-14T12:46:21+00:00",
+      "published_at": "2026-11-15T09:04:59+00:00",
+      "updated_at": "2026-11-15T09:04:59+00:00"
     },
     {
       "id": "dsa-groupanagrams",
@@ -12280,7 +12284,7 @@
       },
       "caption": "LeetCode 49: Group Anagrams 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "group_anagrams"
       },
@@ -12387,7 +12391,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-14T15:16:15+00:00"
+      "created_at": "2026-11-14T15:16:15+00:00",
+      "error": null,
+      "updated_at": "2026-11-15T09:30:06+00:00",
+      "style_used": {
+        "look": "terminal",
+        "hook": "question",
+        "captions": "clean",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "teal_orange",
+        "overlay": "none",
+        "burst": "sparks",
+        "music": "bell"
+      },
+      "day": 12,
+      "video_path": "output/dsa-groupanagrams/reel.mp4",
+      "rendered_at": "2026-11-15T09:07:17+00:00",
+      "published_at": "2026-11-15T09:30:06+00:00",
+      "ig_media_id": "18648309913017130",
+      "permalink": "https://www.instagram.com/reel/Dfwa_kboeT7/",
+      "container_id": "18102309356176838"
     },
     {
       "id": "dsa-movezeroes",
@@ -12971,6 +12997,96 @@
       "ig_media_id": "18124407355944228",
       "permalink": "https://www.instagram.com/reel/DfwUg1zk1cb/",
       "container_id": "18102296021176838"
+    },
+    {
+      "id": "intv-tcpudp",
+      "topic": "TCP vs UDP explained simply",
+      "keyword": "TCP",
+      "category": "interview",
+      "hook": "TCP VS UDP",
+      "script": "TCP is a registered courier. Every packet is confirmed and arrives in order. UDP is like shouting across a room. It's fast, but there's no guarantee, and lost packets are just skipped.",
+      "link": "https://en.wikipedia.org/wiki/User_Datagram_Protocol",
+      "caption": "TCP vs UDP explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Why does a video call use a different protocol than WhatsApp texts?",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "TCP is a registered courier. Every packet is confirmed and arrives in order. UDP is like shouting across a room. It's fast, but there's no guarantee, and lost packets are just skipped.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "COURIER VS SHOUTING",
+            "steps": [
+              {
+                "icon": "📦",
+                "title": "TCP = registered courier",
+                "detail": "delivery confirmed, in order"
+              },
+              {
+                "icon": "📢",
+                "title": "UDP = shouting",
+                "detail": "fast, no guarantee"
+              },
+              {
+                "icon": "🎮",
+                "title": "Lost packet in UDP?",
+                "detail": "just move on"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Use TCP when every byte matters, like chats and web pages. Use UDP when speed matters more, like video calls, games and DNS. Bonus: name the three way handshake.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "💬",
+                "title": "TCP for correctness",
+                "detail": "chat, web, payments"
+              },
+              {
+                "icon": "📹",
+                "title": "UDP for speed",
+                "detail": "video calls, games, DNS"
+              },
+              {
+                "icon": "🤝",
+                "title": "TCP has a handshake",
+                "detail": "SYN, SYN-ACK, ACK"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "TCP vs UDP explained simply"
+      },
+      "keyword_spoken": "tcp",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-15T09:04:59+00:00"
     }
   ],
   "removed": [
