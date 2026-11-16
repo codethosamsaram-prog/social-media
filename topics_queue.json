@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-15T09:30:06+00:00",
+  "updated_at": "2026-11-16T02:59:32+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12537,7 +12537,26 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-14T17:23:28+00:00"
+      "created_at": "2026-11-14T17:23:28+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-16T02:59:32+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "spotlight",
+        "captions": "tape",
+        "cta": "search",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "drift",
+        "grade": "vivid",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "lofi"
+      },
+      "day": 13,
+      "video_path": "output/dsa-movezeroes/reel.mp4",
+      "rendered_at": "2026-11-16T02:58:53+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-dailytemperatures",
