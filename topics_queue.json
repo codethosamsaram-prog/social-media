@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-16T07:27:00+00:00",
+  "updated_at": "2026-11-16T10:08:10+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11776,7 +11776,7 @@
       "link": "https://en.wikipedia.org/wiki/Deadlock",
       "caption": "Deadlock explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "failed",
       "storyboard": [
         {
           "type": "hook",
@@ -11856,24 +11856,24 @@
       ],
       "created_at": "2026-11-14T02:48:55+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-16T07:27:00+00:00",
+      "updated_at": "2026-11-16T10:08:10+00:00",
       "style_used": {
-        "look": "aurora",
-        "hook": "glitch",
-        "captions": "mega",
-        "cta": "triple",
-        "hookFont": "archivo",
-        "presenter": "rohan",
-        "camera": "snap",
-        "grade": "teal_orange",
+        "look": "blueprint",
+        "hook": "spotlight",
+        "captions": "type",
+        "cta": "share",
+        "hookFont": "bebas",
+        "presenter": "kabir",
+        "camera": "drift",
+        "grade": "contrast",
         "overlay": "none",
         "burst": "slash",
-        "music": "arp"
+        "music": "pad"
       },
       "day": 13,
       "video_path": "output/intv-deadlock/reel.mp4",
-      "rendered_at": "2026-11-16T07:26:26+00:00",
-      "attempts": 2
+      "rendered_at": "2026-11-16T10:07:34+00:00",
+      "attempts": 3
     },
     {
       "id": "dsa-topkfrequent",
