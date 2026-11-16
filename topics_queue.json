@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-16T05:46:44+00:00",
+  "updated_at": "2026-11-16T07:27:00+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11856,24 +11856,24 @@
       ],
       "created_at": "2026-11-14T02:48:55+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-16T05:46:44+00:00",
+      "updated_at": "2026-11-16T07:27:00+00:00",
       "style_used": {
-        "look": "blueprint",
+        "look": "aurora",
         "hook": "glitch",
         "captions": "mega",
-        "cta": "series",
-        "hookFont": "bebas",
-        "presenter": "kabir",
+        "cta": "triple",
+        "hookFont": "archivo",
+        "presenter": "rohan",
         "camera": "snap",
         "grade": "teal_orange",
-        "overlay": "letterbox",
-        "burst": "sparks",
-        "music": "pluck"
+        "overlay": "none",
+        "burst": "slash",
+        "music": "arp"
       },
       "day": 13,
       "video_path": "output/intv-deadlock/reel.mp4",
-      "rendered_at": "2026-11-16T05:46:09+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-16T07:26:26+00:00",
+      "attempts": 2
     },
     {
       "id": "dsa-topkfrequent",
