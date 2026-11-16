@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-16T10:08:10+00:00",
+  "updated_at": "2026-11-16T11:43:07+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12229,7 +12229,26 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-14T09:45:12+00:00"
+      "created_at": "2026-11-14T09:45:12+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-16T11:43:07+00:00",
+      "style_used": {
+        "look": "galaxy",
+        "hook": "sticker",
+        "captions": "clean",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "rohan",
+        "camera": "handheld",
+        "grade": "warm",
+        "overlay": "dust",
+        "burst": "sparks",
+        "music": "pluck"
+      },
+      "day": 13,
+      "video_path": "output/intv-oops/reel.mp4",
+      "rendered_at": "2026-11-16T11:42:33+00:00",
+      "attempts": 1
     },
     {
       "id": "quiz-listalias",
