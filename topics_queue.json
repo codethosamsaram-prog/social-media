@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-16T02:59:32+00:00",
+  "updated_at": "2026-11-16T04:13:57+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12431,7 +12431,7 @@
       },
       "caption": "LeetCode 283: Move Zeroes 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "move_zeroes"
       },
@@ -12538,25 +12538,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-14T17:23:28+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-16T02:59:32+00:00",
+      "error": null,
+      "updated_at": "2026-11-16T04:13:57+00:00",
       "style_used": {
         "look": "hexgrid",
-        "hook": "spotlight",
-        "captions": "tape",
+        "hook": "stack",
+        "captions": "gradient",
         "cta": "search",
         "hookFont": "oswald",
-        "presenter": "kabir",
-        "camera": "drift",
-        "grade": "vivid",
-        "overlay": "dust",
+        "presenter": "aarav",
+        "camera": "breathe",
+        "grade": "warm",
+        "overlay": "sparks",
         "burst": "rays",
-        "music": "lofi"
+        "music": "keys"
       },
       "day": 13,
       "video_path": "output/dsa-movezeroes/reel.mp4",
-      "rendered_at": "2026-11-16T02:58:53+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-16T04:13:18+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-16T04:13:57+00:00",
+      "ig_media_id": "18097315439475327",
+      "permalink": "https://www.instagram.com/reel/DfyeJarD0w4/",
+      "container_id": "18102567266176838"
     },
     {
       "id": "dsa-dailytemperatures",
