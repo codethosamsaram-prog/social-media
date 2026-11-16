@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-16T16:19:53+00:00",
+  "updated_at": "2026-11-16T17:37:57+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12821,7 +12821,10 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-15T02:50:17+00:00"
+      "created_at": "2026-11-15T02:50:17+00:00",
+      "error": "No audio was received. Please verify that your parameters are correct.",
+      "updated_at": "2026-11-16T17:37:57+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-inverttree",
