@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-17T07:30:09+00:00",
+  "updated_at": "2026-11-17T09:45:31+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12884,7 +12884,7 @@
       },
       "caption": "LeetCode 226: Invert Binary Tree 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "invert_tree"
       },
@@ -12991,7 +12991,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-15T05:52:52+00:00"
+      "created_at": "2026-11-15T05:52:52+00:00",
+      "error": null,
+      "updated_at": "2026-11-17T09:45:31+00:00",
+      "style_used": {
+        "look": "circuit",
+        "hook": "sticker",
+        "captions": "pop",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "punch",
+        "grade": "vivid",
+        "overlay": "none",
+        "burst": "sparks",
+        "music": "keys"
+      },
+      "day": 14,
+      "video_path": "output/dsa-inverttree/reel.mp4",
+      "rendered_at": "2026-11-17T09:44:58+00:00",
+      "published_at": "2026-11-17T09:45:31+00:00",
+      "ig_media_id": "18657092035039976",
+      "permalink": "https://www.instagram.com/reel/Df1o5ZFAccy/",
+      "container_id": "18102951458176838"
     },
     {
       "id": "hiring-2026-11-15",
