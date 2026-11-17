@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-17T15:02:16+00:00",
+  "updated_at": "2026-11-17T16:02:13+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -7219,7 +7219,26 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-17T16:02:13+00:00",
+      "style_used": {
+        "look": "circuit",
+        "hook": "alert",
+        "captions": "neon",
+        "cta": "series",
+        "hookFont": "bebas",
+        "presenter": "rohan",
+        "camera": "breathe",
+        "grade": "vivid",
+        "overlay": "leaks",
+        "burst": "slash",
+        "music": "pluck"
+      },
+      "day": 14,
+      "video_path": "output/repo-4c1a7c57/reel.mp4",
+      "rendered_at": "2026-11-17T16:01:35+00:00",
+      "attempts": 1
     },
     {
       "id": "repo-ea9a5697",
