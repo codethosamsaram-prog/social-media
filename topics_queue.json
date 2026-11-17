@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-17T14:09:54+00:00",
+  "updated_at": "2026-11-17T15:02:16+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13136,7 +13136,7 @@
       "link": "https://en.wikipedia.org/wiki/User_Datagram_Protocol",
       "caption": "TCP vs UDP explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -13215,25 +13215,29 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-15T09:04:59+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-17T14:09:54+00:00",
+      "error": null,
+      "updated_at": "2026-11-17T15:02:16+00:00",
       "style_used": {
-        "look": "glass",
-        "hook": "glitch",
-        "captions": "type",
+        "look": "mono",
+        "hook": "chat",
+        "captions": "underline",
         "cta": "search",
-        "hookFont": "bebas",
-        "presenter": "rohan",
+        "hookFont": "archivo",
+        "presenter": "kabir",
         "camera": "handheld",
-        "grade": "teal_orange",
+        "grade": "warm",
         "overlay": "dust",
         "burst": "rays",
-        "music": "arp"
+        "music": "lofi"
       },
       "day": 14,
       "video_path": "output/intv-tcpudp/reel.mp4",
-      "rendered_at": "2026-11-17T14:09:20+00:00",
-      "attempts": 2
+      "rendered_at": "2026-11-17T15:01:30+00:00",
+      "attempts": 2,
+      "published_at": "2026-11-17T15:02:16+00:00",
+      "ig_media_id": "18024233609931291",
+      "permalink": "https://www.instagram.com/reel/Df2NHmdE2BZ/",
+      "container_id": "18103041278176838"
     },
     {
       "id": "hiring-2026-11-17",
