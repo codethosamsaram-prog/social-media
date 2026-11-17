@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-17T09:45:31+00:00",
+  "updated_at": "2026-11-17T12:50:58+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13214,7 +13214,26 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-15T09:04:59+00:00"
+      "created_at": "2026-11-15T09:04:59+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-17T12:50:58+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "news",
+        "captions": "karaoke",
+        "cta": "comment",
+        "hookFont": "bebas",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "cool",
+        "overlay": "sparks",
+        "burst": "slash",
+        "music": "pad"
+      },
+      "day": 14,
+      "video_path": "output/intv-tcpudp/reel.mp4",
+      "rendered_at": "2026-11-17T12:50:24+00:00",
+      "attempts": 1
     },
     {
       "id": "hiring-2026-11-17",
