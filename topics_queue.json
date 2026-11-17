@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-16T17:37:57+00:00",
+  "updated_at": "2026-11-17T02:56:59+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12616,7 +12616,7 @@
       },
       "caption": "LeetCode 739: Daily Temperatures 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "daily_temperatures"
       },
@@ -12726,7 +12726,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-14T18:08:51+00:00"
+      "created_at": "2026-11-14T18:08:51+00:00",
+      "error": null,
+      "updated_at": "2026-11-17T02:56:59+00:00",
+      "style_used": {
+        "look": "blueprint",
+        "hook": "split",
+        "captions": "bounce",
+        "cta": "triple",
+        "hookFont": "archivo",
+        "presenter": "kabir",
+        "camera": "punch",
+        "grade": "faded",
+        "overlay": "vhs",
+        "burst": "rays",
+        "music": "pad"
+      },
+      "day": 14,
+      "video_path": "output/dsa-dailytemperatures/reel.mp4",
+      "rendered_at": "2026-11-17T02:56:20+00:00",
+      "published_at": "2026-11-17T02:56:59+00:00",
+      "ig_media_id": "17936809986144104",
+      "permalink": "https://www.instagram.com/reel/Df06IjBCqZ9/",
+      "container_id": "18102874328176838"
     },
     {
       "id": "intv-bigo",
