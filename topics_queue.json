@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-17T16:02:13+00:00",
+  "updated_at": "2026-11-17T17:08:39+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -7160,7 +7160,7 @@
       ],
       "caption": "gbrain is trending on GitHub 🔥 Garry's Opinionated OpenClaw/Hermes Agent Brain.",
       "source": "github_trending",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-10T02:54:47+00:00",
       "meta": {
         "stars_today": 216,
@@ -7220,25 +7220,29 @@
           "demo": "Setup is a single command."
         }
       },
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-17T16:02:13+00:00",
+      "error": null,
+      "updated_at": "2026-11-17T17:08:39+00:00",
       "style_used": {
-        "look": "circuit",
-        "hook": "alert",
+        "look": "glass",
+        "hook": "kinetic",
         "captions": "neon",
-        "cta": "series",
-        "hookFont": "bebas",
+        "cta": "triple",
+        "hookFont": "anton",
         "presenter": "rohan",
-        "camera": "breathe",
-        "grade": "vivid",
-        "overlay": "leaks",
-        "burst": "slash",
+        "camera": "punch",
+        "grade": "faded",
+        "overlay": "letterbox",
+        "burst": "sparks",
         "music": "pluck"
       },
       "day": 14,
       "video_path": "output/repo-4c1a7c57/reel.mp4",
-      "rendered_at": "2026-11-17T16:01:35+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-17T17:07:55+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-17T17:08:39+00:00",
+      "ig_media_id": "18087160517336524",
+      "permalink": "https://www.instagram.com/reel/Df2bl8EAiaM/",
+      "container_id": "18103081367176838"
     },
     {
       "id": "repo-ea9a5697",
