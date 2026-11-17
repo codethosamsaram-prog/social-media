@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-17T02:56:59+00:00",
+  "updated_at": "2026-11-17T06:05:12+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -12760,7 +12760,7 @@
       "link": "https://en.wikipedia.org/wiki/Big_O_notation",
       "caption": "Big O notation explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -12844,9 +12844,29 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-15T02:50:17+00:00",
-      "error": "No audio was received. Please verify that your parameters are correct.",
-      "updated_at": "2026-11-16T17:37:57+00:00",
-      "attempts": 1
+      "error": null,
+      "updated_at": "2026-11-17T06:05:12+00:00",
+      "attempts": 1,
+      "style_used": {
+        "look": "circuit",
+        "hook": "kinetic",
+        "captions": "type",
+        "cta": "series",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "breathe",
+        "grade": "contrast",
+        "overlay": "leaks",
+        "burst": "slash",
+        "music": "bell"
+      },
+      "day": 14,
+      "video_path": "output/intv-bigo/reel.mp4",
+      "rendered_at": "2026-11-17T06:04:41+00:00",
+      "published_at": "2026-11-17T06:05:12+00:00",
+      "ig_media_id": "18132663706888679",
+      "permalink": "https://www.instagram.com/reel/Df1Pr68kqW6/",
+      "container_id": "18102912059176838"
     },
     {
       "id": "dsa-inverttree",
