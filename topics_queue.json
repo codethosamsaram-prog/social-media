@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-18T02:57:46+00:00",
+  "updated_at": "2026-11-18T06:08:43+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -8624,7 +8624,7 @@
       ],
       "caption": "Procexp-Mac is trending on GitHub 🔥 Process Explorer for MacOS.",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "created_at": "2026-11-11T05:58:58+00:00",
       "meta": {
         "stars_today": null,
@@ -8683,7 +8683,29 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
-      }
+      },
+      "error": null,
+      "updated_at": "2026-11-18T06:08:43+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "glitch",
+        "captions": "karaoke",
+        "cta": "series",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "breathe",
+        "grade": "teal_orange",
+        "overlay": "leaks",
+        "burst": "slash",
+        "music": "keys"
+      },
+      "day": 15,
+      "video_path": "output/repo-02eb9f49/reel.mp4",
+      "rendered_at": "2026-11-18T06:08:11+00:00",
+      "published_at": "2026-11-18T06:08:43+00:00",
+      "ig_media_id": "18350910802281385",
+      "permalink": "https://www.instagram.com/reel/Df304i5gYlX/",
+      "container_id": "18103229126176838"
     },
     {
       "id": "hiring-2026-11-11",
