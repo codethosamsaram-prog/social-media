@@ -246,7 +246,11 @@ def append_items(new_items: Iterable[dict[str, Any]]) -> list[dict[str, Any]]:
         known = known_keys()
         added: list[dict[str, Any]] = []
         for item in new_items:
-            item = validate_item(item)
+            try:
+                item = validate_item(item)
+            except ValueError as exc:  # one bad blueprint must not block the rest of the batch
+                print(f"Skipped invalid blueprint {item.get('id')!r}: {exc}")
+                continue
             keys = topic_keys(item)
             if keys & known:
                 continue

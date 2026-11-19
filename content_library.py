@@ -277,7 +277,7 @@ DSA_LIBRARY: list[dict[str, Any]] = [
         },
     },
     {
-        "key": "rotated_search", "number": 33, "title": "Search Rotated Array", "difficulty": "Medium", "hook": "ONE HALF IS SORTED",
+        "key": "rotated_search", "number": 33, "title": "Search Rotated Array", "difficulty": "Medium", "hook": "ONE HALF SORTED",
         "statement": "A sorted array was rotated. Find the target in O(log n).",
         "example": [4, 5, 6, 7, 0, 1, 2], "naive": ("LINEAR SCAN", "O(n) TIME"), "pattern": "MODIFIED BINARY SEARCH",
         "steps": [("🎯", "Check the middle", "found? return it"), ("📈", "Find the sorted half", "one half is always sorted"),
