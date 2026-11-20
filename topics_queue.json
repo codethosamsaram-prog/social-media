@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-20T03:03:29+00:00",
+  "updated_at": "2026-11-20T03:59:37+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13434,7 +13434,7 @@
       },
       "caption": "LeetCode 33: Search Rotated Array 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "rotated_search"
       },
@@ -13544,25 +13544,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-20T02:59:17+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-20T03:03:29+00:00",
+      "error": null,
+      "updated_at": "2026-11-20T03:59:37+00:00",
       "style_used": {
-        "look": "bokeh",
-        "hook": "terminal",
-        "captions": "underline",
-        "cta": "triple",
-        "hookFont": "oswald",
+        "look": "ocean",
+        "hook": "stack",
+        "captions": "clean",
+        "cta": "search",
+        "hookFont": "anton",
         "presenter": "aarav",
-        "camera": "punch",
-        "grade": "warm",
-        "overlay": "none",
-        "burst": "sparks",
+        "camera": "handheld",
+        "grade": "vivid",
+        "overlay": "sparks",
+        "burst": "ring",
         "music": "arp"
       },
       "day": 17,
       "video_path": "output/dsa-rotatedsearch/reel.mp4",
-      "rendered_at": "2026-11-20T03:02:56+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-20T03:59:03+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-20T03:59:37+00:00",
+      "ig_media_id": "18341408308261680",
+      "permalink": "https://www.instagram.com/reel/Df8vskRjiuX/",
+      "container_id": "18103811084176838"
     },
     {
       "id": "dsa-numberofislands",
@@ -14283,6 +14287,502 @@
           }
         ],
         "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "dsa-houserobber",
+      "topic": "LeetCode 198 House Robber - Dynamic Programming",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "ROB OR SKIP",
+      "script": "At each house, decide whether to rob it or skip it. If you rob it, add its cash to the best loot from two houses back. If you skip, keep the loot from the previous house. Only track the last two best totals.",
+      "link": "https://leetcode.com/problems/house-robber/",
+      "code": {
+        "language": "python",
+        "filename": "rob.py",
+        "snippet": "def rob(nums):\n    prev1 = prev2 = 0\n    for n in nums:\n        curr = max(prev1, prev2 + n)\n        prev2 = prev1\n        prev1 = curr\n    return prev1"
+      },
+      "caption": "LeetCode 198: House Robber 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "house_robber"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Never rob two houses side by side.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode one ninety-eight. Maximize your loot along a street where adjacent houses sound alarms.",
+          "data": {
+            "source": "LeetCode",
+            "number": 198,
+            "title": "House Robber",
+            "difficulty": "Medium",
+            "statement": "Find the maximum money you can rob without alerting police by robbing adjacent houses.",
+            "example": [
+              2,
+              7,
+              9,
+              3,
+              1
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Trying every combination takes exponential time. That will definitely time out.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "TRY EVERY COMBO",
+            "items": [
+              2,
+              7,
+              9,
+              3,
+              1
+            ],
+            "cost": "O(2ⁿ) EXPONENTIAL"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "At each house, decide whether to rob it or skip it. If you rob it, add its cash to the best loot from two houses back. If you skip, keep the loot from the previous house. Only track the last two best totals.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "DYNAMIC PROGRAMMING",
+            "steps": [
+              {
+                "icon": "🏠",
+                "title": "Look at each house",
+                "detail": "you have two choices"
+              },
+              {
+                "icon": "💰",
+                "title": "Rob it or skip it",
+                "detail": "rob current plus previous"
+              },
+              {
+                "icon": "🔄",
+                "title": "Track last two maxes",
+                "detail": "no need for full array"
+              },
+              {
+                "icon": "🏆",
+                "title": "Return best profit",
+                "detail": "last value is the answer"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Two variables are all you need. O of n time and O of one space.",
+          "kicker": "LEETCODE 198",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T03:55:07+00:00"
+    },
+    {
+      "id": "dsa-threesum",
+      "topic": "LeetCode 15 3Sum - Sort And Two Pointers",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "SORT AND PIN",
+      "script": "Sort the array first. Loop through and fix the first number. Now use two pointers on the remaining elements to find pairs that sum to the negative of that number. Squeeze inward and skip duplicate values to keep triplets unique.",
+      "link": "https://leetcode.com/problems/3sum/",
+      "code": {
+        "language": "python",
+        "filename": "three.py",
+        "snippet": "def three_sum(nums):\n    nums.sort()\n    res = []\n    for i in range(len(nums) - 2):\n        if i > 0 and nums[i] == nums[i - 1]:\n            continue\n        l, r = i + 1, len(nums) - 1\n        while l < r:\n            s = nums[i] + nums[l] + nums[r]\n            if s < 0:\n                l += 1\n            elif s > 0:\n                r -= 1\n            else:\n                res.append([nums[i], nums[l], nums[r]])\n                while l < r and nums[l] == nums[l + 1]:\n                    l += 1\n                while l < r and nums[r] == nums[r - 1]:\n                    r -= 1\n                l += 1\n                r -= 1\n    return res"
+      },
+      "caption": "LeetCode 15: 3Sum 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "three_sum"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Do not write three loops.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode fifteen. Find every unique group of three numbers that adds up to zero.",
+          "data": {
+            "source": "LeetCode",
+            "number": 15,
+            "title": "3Sum",
+            "difficulty": "Medium",
+            "statement": "Find all unique triplets in an array that add up to zero.",
+            "example": [
+              -1,
+              0,
+              1,
+              2,
+              -1,
+              -4
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Three nested loops take O of n cubed time and give duplicate answers.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "THREE NESTED LOOPS",
+            "items": [
+              -1,
+              0,
+              1,
+              2,
+              -1,
+              -4
+            ],
+            "cost": "O(n³) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Sort the array first. Loop through and fix the first number. Now use two pointers on the remaining elements to find pairs that sum to the negative of that number. Squeeze inward and skip duplicate values to keep triplets unique.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "SORT AND TWO POINTERS",
+            "steps": [
+              {
+                "icon": "🔢",
+                "title": "Sort array first",
+                "detail": "makes duplicates obvious"
+              },
+              {
+                "icon": "📌",
+                "title": "Fix one number",
+                "detail": "loop through each index i"
+              },
+              {
+                "icon": "🎯",
+                "title": "Two pointers for rest",
+                "detail": "left from i+1, right at end"
+              },
+              {
+                "icon": "⚡",
+                "title": "Squeeze and skip dupes",
+                "detail": "move pointers based on sum"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Sorting turns three sum into two sum. O of n squared time.",
+          "kicker": "LEETCODE 15",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              8,
+              9
+            ],
+            "stamps": [
+              "O(n²) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T03:55:07+00:00"
+    },
+    {
+      "id": "repo-14832d82",
+      "topic": "paper-orchestra: PaperOrchestra is a multi-agent framework for automated AI research paper writing (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "SENIORS USE THIS",
+      "script": "This GitHub repo is exploding. paper orchestra: PaperOrchestra is a multi-agent framework for automated AI research paper writing. 1,196 new stars today.",
+      "link": "https://github.com/google-research/paper-orchestra",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# google-research/paper-orchestra\n# +1,196 stars today\n\ngit clone https://github.com/google-research/paper-orchestra.git\ncd paper-orchestra\n\n# PaperOrchestra is a multi-agent\n# framework for automated AI\n# research paper writing"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "paper-orchestra is trending on GitHub 🔥 PaperOrchestra is a multi-agent framework for automated AI research paper writing.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-20T03:55:09+00:00",
+      "meta": {
+        "stars_today": 1196,
+        "stars": 5108,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "google-research/paper-orchestra",
+        "description": "PaperOrchestra is a multi-agent framework for automated AI research paper writing",
+        "stars": 5108,
+        "stars_today": 1196,
+        "language": "Python",
+        "install": "git clone https://github.com/google-research/paper-orchestra",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone google-research/paper-or",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "PaperOrchestra is a multi-agent fr",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🤖",
+            "title": "Multi-Agent Pipeline",
+            "detail": "Orchestrates specialized agents (Outline",
+            "cue": "multi-agent"
+          },
+          {
+            "icon": "🔎",
+            "title": "Comprehensive Literature",
+            "detail": "Automatically searches, prioritizes",
+            "cue": "comprehensive"
+          },
+          {
+            "icon": "🛠️",
+            "title": "Visuals Generation",
+            "detail": "Generates plots and supports the inclusion",
+            "cue": "visuals"
+          }
+        ],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-01e478ba",
+      "topic": "last30days-skill: AI agent skill that researches any topic across Reddit, X, YouTube, HN (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STAR THIS NOW",
+      "script": "This GitHub repo is exploding. last30days skill: AI agent skill that researches any topic across Reddit, X, YouTube, HN. 954 new stars today.",
+      "link": "https://github.com/mvanhorn/last30days-skill",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# mvanhorn/last30days-skill\n# +954 stars today\n\ngit clone https://github.com/mvanhorn/last30days-skill.git\ncd last30days-skill\n\n# AI agent skill that researches any\n# topic across Reddit, X, YouTube,\n# HN"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "last30days-skill is trending on GitHub 🔥 AI agent skill that researches any topic across Reddit, X, YouTube, HN.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-20T03:55:09+00:00",
+      "meta": {
+        "stars_today": 954,
+        "stars": 70902,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "mvanhorn/last30days-skill",
+        "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN",
+        "stars": 70902,
+        "stars_today": 954,
+        "language": "Python",
+        "install": "git clone https://github.com/mvanhorn/last30days-skill",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone mvanhorn/last30days-skil",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "AI agent skill that researches",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-00ca2bad",
+      "topic": "onlook: The Developer Tool for Designers An Open-Source AI-First Design tool Visually build (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "OPEN SOURCE GOLD",
+      "script": "This GitHub repo is exploding. onlook: The Developer Tool for Designers An Open-Source AI-First Design tool Visually build. 27,435 stars already.",
+      "link": "https://github.com/onlook-dev/onlook",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# onlook-dev/onlook\n# 27,435 stars\n\ngit clone https://github.com/onlook-dev/onlook.git\ncd onlook\n\n# The Developer Tool for Designers\n# An Open-Source AI-First Design\n# tool Visually build"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "onlook is trending on GitHub 🔥 The Developer Tool for Designers An Open-Source AI-First Design tool Visually build.",
+      "source": "gemini",
+      "status": "queued",
+      "created_at": "2026-11-20T03:55:11+00:00",
+      "meta": {
+        "stars_today": null,
+        "stars": 27435,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "onlook-dev/onlook",
+        "description": "The Developer Tool for Designers An Open-Source AI-First Design tool Visually build",
+        "stars": 27435,
+        "stars_today": null,
+        "language": "TypeScript",
+        "install": "git clone https://github.com/onlook-dev/onlook",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone onlook-dev/onlook",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "The Developer Tool for Designers",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [
+          {
+            "icon": "🌐",
+            "title": "Built for design. Onlook",
+            "detail": "",
+            "cue": "built"
+          },
+          {
+            "icon": "🤖",
+            "title": "Bring your own agent. We don't",
+            "detail": "",
+            "cue": "bring"
+          },
+          {
+            "icon": "☁️",
+            "title": "Works on your real repo",
+            "detail": "",
+            "cue": "works"
+          }
+        ],
         "narration": {
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
