@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-20T06:13:46+00:00",
+  "updated_at": "2026-11-20T07:44:59+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -15027,6 +15027,120 @@
         "stars_today": 825,
         "language": "TypeScript"
       }
+    },
+    {
+      "id": "hiring-2026-11-20",
+      "topic": "Zeta, Anthropic and OpenAI are hiring engineers in India (2026-11-20)",
+      "keyword": "HIRING",
+      "keyword_spoken": "hiring",
+      "category": "hiring",
+      "hook": "DEVS WANTED NOW",
+      "script": "Zeta, Anthropic and OpenAI are hiring in India right now. Zeta has 9 engineering roles open in Hyderabad and Bengaluru. Anthropic has 4 engineering roles open in Bengaluru and Mumbai. OpenAI has 3 engineering roles open in Bengaluru and Delhi.",
+      "link": "https://jobs.lever.co/zeta",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "Zeta, Anthropic and OpenAI are hiring engineers in India (2026-11-20)"
+      },
+      "stock_queries": [
+        "modern office india",
+        "team meeting office",
+        "bangalore city night"
+      ],
+      "hashtags": [
+        "#hiring",
+        "#jobsinindia",
+        "#softwarejobs",
+        "#bangalorejobs",
+        "#developers"
+      ],
+      "caption": "🚨 Zeta, Anthropic and OpenAI are hiring engineers in India right now.\n\n🏢 Zeta: 9 open roles (Hyderabad, Bengaluru), e.g. Technical Support Engineer I\n🏢 Anthropic: 4 open roles (Bengaluru, Mumbai), e.g. Applied AI Architect ( Global Customers)\n🏢 OpenAI: 3 open roles (Bengaluru, Delhi), e.g. Manager, Applied AI Architect (India)",
+      "source": "career_boards",
+      "status": "published",
+      "created_at": "2026-11-20T07:39:13+00:00",
+      "links": [
+        {
+          "label": "Zeta",
+          "url": "https://jobs.lever.co/zeta"
+        },
+        {
+          "label": "Anthropic",
+          "url": "https://boards.greenhouse.io/anthropic"
+        },
+        {
+          "label": "OpenAI",
+          "url": "https://jobs.ashbyhq.com/openai"
+        }
+      ],
+      "hiring": {
+        "companies": [
+          {
+            "name": "Zeta",
+            "domain": "zeta.tech",
+            "color": "#6c5ce7",
+            "roles": 9,
+            "fresh": 1,
+            "top_role": "Technical Support Engineer I",
+            "cities": [
+              "Hyderabad",
+              "Bengaluru"
+            ],
+            "url": "https://jobs.lever.co/zeta",
+            "score": 12
+          },
+          {
+            "name": "Anthropic",
+            "domain": "anthropic.com",
+            "color": "#d97757",
+            "roles": 4,
+            "fresh": 0,
+            "top_role": "Applied AI Architect ( Global Customers)",
+            "cities": [
+              "Bengaluru",
+              "Mumbai"
+            ],
+            "url": "https://boards.greenhouse.io/anthropic",
+            "score": 4
+          },
+          {
+            "name": "OpenAI",
+            "domain": "openai.com",
+            "color": "#e5e5e5",
+            "roles": 3,
+            "fresh": 0,
+            "top_role": "Manager, Applied AI Architect (India)",
+            "cities": [
+              "Bengaluru",
+              "Delhi"
+            ],
+            "url": "https://jobs.ashbyhq.com/openai",
+            "score": 3
+          }
+        ],
+        "checked_at": "2026-11-20T07:39:13+00:00"
+      },
+      "error": null,
+      "updated_at": "2026-11-20T07:44:59+00:00",
+      "style_used": {
+        "look": "glass",
+        "hook": "question",
+        "captions": "underline",
+        "cta": "triple",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "drift",
+        "grade": "teal_orange",
+        "overlay": "leaks",
+        "burst": "ring",
+        "music": "arp"
+      },
+      "day": 17,
+      "video_path": "output/hiring-2026-11-20/reel.mp4",
+      "rendered_at": "2026-11-20T07:44:26+00:00",
+      "published_at": "2026-11-20T07:44:59+00:00",
+      "ig_media_id": "18126118373027977",
+      "permalink": "https://www.instagram.com/reel/Df9JfPugHpK/",
+      "container_id": "18103853594176838"
     }
   ],
   "removed": [
