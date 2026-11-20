@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-18T06:08:43+00:00",
+  "updated_at": "2026-11-20T03:03:29+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13417,6 +13417,877 @@
       "ig_media_id": "18134950183824302",
       "permalink": "https://www.instagram.com/reel/Df1YFOKiHIG/",
       "container_id": "18102922637176838"
+    },
+    {
+      "id": "dsa-rotatedsearch",
+      "topic": "LeetCode 33 Search Rotated Array - Modified Binary Search",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "ONE HALF SORTED",
+      "script": "Check the middle. Here's the key idea: one half is always sorted. If the target lies inside the sorted half, search there. Otherwise search the other half.",
+      "link": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+      "code": {
+        "language": "python",
+        "filename": "search.py",
+        "snippet": "def search_rotated(a, target):\n    lo, hi = 0, len(a) - 1\n    while lo <= hi:\n        mid = (lo + hi) // 2\n        if a[mid] == target:\n            return mid\n        if a[lo] <= a[mid]:\n            if a[lo] <= target < a[mid]: hi = mid - 1\n            else: lo = mid + 1\n        else:\n            if a[mid] < target <= a[hi]: lo = mid + 1\n            else: hi = mid - 1\n    return -1"
+      },
+      "caption": "LeetCode 33: Search Rotated Array 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "rotated_search"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Binary search, but with a twist.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 33. A sorted array got rotated. Find the target in log n time.",
+          "data": {
+            "source": "LeetCode",
+            "number": 33,
+            "title": "Search Rotated Array",
+            "difficulty": "Medium",
+            "statement": "A sorted array was rotated. Find the target in O(log n).",
+            "example": [
+              4,
+              5,
+              6,
+              7,
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "A linear scan works, but that's O of n.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "LINEAR SCAN",
+            "items": [
+              4,
+              5,
+              6,
+              7,
+              0,
+              1
+            ],
+            "cost": "O(n) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Check the middle. Here's the key idea: one half is always sorted. If the target lies inside the sorted half, search there. Otherwise search the other half.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "MODIFIED BINARY SEARCH",
+            "steps": [
+              {
+                "icon": "🎯",
+                "title": "Check the middle",
+                "detail": "found? return it"
+              },
+              {
+                "icon": "📈",
+                "title": "Find the sorted half",
+                "detail": "one half is always sorted"
+              },
+              {
+                "icon": "🔍",
+                "title": "Target inside it?",
+                "detail": "search that half"
+              },
+              {
+                "icon": "↩️",
+                "title": "Otherwise",
+                "detail": "search the other half"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Modified binary search. O of log n.",
+          "kicker": "LEETCODE 33",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              6,
+              7,
+              10
+            ],
+            "stamps": [
+              "O(log n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-20T03:03:29+00:00",
+      "style_used": {
+        "look": "bokeh",
+        "hook": "terminal",
+        "captions": "underline",
+        "cta": "triple",
+        "hookFont": "oswald",
+        "presenter": "aarav",
+        "camera": "punch",
+        "grade": "warm",
+        "overlay": "none",
+        "burst": "sparks",
+        "music": "arp"
+      },
+      "day": 17,
+      "video_path": "output/dsa-rotatedsearch/reel.mp4",
+      "rendered_at": "2026-11-20T03:02:56+00:00",
+      "attempts": 1
+    },
+    {
+      "id": "dsa-numberofislands",
+      "topic": "LeetCode 200 Number of Islands - Flood Fill Dfs",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "SINK EVERY ISLAND",
+      "script": "Scan every cell. When you find land, that's a new island, so count it. Then sink the whole island with DFS, turning its ones into zeros, so you never count it twice.",
+      "link": "https://leetcode.com/problems/number-of-islands/",
+      "code": {
+        "language": "python",
+        "filename": "num.py",
+        "snippet": "def num_islands(g):\n    def sink(r, c):\n        if 0 <= r < len(g) and 0 <= c < len(g[0]) and g[r][c] == '1':\n            g[r][c] = '0'\n            for dr, dc in ((1, 0), (-1, 0), (0, 1), (0, -1)):\n                sink(r + dr, c + dc)\n    count = 0\n    for r in range(len(g)):\n        for c in range(len(g[0])):\n            if g[r][c] == '1':\n                count += 1\n                sink(r, c)\n    return count"
+      },
+      "caption": "LeetCode 200: Number of Islands 🧠 Save this for your next interview",
+      "source": "dsa_library",
+      "status": "queued",
+      "dsa": {
+        "library": "number_of_islands"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "This is the graph question every company asks.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 200. Count the islands in a grid, where land connects up, down, left and right.",
+          "data": {
+            "source": "LeetCode",
+            "number": 200,
+            "title": "Number of Islands",
+            "difficulty": "Medium",
+            "statement": "Count the islands of 1s in a grid. Land connects up, down, left and right.",
+            "example": []
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Keeping a separate visited set doubles your memory.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "TRACK VISITED SET",
+            "items": [
+              8,
+              4,
+              2,
+              1
+            ],
+            "cost": "O(m·n) EXTRA"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Scan every cell. When you find land, that's a new island, so count it. Then sink the whole island with DFS, turning its ones into zeros, so you never count it twice.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "FLOOD FILL DFS",
+            "steps": [
+              {
+                "icon": "🗺️",
+                "title": "Scan every cell",
+                "detail": "row by row"
+              },
+              {
+                "icon": "🏝️",
+                "title": "Found land?",
+                "detail": "that's a new island"
+              },
+              {
+                "icon": "🌊",
+                "title": "Sink the whole island",
+                "detail": "DFS turns 1s into 0s"
+              },
+              {
+                "icon": "✅",
+                "title": "Count = islands",
+                "detail": "each cell visited once"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Flood fill. Every cell is visited once.",
+          "kicker": "LEETCODE 200",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              10,
+              11
+            ],
+            "stamps": [
+              "O(m·n) TIME",
+              "DFS"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00"
+    },
+    {
+      "id": "intv-jwt",
+      "topic": "JWT authentication explained simply",
+      "keyword": "JWT",
+      "category": "interview",
+      "hook": "JWT EXPLAINED SIMPLY",
+      "script": "You log in once and the server checks your password. It gives you a signed token, like a concert wristband. You show it with every request, so you never send your password again.",
+      "link": "https://en.wikipedia.org/wiki/JSON_Web_Token",
+      "caption": "JWT authentication explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "How does an app remember you're logged in?",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "You log in once and the server checks your password. It gives you a signed token, like a concert wristband. You show it with every request, so you never send your password again.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "A CONCERT WRISTBAND",
+            "steps": [
+              {
+                "icon": "🔑",
+                "title": "Log in once",
+                "detail": "server checks your password"
+              },
+              {
+                "icon": "🎟️",
+                "title": "Get a signed token",
+                "detail": "like a wristband"
+              },
+              {
+                "icon": "🚪",
+                "title": "Show it every request",
+                "detail": "no password again"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "A JWT has three parts: header, payload and signature. The signature means nobody can edit it. The payload isn't encrypted, so no secrets in it. Keep expiry short and use refresh tokens.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🧩",
+                "title": "Header.Payload.Signature",
+                "detail": "three parts, base64"
+              },
+              {
+                "icon": "✍️",
+                "title": "Signature stops tampering",
+                "detail": "change it and it breaks"
+              },
+              {
+                "icon": "⏰",
+                "title": "Short expiry",
+                "detail": "plus refresh tokens"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "JWT authentication explained simply"
+      },
+      "keyword_spoken": "jwt",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00"
+    },
+    {
+      "id": "intv-monolithmicro",
+      "topic": "Monolith vs microservices explained simply",
+      "keyword": "MICRO",
+      "category": "interview",
+      "hook": "MONOLITH VS MICROSERVICES",
+      "script": "A monolith is one big shop where everything lives together. Microservices are a mall, where each shop runs on its own. If one shop catches fire, the rest of the mall stays open.",
+      "link": "https://en.wikipedia.org/wiki/Microservices",
+      "caption": "Monolith vs microservices explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Why did Netflix break its app into hundreds of pieces?",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "A monolith is one big shop where everything lives together. Microservices are a mall, where each shop runs on its own. If one shop catches fire, the rest of the mall stays open.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "ONE SHOP VS A MALL",
+            "steps": [
+              {
+                "icon": "🏪",
+                "title": "Monolith = one big shop",
+                "detail": "everything in one place"
+              },
+              {
+                "icon": "🏬",
+                "title": "Microservices = a mall",
+                "detail": "each shop runs alone"
+              },
+              {
+                "icon": "🔥",
+                "title": "One shop catches fire?",
+                "detail": "the mall stays open"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "The mature answer: start with a monolith because it's simple. Split into microservices when teams and traffic grow. The cost is network calls, monitoring and failures between services.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🚀",
+                "title": "Start with a monolith",
+                "detail": "simple and fast to build"
+              },
+              {
+                "icon": "📦",
+                "title": "Split when teams grow",
+                "detail": "deploy services alone"
+              },
+              {
+                "icon": "🕸️",
+                "title": "Cost: network complexity",
+                "detail": "monitoring, retries"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Monolith vs microservices explained simply"
+      },
+      "keyword_spoken": "micro",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00"
+    },
+    {
+      "id": "intv-ratelimiting",
+      "topic": "Rate limiting explained simply",
+      "keyword": "LIMIT",
+      "category": "interview",
+      "hook": "RATE LIMITING EXPLAINED",
+      "script": "Picture a bucket of tokens. Every request costs one token. When the bucket is empty, you're blocked. It refills slowly, say one token every second.",
+      "link": "https://en.wikipedia.org/wiki/Token_bucket",
+      "caption": "Rate limiting explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Why does an OTP page say try again after thirty seconds?",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Picture a bucket of tokens. Every request costs one token. When the bucket is empty, you're blocked. It refills slowly, say one token every second.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THE TOKEN BUCKET",
+            "steps": [
+              {
+                "icon": "🪣",
+                "title": "Bucket of tokens",
+                "detail": "say 10 tokens"
+              },
+              {
+                "icon": "🎟️",
+                "title": "Each request costs one",
+                "detail": "empty bucket = blocked"
+              },
+              {
+                "icon": "💧",
+                "title": "Refills slowly",
+                "detail": "1 token per second"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "Say rate limiting stops brute force and bot traffic. The server returns HTTP four twenty nine. In a real system, the counters live in Redis, so every server shares them.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🛡️",
+                "title": "Stops abuse",
+                "detail": "brute force, bots, DDoS"
+              },
+              {
+                "icon": "🔢",
+                "title": "Return HTTP 429",
+                "detail": "too many requests"
+              },
+              {
+                "icon": "🗄️",
+                "title": "Store counts in Redis",
+                "detail": "shared by all servers"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Rate limiting explained simply"
+      },
+      "keyword_spoken": "limit",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00"
+    },
+    {
+      "id": "intv-mergerebase",
+      "topic": "Git merge vs rebase explained simply",
+      "keyword": "GIT",
+      "category": "interview",
+      "hook": "MERGE OR REBASE",
+      "script": "Merge joins two branches and keeps both histories, with a merge commit as the knot. Rebase replays your commits on top of main, giving one clean line, but it rewrites history.",
+      "link": "https://git-scm.com/book/en/v2/Git-Branching-Rebasing",
+      "caption": "Git merge vs rebase explained simply 🎯 Save it before your interview",
+      "source": "interview_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Merge or rebase? Seniors argue about this all day.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Merge joins two branches and keeps both histories, with a merge commit as the knot. Rebase replays your commits on top of main, giving one clean line, but it rewrites history.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "TWO WAYS TO JOIN",
+            "steps": [
+              {
+                "icon": "🔀",
+                "title": "Merge",
+                "detail": "keeps both histories + a knot"
+              },
+              {
+                "icon": "📏",
+                "title": "Rebase",
+                "detail": "replays your commits on top"
+              },
+              {
+                "icon": "🧹",
+                "title": "Rebase = clean line",
+                "detail": "but rewrites history"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "The golden rule: never rebase a branch other people are using. Rebase your own local work to tidy it up, then merge into main.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🙅",
+                "title": "Never rebase shared",
+                "detail": "branches others use"
+              },
+              {
+                "icon": "🧽",
+                "title": "Rebase your local work",
+                "detail": "before opening a PR"
+              },
+              {
+                "icon": "🤝",
+                "title": "Merge into main",
+                "detail": "safe and traceable"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Git merge vs rebase explained simply"
+      },
+      "keyword_spoken": "git",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00"
+    },
+    {
+      "id": "quiz-bfsds",
+      "topic": "Dsa Basics Quiz - Which data structure does BFS use?",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "DSA BASICS QUIZ",
+      "script": "Breadth first search uses which data structure? Comment your answer. Three, two, one. The answer is B. A queue. BFS visits nodes level by level, first in, first out. DFS is the one that uses a stack.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=bfs_ds",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "Which data structure does BFS use?"
+      },
+      "caption": "Quiz time 🧩 Which data structure does BFS use? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "If you can't answer this, revise DSA today.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "Breadth first search uses which data structure? Comment your answer. Three, two, one. The answer is B. A queue. BFS visits nodes level by level, first in, first out. DFS is the one that uses a stack.",
+          "stretchable": true,
+          "data": {
+            "question": "Which data structure does BFS use?",
+            "code": "",
+            "options": [
+              "Stack",
+              "Queue",
+              "Heap",
+              "Hash map"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00"
+    },
+    {
+      "id": "quiz-quicksortworst",
+      "topic": "Sorting Interview Quiz - Quicksort's worst-case time?",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "SORTING INTERVIEW QUIZ",
+      "script": "What is the worst case time complexity of quicksort? Comment your answer. Three, two, one. The answer is C. O of n squared. It happens when the pivot is always the smallest or largest, like an already sorted array.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=quicksort_worst",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "Quicksort's worst-case time?"
+      },
+      "caption": "Quiz time 🧩 Quicksort's worst-case time? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "An interviewer asked me this last week.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "What is the worst case time complexity of quicksort? Comment your answer. Three, two, one. The answer is C. O of n squared. It happens when the pivot is always the smallest or largest, like an already sorted array.",
+          "stretchable": true,
+          "data": {
+            "question": "Quicksort's worst-case time?",
+            "code": "",
+            "options": [
+              "O(n)",
+              "O(n log n)",
+              "O(n²)",
+              "O(log n)"
+            ],
+            "correct": 2
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T02:59:17+00:00"
+    },
+    {
+      "id": "repo-2046f5e5",
+      "topic": "superpowers: An agentic skills framework & software development methodology that works (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "NOBODY TALKS ABOUT",
+      "script": "This GitHub repo is exploding. superpowers: An agentic skills framework & software development methodology that works. 2,028 new stars today.",
+      "link": "https://github.com/obra/superpowers",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# obra/superpowers\n# +2,028 stars today\n\ngit clone https://github.com/obra/superpowers.git\ncd superpowers\n\n# An agentic skills framework &\n# software development methodology\n# that works"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#ai"
+      ],
+      "caption": "superpowers is trending on GitHub 🔥 An agentic skills framework & software development methodology that works.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-20T02:57:15+00:00",
+      "meta": {
+        "stars_today": 2028,
+        "stars": 322166,
+        "language": "Shell"
+      },
+      "repo": {
+        "full_name": "obra/superpowers",
+        "description": "An agentic skills framework & software development methodology that works",
+        "stars": 322166,
+        "stars_today": 2028,
+        "language": "Shell",
+        "install": "git clone https://github.com/obra/superpowers",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone obra/superpowers",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "An agentic skills framework &",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
+    },
+    {
+      "id": "repo-c6524b3b",
+      "topic": "Claude-BugHunter: A Claude Code skill bundle for bug hunting and external red-team work (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "BOOKMARK THIS REPO",
+      "script": "This GitHub repo is exploding. Claude BugHunter: A Claude Code skill bundle for bug hunting and external red-team work. 1,349 new stars today.",
+      "link": "https://github.com/elementalsouls/Claude-BugHunter",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# elementalsouls/Claude-BugHunter\n# +1,349 stars today\n\ngit clone https://github.com/elementalsouls/Claude-BugHunter.git\ncd Claude-BugHunter\n\n# A Claude Code skill bundle for bug\n# hunting and external red-team work"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "Claude-BugHunter is trending on GitHub 🔥 A Claude Code skill bundle for bug hunting and external red-team work.",
+      "source": "github_trending",
+      "status": "needs_review",
+      "created_at": "2026-11-20T02:57:14+00:00",
+      "meta": {
+        "stars_today": 1349,
+        "stars": 12672,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "elementalsouls/Claude-BugHunter",
+        "description": "A Claude Code skill bundle for bug hunting and external red-team work",
+        "stars": 12672,
+        "stars_today": 1349,
+        "language": "Python",
+        "install": "git clone https://github.com/elementalsouls/Claude-BugHunter",
+        "demo_code": null,
+        "how": [
+          {
+            "icon": "📦",
+            "title": "Install it",
+            "detail": "git clone elementalsouls/Claude-Bu",
+            "cue": "install"
+          },
+          {
+            "icon": "🧩",
+            "title": "Plug it in",
+            "detail": "a few lines of config",
+            "cue": "plug"
+          },
+          {
+            "icon": "🚀",
+            "title": "Run it",
+            "detail": "A Claude Code skill bundle",
+            "cue": "run"
+          }
+        ],
+        "use_cases": [],
+        "narration": {
+          "how": "Here's how it works. Install it, plug it into your project, and run it.",
+          "demo": "Setup is a single command."
+        }
+      }
     }
   ],
   "removed": [
