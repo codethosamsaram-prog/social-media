@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-20T09:49:46+00:00",
+  "updated_at": "2026-11-20T12:50:18+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13584,7 +13584,7 @@
       },
       "caption": "LeetCode 200: Number of Islands 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "number_of_islands"
       },
@@ -13683,7 +13683,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-20T02:59:17+00:00"
+      "created_at": "2026-11-20T02:59:17+00:00",
+      "error": null,
+      "updated_at": "2026-11-20T12:50:18+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "spotlight",
+        "captions": "box",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "warm",
+        "overlay": "sparks",
+        "burst": "slash",
+        "music": "lofi"
+      },
+      "day": 17,
+      "video_path": "output/dsa-numberofislands/reel.mp4",
+      "rendered_at": "2026-11-20T12:49:46+00:00",
+      "published_at": "2026-11-20T12:50:18+00:00",
+      "ig_media_id": "18084115613348490",
+      "permalink": "https://www.instagram.com/reel/Df9sbf1DNB6/",
+      "container_id": "18103921250176838"
     },
     {
       "id": "intv-jwt",
@@ -15253,6 +15275,60 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-20T09:44:38+00:00"
+    },
+    {
+      "id": "quiz-jsminus",
+      "topic": "Javascript Math Quiz - What does this return? \"5\" - 2",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "JAVASCRIPT MATH QUIZ",
+      "script": "In JavaScript, what is the string five minus two? Comment your answer. Three, two, one. The answer is B. Three. Minus only works on numbers, so JavaScript turns the string into a number. But plus would give fifty two.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=js_minus",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "\"5\" - 2"
+      },
+      "caption": "Quiz time 🧩 What does this return? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "JavaScript maths will break your brain.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "In JavaScript, what is the string five minus two? Comment your answer. Three, two, one. The answer is B. Three. Minus only works on numbers, so JavaScript turns the string into a number. But plus would give fifty two.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this return?",
+            "code": "\"5\" - 2",
+            "options": [
+              "\"52\"",
+              "3",
+              "NaN",
+              "Error"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T12:45:51+00:00"
     }
   ],
   "removed": [
