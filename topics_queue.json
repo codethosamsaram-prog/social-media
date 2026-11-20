@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-20T03:59:37+00:00",
+  "updated_at": "2026-11-20T06:13:46+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13695,7 +13695,7 @@
       "link": "https://en.wikipedia.org/wiki/JSON_Web_Token",
       "caption": "JWT authentication explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -13773,7 +13773,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-20T02:59:17+00:00"
+      "created_at": "2026-11-20T02:59:17+00:00",
+      "error": null,
+      "updated_at": "2026-11-20T06:13:46+00:00",
+      "style_used": {
+        "look": "blueprint",
+        "hook": "kinetic",
+        "captions": "karaoke",
+        "cta": "comment",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "warm",
+        "overlay": "none",
+        "burst": "slash",
+        "music": "pad"
+      },
+      "day": 17,
+      "video_path": "output/intv-jwt/reel.mp4",
+      "rendered_at": "2026-11-20T06:13:10+00:00",
+      "published_at": "2026-11-20T06:13:46+00:00",
+      "ig_media_id": "18477917803137569",
+      "permalink": "https://www.instagram.com/reel/Df8_C0IDKae/",
+      "container_id": "18103837805176838"
     },
     {
       "id": "intv-monolithmicro",
@@ -14787,6 +14809,223 @@
           "how": "Here's how it works. Install it, plug it into your project, and run it.",
           "demo": "Setup is a single command."
         }
+      }
+    },
+    {
+      "id": "dsa-validpalindrome",
+      "topic": "LeetCode 125 Valid Palindrome - Two Pointers",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "SQUEEZE FROM ENDS",
+      "script": "Use two pointers, one at each end. Skip spaces and punctuation, convert to lowercase, and check if they match as you squeeze inward.",
+      "link": "https://leetcode.com/problems/valid-palindrome/",
+      "code": {
+        "language": "python",
+        "filename": "is.py",
+        "snippet": "def is_palindrome(s):\n    l, r = 0, len(s) - 1\n    while l < r:\n        while l < r and not s[l].isalnum(): l += 1\n        while l < r and not s[r].isalnum(): r -= 1\n        if s[l].lower() != s[r].lower(): return False\n        l, r = l + 1, r - 1\n    return True"
+      },
+      "caption": "LeetCode 125: Valid Palindrome 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "valid_palindrome"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Do not copy strings in memory.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 125. Check if a string is a palindrome, ignoring non-alphanumeric characters.",
+          "data": {
+            "source": "LeetCode",
+            "number": 125,
+            "title": "Valid Palindrome",
+            "difficulty": "Easy",
+            "statement": "Given a string, determine if it is a palindrome, considering only alphanumeric characters and ignoring cases.",
+            "example": [
+              "A",
+              " ",
+              "m",
+              "a",
+              "n",
+              ",",
+              " ",
+              "a"
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Reversing a cleaned copy takes extra space that you do not need.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "REVERSE WHOLE STRING",
+            "items": [
+              "A",
+              " ",
+              "m",
+              "a",
+              "n",
+              ","
+            ],
+            "cost": "O(n) EXTRA SPACE"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Use two pointers, one at each end. Skip spaces and punctuation, convert to lowercase, and check if they match as you squeeze inward.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "TWO POINTERS",
+            "steps": [
+              {
+                "icon": "👈",
+                "title": "Left pointer at start",
+                "detail": "moving right"
+              },
+              {
+                "icon": "👉",
+                "title": "Right pointer at end",
+                "detail": "moving left"
+              },
+              {
+                "icon": "⏭️",
+                "title": "Skip non-alphanumeric",
+                "detail": "ignore spaces and punctuation"
+              },
+              {
+                "icon": "🔍",
+                "title": "Compare lowercase chars",
+                "detail": "must match on both sides"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Two pointers moving inward. O of n time and O of one space.",
+          "kicker": "LEETCODE 125",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T06:10:31+00:00"
+    },
+    {
+      "id": "repo-6096cc3a",
+      "topic": "CLI-Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STAR THIS NOW",
+      "script": "This GitHub repo is exploding. CLI Anything: \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:. 898 new stars today.",
+      "link": "https://github.com/HKUDS/CLI-Anything",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# HKUDS/CLI-Anything\n# +898 stars today\n\ngit clone https://github.com/HKUDS/CLI-Anything.git\ncd CLI-Anything\n\n# \"CLI-Anything: Making ALL Software\n# Agent-Native\" -- CLI-Hub:"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#python"
+      ],
+      "caption": "CLI-Anything is trending on GitHub 🔥 \"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-20T06:10:33+00:00",
+      "meta": {
+        "stars_today": 898,
+        "stars": 60751,
+        "language": "Python"
+      },
+      "repo": {
+        "full_name": "HKUDS/CLI-Anything",
+        "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub:",
+        "stars": 60751,
+        "stars_today": 898,
+        "language": "Python"
+      }
+    },
+    {
+      "id": "repo-2c7b3111",
+      "topic": "firecrawl: Knowledge infrastructure to make your agents smarter (GitHub trending)",
+      "keyword": "REPO",
+      "keyword_spoken": "repo",
+      "category": "repo",
+      "hook": "STOP PAYING FOR",
+      "script": "This GitHub repo is exploding. firecrawl: Knowledge infrastructure to make your agents smarter. 825 new stars today.",
+      "link": "https://github.com/firecrawl/firecrawl",
+      "code": {
+        "language": "bash",
+        "filename": "terminal",
+        "snippet": "# firecrawl/firecrawl\n# +825 stars today\n\ngit clone https://github.com/firecrawl/firecrawl.git\ncd firecrawl\n\n# Knowledge infrastructure to make\n# your agents smarter"
+      },
+      "stock_queries": [
+        "computer screen code",
+        "programmer typing night",
+        "server room lights"
+      ],
+      "hashtags": [
+        "#github",
+        "#opensource",
+        "#coding",
+        "#developers",
+        "#typescript"
+      ],
+      "caption": "firecrawl is trending on GitHub 🔥 Knowledge infrastructure to make your agents smarter.",
+      "source": "github_trending",
+      "status": "queued",
+      "created_at": "2026-11-20T06:10:34+00:00",
+      "meta": {
+        "stars_today": 825,
+        "stars": 204490,
+        "language": "TypeScript"
+      },
+      "repo": {
+        "full_name": "firecrawl/firecrawl",
+        "description": "Knowledge infrastructure to make your agents smarter",
+        "stars": 204490,
+        "stars_today": 825,
+        "language": "TypeScript"
       }
     }
   ],
