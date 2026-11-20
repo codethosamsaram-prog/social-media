@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-20T12:50:18+00:00",
+  "updated_at": "2026-11-20T16:03:56+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13829,7 +13829,7 @@
       "link": "https://en.wikipedia.org/wiki/Microservices",
       "caption": "Monolith vs microservices explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -13907,7 +13907,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-20T02:59:17+00:00"
+      "created_at": "2026-11-20T02:59:17+00:00",
+      "error": null,
+      "updated_at": "2026-11-20T16:03:56+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "stack",
+        "captions": "underline",
+        "cta": "share",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "drift",
+        "grade": "cool",
+        "overlay": "leaks",
+        "burst": "ring",
+        "music": "pluck"
+      },
+      "day": 17,
+      "video_path": "output/intv-monolithmicro/reel.mp4",
+      "rendered_at": "2026-11-20T16:03:22+00:00",
+      "published_at": "2026-11-20T16:03:56+00:00",
+      "ig_media_id": "17995744089077712",
+      "permalink": "https://www.instagram.com/reel/Df-ClbyiZqq/",
+      "container_id": "18103972715176838"
     },
     {
       "id": "intv-ratelimiting",
@@ -15329,6 +15351,123 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-20T12:45:51+00:00"
+    },
+    {
+      "id": "dsa-validanagram",
+      "topic": "LeetCode 242 Valid Anagram - Frequency Counter",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "COUNT AND MATCH",
+      "script": "Count every character in the first string using a hash map. Then subtract counts using the second string. If everything balances out, you have a valid anagram.",
+      "link": "https://leetcode.com/problems/valid-anagram/",
+      "code": {
+        "language": "python",
+        "filename": "is.py",
+        "snippet": "def is_anagram(s, t):\n    if len(s) != len(t):\n        return False\n    count = {}\n    for c in s:\n        count[c] = count.get(c, 0) + 1\n    for c in t:\n        if c not in count:\n            return False\n        count[c] -= 1\n        if count[c] < 0:\n            return False\n    return True"
+      },
+      "caption": "LeetCode 242: Valid Anagram 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "valid_anagram"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Stop sorting both strings to check for anagrams.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 242. Check if two strings have the exact same character counts.",
+          "data": {
+            "source": "LeetCode",
+            "number": 242,
+            "title": "Valid Anagram",
+            "difficulty": "Easy",
+            "statement": "Return true if t is an anagram of s, and false otherwise.",
+            "example": [
+              "anagram",
+              "nagaram"
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Sorting works, but that takes O of n log n time.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "SORT BOTH STRINGS",
+            "items": [
+              "anagram",
+              "nagaram"
+            ],
+            "cost": "O(n log n) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Count every character in the first string using a hash map. Then subtract counts using the second string. If everything balances out, you have a valid anagram.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "FREQUENCY COUNTER",
+            "steps": [
+              {
+                "icon": "📏",
+                "title": "Check lengths first",
+                "detail": "if different, return false"
+              },
+              {
+                "icon": "📊",
+                "title": "Count characters in s",
+                "detail": "store in a hash map"
+              },
+              {
+                "icon": "📉",
+                "title": "Subtract count using t",
+                "detail": "for each char in string t"
+              },
+              {
+                "icon": "✅",
+                "title": "Check all counts zero",
+                "detail": "return true if clean match"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Linear time and simple counting. O of n time.",
+          "kicker": "LEETCODE 242",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              6,
+              7
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "HASH MAP"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-20T15:58:11+00:00"
     }
   ],
   "removed": [
