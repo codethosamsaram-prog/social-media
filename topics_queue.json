@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-21T02:56:25+00:00",
+  "updated_at": "2026-11-21T06:01:15+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -13941,7 +13941,7 @@
       "link": "https://en.wikipedia.org/wiki/Token_bucket",
       "caption": "Rate limiting explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -14019,7 +14019,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-20T02:59:17+00:00"
+      "created_at": "2026-11-20T02:59:17+00:00",
+      "error": null,
+      "updated_at": "2026-11-21T06:01:15+00:00",
+      "style_used": {
+        "look": "ember",
+        "hook": "glitch",
+        "captions": "pop",
+        "cta": "triple",
+        "hookFont": "bebas",
+        "presenter": "rohan",
+        "camera": "punch",
+        "grade": "cool",
+        "overlay": "leaks",
+        "burst": "sparks",
+        "music": "pad"
+      },
+      "day": 18,
+      "video_path": "output/intv-ratelimiting/reel.mp4",
+      "rendered_at": "2026-11-21T06:00:37+00:00",
+      "published_at": "2026-11-21T06:01:15+00:00",
+      "ig_media_id": "18291774322294317",
+      "permalink": "https://www.instagram.com/reel/Df_iaF7Cv4o/",
+      "container_id": "18104135714176838"
     },
     {
       "id": "intv-mergerebase",
