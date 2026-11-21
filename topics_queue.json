@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-20T16:03:56+00:00",
+  "updated_at": "2026-11-21T02:56:25+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -14397,7 +14397,7 @@
       },
       "caption": "LeetCode 198: House Robber 🧠 Save this for your next interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "house_robber"
       },
@@ -14502,7 +14502,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-20T03:55:07+00:00"
+      "created_at": "2026-11-20T03:55:07+00:00",
+      "error": null,
+      "updated_at": "2026-11-21T02:56:25+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "sticker",
+        "captions": "type",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "faded",
+        "overlay": "letterbox",
+        "burst": "rays",
+        "music": "lofi"
+      },
+      "day": 18,
+      "video_path": "output/dsa-houserobber/reel.mp4",
+      "rendered_at": "2026-11-21T02:55:50+00:00",
+      "published_at": "2026-11-21T02:56:25+00:00",
+      "ig_media_id": "18118411559112116",
+      "permalink": "https://www.instagram.com/reel/Df_NQScDsga/",
+      "container_id": "18104100614176838"
     },
     {
       "id": "dsa-threesum",
