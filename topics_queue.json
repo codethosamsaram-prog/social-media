@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-21T12:26:13+00:00",
+  "updated_at": "2026-11-21T13:42:32+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -14695,24 +14695,24 @@
       ],
       "created_at": "2026-11-20T03:55:07+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-21T12:26:13+00:00",
+      "updated_at": "2026-11-21T13:42:32+00:00",
       "style_used": {
-        "look": "chalk",
+        "look": "terminal",
         "hook": "question",
-        "captions": "neon",
-        "cta": "comment",
-        "hookFont": "archivo",
+        "captions": "mega",
+        "cta": "series",
+        "hookFont": "anton",
         "presenter": "rohan",
-        "camera": "drift",
-        "grade": "faded",
-        "overlay": "dust",
-        "burst": "rays",
-        "music": "pluck"
+        "camera": "snap",
+        "grade": "teal_orange",
+        "overlay": "vhs",
+        "burst": "ring",
+        "music": "arp"
       },
       "day": 18,
       "video_path": "output/dsa-threesum/reel.mp4",
-      "rendered_at": "2026-11-21T12:25:40+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-21T13:41:59+00:00",
+      "attempts": 2
     },
     {
       "id": "repo-14832d82",
@@ -15718,6 +15718,96 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-21T12:21:51+00:00"
+    },
+    {
+      "id": "intv-cacheeviction",
+      "topic": "Cache eviction explained simply",
+      "keyword": "CACHE",
+      "category": "interview",
+      "hook": "CACHE EVICTION POLICY",
+      "script": "Think of a small study desk. Your desk is cache memory, meaning space is very limited. When new books arrive and the desk gets crowded, you must throw away the oldest book you used to make space.",
+      "link": "https://en.wikipedia.org/wiki/Cache_replacement_policies",
+      "caption": "Cache eviction explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Cache eviction. How memory clears old data.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a small study desk. Your desk is cache memory, meaning space is very limited. When new books arrive and the desk gets crowded, you must throw away the oldest book you used to make space.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF ASTUDY DESK",
+            "steps": [
+              {
+                "icon": "📚",
+                "title": "Desk = cache memory",
+                "detail": "very limited small space"
+              },
+              {
+                "icon": "📥",
+                "title": "New books arrive",
+                "detail": "desk gets too crowded"
+              },
+              {
+                "icon": "🗑️",
+                "title": "Throw oldest book",
+                "detail": "make space for new one"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. Cache eviction policies like L R U, meaning least recently used, decide which items to remove when the cache is full. This keeps frequently accessed data close and frees up memory.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "⏰",
+                "title": "L R U policy",
+                "detail": "least recently used goes out"
+              },
+              {
+                "icon": "🚀",
+                "title": "Keeps hot data close",
+                "detail": "fast retrieval for users"
+              },
+              {
+                "icon": "📉",
+                "title": "Frees up RAM",
+                "detail": "prevents out of memory errors"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Cache eviction explained simply"
+      },
+      "keyword_spoken": "cache",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-21T13:37:10+00:00"
     }
   ],
   "removed": [
