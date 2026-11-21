@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-21T14:39:30+00:00",
+  "updated_at": "2026-11-21T15:36:36+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -14053,7 +14053,7 @@
       "link": "https://git-scm.com/book/en/v2/Git-Branching-Rebasing",
       "caption": "Git merge vs rebase explained simply 🎯 Save it before your interview",
       "source": "interview_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -14131,7 +14131,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-20T02:59:17+00:00"
+      "created_at": "2026-11-20T02:59:17+00:00",
+      "error": null,
+      "updated_at": "2026-11-21T15:36:36+00:00",
+      "style_used": {
+        "look": "neon",
+        "hook": "stack",
+        "captions": "clean",
+        "cta": "search",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "warm",
+        "overlay": "sparks",
+        "burst": "rays",
+        "music": "keys"
+      },
+      "day": 18,
+      "video_path": "output/intv-mergerebase/reel.mp4",
+      "rendered_at": "2026-11-21T15:36:04+00:00",
+      "published_at": "2026-11-21T15:36:36+00:00",
+      "ig_media_id": "18348566683253101",
+      "permalink": "https://www.instagram.com/reel/DgAkQkBk5CZ/",
+      "container_id": "18104291843176838"
     },
     {
       "id": "quiz-bfsds",
@@ -15812,6 +15834,342 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-21T13:37:10+00:00"
+    },
+    {
+      "id": "dsa-subsets",
+      "topic": "LeetCode 78 Subsets - Backtracking Dfs",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "PICK OR SKIP",
+      "script": "Think of it as a binary choice for every number. You either include the current number in your subset, or you skip it. Use backtracking recursion to explore both branches.",
+      "link": "https://leetcode.com/problems/subsets/",
+      "code": {
+        "language": "python",
+        "filename": "subsets.py",
+        "snippet": "def subsets(nums):\n    res = []\n    def dfs(i, path):\n        if i == len(nums):\n            res.append(path[:])\n            return\n        path.append(nums[i])\n        dfs(i + 1, path)\n        path.pop()\n        dfs(i + 1, path)\n    dfs(0, [])\n    return res"
+      },
+      "caption": "LeetCode 78: Subsets 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "subsets"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Most students get confused generating all power sets.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 78. Return all possible subsets of an array.",
+          "data": {
+            "source": "LeetCode",
+            "number": 78,
+            "title": "Subsets",
+            "difficulty": "Medium",
+            "statement": "Given an integer array of unique elements, return all possible subsets.",
+            "example": [
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Writing nested loops for each size is impossible.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "WRITE FIVE LOOPS",
+            "items": [
+              1,
+              2,
+              3
+            ],
+            "cost": "HARD TO SCALE"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Think of it as a binary choice for every number. You either include the current number in your subset, or you skip it. Use backtracking recursion to explore both branches.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "BACKTRACKING DFS",
+            "steps": [
+              {
+                "icon": "🌲",
+                "title": "Start empty subset",
+                "detail": "explore every choice"
+              },
+              {
+                "icon": "➕",
+                "title": "Include current number",
+                "detail": "add it to current path"
+              },
+              {
+                "icon": "🔙",
+                "title": "Backtrack and pop",
+                "detail": "remove it to test skip"
+              },
+              {
+                "icon": "📦",
+                "title": "Save every state",
+                "detail": "append copy to results"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Include, recurse, pop, and recurse again. O of two to the power n time.",
+          "kicker": "LEETCODE 78",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "stamps": [
+              "O(2ⁿ) TIME",
+              "RECURSION"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-21T15:31:43+00:00"
+    },
+    {
+      "id": "dsa-coinchange",
+      "topic": "LeetCode 322 Coin Change - Bottom Up Dp",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "BUILD UP AMOUNTS",
+      "script": "Build an array from zero up to the target amount. For each amount, test every coin and find the minimum coins needed by looking at the subproblem before it.",
+      "link": "https://leetcode.com/problems/coin-change/",
+      "code": {
+        "language": "python",
+        "filename": "coin.py",
+        "snippet": "def coin_change(coins, amount):\n    dp = [float('inf')] * (amount + 1)\n    dp[0] = 0\n    for i in range(1, amount + 1):\n        for c in coins:\n            if i - c >= 0:\n                dp[i] = min(dp[i], 1 + dp[i - c])\n    return dp[amount] if dp[amount] != float('inf') else -1"
+      },
+      "caption": "LeetCode 322: Coin Change 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "coin_change"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Greedy coin choices fail miserably in dynamic programming.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 322. Find the minimum coins needed to make the total amount.",
+          "data": {
+            "source": "LeetCode",
+            "number": 322,
+            "title": "Coin Change",
+            "difficulty": "Medium",
+            "statement": "Return the fewest number of coins that you need to make up that amount.",
+            "example": [
+              1,
+              2,
+              5
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Taking the biggest coin first gives the wrong answer.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "TRY BIGGEST COINS",
+            "items": [
+              1,
+              2,
+              5
+            ],
+            "cost": "FAILS ON EDGE CASES"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Build an array from zero up to the target amount. For each amount, test every coin and find the minimum coins needed by looking at the subproblem before it.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "BOTTOM UP DP",
+            "steps": [
+              {
+                "icon": "🧱",
+                "title": "Make a DP array",
+                "detail": "size amount plus one"
+              },
+              {
+                "icon": "🎯",
+                "title": "Set base case to zero",
+                "detail": "zero coins for zero sum"
+              },
+              {
+                "icon": "🪙",
+                "title": "Loop through all coins",
+                "detail": "for every single amount"
+              },
+              {
+                "icon": "➕",
+                "title": "Take minimum of steps",
+                "detail": "dp equals one plus leftover"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Fill the dynamic programming table iteratively. O of amount times coins time.",
+          "kicker": "LEETCODE 322",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "stamps": [
+              "O(amount × coins)",
+              "DP TABLE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-21T15:31:43+00:00"
+    },
+    {
+      "id": "intv-circuitbreakerpattern",
+      "topic": "Circuit Breaker pattern explained simply",
+      "keyword": "CIRCUIT",
+      "category": "interview",
+      "hook": "CIRCUIT BREAKER PATTERN",
+      "script": "Think of house fuses. Your home is like microservices. If there is a power surge in one room, a fuse trips and cuts the power before the whole house catches fire. A circuit breaker does the same for servers.",
+      "link": "https://en.wikipedia.org/wiki/Circuit_breaker_design_pattern",
+      "caption": "Circuit Breaker pattern explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Circuit breaker pattern. Stop services from crashing.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of house fuses. Your home is like microservices. If there is a power surge in one room, a fuse trips and cuts the power before the whole house catches fire. A circuit breaker does the same for servers.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF HOUSE FUSES",
+            "steps": [
+              {
+                "icon": "🏠",
+                "title": "Home = microservices",
+                "detail": "many rooms connected together"
+              },
+              {
+                "icon": "⚡",
+                "title": "Surge = down service",
+                "detail": "one broken server drops power"
+              },
+              {
+                "icon": "🔌",
+                "title": "Fuse = breaker",
+                "detail": "cuts power before fire spreads"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. When a service fails repeatedly, the circuit breaker opens and fails fast without hitting the dead server. It tests with half open, and closes when the server heals.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🛑",
+                "title": "Open state",
+                "detail": "fails fast without calling down app"
+              },
+              {
+                "icon": "🔍",
+                "title": "Half-open state",
+                "detail": "tests if server is back online"
+              },
+              {
+                "icon": "✅",
+                "title": "Closed state",
+                "detail": "normal traffic flows smoothly again"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Circuit Breaker pattern explained simply"
+      },
+      "keyword_spoken": "circuit",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-21T15:31:52+00:00"
     }
   ],
   "removed": [
