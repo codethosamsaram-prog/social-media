@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-21T09:30:10+00:00",
+  "updated_at": "2026-11-21T12:26:13+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -14693,7 +14693,26 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-20T03:55:07+00:00"
+      "created_at": "2026-11-20T03:55:07+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-21T12:26:13+00:00",
+      "style_used": {
+        "look": "chalk",
+        "hook": "question",
+        "captions": "neon",
+        "cta": "comment",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "faded",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "pluck"
+      },
+      "day": 18,
+      "video_path": "output/dsa-threesum/reel.mp4",
+      "rendered_at": "2026-11-21T12:25:40+00:00",
+      "attempts": 1
     },
     {
       "id": "repo-14832d82",
@@ -15645,6 +15664,60 @@
       "ig_media_id": "17961633822260887",
       "permalink": "https://www.instagram.com/reel/Df_qHn4Du64/",
       "container_id": "18104149994176838"
+    },
+    {
+      "id": "quiz-floordiv",
+      "topic": "Python Division Quiz - What does this print? print(-7 // 2)",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "PYTHON DIVISION QUIZ",
+      "script": "What does minus seven floor divided by two print in Python? Comment your answer. Three, two, one. The answer is B. Minus four. Floor division always rounds down, towards negative infinity, not towards zero.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=floor_div",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "print(-7 // 2)"
+      },
+      "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Even good programmers miss this one.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "What does minus seven floor divided by two print in Python? Comment your answer. Three, two, one. The answer is B. Minus four. Floor division always rounds down, towards negative infinity, not towards zero.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this print?",
+            "code": "print(-7 // 2)",
+            "options": [
+              "-3",
+              "-4",
+              "-3.5",
+              "3"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-21T12:21:51+00:00"
     }
   ],
   "removed": [
