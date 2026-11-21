@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-21T13:42:32+00:00",
+  "updated_at": "2026-11-21T14:39:30+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -14586,7 +14586,7 @@
       },
       "caption": "LeetCode 15: 3Sum 🧠 Save this for your next interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "three_sum"
       },
@@ -14694,25 +14694,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-20T03:55:07+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-21T13:42:32+00:00",
+      "error": null,
+      "updated_at": "2026-11-21T14:39:30+00:00",
       "style_used": {
         "look": "terminal",
-        "hook": "question",
+        "hook": "sticker",
         "captions": "mega",
-        "cta": "series",
-        "hookFont": "anton",
-        "presenter": "rohan",
-        "camera": "snap",
-        "grade": "teal_orange",
+        "cta": "comment",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "breathe",
+        "grade": "cool",
         "overlay": "vhs",
-        "burst": "ring",
+        "burst": "slash",
         "music": "arp"
       },
       "day": 18,
       "video_path": "output/dsa-threesum/reel.mp4",
-      "rendered_at": "2026-11-21T13:41:59+00:00",
-      "attempts": 2
+      "rendered_at": "2026-11-21T14:38:56+00:00",
+      "attempts": 2,
+      "published_at": "2026-11-21T14:39:30+00:00",
+      "ig_media_id": "18161929669568577",
+      "permalink": "https://www.instagram.com/reel/DgAduBFEe0U/",
+      "container_id": "18104266928176838"
     },
     {
       "id": "repo-14832d82",
