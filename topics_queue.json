@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-21T15:36:36+00:00",
+  "updated_at": "2026-11-22T02:57:25+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -15004,7 +15004,7 @@
       },
       "caption": "LeetCode 125: Valid Palindrome 🧠 Save this for your next interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "valid_palindrome"
       },
@@ -15117,7 +15117,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-20T06:10:31+00:00"
+      "created_at": "2026-11-20T06:10:31+00:00",
+      "error": null,
+      "updated_at": "2026-11-22T02:57:25+00:00",
+      "style_used": {
+        "look": "circuit",
+        "hook": "kinetic",
+        "captions": "karaoke",
+        "cta": "share",
+        "hookFont": "archivo",
+        "presenter": "aarav",
+        "camera": "handheld",
+        "grade": "cool",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "arp"
+      },
+      "day": 19,
+      "video_path": "output/dsa-validpalindrome/reel.mp4",
+      "rendered_at": "2026-11-22T02:56:52+00:00",
+      "published_at": "2026-11-22T02:57:25+00:00",
+      "ig_media_id": "18138993526661780",
+      "permalink": "https://www.instagram.com/reel/DgByKxtAK0R/",
+      "container_id": "18104427842176838"
     },
     {
       "id": "repo-6096cc3a",
@@ -16170,6 +16192,96 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-21T15:31:52+00:00"
+    },
+    {
+      "id": "intv-consistenthashing",
+      "topic": "Consistent hashing explained simply",
+      "keyword": "HASHING",
+      "category": "interview",
+      "hook": "CONSISTENT HASHING EXPLAINED",
+      "script": "Think of a wedding thali buffet. Servers are buffet counters holding food plates, and dishes are user data items. When you add a new counter, normal hashing scrambles everything. But consistent hashing means you only move food to the nearest new counter.",
+      "link": "https://en.wikipedia.org/wiki/Consistent_hashing",
+      "caption": "Consistent hashing explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Consistent hashing. System design interviewers love this.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a wedding thali buffet. Servers are buffet counters holding food plates, and dishes are user data items. When you add a new counter, normal hashing scrambles everything. But consistent hashing means you only move food to the nearest new counter.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A THALI BUFFET",
+            "steps": [
+              {
+                "icon": "🍽️",
+                "title": "Servers = buffet counters",
+                "detail": "holding food plates"
+              },
+              {
+                "icon": "🍛",
+                "title": "Dishes = user data items",
+                "detail": "placed on the tables"
+              },
+              {
+                "icon": "🔄",
+                "title": "Adding a plate",
+                "detail": "only moves adjacent food"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. Consistent hashing maps both servers and keys onto a circular ring. When a server joins or leaves, only a fraction of keys are remapped. We use virtual nodes to prevent hot spots and keep the load balanced.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🎯",
+                "title": "Ring topology",
+                "detail": "keys map to next server"
+              },
+              {
+                "icon": "📈",
+                "title": "Scale up or down",
+                "detail": "minimal data movement"
+              },
+              {
+                "icon": "⚖️",
+                "title": "Virtual nodes",
+                "detail": "ensure even load balance"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Consistent hashing explained simply"
+      },
+      "keyword_spoken": "hashing",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-22T02:52:52+00:00"
     }
   ],
   "removed": [
