@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-22T15:33:57+00:00",
+  "updated_at": "2026-11-22T16:30:55+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -15843,7 +15843,7 @@
       "link": "https://en.wikipedia.org/wiki/Cache_replacement_policies",
       "caption": "Cache eviction explained simply 🎯 Save it before your interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -15922,9 +15922,29 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-21T13:37:10+00:00",
-      "error": "No audio was received. Please verify that your parameters are correct.",
-      "updated_at": "2026-11-22T15:33:57+00:00",
-      "attempts": 1
+      "error": null,
+      "updated_at": "2026-11-22T16:30:55+00:00",
+      "attempts": 1,
+      "style_used": {
+        "look": "retrosun",
+        "hook": "glitch",
+        "captions": "pop",
+        "cta": "triple",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "handheld",
+        "grade": "vivid",
+        "overlay": "sparks",
+        "burst": "ring",
+        "music": "bell"
+      },
+      "day": 19,
+      "video_path": "output/intv-cacheeviction/reel.mp4",
+      "rendered_at": "2026-11-22T16:30:21+00:00",
+      "published_at": "2026-11-22T16:30:55+00:00",
+      "ig_media_id": "18212321125369677",
+      "permalink": "https://www.instagram.com/reel/DgDPQvWkpQg/",
+      "container_id": "18104650958176838"
     },
     {
       "id": "dsa-subsets",
