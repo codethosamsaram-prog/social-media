@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-22T09:30:08+00:00",
+  "updated_at": "2026-11-22T12:30:12+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -15545,7 +15545,7 @@
       },
       "caption": "LeetCode 242: Valid Anagram 🧠 Save this for your next interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "valid_anagram"
       },
@@ -15644,7 +15644,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-20T15:58:11+00:00"
+      "created_at": "2026-11-20T15:58:11+00:00",
+      "error": null,
+      "updated_at": "2026-11-22T12:30:12+00:00",
+      "style_used": {
+        "look": "glass",
+        "hook": "stack",
+        "captions": "tape",
+        "cta": "share",
+        "hookFont": "archivo",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "faded",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "keys"
+      },
+      "day": 19,
+      "video_path": "output/dsa-validanagram/reel.mp4",
+      "rendered_at": "2026-11-22T12:27:23+00:00",
+      "published_at": "2026-11-22T12:30:12+00:00",
+      "ig_media_id": "17913556224577308",
+      "permalink": "https://www.instagram.com/reel/DgCzdNpmFr1/",
+      "container_id": "18104573933176838"
     },
     {
       "id": "hiring-2026-11-21",
@@ -16529,6 +16551,60 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-22T09:21:51+00:00"
+    },
+    {
+      "id": "quiz-having",
+      "topic": "Sql Interview Quiz - Which clause filters after GROUP BY? SELECT dept, COUNT(*)",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "SQL INTERVIEW QUIZ",
+      "script": "Which clause filters the groups after group by? Comment your answer. Three, two, one. The answer is B. Having. Where filters rows before grouping. Having filters the groups after.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=having",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "SELECT dept, COUNT(*)\nFROM emp\nGROUP BY dept\n???? COUNT(*) > 5"
+      },
+      "caption": "Quiz time 🧩 Which clause filters after GROUP BY? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Every SQL interview has this question.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "Which clause filters the groups after group by? Comment your answer. Three, two, one. The answer is B. Having. Where filters rows before grouping. Having filters the groups after.",
+          "stretchable": true,
+          "data": {
+            "question": "Which clause filters after GROUP BY?",
+            "code": "SELECT dept, COUNT(*)\nFROM emp\nGROUP BY dept\n???? COUNT(*) > 5",
+            "options": [
+              "WHERE",
+              "HAVING",
+              "ORDER BY",
+              "LIMIT"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-22T12:20:51+00:00"
     }
   ],
   "removed": [
