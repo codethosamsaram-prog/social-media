@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-23T02:59:43+00:00",
+  "updated_at": "2026-11-23T04:06:56+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -15962,7 +15962,7 @@
       },
       "caption": "LeetCode 78: Subsets 🧠 Save this for your next interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "subsets"
       },
@@ -16068,9 +16068,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-21T15:31:43+00:00",
-      "error": "No audio was received. Please verify that your parameters are correct.",
-      "updated_at": "2026-11-23T02:59:43+00:00",
-      "attempts": 1
+      "error": null,
+      "updated_at": "2026-11-23T04:06:56+00:00",
+      "attempts": 1,
+      "style_used": {
+        "look": "galaxy",
+        "hook": "spotlight",
+        "captions": "clean",
+        "cta": "search",
+        "hookFont": "archivo",
+        "presenter": "aarav",
+        "camera": "punch",
+        "grade": "contrast",
+        "overlay": "none",
+        "burst": "slash",
+        "music": "keys"
+      },
+      "day": 20,
+      "video_path": "output/dsa-subsets/reel.mp4",
+      "rendered_at": "2026-11-23T04:06:27+00:00",
+      "published_at": "2026-11-23T04:06:56+00:00",
+      "ig_media_id": "17957643171275112",
+      "permalink": "https://www.instagram.com/reel/DgEe7ICFYzz/",
+      "container_id": "18104810360176838"
     },
     {
       "id": "dsa-coinchange",
@@ -16631,6 +16651,96 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-22T12:20:51+00:00"
+    },
+    {
+      "id": "intv-messagequeue",
+      "topic": "Message Queue explained simply",
+      "keyword": "QUEUE",
+      "category": "interview",
+      "hook": "MESSAGE QUEUE SYSTEM",
+      "script": "Think of a busy panipuri stall. The stall is your server making plates one by one. The crowd is sudden user traffic shouting at once. The queue is a token tray that holds orders in a line so the bhaiya does not panic.",
+      "link": "https://en.wikipedia.org/wiki/Message_queue",
+      "caption": "Message Queue explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Message queue. Stop crashing your server during heavy traffic.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a busy panipuri stall. The stall is your server making plates one by one. The crowd is sudden user traffic shouting at once. The queue is a token tray that holds orders in a line so the bhaiya does not panic.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A PANIPURI STALL",
+            "steps": [
+              {
+                "icon": "pani",
+                "title": "Stall = your server",
+                "detail": "makes one plate at a time"
+              },
+              {
+                "icon": "c-crowd",
+                "title": "Crowd = user traffic",
+                "detail": "everyone shouting at once"
+              },
+              {
+                "icon": "tray",
+                "title": "Queue = token tray",
+                "detail": "holds orders in line"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. A message queue acts as a buffer that absorbs traffic spikes and saves your server from crashing. It decouples services because the producer does not wait for the consumer to finish. Plus, it safely stores messages if a service goes down.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "buff",
+                "title": "Buffer: absorbs spikes",
+                "detail": "saves server from crashing"
+              },
+              {
+                "icon": "async",
+                "title": "Async: decouples apps",
+                "detail": "producer does not wait"
+              },
+              {
+                "icon": "reli",
+                "title": "Reliable: saves data",
+                "detail": "even if the server dies"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Message Queue explained simply"
+      },
+      "keyword_spoken": "queue",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-23T04:03:32+00:00"
     }
   ],
   "removed": [
