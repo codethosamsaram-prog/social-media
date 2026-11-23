@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-23T09:51:44+00:00",
+  "updated_at": "2026-11-23T13:20:27+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -16130,7 +16130,7 @@
       },
       "caption": "LeetCode 322: Coin Change 🧠 Save this for your next interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "coin_change"
       },
@@ -16235,7 +16235,29 @@
         "abstract binary code",
         "dark desk setup"
       ],
-      "created_at": "2026-11-21T15:31:43+00:00"
+      "created_at": "2026-11-21T15:31:43+00:00",
+      "error": null,
+      "updated_at": "2026-11-23T13:20:27+00:00",
+      "style_used": {
+        "look": "bokeh",
+        "hook": "sticker",
+        "captions": "gradient",
+        "cta": "share",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "contrast",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "keys"
+      },
+      "day": 20,
+      "video_path": "output/dsa-coinchange/reel.mp4",
+      "rendered_at": "2026-11-23T13:19:56+00:00",
+      "published_at": "2026-11-23T13:20:27+00:00",
+      "ig_media_id": "17941588890402748",
+      "permalink": "https://www.instagram.com/reel/DgFeQ-lGVin/",
+      "container_id": "18104931329176838"
     },
     {
       "id": "intv-circuitbreakerpattern",
@@ -16898,6 +16920,60 @@
       "ig_media_id": "18012805289776605",
       "permalink": "https://www.instagram.com/reel/DgE72fADALY/",
       "container_id": "18104862266176838"
+    },
+    {
+      "id": "quiz-boolstring",
+      "topic": "Python Truthy Quiz - What does this print? print(bool(\"False\"))",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "PYTHON TRUTHY QUIZ",
+      "script": "What does bool of the string False print? Comment your answer. Three, two, one. The answer is A. True. Any non empty string is truthy, even the word False.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=bool_string",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "print(bool(\"False\"))"
+      },
+      "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "This looks obvious. It isn't.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "What does bool of the string False print? Comment your answer. Three, two, one. The answer is A. True. Any non empty string is truthy, even the word False.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this print?",
+            "code": "print(bool(\"False\"))",
+            "options": [
+              "True",
+              "False",
+              "Error",
+              "None"
+            ],
+            "correct": 0
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-23T13:15:48+00:00"
     }
   ],
   "removed": [
