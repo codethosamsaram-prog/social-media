@@ -355,6 +355,7 @@ class DMJob:
     keyword: str
     text: str
     media_id: str | None
+    parent_id: str | None = None
 
 
 dm_queue: asyncio.Queue[DMJob] | None = None
@@ -378,12 +379,36 @@ async def send_dm(job: DMJob) -> None:
                 continue
             state.record("dm_failed", user=job.username, item_id=job.item_id, keyword=job.keyword, error=str(exc))
             await hub.emit("error", f"DM to @{job.username} failed: {exc}")
+            await reply_to_comment(job.comment_id, job.parent_id, job.username)
             return
-    if settings.public_reply_enabled:
-        try:
-            await graph("POST", f"{job.comment_id}/replies", params={"message": settings.public_reply_text})
-        except (GraphAPIError, httpx.HTTPError) as exc:
-            await hub.emit("warn", f"Public reply failed: {exc}")
+    text = settings.public_reply_text if settings.public_reply_enabled else None
+    await reply_to_comment(job.comment_id, job.parent_id, job.username, text)
+
+
+# Varied so Instagram doesn't read a wall of identical replies as spam.
+REPLY_VARIANTS = ("🙌", "🙌🔥", "🙌❤️", "🔥🙌", "🙌✨", "🙌💯", "Thank you! 🙌", "Means a lot 🙌", "🙌🚀", "❤️🙌")
+
+
+def pick_reply(comment_id: str) -> str:
+    # Stable per comment, so a Meta redelivery that slips past dedupe can't post a different variant.
+    return REPLY_VARIANTS[int(hashlib.sha1(comment_id.encode()).hexdigest(), 16) % len(REPLY_VARIANTS)]
+
+
+async def reply_to_comment(comment_id: str, parent_id: str | None, username: str, text: str | None = None) -> None:
+    """Post one public reply. Text defaults to an emoji variant; skipped if all-comment replies are off."""
+    if text is None:
+        if not settings.reply_all_comments:
+            return
+        text = pick_reply(comment_id)
+    # Instagram threads are one level deep: a reply to a reply goes on the top-level comment.
+    target = parent_id or comment_id
+    try:
+        await graph("POST", f"{target}/replies", params={"message": text})
+        state.record("reply_sent", user=username, comment_id=comment_id, text=text)
+        await hub.emit("success", f"Replied to @{username}: {text}")
+    except (GraphAPIError, httpx.HTTPError) as exc:
+        state.record("reply_failed", user=username, comment_id=comment_id, error=str(exc))
+        await hub.emit("warn", f"Reply to @{username} failed: {exc}")
 
 
 async def dm_worker() -> None:
@@ -410,6 +435,7 @@ async def handle_comment(value: dict[str, Any], dry_run: bool = False) -> None:
     sender = value.get("from") or {}
     user_id, username = str(sender.get("id") or ""), sender.get("username") or "unknown"
     media_id = (value.get("media") or {}).get("id")
+    parent_id = str(value.get("parent_id") or "") or None
     tag = "[SIMULATED] " if dry_run else ""
     if not comment_id:
         return
@@ -426,14 +452,21 @@ async def handle_comment(value: dict[str, Any], dry_run: bool = False) -> None:
     item, keyword = resolve_item(text, media_id)
     if not item:
         await hub.emit("info", f"{tag}No trigger keyword in comment from @{username}")
+        if dry_run:
+            await hub.emit("info", f"{tag}Would reply to @{username}: {pick_reply(comment_id)}")
+        elif settings.instagram_ready:
+            await reply_to_comment(comment_id, parent_id, username)
         return
     if not dry_run:
         state.record("keyword_hit", user=username, item_id=item["id"], keyword=keyword)
         if not state.claim_cooldown(user_id, item["id"], settings.dm_cooldown_hours):
             await hub.emit("info", f"@{username} already got the {keyword} link recently, skipped")
+            if settings.instagram_ready:
+                await reply_to_comment(comment_id, parent_id, username)
             return
 
-    job = DMJob(comment_id, user_id, username, item["id"], keyword or item["keyword"], build_dm(item), media_id)
+    job = DMJob(comment_id, user_id, username, item["id"], keyword or item["keyword"], build_dm(item), media_id,
+                parent_id)
     if dry_run:
         await hub.emit("dm", f"{tag}Would DM @{username} -> {item['link']} ({job.keyword})", item_id=item["id"])
         return

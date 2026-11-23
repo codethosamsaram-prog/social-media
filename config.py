@@ -101,6 +101,7 @@ class Settings:
     dm_cooldown_hours: int
     public_reply_enabled: bool
     public_reply_text: str
+    reply_all_comments: bool
     est_views_per_comment: int
     # --- paths -------------------------------------------------------------------
     base_dir: Path
@@ -151,6 +152,7 @@ class Settings:
             dm_cooldown_hours=max(0, _env_int("DM_COOLDOWN_HOURS", 24)),
             public_reply_enabled=_env_bool("PUBLIC_REPLY_ENABLED", True),
             public_reply_text=_env("PUBLIC_REPLY_TEXT", "Sent! Check your DMs 📩🔥"),
+            reply_all_comments=_env_bool("REPLY_ALL_COMMENTS", True),
             est_views_per_comment=max(1, _env_int("EST_VIEWS_PER_COMMENT", 100)),
             base_dir=BASE_DIR,
             queue_file=queue_file,
