@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-23T17:07:15+00:00",
+  "updated_at": "2026-11-24T03:06:48+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -16607,7 +16607,7 @@
       "link": "https://en.wikipedia.org/wiki/Garbage_collection_(computer_science)",
       "caption": "Garbage Collection explained simply 🎯 Save it before your interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -16685,7 +16685,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-22T09:21:51+00:00"
+      "created_at": "2026-11-22T09:21:51+00:00",
+      "error": null,
+      "updated_at": "2026-11-24T03:06:48+00:00",
+      "style_used": {
+        "look": "glass",
+        "hook": "alert",
+        "captions": "neon",
+        "cta": "comment",
+        "hookFont": "bebas",
+        "presenter": "kabir",
+        "camera": "breathe",
+        "grade": "faded",
+        "overlay": "vhs",
+        "burst": "ring",
+        "music": "pluck"
+      },
+      "day": 21,
+      "video_path": "output/intv-garbagecollection/reel.mp4",
+      "rendered_at": "2026-11-24T03:06:15+00:00",
+      "published_at": "2026-11-24T03:06:48+00:00",
+      "ig_media_id": "17980617618135555",
+      "permalink": "https://www.instagram.com/reel/DgG81UPD2Ij/",
+      "container_id": "18105102992176838"
     },
     {
       "id": "quiz-having",
