@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-24T03:06:48+00:00",
+  "updated_at": "2026-11-24T05:30:11+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -16773,7 +16773,7 @@
       "link": "https://en.wikipedia.org/wiki/Message_queue",
       "caption": "Message Queue explained simply 🎯 Save it before your interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -16851,7 +16851,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-23T04:03:32+00:00"
+      "created_at": "2026-11-23T04:03:32+00:00",
+      "error": null,
+      "updated_at": "2026-11-24T05:30:11+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "chat",
+        "captions": "pop",
+        "cta": "series",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "snap",
+        "grade": "contrast",
+        "overlay": "dust",
+        "burst": "sparks",
+        "music": "keys"
+      },
+      "day": 21,
+      "video_path": "output/intv-messagequeue/reel.mp4",
+      "rendered_at": "2026-11-24T05:13:19+00:00",
+      "published_at": "2026-11-24T05:30:11+00:00",
+      "ig_media_id": "18215660983363735",
+      "permalink": "https://www.instagram.com/reel/DgHLXxil6mn/",
+      "container_id": "18105127688176838"
     },
     {
       "id": "hiring-2026-11-23",
@@ -17019,6 +17041,276 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-23T13:15:48+00:00"
+    },
+    {
+      "id": "intv-btreeindexing",
+      "topic": "B Tree indexing explained simply",
+      "keyword": "INDEX",
+      "category": "interview",
+      "hook": "TREE INDEXING WORKS",
+      "script": "Think of a thick dictionary. Searching page by page is very slow. An index is like the alphabetical tabs on the side. A B tree is like multi level tabs that help you jump straight to your exact page.",
+      "link": "https://en.wikipedia.org/wiki/B-tree",
+      "caption": "B Tree indexing explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "B tree indexing. Why databases find data so fast.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a thick dictionary. Searching page by page is very slow. An index is like the alphabetical tabs on the side. A B tree is like multi level tabs that help you jump straight to your exact page.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A DICTIONARY",
+            "steps": [
+              {
+                "icon": "📖",
+                "title": "Dictionary = big data",
+                "detail": "searching page by page is slow"
+              },
+              {
+                "icon": "📇",
+                "title": "Index = first letter tabs",
+                "detail": "you jump straight to the letter"
+              },
+              {
+                "icon": "🌳",
+                "title": "B tree = multi level tabs",
+                "detail": "jump from broad section to page"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. A B tree keeps data sorted and balanced in multiple branches. This reduces disk reads and keeps search time at O of log n, which is why databases use it for fast lookups.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🔍",
+                "title": "B tree keeps data sorted",
+                "detail": "allows fast binary searches"
+              },
+              {
+                "icon": "🌿",
+                "title": "Self balancing nodes",
+                "detail": "keeps lookups at O of log n"
+              },
+              {
+                "icon": "💾",
+                "title": "Disk blocks aligned",
+                "detail": "minimizes costly disk reads"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "B Tree indexing explained simply"
+      },
+      "keyword_spoken": "index",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-24T05:05:31+00:00"
+    },
+    {
+      "id": "intv-horizontalscaling",
+      "topic": "Horizontal vs Vertical scaling explained simply",
+      "keyword": "SCALE",
+      "category": "interview",
+      "hook": "SCALE YOUR SYSTEM",
+      "script": "Think of a restaurant getting crowded. Vertical scaling is buying one massive chair and table. Horizontal scaling is simply adding more tables next to it. One big table eventually hits a physical limit.",
+      "link": "https://en.wikipedia.org/wiki/Scalability",
+      "caption": "Horizontal vs Vertical scaling explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Horizontal versus vertical scaling. How big apps handle traffic.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a restaurant getting crowded. Vertical scaling is buying one massive chair and table. Horizontal scaling is simply adding more tables next to it. One big table eventually hits a physical limit.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A RESTAURANT",
+            "steps": [
+              {
+                "icon": "🪑",
+                "title": "Vertical = bigger table",
+                "detail": "upgrade chair, buy a bigger desk"
+              },
+              {
+                "icon": "👥",
+                "title": "Horizontal = more tables",
+                "detail": "add more identical small tables"
+              },
+              {
+                "icon": "🚧",
+                "title": "Big table has limits",
+                "detail": "adding chairs eventually fails"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. Vertical scaling upgrades a single server, but it has hardware limits. Horizontal scaling adds multiple servers to share the load, making the system scalable and fault tolerant.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "📈",
+                "title": "Vertical scaling",
+                "detail": "upgrade CPU and RAM on one box"
+              },
+              {
+                "icon": "🌐",
+                "title": "Horizontal scaling",
+                "detail": "add more servers behind a balancer"
+              },
+              {
+                "icon": "🛡️",
+                "title": "No single failure point",
+                "detail": "horizontal gives high availability"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Horizontal vs Vertical scaling explained simply"
+      },
+      "keyword_spoken": "scale",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-24T05:05:31+00:00"
+    },
+    {
+      "id": "intv-debouncethrottle",
+      "topic": "Debounce vs Throttle explained simply",
+      "keyword": "THROTTLE",
+      "category": "interview",
+      "hook": "DEBOUNCE AND THROTTLE",
+      "script": "Think of a lift door. Debounce waits until you completely stop pressing the button before closing. Throttle ensures the door closes at a steady gap, no matter how many times you press it.",
+      "link": "https://en.wikipedia.org/wiki/Throttling_(computing)",
+      "caption": "Debounce vs Throttle explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Debounce and throttle. Stop your app from crashing.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a lift door. Debounce waits until you completely stop pressing the button before closing. Throttle ensures the door closes at a steady gap, no matter how many times you press it.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A LIFT DOOR",
+            "steps": [
+              {
+                "icon": "🚪",
+                "title": "Lift door closing",
+                "detail": "someone presses button again"
+              },
+              {
+                "icon": "⏳",
+                "title": "Debounce resets timer",
+                "detail": "wait till typing completely stops"
+              },
+              {
+                "icon": "⏱️",
+                "title": "Throttle sets steady gap",
+                "detail": "runs once every few seconds"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. Debounce delays execution until an action stops, perfect for search autocomplete. Throttle limits execution to fixed time intervals, ideal for window resizing or scrolling.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🔍",
+                "title": "Debounce for search bars",
+                "detail": "fires only after typing pauses"
+              },
+              {
+                "icon": "🖱️",
+                "title": "Throttle for scroll events",
+                "detail": "limits execution to set intervals"
+              },
+              {
+                "icon": "⚡",
+                "title": "Both save CPU cycles",
+                "detail": "prevents flooding your backend"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Debounce vs Throttle explained simply"
+      },
+      "keyword_spoken": "throttle",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-24T05:05:31+00:00"
     }
   ],
   "removed": [
