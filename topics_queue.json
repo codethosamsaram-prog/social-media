@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-24T07:51:34+00:00",
+  "updated_at": "2026-11-24T10:19:58+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -17164,7 +17164,7 @@
       "link": "https://en.wikipedia.org/wiki/Scalability",
       "caption": "Horizontal vs Vertical scaling explained simply 🎯 Save it before your interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -17242,7 +17242,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-24T05:05:31+00:00"
+      "created_at": "2026-11-24T05:05:31+00:00",
+      "error": null,
+      "updated_at": "2026-11-24T10:19:58+00:00",
+      "style_used": {
+        "look": "sunset",
+        "hook": "stack",
+        "captions": "type",
+        "cta": "search",
+        "hookFont": "archivo",
+        "presenter": "kabir",
+        "camera": "punch",
+        "grade": "cool",
+        "overlay": "sparks",
+        "burst": "slash",
+        "music": "bell"
+      },
+      "day": 21,
+      "video_path": "output/intv-horizontalscaling/reel.mp4",
+      "rendered_at": "2026-11-24T10:19:24+00:00",
+      "published_at": "2026-11-24T10:19:58+00:00",
+      "ig_media_id": "17889077652502360",
+      "permalink": "https://www.instagram.com/reel/DgHuZsapSxt/",
+      "container_id": "18105194045176838"
     },
     {
       "id": "intv-debouncethrottle",
@@ -17333,6 +17355,186 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-24T05:05:31+00:00"
+    },
+    {
+      "id": "intv-cookievssession",
+      "topic": "Cookie vs Session explained simply",
+      "keyword": "COOKIE",
+      "category": "interview",
+      "hook": "COOKIE VERSUS SESSION",
+      "script": "Think of a hotel. A cookie is like a wristband stored right on your hand, showing you paid. A session is the big guest book stored at the hotel reception.",
+      "link": "https://en.wikipedia.org/wiki/HTTP_cookie",
+      "caption": "Cookie vs Session explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Cookie versus session. Most freshers mix these up.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a hotel. A cookie is like a wristband stored right on your hand, showing you paid. A session is the big guest book stored at the hotel reception.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A HOTEL",
+            "steps": [
+              {
+                "icon": "🎫",
+                "title": "Cookie = a wristband",
+                "detail": "stored right on your hand"
+              },
+              {
+                "icon": "📒",
+                "title": "Session = guest book",
+                "detail": "stored at hotel reception"
+              },
+              {
+                "icon": "🔒",
+                "title": "Wristband holds data",
+                "detail": "reception holds big file"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. Cookies are stored on the user's browser and sent with every request. Sessions are stored securely on the server, and only a tiny session id is kept on the client.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🍪",
+                "title": "Cookie on client side",
+                "detail": "sent on every request"
+              },
+              {
+                "icon": "🗄️",
+                "title": "Session on server side",
+                "detail": "only id sent to client"
+              },
+              {
+                "icon": "⚖️",
+                "title": "Size and security",
+                "detail": "cookies hold small data"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Cookie vs Session explained simply"
+      },
+      "keyword_spoken": "cookie",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-24T10:10:50+00:00"
+    },
+    {
+      "id": "intv-forwardvsreverseproxy",
+      "topic": "Forward vs Reverse Proxy explained simply",
+      "keyword": "PROXY",
+      "category": "interview",
+      "hook": "PROXY SERVERS EXPLAINED",
+      "script": "Think of an office. A forward proxy is like your friend going out to the market for you, hiding your identity. A reverse proxy is the office security guard, protecting the boss from random crowds.",
+      "link": "https://en.wikipedia.org/wiki/Reverse_proxy",
+      "caption": "Forward vs Reverse Proxy explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Forward proxy versus reverse proxy. Know the difference.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of an office. A forward proxy is like your friend going out to the market for you, hiding your identity. A reverse proxy is the office security guard, protecting the boss from random crowds.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF AN OFFICE",
+            "steps": [
+              {
+                "icon": "🚪",
+                "title": "Forward = student agent",
+                "detail": "goes out to buy notes"
+              },
+              {
+                "icon": "🛡️",
+                "title": "Reverse = gatekeeper",
+                "detail": "protects the main office"
+              },
+              {
+                "icon": "👥",
+                "title": "Hides the sender",
+                "detail": "or hides the receiver"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. A forward proxy sits in front of clients to hide who is making the request. A reverse proxy sits in front of servers to manage traffic, cache data, and protect backend systems.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🕵️",
+                "title": "Forward hides client",
+                "detail": "bypasses college blocks"
+              },
+              {
+                "icon": "⚡",
+                "title": "Reverse hides server",
+                "detail": "handles load and caching"
+              },
+              {
+                "icon": "🌐",
+                "title": "System design must",
+                "detail": "crucial for web scale"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Forward vs Reverse Proxy explained simply"
+      },
+      "keyword_spoken": "proxy",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-24T10:10:50+00:00"
     }
   ],
   "removed": [
