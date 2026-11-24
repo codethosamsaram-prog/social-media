@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-24T10:19:58+00:00",
+  "updated_at": "2026-11-24T12:30:11+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -17276,7 +17276,7 @@
       "link": "https://en.wikipedia.org/wiki/Throttling_(computing)",
       "caption": "Debounce vs Throttle explained simply 🎯 Save it before your interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -17354,7 +17354,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-24T05:05:31+00:00"
+      "created_at": "2026-11-24T05:05:31+00:00",
+      "error": null,
+      "updated_at": "2026-11-24T12:30:11+00:00",
+      "style_used": {
+        "look": "matrix",
+        "hook": "split",
+        "captions": "pop",
+        "cta": "triple",
+        "hookFont": "anton",
+        "presenter": "rohan",
+        "camera": "breathe",
+        "grade": "contrast",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "pluck"
+      },
+      "day": 21,
+      "video_path": "output/intv-debouncethrottle/reel.mp4",
+      "rendered_at": "2026-11-24T12:20:46+00:00",
+      "published_at": "2026-11-24T12:30:11+00:00",
+      "ig_media_id": "18132353972486897",
+      "permalink": "https://www.instagram.com/reel/DgH8SpMD2Ji/",
+      "container_id": "18105221396176838"
     },
     {
       "id": "intv-cookievssession",
@@ -17535,6 +17557,96 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-24T10:10:50+00:00"
+    },
+    {
+      "id": "intv-mutexvssemaphore",
+      "topic": "Mutex vs Semaphore explained simply",
+      "keyword": "MUTEX",
+      "category": "interview",
+      "hook": "MUTEX VERSUS SEMAPHORE",
+      "script": "Think of a public restroom. A mutex is like a single key to a single stall, so only one person goes inside at a time. A semaphore is like a ticket counter that allows a fixed number of people inside based on available stalls.",
+      "link": "https://en.wikipedia.org/wiki/Semaphore_(programming)",
+      "caption": "Mutex vs Semaphore explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Mutex versus semaphore. Interviewers love asking this.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a public restroom. A mutex is like a single key to a single stall, so only one person goes inside at a time. A semaphore is like a ticket counter that allows a fixed number of people inside based on available stalls.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A TOILET",
+            "steps": [
+              {
+                "icon": "🚪",
+                "title": "Mutex = single key",
+                "detail": "only one person goes inside"
+              },
+              {
+                "icon": "🎟️",
+                "title": "Semaphore = tokens",
+                "detail": "multiple entry passes given"
+              },
+              {
+                "icon": "🚻",
+                "title": "Capacity is the key",
+                "detail": "one versus many entries"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. A mutex provides strict mutual exclusion and can only be unlocked by the thread that locked it. A semaphore uses an integer counter to control access to a resource and can be signaled by any thread.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🔑",
+                "title": "Mutex: locking key",
+                "detail": "owned by the exact thread"
+              },
+              {
+                "icon": "🚦",
+                "title": "Semaphore: signal counter",
+                "detail": "any thread can release it"
+              },
+              {
+                "icon": "🛡️",
+                "title": "Mutex for mutual exclusion",
+                "detail": "semaphore for signaling"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Mutex vs Semaphore explained simply"
+      },
+      "keyword_spoken": "mutex",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-24T12:17:34+00:00"
     }
   ],
   "removed": [
