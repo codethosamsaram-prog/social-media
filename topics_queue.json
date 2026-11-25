@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-25T07:55:10+00:00",
+  "updated_at": "2026-11-25T09:09:56+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -17915,7 +17915,26 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-25T05:13:13+00:00"
+      "created_at": "2026-11-25T05:13:13+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-25T09:09:56+00:00",
+      "style_used": {
+        "look": "aurora",
+        "hook": "split",
+        "captions": "type",
+        "cta": "series",
+        "hookFont": "anton",
+        "presenter": "kabir",
+        "camera": "punch",
+        "grade": "vivid",
+        "overlay": "vhs",
+        "burst": "slash",
+        "music": "pad"
+      },
+      "day": 22,
+      "video_path": "output/intv-virtualmemory/reel.mp4",
+      "rendered_at": "2026-11-25T09:09:22+00:00",
+      "attempts": 1
     },
     {
       "id": "intv-loadfactorhashmap",
@@ -18006,6 +18025,96 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-25T05:13:13+00:00"
+    },
+    {
+      "id": "intv-httpstatuscodes",
+      "topic": "HTTP Status Codes explained simply",
+      "keyword": "STATUS",
+      "category": "interview",
+      "hook": "HTTP STATUS CODES",
+      "script": "Think of Swiggy. Two hundred means success, your order is delivered hot. Four hundred is a user error, like you typed the wrong address. Five hundred is a server bug, the restaurant kitchen crashed.",
+      "link": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes",
+      "caption": "HTTP Status Codes explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "HTTP status codes. Most freshers mix these up.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of Swiggy. Two hundred means success, your order is delivered hot. Four hundred is a user error, like you typed the wrong address. Five hundred is a server bug, the restaurant kitchen crashed.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF SWIGGY",
+            "steps": [
+              {
+                "icon": "🛵",
+                "title": "Two hundred is success",
+                "detail": "order delivered hot"
+              },
+              {
+                "icon": "🔍",
+                "title": "Four hundred is user error",
+                "detail": "you typed wrong address"
+              },
+              {
+                "icon": "🚨",
+                "title": "Five hundred is server bug",
+                "detail": "restaurant kitchen crashed"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. Two hundred means. Ok, the request worked fine. Four zero four means not found, the URL does not exist. Five hundred means server error, the backend code crashed.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "✅",
+                "title": "Two zero zero ok",
+                "detail": "request worked fine"
+              },
+              {
+                "icon": "⚠️",
+                "title": "Four zero four not found",
+                "detail": "url does not exist"
+              },
+              {
+                "icon": "🔥",
+                "title": "Five hundred error",
+                "detail": "backend code crashed"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "HTTP Status Codes explained simply"
+      },
+      "keyword_spoken": "status",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-25T09:05:53+00:00"
     }
   ],
   "removed": [
