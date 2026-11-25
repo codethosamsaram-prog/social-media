@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-24T15:57:45+00:00",
+  "updated_at": "2026-11-25T03:05:42+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -17578,7 +17578,26 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-24T10:10:50+00:00"
+      "created_at": "2026-11-24T10:10:50+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-25T03:05:42+00:00",
+      "style_used": {
+        "look": "glass",
+        "hook": "spotlight",
+        "captions": "bounce",
+        "cta": "comment",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "warm",
+        "overlay": "letterbox",
+        "burst": "sparks",
+        "music": "lofi"
+      },
+      "day": 22,
+      "video_path": "output/intv-forwardvsreverseproxy/reel.mp4",
+      "rendered_at": "2026-11-25T03:05:07+00:00",
+      "attempts": 1
     },
     {
       "id": "intv-mutexvssemaphore",
@@ -17669,6 +17688,96 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-24T12:17:34+00:00"
+    },
+    {
+      "id": "intv-restapi",
+      "topic": "REST API explained simply",
+      "keyword": "REST",
+      "category": "interview",
+      "hook": "REST API BASICS",
+      "script": "Think of a roadside dhaba. The menu is the A P I, showing what food you can order. The waiter is the request, taking your order to the kitchen. The food is the response, bringing your butter chicken back.",
+      "link": "https://en.wikipedia.org/wiki/Representational_state_transfer",
+      "caption": "REST API explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Rest A P I. Most freshers mix these up.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a roadside dhaba. The menu is the A P I, showing what food you can order. The waiter is the request, taking your order to the kitchen. The food is the response, bringing your butter chicken back.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A DHABA",
+            "steps": [
+              {
+                "icon": "📝",
+                "title": "Menu = the API rules",
+                "detail": "what food you can order"
+              },
+              {
+                "icon": "👦",
+                "title": "Waiter = the request",
+                "detail": "takes your order to kitchen"
+              },
+              {
+                "icon": "🍲",
+                "title": "Food = the response",
+                "detail": "brings back your butter chicken"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. A Rest A P I is stateless, meaning the server forgets past orders. It uses standard methods like get and post, and usually sends back data in json format.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🌐",
+                "title": "Stateless connection",
+                "detail": "server forgets past orders"
+              },
+              {
+                "icon": "🔄",
+                "title": "Standard methods",
+                "detail": "get post put and delete"
+              },
+              {
+                "icon": "📦",
+                "title": "Standard format",
+                "detail": "usually returns json data"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "REST API explained simply"
+      },
+      "keyword_spoken": "rest",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-25T02:57:20+00:00"
     }
   ],
   "removed": [
