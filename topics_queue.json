@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-25T10:34:17+00:00",
+  "updated_at": "2026-11-25T11:36:15+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -18242,24 +18242,114 @@
       ],
       "created_at": "2026-11-25T10:26:35+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-25T10:34:17+00:00",
+      "updated_at": "2026-11-25T11:36:15+00:00",
       "style_used": {
-        "look": "mono",
-        "hook": "stack",
+        "look": "matrix",
+        "hook": "sticker",
         "captions": "bounce",
-        "cta": "share",
+        "cta": "triple",
         "hookFont": "bebas",
         "presenter": "rohan",
-        "camera": "drift",
-        "grade": "faded",
-        "overlay": "dust",
-        "burst": "sparks",
+        "camera": "handheld",
+        "grade": "contrast",
+        "overlay": "sparks",
+        "burst": "ring",
         "music": "keys"
       },
       "day": 22,
       "video_path": "output/dsa-majorityelement/reel.mp4",
-      "rendered_at": "2026-11-25T10:33:43+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-25T11:35:40+00:00",
+      "attempts": 2
+    },
+    {
+      "id": "intv-apigateway",
+      "topic": "API Gateway explained simply",
+      "keyword": "GATEWAY",
+      "category": "interview",
+      "hook": "API GATEWAY PATTERN",
+      "script": "Think of a big shopping mall. An API gateway is the main entrance. Instead of wandering around, every visitor goes through this one door. A security guard checks your ID, and then points you to the exact shop you need.",
+      "link": "https://en.wikipedia.org/wiki/API_gateway",
+      "caption": "API Gateway explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "API Gateway. Do not hit microservices directly.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a big shopping mall. An API gateway is the main entrance. Instead of wandering around, every visitor goes through this one door. A security guard checks your ID, and then points you to the exact shop you need.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A MALL",
+            "steps": [
+              {
+                "icon": "🏬",
+                "title": "Gateway = mall entry",
+                "detail": "one main door for all shops"
+              },
+              {
+                "icon": "🔍",
+                "title": "Security guard",
+                "detail": "checks bag before letting you in"
+              },
+              {
+                "icon": "🎯",
+                "title": "Directs traffic",
+                "detail": "sends you to the right store"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. An API gateway acts as a single entry point for all client requests. It handles cross cutting concerns like authentication, SSL termination, and rate limiting, so our backend microservices stay clean and secure.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🚪",
+                "title": "Single entry point",
+                "detail": "hides internal services"
+              },
+              {
+                "icon": "🛡️",
+                "title": "Handles auth, rate limit",
+                "detail": "protects backend servers"
+              },
+              {
+                "icon": "🔀",
+                "title": "Routes requests",
+                "detail": "simplifies client code"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "API Gateway explained simply"
+      },
+      "keyword_spoken": "gateway",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-25T11:31:21+00:00"
     }
   ],
   "removed": [
