@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-25T05:30:08+00:00",
+  "updated_at": "2026-11-25T07:55:10+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -17725,7 +17725,7 @@
       "link": "https://en.wikipedia.org/wiki/Representational_state_transfer",
       "caption": "REST API explained simply 🎯 Save it before your interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -17803,7 +17803,29 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-25T02:57:20+00:00"
+      "created_at": "2026-11-25T02:57:20+00:00",
+      "error": null,
+      "updated_at": "2026-11-25T07:55:10+00:00",
+      "style_used": {
+        "look": "hexgrid",
+        "hook": "glitch",
+        "captions": "karaoke",
+        "cta": "comment",
+        "hookFont": "oswald",
+        "presenter": "rohan",
+        "camera": "handheld",
+        "grade": "faded",
+        "overlay": "dust",
+        "burst": "sparks",
+        "music": "keys"
+      },
+      "day": 22,
+      "video_path": "output/intv-restapi/reel.mp4",
+      "rendered_at": "2026-11-25T07:54:40+00:00",
+      "published_at": "2026-11-25T07:55:10+00:00",
+      "ig_media_id": "17969198642982057",
+      "permalink": "https://www.instagram.com/reel/DgKCocXB7mM/",
+      "container_id": "18105460034176838"
     },
     {
       "id": "intv-virtualmemory",
