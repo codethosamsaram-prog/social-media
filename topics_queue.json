@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-25T11:36:15+00:00",
+  "updated_at": "2026-11-25T12:43:12+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -18132,7 +18132,7 @@
       },
       "caption": "LeetCode 169: Majority Element 🧠 Save this for your next interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "dsa": {
         "library": "majority_element"
       },
@@ -18241,25 +18241,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-25T10:26:35+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-25T11:36:15+00:00",
+      "error": null,
+      "updated_at": "2026-11-25T12:43:12+00:00",
       "style_used": {
-        "look": "matrix",
-        "hook": "sticker",
-        "captions": "bounce",
-        "cta": "triple",
-        "hookFont": "bebas",
-        "presenter": "rohan",
-        "camera": "handheld",
-        "grade": "contrast",
-        "overlay": "sparks",
-        "burst": "ring",
-        "music": "keys"
+        "look": "chalk",
+        "hook": "stack",
+        "captions": "neon",
+        "cta": "share",
+        "hookFont": "archivo",
+        "presenter": "aarav",
+        "camera": "breathe",
+        "grade": "none",
+        "overlay": "letterbox",
+        "burst": "sparks",
+        "music": "arp"
       },
       "day": 22,
       "video_path": "output/dsa-majorityelement/reel.mp4",
-      "rendered_at": "2026-11-25T11:35:40+00:00",
-      "attempts": 2
+      "rendered_at": "2026-11-25T12:42:32+00:00",
+      "attempts": 2,
+      "published_at": "2026-11-25T12:43:12+00:00",
+      "ig_media_id": "17931116553429742",
+      "permalink": "https://www.instagram.com/reel/DgKjlALBNM-/",
+      "container_id": "18105520019176838"
     },
     {
       "id": "intv-apigateway",
