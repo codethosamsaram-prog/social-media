@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-25T09:09:56+00:00",
+  "updated_at": "2026-11-25T10:34:17+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -18115,6 +18115,151 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-25T09:05:53+00:00"
+    },
+    {
+      "id": "dsa-majorityelement",
+      "topic": "LeetCode 169 Majority Element - Boyer Moore Voting",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "VOTE CANCELLATION TRICK",
+      "script": "Treat each number as a vote. If you see your candidate, increase the count. If you see someone else, decrease it. When count hits zero, switch candidates.",
+      "link": "https://leetcode.com/problems/majority_element/",
+      "code": {
+        "language": "python",
+        "filename": "majority.py",
+        "snippet": "def majority_element(nums):\n    count = candidate = 0\n    for n in nums:\n        if count == 0:\n            candidate = n\n        count += 1 if n == candidate else -1\n    return candidate"
+      },
+      "caption": "LeetCode 169: Majority Element 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "majority_element"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Boyer Moore voting solves this with zero extra memory.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 169. Find the element that appears more than half the time.",
+          "data": {
+            "source": "LeetCode",
+            "number": 169,
+            "title": "Majority Element",
+            "difficulty": "Easy",
+            "statement": "Given an array of size n, find the majority element that appears more than n over 2 times.",
+            "example": [
+              2,
+              2,
+              1,
+              1,
+              1,
+              2,
+              2
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Using a hash map to count frequencies works, but it takes O of n space.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "HASH MAP FREQUENCIES",
+            "items": [
+              2,
+              2,
+              1,
+              1,
+              1,
+              2
+            ],
+            "cost": "O(n) SPACE"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Treat each number as a vote. If you see your candidate, increase the count. If you see someone else, decrease it. When count hits zero, switch candidates.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "BOYER MOORE VOTING",
+            "steps": [
+              {
+                "icon": "🗳️",
+                "title": "Pick a candidate",
+                "detail": "start with count zero"
+              },
+              {
+                "icon": "🤝",
+                "title": "Match means vote up",
+                "detail": "different means vote down"
+              },
+              {
+                "icon": "🔄",
+                "title": "If count hits zero",
+                "detail": "pick a new candidate"
+              },
+              {
+                "icon": "👑",
+                "title": "Survivor is winner",
+                "detail": "majority always wins"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "The majority element survives every cancellation. O of n time.",
+          "kicker": "LEETCODE 169",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              2,
+              5
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-25T10:26:35+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-25T10:34:17+00:00",
+      "style_used": {
+        "look": "mono",
+        "hook": "stack",
+        "captions": "bounce",
+        "cta": "share",
+        "hookFont": "bebas",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "faded",
+        "overlay": "dust",
+        "burst": "sparks",
+        "music": "keys"
+      },
+      "day": 22,
+      "video_path": "output/dsa-majorityelement/reel.mp4",
+      "rendered_at": "2026-11-25T10:33:43+00:00",
+      "attempts": 1
     }
   ],
   "removed": [
