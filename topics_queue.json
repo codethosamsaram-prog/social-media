@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-26T07:51:47+00:00",
+  "updated_at": "2026-11-26T09:30:07+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -17025,7 +17025,7 @@
       },
       "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -17062,7 +17062,9 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-23T13:15:48+00:00"
+      "created_at": "2026-11-23T13:15:48+00:00",
+      "published_at": "2026-11-26T09:05:16+00:00",
+      "updated_at": "2026-11-26T09:05:16+00:00"
     },
     {
       "id": "intv-btreeindexing",
@@ -18661,7 +18663,7 @@
       },
       "caption": "Quiz time 🧩 Which sort is NOT stable? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -18698,7 +18700,29 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-26T02:55:23+00:00"
+      "created_at": "2026-11-26T02:55:23+00:00",
+      "error": null,
+      "updated_at": "2026-11-26T09:30:07+00:00",
+      "style_used": {
+        "look": "terminal",
+        "hook": "split",
+        "captions": "pop",
+        "cta": "share",
+        "hookFont": "bebas",
+        "presenter": "aarav",
+        "camera": "punch",
+        "grade": "teal_orange",
+        "overlay": "none",
+        "burst": "sparks",
+        "music": "pad"
+      },
+      "day": 23,
+      "video_path": "output/quiz-stablesort/reel.mp4",
+      "rendered_at": "2026-11-26T09:07:42+00:00",
+      "published_at": "2026-11-26T09:30:07+00:00",
+      "ig_media_id": "18116237437885267",
+      "permalink": "https://www.instagram.com/reel/DgMvyRbxf4t/",
+      "container_id": "18105770168176838"
     },
     {
       "id": "hiring-2026-11-26",
@@ -18811,6 +18835,249 @@
       "ig_media_id": "17978331813163045",
       "permalink": "https://www.instagram.com/reel/DgMnDSvhAPX/",
       "container_id": "18105754955176838"
+    },
+    {
+      "id": "dsa-climbingstairs",
+      "topic": "LeetCode 70 Climbing Stairs - Dynamic Programming",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "FIBONACCI IN DISGUISE",
+      "script": "Notice that the ways to reach step n is the sum of ways to reach step n minus one and n minus two. This is just the Fibonacci sequence.",
+      "link": "https://leetcode.com/problems/climbing_stairs/",
+      "code": {
+        "language": "python",
+        "filename": "climb.py",
+        "snippet": "def climb_stairs(n):\n    if n <= 2:\n        return n\n    a, b = 1, 2\n    for _ in range(3, n + 1):\n        a, b = b, a + b\n    return b"
+      },
+      "caption": "LeetCode 70: Climbing Stairs 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "climbing_stairs"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Stop using slow recursion for Climbing Stairs.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 70. Find how many distinct ways you can climb n steps taking one or two at a time.",
+          "data": {
+            "source": "LeetCode",
+            "number": 70,
+            "title": "Climbing Stairs",
+            "difficulty": "Easy",
+            "statement": "Return distinct ways to climb to the top of n steps.",
+            "example": [
+              3
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Naive recursion recalculates the same steps over and over again.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "RECURSIVE BRANCHING",
+            "items": [
+              3
+            ],
+            "cost": "O(2ⁿ) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Notice that the ways to reach step n is the sum of ways to reach step n minus one and n minus two. This is just the Fibonacci sequence.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "DYNAMIC PROGRAMMING",
+            "steps": [
+              {
+                "icon": "🪜",
+                "title": "Define base cases",
+                "detail": "one way for one step, two for two"
+              },
+              {
+                "icon": "🧮",
+                "title": "Previous two sums",
+                "detail": "ways to reach current step"
+              },
+              {
+                "icon": "🔁",
+                "title": "Iterate up to n",
+                "detail": "shift variables forward"
+              },
+              {
+                "icon": "🎯",
+                "title": "Return total ways",
+                "detail": "at the top of the stairs"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Iterate with two variables. O of one space.",
+          "kicker": "LEETCODE 70",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              4,
+              5
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-26T09:03:15+00:00"
+    },
+    {
+      "id": "dsa-searchinsertposition",
+      "topic": "LeetCode 35 Search Insert Position - Binary Search",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "BINARY SEARCH VARIANT",
+      "script": "Use binary search. Cut the sorted array in half repeatedly. If the middle number is smaller than the target, move your left pointer up. Otherwise, bring your right pointer down.",
+      "link": "https://leetcode.com/problems/search-insert-position/",
+      "code": {
+        "language": "python",
+        "filename": "search.py",
+        "snippet": "def search_insert(nums, target):\n    l, r = 0, len(nums)\n    while l < r:\n        mid = (l + r) // 2\n        if nums[mid] < target:\n            l = mid + 1\n        else:\n            r = mid\n    return l"
+      },
+      "caption": "LeetCode 35: Search Insert Position 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "search_insert_position"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Never use a linear scan for Search Insert Position.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 35. Find the index of a target in a sorted array, or where it should go.",
+          "data": {
+            "source": "LeetCode",
+            "number": 35,
+            "title": "Search Insert Position",
+            "difficulty": "Easy",
+            "statement": "Return the index if the target is found. If not, return where it would be inserted.",
+            "example": [
+              [
+                1,
+                3,
+                5,
+                6
+              ],
+              5
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Checking every element one by one is too slow.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "LINEAR SCAN",
+            "items": [
+              [
+                1,
+                3,
+                5,
+                6
+              ],
+              5
+            ],
+            "cost": "O(n) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Use binary search. Cut the sorted array in half repeatedly. If the middle number is smaller than the target, move your left pointer up. Otherwise, bring your right pointer down.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "BINARY SEARCH",
+            "steps": [
+              {
+                "icon": "🎯",
+                "title": "Set pointers",
+                "detail": "low at zero, high at end"
+              },
+              {
+                "icon": "✂️",
+                "title": "Find middle index",
+                "detail": "cut search space in half"
+              },
+              {
+                "icon": "⚖️",
+                "title": "Compare with target",
+                "detail": "adjust low or high pointers"
+              },
+              {
+                "icon": "✅",
+                "title": "Return low pointer",
+                "detail": "the exact insertion index"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Standard binary search. O of log n time.",
+          "kicker": "LEETCODE 35",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              3,
+              4,
+              5
+            ],
+            "stamps": [
+              "O(log n)",
+              "O(1) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-26T09:03:15+00:00"
     }
   ],
   "removed": [
