@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-26T09:30:07+00:00",
+  "updated_at": "2026-11-26T15:12:16+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11389,24 +11389,24 @@
       ],
       "created_at": "2026-11-13T08:03:34+00:00",
       "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-14T16:45:59+00:00",
-      "attempts": 3,
+      "updated_at": "2026-11-26T15:12:16+00:00",
+      "attempts": 4,
       "style_used": {
-        "look": "hexgrid",
-        "hook": "stack",
-        "captions": "underline",
-        "cta": "search",
-        "hookFont": "bebas",
-        "presenter": "aarav",
-        "camera": "punch",
-        "grade": "teal_orange",
-        "overlay": "none",
-        "burst": "slash",
-        "music": "pad"
+        "look": "ocean",
+        "hook": "alert",
+        "captions": "clean",
+        "cta": "series",
+        "hookFont": "oswald",
+        "presenter": "kabir",
+        "camera": "breathe",
+        "grade": "contrast",
+        "overlay": "dust",
+        "burst": "rays",
+        "music": "keys"
       },
-      "day": 11,
+      "day": 23,
       "video_path": "output/dsa-climbingstairs/reel.mp4",
-      "rendered_at": "2026-11-14T16:45:26+00:00"
+      "rendered_at": "2026-11-26T15:11:43+00:00"
     },
     {
       "id": "hiring-2026-11-13",
@@ -19078,6 +19078,114 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-26T09:03:15+00:00"
+    },
+    {
+      "id": "quiz-hashmapavg",
+      "topic": "Hashmap Basics Quiz - Average lookup time in a hash map?",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "HASHMAP BASICS QUIZ",
+      "script": "What is the average lookup time in a hash map? Comment your answer. Three, two, one. The answer is A. O of one on average. The hash tells you exactly where to look. With many collisions, the worst case is O of n.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=hashmap_avg",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "Average lookup time in a hash map?"
+      },
+      "caption": "Quiz time 🧩 Average lookup time in a hash map? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Every coding interview depends on this fact.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "What is the average lookup time in a hash map? Comment your answer. Three, two, one. The answer is A. O of one on average. The hash tells you exactly where to look. With many collisions, the worst case is O of n.",
+          "stretchable": true,
+          "data": {
+            "question": "Average lookup time in a hash map?",
+            "code": "",
+            "options": [
+              "O(1)",
+              "O(log n)",
+              "O(n)",
+              "O(n²)"
+            ],
+            "correct": 0
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-26T15:07:26+00:00"
+    },
+    {
+      "id": "quiz-isvseq",
+      "topic": "Python Identity Quiz - What does this print? a = [1, 2]",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "PYTHON IDENTITY QUIZ",
+      "script": "Two lists with the same values. What does this print? Comment your answer. Three, two, one. The answer is B. True, False. Double equals compares the values. Is checks whether they are the very same object.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=is_vs_eq",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "a = [1, 2]\nb = [1, 2]\nprint(a == b, a is b)"
+      },
+      "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Most Python learners confuse these two.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "Two lists with the same values. What does this print? Comment your answer. Three, two, one. The answer is B. True, False. Double equals compares the values. Is checks whether they are the very same object.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this print?",
+            "code": "a = [1, 2]\nb = [1, 2]\nprint(a == b, a is b)",
+            "options": [
+              "True True",
+              "True False",
+              "False True",
+              "False False"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-26T15:07:26+00:00"
     }
   ],
   "removed": [
