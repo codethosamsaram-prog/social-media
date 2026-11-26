@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-25T15:30:09+00:00",
+  "updated_at": "2026-11-26T03:00:19+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -18488,6 +18488,213 @@
       "ig_media_id": "17915615175591331",
       "permalink": "https://www.instagram.com/reel/DgKtUbQClsg/",
       "container_id": "18105539768176838"
+    },
+    {
+      "id": "dsa-firstuniquecharacter",
+      "topic": "LeetCode 387 First Unique Character - Two Pass Counter",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "FREQUENCY MAP SCAN",
+      "script": "Make two passes. First, count every character's frequency using a hash map. Second, walk the string again and return the index of the first character with a count of one.",
+      "link": "https://leetcode.com/problems/first-unique-character-in-a-string/",
+      "code": {
+        "language": "python",
+        "filename": "first.py",
+        "snippet": "def first_uniq_char(s):\n    count = {}\n    for c in s:\n        count[c] = count.get(c, 0) + 1\n    for i, c in enumerate(s):\n        if count[c] == 1:\n            return i\n    return -1"
+      },
+      "caption": "LeetCode 387: First Unique Character 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "published",
+      "dsa": {
+        "library": "first_unique_character"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Finding the first unique character is a classic warm up question.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 387. Return the index of the first non-repeating character.",
+          "data": {
+            "source": "LeetCode",
+            "number": 387,
+            "title": "First Unique Character",
+            "difficulty": "Easy",
+            "statement": "Find the first non-repeating character in a string and return its index.",
+            "example": [
+              "l",
+              "o",
+              "v",
+              "e",
+              "l",
+              "e",
+              "e",
+              "t"
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Checking every character against all others takes O of n squared time.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "COMPARE EVERY PAIR",
+            "items": [
+              "l",
+              "o",
+              "v",
+              "e",
+              "l",
+              "e"
+            ],
+            "cost": "O(n²) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "Make two passes. First, count every character's frequency using a hash map. Second, walk the string again and return the index of the first character with a count of one.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "TWO PASS COUNTER",
+            "steps": [
+              {
+                "icon": "📊",
+                "title": "Count letter frequencies",
+                "detail": "use a hash map"
+              },
+              {
+                "icon": "🔍",
+                "title": "Walk the string again",
+                "detail": "check each letter count"
+              },
+              {
+                "icon": "🎯",
+                "title": "Find count equal to 1",
+                "detail": "return its index"
+              },
+              {
+                "icon": "❌",
+                "title": "Return minus one",
+                "detail": "if none are unique"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Hash map counts, linear scan finds the answer. O of n time.",
+          "kicker": "LEETCODE 387",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "stamps": [
+              "O(n) TIME",
+              "2 PASSES"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-26T02:55:23+00:00",
+      "error": null,
+      "updated_at": "2026-11-26T03:00:19+00:00",
+      "style_used": {
+        "look": "blueprint",
+        "hook": "kinetic",
+        "captions": "neon",
+        "cta": "comment",
+        "hookFont": "anton",
+        "presenter": "kabir",
+        "camera": "snap",
+        "grade": "vivid",
+        "overlay": "sparks",
+        "burst": "slash",
+        "music": "arp"
+      },
+      "day": 23,
+      "video_path": "output/dsa-firstuniquecharacter/reel.mp4",
+      "rendered_at": "2026-11-26T02:59:48+00:00",
+      "published_at": "2026-11-26T03:00:19+00:00",
+      "ig_media_id": "18120538574590538",
+      "permalink": "https://www.instagram.com/reel/DgMFrwXNpcx/",
+      "container_id": "18105698945176838"
+    },
+    {
+      "id": "quiz-stablesort",
+      "topic": "Sorting Trick Quiz - Which sort is NOT stable?",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "SORTING TRICK QUIZ",
+      "script": "Which of these sorting algorithms is not stable? Comment your answer. Three, two, one. The answer is C. Quick sort. Its swaps can jump equal elements past each other, so their original order isn't kept.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=stable_sort",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "Which sort is NOT stable?"
+      },
+      "caption": "Quiz time 🧩 Which sort is NOT stable? Comment A, B, C or D before the reveal 👇",
+      "source": "quiz_library",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Only real DSA people know this one.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "Which of these sorting algorithms is not stable? Comment your answer. Three, two, one. The answer is C. Quick sort. Its swaps can jump equal elements past each other, so their original order isn't kept.",
+          "stretchable": true,
+          "data": {
+            "question": "Which sort is NOT stable?",
+            "code": "",
+            "options": [
+              "Merge sort",
+              "Insertion sort",
+              "Quick sort",
+              "Bubble sort"
+            ],
+            "correct": 2
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-26T02:55:23+00:00"
     }
   ],
   "removed": [
