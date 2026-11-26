@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-26T15:12:16+00:00",
+  "updated_at": "2026-11-26T16:30:00+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11283,7 +11283,7 @@
       },
       "caption": "LeetCode 70: Climbing Stairs 🧠 Save this for your next interview",
       "source": "dsa_library",
-      "status": "failed",
+      "status": "published",
       "dsa": {
         "library": "climbing_stairs"
       },
@@ -11388,25 +11388,29 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-13T08:03:34+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-26T15:12:16+00:00",
+      "error": null,
+      "updated_at": "2026-11-26T16:30:00+00:00",
       "attempts": 4,
       "style_used": {
-        "look": "ocean",
-        "hook": "alert",
-        "captions": "clean",
-        "cta": "series",
-        "hookFont": "oswald",
-        "presenter": "kabir",
-        "camera": "breathe",
-        "grade": "contrast",
-        "overlay": "dust",
+        "look": "blueprint",
+        "hook": "glitch",
+        "captions": "underline",
+        "cta": "comment",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "cool",
+        "overlay": "letterbox",
         "burst": "rays",
         "music": "keys"
       },
       "day": 23,
       "video_path": "output/dsa-climbingstairs/reel.mp4",
-      "rendered_at": "2026-11-26T15:11:43+00:00"
+      "rendered_at": "2026-11-26T16:29:28+00:00",
+      "published_at": "2026-11-26T16:30:00+00:00",
+      "ig_media_id": "17979130647178059",
+      "permalink": "https://www.instagram.com/reel/DgNiV2KACVP/",
+      "container_id": "18105889082176838"
     },
     {
       "id": "hiring-2026-11-13",
@@ -19186,6 +19190,96 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-26T15:07:26+00:00"
+    },
+    {
+      "id": "intv-corsexplained",
+      "topic": "CORS explained simply",
+      "keyword": "CORS",
+      "category": "interview",
+      "hook": "CORS EXPLAINED SIMPLY",
+      "script": "Think of a club bouncer. A website from one domain tries to enter another. The browser acts as a strict bouncer and checks your ID. Different origins are blocked by default, unless the server says yes.",
+      "link": "https://en.wikipedia.org/wiki/Cross-origin_resource_sharing",
+      "caption": "CORS explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "CORS. Why does your frontend keep breaking?",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a club bouncer. A website from one domain tries to enter another. The browser acts as a strict bouncer and checks your ID. Different origins are blocked by default, unless the server says yes.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A CLUB BUNCER",
+            "steps": [
+              {
+                "icon": "🚪",
+                "title": "Website from one domain",
+                "detail": "tries to enter another"
+              },
+              {
+                "icon": "👮‍♂️",
+                "title": "Browser is the bouncer",
+                "detail": "checks your ID card"
+              },
+              {
+                "icon": "🛑",
+                "title": "Different origin blocked",
+                "detail": "unless the VIP list says yes"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. CORS is a security mechanism stopping malicious sites from stealing data. The browser checks if the protocol, domain, and port match. If not, the server must explicitly allow it using response headers.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🛡️",
+                "title": "Security mechanism",
+                "detail": "stops malicious sites reading data"
+              },
+              {
+                "icon": "🌐",
+                "title": "Checks origin header",
+                "detail": "protocol, domain, and port"
+              },
+              {
+                "icon": "✅",
+                "title": "Server sends headers",
+                "detail": "access control allow origin to pass"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "CORS explained simply"
+      },
+      "keyword_spoken": "cors",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-26T16:26:43+00:00"
     }
   ],
   "removed": [
