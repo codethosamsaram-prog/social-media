@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-27T07:59:53+00:00",
+  "updated_at": "2026-11-27T09:30:08+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -19120,7 +19120,7 @@
       },
       "caption": "Quiz time 🧩 Average lookup time in a hash map? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -19157,7 +19157,29 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-26T15:07:26+00:00"
+      "created_at": "2026-11-26T15:07:26+00:00",
+      "error": null,
+      "updated_at": "2026-11-27T09:30:08+00:00",
+      "style_used": {
+        "look": "chalk",
+        "hook": "sticker",
+        "captions": "gradient",
+        "cta": "series",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "drift",
+        "grade": "faded",
+        "overlay": "vhs",
+        "burst": "sparks",
+        "music": "keys"
+      },
+      "day": 24,
+      "video_path": "output/quiz-hashmapavg/reel.mp4",
+      "rendered_at": "2026-11-27T09:05:18+00:00",
+      "published_at": "2026-11-27T09:30:08+00:00",
+      "ig_media_id": "18035021435879538",
+      "permalink": "https://www.instagram.com/reel/DgPUTgHtg66/",
+      "container_id": "18106092815176838"
     },
     {
       "id": "quiz-isvseq",
@@ -19413,6 +19435,131 @@
       "ig_media_id": "17917298436285177",
       "permalink": "https://www.instagram.com/reel/DgPMvtuCvBI/",
       "container_id": "18106079636176838"
+    },
+    {
+      "id": "dsa-subsetsumexists",
+      "topic": "LeetCode 416 Partition Equal Subset Sum - Bottom Up Set",
+      "keyword": "LEETCODE",
+      "keyword_spoken": "leetcode",
+      "category": "dsa",
+      "hook": "KNAPSACK DP TRICK",
+      "script": "First, find the total sum. If it is odd, return false. Otherwise, your target is half that sum. Maintain a set of all reachable sums, and for each number, update the set by adding that number to all previous sums.",
+      "link": "https://leetcode.com/problems/partition-equal-subset-sum/",
+      "code": {
+        "language": "python",
+        "filename": "can.py",
+        "snippet": "def can_partition(nums):\n    total = sum(nums)\n    if total % 2 != 0:\n        return False\n    target = total // 2\n    dp = {0}\n    for n in nums:\n        dp.update({t + n for t in dp})\n    return target in dp"
+      },
+      "caption": "LeetCode 416: Partition Equal Subset Sum 🧠 Save this for your next interview",
+      "source": "gemini",
+      "status": "queued",
+      "dsa": {
+        "library": "subset_sum_exists"
+      },
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Checking every subset for equal sum takes way too long.",
+          "kicker": "LEETCODE TRICK"
+        },
+        {
+          "type": "problem",
+          "narration": "LeetCode 416. Split an array into two subsets with identical sums.",
+          "data": {
+            "source": "LeetCode",
+            "number": 416,
+            "title": "Partition Equal Subset Sum",
+            "difficulty": "Medium",
+            "statement": "Determine if the array can be partitioned into two subsets with equal sum.",
+            "example": [
+              1,
+              5,
+              11,
+              5
+            ]
+          }
+        },
+        {
+          "type": "naive",
+          "narration": "Checking every subset gives an exponential time complexity of O of two to the power of n.",
+          "kicker": "THE OBVIOUS WAY",
+          "optional": true,
+          "data": {
+            "label": "CHECK EVERY SUBSET",
+            "items": [
+              1,
+              5,
+              11,
+              5
+            ],
+            "cost": "O(2ⁿ) TIME"
+          }
+        },
+        {
+          "type": "how",
+          "narration": "First, find the total sum. If it is odd, return false. Otherwise, your target is half that sum. Maintain a set of all reachable sums, and for each number, update the set by adding that number to all previous sums.",
+          "kicker": "THE SMART WAY",
+          "stretchable": true,
+          "data": {
+            "title": "BOTTOM UP SET",
+            "steps": [
+              {
+                "icon": "🧮",
+                "title": "Find total sum",
+                "detail": "if odd, it is impossible"
+              },
+              {
+                "icon": "🎯",
+                "title": "Target is sum over two",
+                "detail": "what subset reaches this?"
+              },
+              {
+                "icon": "🧺",
+                "title": "Use a DP set",
+                "detail": "store all reachable sums"
+              },
+              {
+                "icon": "✅",
+                "title": "Check if target in set",
+                "detail": "return true or false"
+              }
+            ]
+          }
+        },
+        {
+          "type": "code",
+          "narration": "Dynamic programming with a hash set. Efficient and clean.",
+          "kicker": "LEETCODE 416",
+          "data": {
+            "title": "THE CODE",
+            "focus": [
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "stamps": [
+              "O(n × sum) TIME",
+              "O(sum) SPACE"
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#leetcode",
+        "#dsa",
+        "#python",
+        "#coding",
+        "#programming"
+      ],
+      "stock_queries": [
+        "programmer thinking",
+        "abstract binary code",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-27T09:03:21+00:00"
     }
   ],
   "removed": [
