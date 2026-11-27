@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-27T05:30:06+00:00",
+  "updated_at": "2026-11-27T07:59:53+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -19302,6 +19302,117 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-26T16:26:43+00:00"
+    },
+    {
+      "id": "hiring-2026-11-27",
+      "topic": "HackerRank, Stripe and Twilio are hiring engineers in India (2026-11-27)",
+      "keyword": "HIRING",
+      "keyword_spoken": "hiring",
+      "category": "hiring",
+      "hook": "OPEN ROLES NOW",
+      "script": "HackerRank, Stripe and Twilio are hiring in India right now. HackerRank has 12 engineering roles open in Bengaluru. Stripe has 11 engineering roles open in Bengaluru. Twilio has 10 engineering roles open in India.",
+      "link": "https://boards.greenhouse.io/hackerrank",
+      "code": {
+        "language": "python",
+        "filename": "main.py",
+        "snippet": "HackerRank, Stripe and Twilio are hiring engineers in India (2026-11-27)"
+      },
+      "stock_queries": [
+        "modern office india",
+        "team meeting office",
+        "bangalore city night"
+      ],
+      "hashtags": [
+        "#hiring",
+        "#jobsinindia",
+        "#softwarejobs",
+        "#bangalorejobs",
+        "#developers"
+      ],
+      "caption": "🚨 HackerRank, Stripe and Twilio are hiring engineers in India right now.\n\n🏢 HackerRank: 12 open roles (Bengaluru), e.g. Senior Engineering Manager - Evaluation\n🏢 Stripe: 11 open roles (Bengaluru), e.g. Engineering Manager, Core Infrastructure\n🏢 Twilio: 10 open roles (India), e.g. Technical Support Engineer 2",
+      "source": "career_boards",
+      "status": "published",
+      "created_at": "2026-11-27T07:56:16+00:00",
+      "links": [
+        {
+          "label": "HackerRank",
+          "url": "https://boards.greenhouse.io/hackerrank"
+        },
+        {
+          "label": "Stripe",
+          "url": "https://boards.greenhouse.io/stripe"
+        },
+        {
+          "label": "Twilio",
+          "url": "https://boards.greenhouse.io/twilio"
+        }
+      ],
+      "hiring": {
+        "companies": [
+          {
+            "name": "HackerRank",
+            "domain": "hackerrank.com",
+            "color": "#2ec866",
+            "roles": 12,
+            "fresh": 2,
+            "top_role": "Senior Engineering Manager - Evaluation",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/hackerrank",
+            "score": 18
+          },
+          {
+            "name": "Stripe",
+            "domain": "stripe.com",
+            "color": "#635bff",
+            "roles": 11,
+            "fresh": 1,
+            "top_role": "Engineering Manager, Core Infrastructure",
+            "cities": [
+              "Bengaluru"
+            ],
+            "url": "https://boards.greenhouse.io/stripe",
+            "score": 14
+          },
+          {
+            "name": "Twilio",
+            "domain": "twilio.com",
+            "color": "#f22f46",
+            "roles": 10,
+            "fresh": 0,
+            "top_role": "Technical Support Engineer 2",
+            "cities": [
+              "India"
+            ],
+            "url": "https://boards.greenhouse.io/twilio",
+            "score": 10
+          }
+        ],
+        "checked_at": "2026-11-27T07:56:16+00:00"
+      },
+      "error": null,
+      "updated_at": "2026-11-27T07:59:53+00:00",
+      "style_used": {
+        "look": "retrosun",
+        "hook": "stack",
+        "captions": "mega",
+        "cta": "triple",
+        "hookFont": "bebas",
+        "presenter": "kabir",
+        "camera": "handheld",
+        "grade": "warm",
+        "overlay": "none",
+        "burst": "slash",
+        "music": "arp"
+      },
+      "day": 24,
+      "video_path": "output/hiring-2026-11-27/reel.mp4",
+      "rendered_at": "2026-11-27T07:59:13+00:00",
+      "published_at": "2026-11-27T07:59:53+00:00",
+      "ig_media_id": "17917298436285177",
+      "permalink": "https://www.instagram.com/reel/DgPMvtuCvBI/",
+      "container_id": "18106079636176838"
     }
   ],
   "removed": [
