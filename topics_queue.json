@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-27T09:30:08+00:00",
+  "updated_at": "2026-11-27T13:04:56+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -11389,7 +11389,7 @@
       ],
       "created_at": "2026-11-13T08:03:34+00:00",
       "error": null,
-      "updated_at": "2026-11-27T03:45:17+00:00",
+      "updated_at": "2026-11-27T13:04:56+00:00",
       "attempts": 4,
       "style_used": {
         "look": "blueprint",
@@ -11407,7 +11407,7 @@
       "day": 23,
       "video_path": "output/dsa-climbingstairs/reel.mp4",
       "rendered_at": "2026-11-26T16:29:28+00:00",
-      "published_at": "2026-11-27T03:45:17+00:00",
+      "published_at": "2026-11-27T13:04:56+00:00",
       "ig_media_id": "17979130647178059",
       "permalink": "https://www.instagram.com/reel/DgNiV2KACVP/",
       "container_id": "18105889082176838"
@@ -19560,6 +19560,150 @@
         "dark desk setup"
       ],
       "created_at": "2026-11-27T09:03:21+00:00"
+    },
+    {
+      "id": "intv-ratelimiter",
+      "topic": "Rate Limiter explained simply",
+      "keyword": "LIMIT",
+      "category": "interview",
+      "hook": "RATE LIMITERS WORK",
+      "script": "Think of a club bouncer. The club is your server, and the people are incoming requests. The bouncer checks how fast you try to enter. If you spam requests, the bouncer tells you to wait outside.",
+      "link": "https://en.wikipedia.org/wiki/Rate_limiting",
+      "caption": "Rate Limiter explained simply 🎯 Save it before your interview",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Rate limiters. How servers block spam.",
+          "kicker": "INTERVIEW QUESTION"
+        },
+        {
+          "type": "how",
+          "narration": "Think of a club bouncer. The club is your server, and the people are incoming requests. The bouncer checks how fast you try to enter. If you spam requests, the bouncer tells you to wait outside.",
+          "kicker": "IN SIMPLE WORDS",
+          "stretchable": true,
+          "data": {
+            "title": "THINK OF A CLUB BUNCER",
+            "steps": [
+              {
+                "icon": "🎟️",
+                "title": "Club = your server",
+                "detail": "everyone wants to enter"
+              },
+              {
+                "icon": "🛑",
+                "title": "Bouncer at gate",
+                "detail": "checks how many times you try"
+              },
+              {
+                "icon": "🚪",
+                "title": "Too many entries",
+                "detail": "bouncer says wait outside"
+              }
+            ]
+          }
+        },
+        {
+          "type": "use_cases",
+          "narration": "In the interview, say this. A rate limiter controls how many requests a user can make in a given time. We use algorithms like token bucket or sliding window. This protects our backend from crashes and DDOS attacks.",
+          "kicker": "IN THE INTERVIEW",
+          "stretchable": true,
+          "data": {
+            "title": "SAY THIS",
+            "cards": [
+              {
+                "icon": "🪙",
+                "title": "Token bucket",
+                "detail": "refills tokens at a set rate"
+              },
+              {
+                "icon": "📊",
+                "title": "Sliding window",
+                "detail": "tracks requests in time slots"
+              },
+              {
+                "icon": "🛡️",
+                "title": "Protects backend",
+                "detail": "stops crashing from traffic"
+              }
+            ]
+          }
+        }
+      ],
+      "hashtags": [
+        "#interviewprep",
+        "#softwareengineer",
+        "#systemdesign",
+        "#placements",
+        "#coding"
+      ],
+      "code": {
+        "language": "text",
+        "filename": "snippet.txt",
+        "snippet": "Rate Limiter explained simply"
+      },
+      "keyword_spoken": "limit",
+      "stock_queries": [
+        "job interview office",
+        "programmer thinking",
+        "whiteboard meeting"
+      ],
+      "created_at": "2026-11-27T12:18:13+00:00"
+    },
+    {
+      "id": "quiz-jssortquiz",
+      "topic": "Javascript Quirk Quiz - What does this return? console.log([10, 2, 5].sort());",
+      "keyword": "QUIZ",
+      "category": "quiz",
+      "hook": "JAVASCRIPT QUIRK QUIZ",
+      "script": "What does this JavaScript code output? Comment your answer. Three, two, one. The answer is B. [\"10\", \"2\", \"5\"]. JavaScript sort converts everything to strings by default, so ten comes before two because one is less than two.",
+      "link": "https://www.instagram.com/code_tho_samsaram/?quiz=js_sort_quiz",
+      "code": {
+        "language": "python",
+        "filename": "quiz.py",
+        "snippet": "console.log([10, 2, 5].sort());"
+      },
+      "caption": "Quiz time 🧩 What does this return? Comment A, B, C or D before the reveal 👇",
+      "source": "gemini",
+      "status": "queued",
+      "storyboard": [
+        {
+          "type": "hook",
+          "narration": "Most developers get this wrong.",
+          "kicker": "QUICK QUIZ"
+        },
+        {
+          "type": "quiz",
+          "narration": "What does this JavaScript code output? Comment your answer. Three, two, one. The answer is B. [\"10\", \"2\", \"5\"]. JavaScript sort converts everything to strings by default, so ten comes before two because one is less than two.",
+          "stretchable": true,
+          "data": {
+            "question": "What does this return?",
+            "code": "console.log([10, 2, 5].sort());",
+            "options": [
+              "[2, 5, 10]",
+              "[\"10\", \"2\", \"5\"]",
+              "[10, 2, 5]",
+              "Error"
+            ],
+            "correct": 1
+          }
+        }
+      ],
+      "hashtags": [
+        "#codingquiz",
+        "#python",
+        "#javascript",
+        "#programming",
+        "#developers"
+      ],
+      "keyword_spoken": "quiz",
+      "stock_queries": [
+        "students thinking",
+        "abstract question mark",
+        "dark desk setup"
+      ],
+      "created_at": "2026-11-27T12:18:17+00:00"
     }
   ],
   "removed": [
