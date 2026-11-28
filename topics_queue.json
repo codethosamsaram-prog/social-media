@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-28T08:27:48+00:00",
+  "updated_at": "2026-11-28T09:30:09+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -19219,7 +19219,7 @@
       },
       "caption": "Quiz time 🧩 What does this print? Comment A, B, C or D before the reveal 👇",
       "source": "quiz_library",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -19256,7 +19256,9 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-26T15:07:26+00:00"
+      "created_at": "2026-11-26T15:07:26+00:00",
+      "published_at": "2026-11-28T09:25:31+00:00",
+      "updated_at": "2026-11-28T09:25:31+00:00"
     },
     {
       "id": "intv-corsexplained",
@@ -19689,7 +19691,7 @@
       },
       "caption": "Quiz time 🧩 What does this return? Comment A, B, C or D before the reveal 👇",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -19726,7 +19728,29 @@
         "abstract question mark",
         "dark desk setup"
       ],
-      "created_at": "2026-11-27T12:18:17+00:00"
+      "created_at": "2026-11-27T12:18:17+00:00",
+      "error": null,
+      "updated_at": "2026-11-28T09:30:09+00:00",
+      "style_used": {
+        "look": "terminal",
+        "hook": "sticker",
+        "captions": "bounce",
+        "cta": "search",
+        "hookFont": "archivo",
+        "presenter": "rohan",
+        "camera": "handheld",
+        "grade": "cool",
+        "overlay": "sparks",
+        "burst": "slash",
+        "music": "keys"
+      },
+      "day": 25,
+      "video_path": "output/quiz-jssortquiz/reel.mp4",
+      "rendered_at": "2026-11-28T09:29:22+00:00",
+      "published_at": "2026-11-28T09:30:09+00:00",
+      "ig_media_id": "17999863932102975",
+      "permalink": "https://www.instagram.com/reel/DgR72sGg68l/",
+      "container_id": "18106397045176838"
     },
     {
       "id": "hiring-2026-11-28",
