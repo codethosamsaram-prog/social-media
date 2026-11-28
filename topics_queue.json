@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-27T18:44:10+00:00",
+  "updated_at": "2026-11-28T06:05:37+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -18168,7 +18168,26 @@
         "programmer thinking",
         "whiteboard meeting"
       ],
-      "created_at": "2026-11-25T09:05:53+00:00"
+      "created_at": "2026-11-25T09:05:53+00:00",
+      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
+      "updated_at": "2026-11-28T06:05:37+00:00",
+      "style_used": {
+        "look": "ocean",
+        "hook": "terminal",
+        "captions": "bounce",
+        "cta": "search",
+        "hookFont": "anton",
+        "presenter": "aarav",
+        "camera": "snap",
+        "grade": "none",
+        "overlay": "leaks",
+        "burst": "rays",
+        "music": "arp"
+      },
+      "day": 25,
+      "video_path": "output/intv-httpstatuscodes/reel.mp4",
+      "rendered_at": "2026-11-28T06:05:04+00:00",
+      "attempts": 1
     },
     {
       "id": "dsa-majorityelement",
