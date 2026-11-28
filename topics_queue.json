@@ -1,6 +1,6 @@
 {
   "account": "@code_tho_samsaram",
-  "updated_at": "2026-11-28T06:05:37+00:00",
+  "updated_at": "2026-11-28T07:15:46+00:00",
   "items": [
     {
       "id": "seed-01-uibuild",
@@ -18090,7 +18090,7 @@
       "link": "https://en.wikipedia.org/wiki/List_of_HTTP_status_codes",
       "caption": "HTTP Status Codes explained simply 🎯 Save it before your interview",
       "source": "gemini",
-      "status": "queued",
+      "status": "published",
       "storyboard": [
         {
           "type": "hook",
@@ -18169,25 +18169,29 @@
         "whiteboard meeting"
       ],
       "created_at": "2026-11-25T09:05:53+00:00",
-      "error": "Video upload -> 400: {\"debug_info\":{\"retriable\":false,\"type\":\"ProcessingFailedError\",\"message\":\"Request processing failed\"}}",
-      "updated_at": "2026-11-28T06:05:37+00:00",
+      "error": null,
+      "updated_at": "2026-11-28T07:15:46+00:00",
       "style_used": {
-        "look": "ocean",
-        "hook": "terminal",
-        "captions": "bounce",
-        "cta": "search",
-        "hookFont": "anton",
+        "look": "matrix",
+        "hook": "kinetic",
+        "captions": "karaoke",
+        "cta": "triple",
+        "hookFont": "oswald",
         "presenter": "aarav",
         "camera": "snap",
-        "grade": "none",
-        "overlay": "leaks",
-        "burst": "rays",
-        "music": "arp"
+        "grade": "warm",
+        "overlay": "letterbox",
+        "burst": "slash",
+        "music": "lofi"
       },
       "day": 25,
       "video_path": "output/intv-httpstatuscodes/reel.mp4",
-      "rendered_at": "2026-11-28T06:05:04+00:00",
-      "attempts": 1
+      "rendered_at": "2026-11-28T07:15:14+00:00",
+      "attempts": 1,
+      "published_at": "2026-11-28T07:15:46+00:00",
+      "ig_media_id": "17944128477389988",
+      "permalink": "https://www.instagram.com/reel/DgRsgS3Ts94/",
+      "container_id": "18106369715176838"
     },
     {
       "id": "dsa-majorityelement",
